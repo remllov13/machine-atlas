@@ -1,0 +1,269 @@
+{
+  "id": "banking-retail",
+  "name": "Retail Banking",
+  "aka": [
+    "commercial banking",
+    "depository institution"
+  ],
+  "sector": "Financial services",
+  "geography": "Global; figures skew US",
+  "era": "Modern form since ~17th c. goldsmith-bankers; deposit banking much older",
+  "mode": "teardown",
+  "date_walked": "2026-07-26",
+  "chain": {
+    "parent_id": null,
+    "relation": "seed",
+    "relation_note": "First entry in the Atlas. The chain grows from here.",
+    "chain_position": 0,
+    "suggested_next": [
+      {
+        "id": "core-banking-software",
+        "relation": "upstream_supplier",
+        "why": "The software rails every bank runs on — who sells the picks and shovels?"
+      },
+      {
+        "id": "payment-networks",
+        "relation": "symbiote",
+        "why": "Visa/Mastercard sit on the same money flow and run a pure toll-booth."
+      },
+      {
+        "id": "insurance-underwriting",
+        "relation": "substitute",
+        "why": "Same 'float' mechanic as deposits, different wrapper — the first cross-link."
+      }
+    ]
+  },
+  "one_line": "Buy money cheap from depositors, sell it dear to borrowers, and live on the gap.",
+  "engine": {
+    "inputs": "Deposits — other people's money, entrusted cheaply",
+    "transformation": "Pools deposits, holds a fraction as capital, lends the rest out many times over",
+    "outputs": "Loans — the same money, sold as credit at a higher rate",
+    "money_in": "Interest and fees from borrowers; card, account and overdraft fees",
+    "money_out": "Interest paid to depositors; operating cost; loan losses",
+    "the_spread": "loan rate − deposit rate  (the Net Interest Margin)",
+    "leverage_point": "Hold ~10% as capital, lend the rest — roughly 10× the capital base"
+  },
+  "unit": {
+    "unit_name": "One dollar of deposits",
+    "unit_economics": "A dollar deposited at ~0.5% funds a loan at ~7%; the ~6.5pt gross spread, minus losses and cost, is the margin. Figures illustrative.",
+    "what_one_unit_produces": "Not just interest — a customer relationship that can be cross-sold cards, mortgages, and advice at higher margin."
+  },
+  "plays": [
+    {
+      "play_name": "Margin Lag",
+      "tagline": "Raise loan rates fast. Raise deposit rates slow.",
+      "flow": [
+        {
+          "step_title": "Fed hikes",
+          "step_desc": "The central bank raises rates."
+        },
+        {
+          "step_title": "Speed gap",
+          "step_desc": "Loan rates jump the same day; deposit rates crawl up over months."
+        },
+        {
+          "step_title": "The lag = profit",
+          "step_desc": "The bank keeps the widening gap before it has to pass raises on."
+        }
+      ],
+      "the_move": "Loans reprice at a sprint; deposits reprice at a walk. The delay itself is the money.",
+      "in_the_wild": "In the 2022–23 hiking cycle, US loan yields rose faster than deposit costs — 'loan betas beat deposit betas' — fattening margins until deposit costs caught up.",
+      "watch_out": "Eventually depositors demand their raise. Margins peak, then compress.",
+      "glyph_id": "marginlag",
+      "mechanics": [
+        "spread",
+        "capital-cycle",
+        "arbitrage"
+      ]
+    },
+    {
+      "play_name": "Fee Fortress",
+      "tagline": "Boring rates. The real money leaks in from the sides.",
+      "flow": [
+        {
+          "step_title": "Thin spread",
+          "step_desc": "Headline rates are unremarkable — nothing to see."
+        },
+        {
+          "step_title": "Fee streams",
+          "step_desc": "Overdraft, account, ATM, card and wire fees pour in from every side."
+        },
+        {
+          "step_title": "Moat fills",
+          "step_desc": "Non-interest income becomes the profit engine, not the spread."
+        }
+      ],
+      "the_move": "Don't win on the spread — win on the fine print. Dozens of small fees fill the moat.",
+      "in_the_wild": "US retail banking has historically drawn a large share of revenue from non-interest income — fees small and frequent enough that customers barely notice them adding up.",
+      "watch_out": "Fee income is politically fragile — regulators love to cap overdraft and 'junk' fees.",
+      "glyph_id": "feefortress",
+      "mechanics": [
+        "toll-booth",
+        "bundling",
+        "information-asymmetry"
+      ]
+    },
+    {
+      "play_name": "Niche Play",
+      "tagline": "Own one narrow lane. Charge a premium for the expertise.",
+      "flow": [
+        {
+          "step_title": "Pick one target",
+          "step_desc": "Auto loans, small-business, equipment leasing — one segment, deeply known."
+        },
+        {
+          "step_title": "Specialist edge",
+          "step_desc": "Underwrite risk competitors can't read; lend where they won't."
+        },
+        {
+          "step_title": "Premium rate",
+          "step_desc": "Charge more because you understand the borrower better than anyone."
+        }
+      ],
+      "the_move": "Skip the scale war. Go an inch wide and a mile deep, and price the expertise.",
+      "in_the_wild": "Community banks lean on this — accepting higher risk on borrowers they personally know in exchange for higher yield.",
+      "watch_out": "Concentration. If your one lane hits a pothole, the whole book feels it.",
+      "glyph_id": "nicheplay",
+      "mechanics": [
+        "information-asymmetry",
+        "brand-premium",
+        "adverse-selection"
+      ]
+    },
+    {
+      "play_name": "Deposit Rush",
+      "tagline": "Outbid everyone on savings. Pull cash in fast, then deploy.",
+      "flow": [
+        {
+          "step_title": "High-yield magnet",
+          "step_desc": "Post a top-of-market savings or CD rate."
+        },
+        {
+          "step_title": "Liquidity floods in",
+          "step_desc": "Cash arrives faster than organic growth ever could."
+        },
+        {
+          "step_title": "Deploy the cash",
+          "step_desc": "Turn funding into higher-yielding loans and earn the spread."
+        }
+      ],
+      "the_move": "Buy funding aggressively when you need liquidity now — speed over cost.",
+      "in_the_wild": "Post-pandemic, national high-yield platforms let banks vacuum up deposits with a rate — but that funding is 'hot': it chases the next best rate and leaves as fast.",
+      "watch_out": "Rate-shoppers aren't loyal. Elevated deposit costs squeeze the very margin you chased.",
+      "glyph_id": "depositrush",
+      "mechanics": [
+        "scarcity-manufacture",
+        "capital-cycle",
+        "spread"
+      ]
+    },
+    {
+      "play_name": "Cross-Sell Trap",
+      "tagline": "One shiny product to get you in. Then bundle you in for life.",
+      "flow": [
+        {
+          "step_title": "The lure",
+          "step_desc": "A standout product — a high-yield savings account — gets you through the door."
+        },
+        {
+          "step_title": "The funnel",
+          "step_desc": "Checking, card, mortgage, investments — bundled with relationship pricing."
+        },
+        {
+          "step_title": "Stickiness",
+          "step_desc": "Each added product makes leaving costlier; you stop shopping around."
+        }
+      ],
+      "the_move": "The rate is bait. The profit is everything they sell you afterward.",
+      "in_the_wild": "A standard tactic: tie every new loan to a household checking account — integrated bundles cut churn and lock in the relationship.",
+      "watch_out": "For the customer: convenience quietly costs the best rate on each individual product. For the bank: aggressive cross-sell can tip into scandal (see Wells Fargo).",
+      "glyph_id": "crosssell",
+      "mechanics": [
+        "loss-leader",
+        "lock-in",
+        "switching-cost",
+        "bundling"
+      ]
+    }
+  ],
+  "mechanics_summary": [
+    {
+      "tag": "spread",
+      "note": "Profit is the gap between a cheap input price and a dear output price."
+    },
+    {
+      "tag": "float",
+      "note": "Hold other people's money in the gap between receiving and paying it out."
+    },
+    {
+      "tag": "capital-cycle",
+      "note": "Leverage a thin capital base into a large asset book; regulated by ratio."
+    },
+    {
+      "tag": "lock-in",
+      "note": "Make leaving costlier than staying."
+    },
+    {
+      "tag": "loss-leader",
+      "note": "Lose on the lure to win on everything sold after it."
+    },
+    {
+      "tag": "toll-booth",
+      "note": "Sit on a flow and charge a small fee each time value passes."
+    }
+  ],
+  "history": {
+    "origin": {
+      "who": "London goldsmith-bankers",
+      "when": "17th century",
+      "what_problem_forced_it": "Merchants needed somewhere safe to store gold. Goldsmiths issued paper receipts for deposits; when they noticed not everyone withdrew at once, they began lending out receipts against gold they held — inventing fractional-reserve lending and, with it, the spread."
+    },
+    "operator": {
+      "name": "A. P. Giannini, Bank of Italy / Bank of America",
+      "what_they_did": "Opened banking to working-class immigrants ignored by elite banks in early-1900s San Francisco; lent on character and small deposits, and famously lent to rebuild after the 1906 earthquake. Turned the 'underserved, not unworthy' niche into the largest bank in the country.",
+      "outcome": "Bank of America became, for a time, the world's largest commercial bank."
+    },
+    "counterexample": {
+      "name": "Wells Fargo cross-sell scandal (2016)",
+      "what_they_did": "Pushed the Cross-Sell Trap past the line — employees under quota pressure opened millions of accounts customers never authorized.",
+      "why_it_broke": "The play depends on customer trust; manufacturing fake demand destroyed it, drew billions in fines, and capped the bank's growth by regulators for years."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {
+        "label": "Capital ratio (illustrative)",
+        "value": "~10",
+        "unit": "%",
+        "source_url": "https://www.bis.org/bcbs/basel3.htm",
+        "as_of_date": "2026-07-26",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Illustrative gross spread",
+        "value": "~6.5",
+        "unit": "pts",
+        "source_url": null,
+        "as_of_date": "2026-07-26",
+        "confidence": "illustrative"
+      }
+    ],
+    "confidence": "ballpark",
+    "unknowns": [
+      "Exact current NIM varies widely by bank, year, and rate environment — not pinned here.",
+      "Non-interest income share differs by institution; stated only as 'a large share'.",
+      "Deposit/loan beta figures for 2022–23 are directional, not sourced to a specific filing in this entry."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "Picture two arrows off the same starting line: the loan arrow shoots up fast, the deposit arrow crawls. The widening wedge between them is the profit.",
+    "three_questions": [
+      "Where does a bank's money come in, and where does it go out?",
+      "What single equation is the whole business? (loan rate − deposit rate)",
+      "Name two ways a bank widens or defends that spread."
+    ],
+    "last_reviewed": null,
+    "next_review": null,
+    "ease": null
+  }
+}

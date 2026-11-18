@@ -1,0 +1,223 @@
+{
+  "identity": {
+    "id": "frontier-room",
+    "name": "The Frontier Room — AI Builders' Club",
+    "aka": ["Fort Lauderdale AI Builders' Club", "the screened room", "a convening layer", "working title: Current"],
+    "sector": "Community / convening / ecosystem infrastructure",
+    "geography": "Fort Lauderdale / South Florida (Broward, between Miami and Boca)",
+    "era": "2025–present AI boom; the local builder-room gap",
+    "mode": "buildout",
+    "date_walked": "2026-11-17"
+  },
+  "chain": {
+    "parent_id": null,
+    "relation": "root",
+    "relation_note": "A second root, and the human end of the stack NVIDIA and TSMC sit at the bottom of. The silicon chain ends in GPUs; this is a room full of the people renting those GPUs to build. Where the hardware entries are about owning a scarce physical input, this one is about owning a scarce social input — proximity to the best builders. Same word runs through both: whoever controls the bottleneck everyone must pass through sets the terms.",
+    "chain_position": 1,
+    "suggested_next": [
+      {
+        "id": "ai-tinkerers",
+        "relation": "template",
+        "why": "The exact model being copied — screened, demo-first, no-pitch builder meetups, sponsor-funded. A teardown of the template shows the working machine this buildout borrows from 30 miles south."
+      },
+      {
+        "id": "coworking-spaces",
+        "relation": "substitute",
+        "why": "The generalist-clubhouse business (WeWork, General Provision) this deliberately is NOT — real estate and rent vs. curation and signal. The clearest contrast class for why asset-light convening is a different business."
+      },
+      {
+        "id": "venture-capital",
+        "relation": "customer",
+        "why": "The capital layer the room sells deal-flow access to. A teardown of how a VC fund makes money explains why a convener's 'first look' seat converts to scout fees and carry — the room's real prize."
+      }
+    ]
+  },
+  "one_line": "Own the room the region's best AI builders choose to stand in, and you own the gravity — you never pay for real estate, you charge sponsors to stand near the talent, and your real pay is being the first person every deal and hire passes through.",
+  "why_now": "South Florida's capital is here and AI-hungry — roughly $2B of venture flowed into the region in H1 2025 — but the builder infrastructure outside Miami's Wynwood core hasn't caught up. Serious Fort Lauderdale AI talent currently commutes ~37 minutes south to Miami and hands its energy to that scene. There is no screened, demo-first AI builders' room anchored in Broward. The window: AI is in its 'third inning' where winners are deep verticalized B2B companies, exactly the serious builders a screened room selects for — and the category name in Fort Lauderdale is unclaimed.",
+  "structural_gap": "Fort Lauderdale has the talent, the capital nearby (Las Olas VC and others are headquartered in the city itself), and institutional anchors (NSU's Levan Center, FAU Tech Runway) — but no screened, demo-first AI builders' room of its own. The serious builder energy leaks south to Miami because there is nowhere local worth staying for. The gap is not a missing building; it is a missing standard.",
+  "engine": {
+    "inputs": [
+      "A screened cohort of 40–80 active AI builders (the scarce social input)",
+      "A borrowed venue for one evening a month (General Provision, NSU Levan, FAU)",
+      "One infrastructure/cloud sponsor covering food and space",
+      "A 60-second screening form and a between-meetups channel (Slack/Discord)",
+      "The convener's own time and judgment — the standard is held, never delegated"
+    ],
+    "transformation": "Convert a venue's idle evening and a sponsor's marketing budget into concentrated proximity — a screened room where running code earns the floor. Filter hard so the conversation stays builder-to-builder, run live demos instead of pitches, and let density pull talent, talent pull demos, demos pull capital, and capital pull more talent. The convener stands at the hub, informed first and trusted most.",
+    "outputs": [
+      "A recurring, screened room of active AI builders (the compounding relationship asset)",
+      "Demo videos that recruit next month's cohort at $0 ad spend",
+      "A deal-flow and talent information edge sold to sponsors and capital",
+      "The convener's seat: first look at the region's talent, tools, and raises"
+    ],
+    "money_in": "Event sponsorship (launch-day revenue), annual partner tiers, optional member dues, talent/recruiting access fees, and — the uncapped layer — capital-side upside (scout fees, advisory equity, syndicate carry) on companies seen first.",
+    "money_out": "Near-zero cash: food and venue are sponsor- and partner-covered; tooling runs ~$30/month. The real cost is sweat and the discipline to protect the standard.",
+    "the_spread": "A night costs ~$650–1,200 to run and a single event sponsor pays $1,500–3,000 — so the room is cash-positive or break-even from night one, but the actual spread is non-cash: reputation and a deal-flow seat bought cheaply now, cashed out later as scout fees and equity.",
+    "leverage_point": "Asset-light curation. Because the product is the room and not the real estate, the convener borrows every physical input and keeps the two things that compound and cannot be bought: the screening relationship (trust) and the standing as 'the room' (reputation)."
+  },
+  "unit": "One monthly ~50-person meetup. The whole model is legible in a single night: ~$650–1,200 cash cost, covered by one $1,500–3,000 sponsor for a net of +$300 to +$1,800; and the real yield — ~5 demo videos, ~50 screened relationships, 1 convener's information edge, and 1–2 standout builders worth championing to capital (the seed of the uncapped upside).",
+  "one_unit_economics": {
+    "unit_name": "One ~50-person meetup night",
+    "line_items": [
+      {"item": "Venue (~50 cap, 3 hrs)", "cash": "$0 (market $800–1,500)", "covered_by": "Venue partner", "confidence": "illustrative"},
+      {"item": "Food + drinks (50 people)", "cash": "$600–900", "covered_by": "Event sponsor", "confidence": "illustrative"},
+      {"item": "A/V (screen + mic)", "cash": "$0", "covered_by": "Venue", "confidence": "illustrative"},
+      {"item": "Video capture of demos", "cash": "$0–300", "covered_by": "Volunteer / sponsor", "confidence": "illustrative"},
+      {"item": "Tools (Luma + Discord + form)", "cash": "~$30/mo", "covered_by": "You", "confidence": "illustrative"},
+      {"item": "Sponsor pays", "cash": "$1,500–3,000", "covered_by": "1 sponsor", "confidence": "illustrative"}
+    ],
+    "summary": "Total cash needed ~$650–1,200; one sponsor covers it; net cash +$300 to +$1,800 per night. The cash is a rounding error — the point is the relationships and demo content the night produces. Figures are the playbook's own illustrative ranges, to validate locally with real sponsors."
+  },
+  "operating_model": "A screened, monthly, demo-first room of 40–80 active AI builders — NOT a coworking space, a lease, a 'tech networking' mixer, a recruiting floor, or a lecture series. Borrow venues rather than build; a 60-second application protects signal density (admit people actively shipping AI, decline spectators and recruiters). Running code earns the floor: ~3 hours, two sets of 5-minute live demos, technical Q&A, Wednesday evenings. It is a cadence, not an event — monthly to start, with a quarterly hack night and an annual flagship 'Demo Day.' The convener owns the moderation voice from night one: correct the behavior, keep the person; protect signal over growth.",
+  "money_stack": [
+    {"layer": "Event sponsorship", "phase": "Launch (1→)", "price_range": "$1.5–3k / night", "note": "Covers food + logo + 60-sec intro. Parallel: Agentuity @ AI Tinkerers Miami."},
+    {"layer": "Annual partner tiers", "phase": "Cadence (2→)", "price_range": "$7.5–25k / yr", "note": "Founding $15–25k, Core $7.5–12k. Recurring sponsor packages: logo, demo intro slot, hiring access."},
+    {"layer": "Member dues (optional)", "phase": "Cadence (2→)", "price_range": "$25–40 / mo", "note": "40 members × $30 ≈ $14k/yr. Gate Core perks, not access."},
+    {"layer": "Talent / recruiting", "phase": "Cadence→Compound (2–3→)", "price_range": "$5–15k / hire", "note": "Hiring-access add-on; the screened room is the filter employers pay for."},
+    {"layer": "Capital-side upside (illiquid)", "phase": "Compound (3→)", "price_range": "scout / equity / carry", "note": "Scout fees $5–25k per funded deal, advisory equity 0.25–1%, micro-syndicate 10–20% carry. Where convening → deal flow → wealth. The uncapped prize."}
+  ],
+  "players_map": {
+    "conveners_to_study": ["AI Tinkerers Miami (the direct template)", "Refresh Miami (16k+ members, best distribution)", "eMerge Americas", "Miami Hack Week"],
+    "capital": ["Las Olas Venture Capital (Fort Lauderdale, Mark Volchek)", "Fuel Venture Capital", "1001 VC", "DeepWork Capital", "Blumberg Capital"],
+    "anchors": ["NSU Alan B. Levan Center of Innovation", "FAU Tech Runway", "General Provision (primary venue)", "Tech Lauderdale"],
+    "sponsors": ["Agentuity (warmest first call)", "PostHog", "Replit", "AWS / Google Cloud / Azure credit programs", "Model labs: Anthropic, OpenAI, Google dev-rel"],
+    "builders": ["Pillar", "FirmPilot", "Prescient AI", "Exowatt", "Guardz", "Mytaverse", "1PLTFRM"]
+  },
+  "plays": [
+    {
+      "play_name": "Borrow the Room",
+      "tagline": "Bring the builders; let someone else own the walls.",
+      "flow": [
+        {"step_title": "Find idle venues", "step_desc": "Partners who already want builder foot traffic — a founder clubhouse, a university innovation center — have empty evenings worth $800–1,500."},
+        {"step_title": "Trade the crowd for the space", "step_desc": "You bring ~50 vetted builders, brand, photos, and programming they don't have to create; they give you the room at $0 cash."},
+        {"step_title": "Rotate, don't lease", "step_desc": "Keep several venues in rotation so you never sign a lease, never carry rent, and can flex through lean months."}
+      ],
+      "the_move": "Never buy the asset that depreciates. Convert a venue's idle evening into your platform, and keep your balance sheet empty on purpose.",
+      "in_the_wild": {
+        "name": "The LAB Miami built its brand partly by hosting the AI builder scene, and AI Tinkerers Miami runs on a borrowed venue (The LAB) with a sponsor (Agentuity) covering costs — a working asset-light room 30 miles south",
+        "confidence": "medium"
+      },
+      "watch_out": "A borrowed room means a borrowed standard. If a venue starts dictating who gets in or turns the night into its own showcase, the signal dies — the convener must hold the admission decision, always.",
+      "mechanics": ["asset-light", "value-exchange", "venue-arbitrage", "no-lease-resilience"]
+    },
+    {
+      "play_name": "Screen Hard",
+      "tagline": "The filter is the product, not the gate.",
+      "flow": [
+        {"step_title": "Ask one real question", "step_desc": "'What are you building or shipping with AI right now?' plus a link. Sixty seconds of friction is the whole filter."},
+        {"step_title": "Admit builders, decline spectators", "step_desc": "Auto-admit hands-on builders; ratio-cap adjacent roles; decline pure sales, recruiters, and the 'AI-curious.'"},
+        {"step_title": "Cap the room", "step_desc": "A hard seat cap manufactures demand — scarcity plus screening makes admission mean something."}
+      ],
+      "the_move": "Curation is not gatekeeping — it is the asset. A screened room of fifty people shipping AI beats a thousand badge-scanners, so you filter hard and never apologize for it.",
+      "in_the_wild": {
+        "name": "AI Tinkerers caps some meetups at ~30 builders and screens for active builders only; the scarcity and screening are exactly what make the room worth being admitted to",
+        "confidence": "medium"
+      },
+      "watch_out": "Signal dilution is the fastest way to die — admitting non-builders to grow the headcount turns the room into 'just another mixer,' and the moat evaporates the night a spectator gets the floor.",
+      "mechanics": ["curation-as-moat", "scarcity-power", "signal-density", "adverse-selection-defense"]
+    },
+    {
+      "play_name": "Demos Beat Decks",
+      "tagline": "Running code earns the floor; nobody pitches.",
+      "flow": [
+        {"step_title": "Set the standard", "step_desc": "Live demos only — no slides, no vendors, no recruiters working the edges. What you shipped this week is the only credential."},
+        {"step_title": "Film everything", "step_desc": "Every 5-minute demo is captured on video, turning one night into a library of proof."},
+        {"step_title": "Let the clips recruit", "step_desc": "Published demo clips are the marketing that pulls next month's cohort — at $0 ad spend."}
+      ],
+      "the_move": "Make the content produce its own distribution. By demanding real, shipped work on stage, the room generates the exact artifacts that recruit the next, better cohort for free.",
+      "in_the_wild": {
+        "name": "AI Tinkerers' demo-first, no-pitch format is the direct template — monthly screened builder nights of roughly 150 attendees built on running code, not decks",
+        "confidence": "medium"
+      },
+      "watch_out": "The moment a sponsor is allowed to pitch from the stage, the room stops being builder-to-builder. Vendor capture is a slow poison — the standard has to be held hardest exactly when the money asks to bend it.",
+      "mechanics": ["content-flywheel", "proof-of-work", "zero-cac-marketing", "standard-as-product"]
+    },
+    {
+      "play_name": "Layer the Money",
+      "tagline": "Keep the lights on with sponsors; get rich on the seat.",
+      "flow": [
+        {"step_title": "Start with one sponsor", "step_desc": "An infra or cloud sponsor covers food and space per night — launch-day revenue that makes the room cash-neutral immediately."},
+        {"step_title": "Stack recurring layers", "step_desc": "Add annual partner tiers, optional dues, and paid hiring access as the room proves value."},
+        {"step_title": "Hold the option", "step_desc": "The real return is the convener's seat — first look at talent and deals that converts to scout fees, advisory equity, and carry."}
+      ],
+      "the_move": "Treat cash sponsorship as the floor and the deal-flow seat as the ceiling. Layers 1–4 might total $40–100k a year — real but capped; Layer 5 is uncapped, because one scouted deal in a company you saw first can dwarf every cash line combined.",
+      "in_the_wild": {
+        "name": "Agentuity sponsored nearly every recent AI Tinkerers Miami event and The LAB provided the venue — a proven sponsor-plus-venue revenue base in this exact market, 30 miles away",
+        "confidence": "medium"
+      },
+      "watch_out": "Chasing the capped cash (more dues, more tiers) while neglecting the uncapped seat is the classic error — the money that changes your life is the equity position, and it only accrues if the room's signal stays worth a first look.",
+      "mechanics": ["revenue-layering", "optionality", "convener-information-edge", "deferred-upside"]
+    },
+    {
+      "play_name": "Stand at the Hub",
+      "tagline": "Convene the flywheel; don't just watch it spin.",
+      "flow": [
+        {"step_title": "Concentrate density", "step_desc": "A screened room puts the best AI builders in one place, repeatedly."},
+        {"step_title": "Let density produce signal", "step_desc": "Density produces demos and the region's earliest news, which pulls investors and infra money toward the room."},
+        {"step_title": "Compound the cohort", "step_desc": "Capital and reputation attract the next, better cohort — and each turn makes the next easier."}
+      ],
+      "the_move": "Sit at the hub, not outside it. The convener who stands at the center of the loop is informed first and trusted most, and that position compounds into the most valuable seat in the regional scene.",
+      "in_the_wild": {
+        "name": "Refresh Miami grew into the region's largest tech community (16,000+ members) and its #MiamiTech newsletter became the best distribution channel in South Florida — the convener's-seat flywheel, proven at scale",
+        "confidence": "medium"
+      },
+      "watch_out": "The fuel is curation and cadence, not real estate — skip months (cadence collapse) or burn out as a solo organizer and the wheel stops. Distribute to a Core team early, or the hub you built collapses onto one exhausted person.",
+      "mechanics": ["network-effects", "flywheel", "first-mover", "cadence-trust"]
+    }
+  ],
+  "mechanics_summary": [
+    {"tag": "asset-light", "note": "The product is the room, not the real estate — borrow every physical input and carry no lease, so the model flexes and survives lean months."},
+    {"tag": "curation-as-moat", "note": "The screening relationship is trust that compounds and cannot be bought by a competitor. The filter is the asset, not the gate."},
+    {"tag": "network-effects", "note": "Density pulls talent, talent pulls demos, demos pull capital, capital pulls more talent — a flywheel where each turn makes the next easier."},
+    {"tag": "content-flywheel", "note": "Filmed demos become the zero-cost marketing that recruits the next cohort; the room generates its own distribution."},
+    {"tag": "convener-information-edge", "note": "Standing at the hub means knowing who and what is moving first — the seat that converts to scout fees, advisory, and reputation."},
+    {"tag": "optionality", "note": "Capped cash layers keep the lights on; the uncapped prize is an equity/scout option on the region's best startups, seen first."},
+    {"tag": "first-mover", "note": "No screened AI builders' club is anchored in Broward yet — reputation is slow to build and hard to copy, so owning the category name early is the moat."}
+  ],
+  "history": {
+    "origin": {
+      "who": "The convener (Andrew), modeling on Refresh Miami and AI Tinkerers",
+      "when": "Conceived 2025–2026 against the South Florida AI capital boom",
+      "what_problem_forced_it": "Serious Fort Lauderdale AI builders had nowhere local to convene and defaulted to a ~37-minute drive to Miami's scene, bleeding the region's talent energy south. The playbook's insight: Fort Lauderdale is not the periphery but the geographic midpoint between Boca's FAU Tech Runway (~20 mi north) and Miami (~30 mi south) — a room here lowers the access cost from both directions and pulls the center of gravity into open territory."
+    },
+    "operator": {
+      "name": "AI Tinkerers Miami + The LAB Miami (the template operators)",
+      "what_they_did": "Ran the exact unit — screened, demo-first, no-pitch builder nights, free to attendees, with food and venue covered by a sponsor (Agentuity) and a host (The LAB). Proved that an asset-light convening layer works in this specific market.",
+      "outcome": "A durable, sponsor-funded monthly room of ~150 builders 30 miles south — the working machine this buildout copies rather than invents. 'Good artists copy; great artists steal what works.'"
+    },
+    "counterexample": {
+      "name": "The generalist clubhouse (e.g. a WeWork-style coworking lease)",
+      "what_they_did": "Sells space and broad community — rent from memberships, dedicated desks, private offices — with high capital needs (long lease, build-out, staffed campus) and a moat of location plus hospitality.",
+      "why_it_broke": "That moat is replicable with capital; the convener is a landlord of a network, not the hub of its deal flow. The lesson this buildout inverts: in a curation-and-trust business, signing a lease to grow headcount is the move that converts a high-margin reputation asset into a low-margin real-estate business exposed to every empty desk."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {"claim": "Roughly $2B of venture capital into South Florida in H1 2025", "value": "~$2B", "as_of_date": "2026-11-17", "source_url": null, "confidence": "illustrative"},
+      {"claim": "Fastest observed Fort Lauderdale → Miami AI-scene drive ~37 min; typical mid-week ~60 min", "value": "37–60 min", "as_of_date": "2026-11-17", "source_url": null, "confidence": "illustrative"},
+      {"claim": "Miami ranked No. 22 globally and No. 10 among US metros (2025 Global Startup Ecosystem Report)", "value": "#10 US / #22 global", "as_of_date": "2026-11-17", "source_url": null, "confidence": "illustrative"},
+      {"claim": "One meetup: ~$650–1,200 cash cost, $1,500–3,000 sponsor, net +$300 to +$1,800", "value": "net +$300–1,800/night", "as_of_date": "2026-11-17", "source_url": null, "confidence": "illustrative"},
+      {"claim": "Screening funnel per event: ~150 applications → 70 admitted → 50 attend → 5 demo → 1–2 standouts", "value": "150→70→50→5→1-2", "as_of_date": "2026-11-17", "source_url": null, "confidence": "illustrative"}
+    ],
+    "overall": "illustrative",
+    "unknowns": [
+      "Every figure here comes from Andrew's own Frontier Room playbook as an illustrative planning range — none were independently re-verified in this session against primary sources (VC totals, the Global Startup Ecosystem Report, drive times).",
+      "The revenue stack (sponsor tiers, scout fees, carry) is a plan to pressure-test with real South Florida sponsors, not booked revenue.",
+      "Whether Fort Lauderdale's builder density is actually sufficient to sustain a monthly screened room is the core untested assumption.",
+      "This is educational business analysis and a founder's own planning document, not investment or legal advice; convening, sponsorship, and any syndicate/scout activity carry regulatory and tax considerations to check locally."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "A single lit room on the ground floor of a borrowed building, halfway up a dark coastline between two city glows — Boca's lights to the north, Miami's brighter blaze to the south. Inside, fifty people crowd around a laptop on a stool where someone is running live code; no stage, no slides, no lanyard-scanners. At the doorway stands the convener, not charging admission but checking a single question on a phone — 'what are you building?' — and quietly turning away the suits with pitch decks. Through the window, investors and sponsors press their faces to the glass, trying to get in. The room owns no walls, pays no rent, and is the most valuable address in the region.",
+    "questions": [
+      "What is the actual product — the venue, the coffee, the membership, or the room itself? (And why does owning no real estate make the moat stronger, not weaker?)",
+      "The cash from one night is a rounding error. So what is the convener really being paid in, and when does it pay out?",
+      "Name the one admission decision the convener can never delegate, and what dies the night they get it wrong."
+    ]
+  },
+  "economics_lens": {
+    "concept": "Network effects and two-sided markets (increasing returns to density)",
+    "micro_or_macro": "micro",
+    "explain": "The room is a two-sided market: builders want to be where the other best builders and the capital are, and sponsors/investors want to be where the screened builders are — each side's value rises with the other's participation, a direct Metcalfe-style network effect. Curation is the mechanism that keeps the externality positive: admitting non-builders would be a congestion/adverse-selection effect that dilutes the signal every member came for, so the screen is really externality management. And because reputation and trust compound while real estate depreciates, the business tends toward increasing returns for the first credible convener — the same winner-take-most logic that makes NVIDIA's developer ecosystem hard to dislodge, here running on people instead of silicon."
+  }
+}

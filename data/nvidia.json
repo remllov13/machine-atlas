@@ -1,0 +1,213 @@
+{
+  "identity": {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "aka": ["Nvidia Corporation", "NVDA", "the AI shovel seller"],
+    "sector": "Semiconductors / AI compute infrastructure",
+    "geography": "United States (Santa Clara, CA); manufacturing via Taiwan",
+    "era": "1993-present; AI data-center dominance 2023-present",
+    "mode": "teardown",
+    "date_walked": "2026-11-17"
+  },
+  "chain": {
+    "parent_id": null,
+    "relation": "root",
+    "relation_note": "First entry in the Atlas. NVIDIA is the floor the modern AI economy stands on: nearly every AI business studied later will buy from, build on, or try to route around this machine. Starting the thread here means every future entry can point back to 'who they pay for compute.'",
+    "chain_position": 1,
+    "suggested_next": [
+      {
+        "id": "tsmc",
+        "relation": "supplier",
+        "why": "NVIDIA designs chips but makes none. TSMC fabricates every one and owns the advanced packaging (CoWoS) that is the real bottleneck. You cannot understand NVIDIA's 'fabless' leverage without tearing down who actually holds the furnace."
+      },
+      {
+        "id": "openai",
+        "relation": "customer",
+        "why": "The archetypal 'miner' buying NVIDIA's shovels. A teardown of a frontier AI lab shows the demand side of this machine: why buyers pay 70%+ gross margins and still come back every year."
+      },
+      {
+        "id": "coreweave",
+        "relation": "customer",
+        "why": "A 'neocloud' that rents NVIDIA GPUs by the hour. It reveals how NVIDIA's allocation power reshapes an entire layer of middlemen who exist only to resell its scarce silicon."
+      }
+    ]
+  },
+  "one_line": "NVIDIA sells the only shovels the AI gold rush can use, then gives away the map (CUDA) for free so the shovels stay the only ones that work.",
+  "engine": {
+    "inputs": [
+      "Chip designs and architectures (Hopper, Blackwell, Rubin) from in-house R&D",
+      "Fabricated wafers and advanced packaging bought from TSMC",
+      "High-bandwidth memory (HBM) from SK Hynix, Micron, Samsung",
+      "A free, two-decade-old software platform (CUDA) and the developers trained on it"
+    ],
+    "transformation": "Turn a commodity (silicon) into a system by wrapping the chip in proprietary software, networking, and reference designs so that buying a GPU means buying into an ecosystem that is expensive to leave. Design the hardware, outsource the hard capital (fabs) to TSMC, and keep the two highest-margin layers: architecture design and the CUDA software stack.",
+    "outputs": [
+      "Data-center AI accelerators (GPUs) sold as chips, boards, and whole racks (GB200 NVL72)",
+      "Networking (NVLink, InfiniBand via the Mellanox acquisition)",
+      "The CUDA software platform and libraries, given away to lock in demand",
+      "Gaming GPUs, pro visualization, and automotive as secondary lines"
+    ],
+    "money_in": "Mostly one-time hardware sales to hyperscalers, AI labs, neoclouds, and governments, increasingly as high-ticket integrated systems rather than loose chips.",
+    "money_out": "Wafers and packaging to TSMC, HBM to memory makers, heavy R&D to keep the one-year architecture cadence, and stock-based compensation to retain scarce chip and AI talent.",
+    "the_spread": "A fabless design + software company carrying roughly 71-75% GAAP gross margin. NVIDIA captures the designer's and the platform's margin while TSMC absorbs the capital intensity of actually building chips.",
+    "leverage_point": "CUDA. The hardware is replicable; the fifteen-plus years of developer habit, tooling, and optimized libraries built on CUDA are not. That software lock-in is what lets NVIDIA charge gold-rush prices for silicon."
+  },
+  "unit": "One AI accelerator (or, increasingly, one rack of them). The relevant unit economics: revenue per GPU at a ~70%+ gross margin, multiplied across millions of units — and the fact that each GPU sold deepens the CUDA install base, lowering the odds the next buyer defects.",
+  "plays": [
+    {
+      "play_name": "Free Map",
+      "tagline": "Give the software away so the hardware stays the only hardware that works.",
+      "flow": [
+        {"step_title": "Seed the standard", "step_desc": "Release a free software platform (CUDA, 2006) and spend years getting universities, researchers, and framework authors to build on it before anyone needs it for AI."},
+        {"step_title": "Let habits harden", "step_desc": "Every tutorial, PhD thesis, and production pipeline written against CUDA becomes switching cost. A rival chip now has to beat NVIDIA AND re-run a decade of software work."},
+        {"step_title": "Charge on the hardware", "step_desc": "Because the software is only free on NVIDIA silicon, the lock-in shows up as pricing power on the GPUs people must buy to use what they already know."}
+      ],
+      "the_move": "Monetize a hardware moat by giving the complementary software away. The giveaway is not generosity; it is the toll booth relocated one layer up.",
+      "in_the_wild": {
+        "name": "PyTorch and the entire deep-learning research stack were built and optimized CUDA-first, so frontier training runs assume NVIDIA by default",
+        "confidence": "illustrative"
+      },
+      "watch_out": "If a credible open layer (an OpenAI/Microsoft/Meta-backed software standard, or AMD's ROCm reaching parity) lets buyers keep their code while swapping silicon, the toll booth loses its road.",
+      "mechanics": ["switching-costs", "ecosystem-lock-in", "loss-leader-complement", "network-effects"]
+    },
+    {
+      "play_name": "Sell Shovels",
+      "tagline": "In a gold rush, be the one store every miner has to visit.",
+      "flow": [
+        {"step_title": "Spot the rush", "step_desc": "When a frenzy begins (deep learning, then generative AI), identify the one input every competitor needs regardless of who wins."},
+        {"step_title": "Own the input", "step_desc": "Be the default supplier of that input so rival miners fund you no matter which of them strikes gold."},
+        {"step_title": "Stay neutral and paid", "step_desc": "Avoid picking a winner among customers; sell to all of them, so your revenue is the sum of the whole war, not one army."}
+      ],
+      "the_move": "Collect a tax on an entire competitive frenzy by supplying the shared bottleneck instead of competing inside it.",
+      "in_the_wild": {
+        "name": "xAI's 'Colossus' supercomputer in Memphis was stood up on roughly 100,000 NVIDIA H100 GPUs — a direct OpenAI rival paying NVIDIA to try to beat OpenAI, who also buys NVIDIA",
+        "confidence": "medium"
+      },
+      "watch_out": "The richest miners (Google with TPUs, Amazon with Trainium, Microsoft and Meta with in-house silicon) can afford to forge their own shovels and stop visiting the store.",
+      "mechanics": ["picks-and-shovels", "derived-demand", "neutral-supplier", "bottleneck-control"]
+    },
+    {
+      "play_name": "No Furnace",
+      "tagline": "Design the chip, let someone else own the factory.",
+      "flow": [
+        {"step_title": "Skip the fab", "step_desc": "Build no multi-billion-dollar fabrication plants. Design the silicon and hand the blueprints to a contract manufacturer (TSMC)."},
+        {"step_title": "Keep the fat layers", "step_desc": "Retain the two highest-margin activities — architecture design and the software platform — and push the capital-heavy, lower-margin manufacturing onto the partner."},
+        {"step_title": "Scale on someone else's balance sheet", "step_desc": "Grow unit volume without growing your own factories, so revenue can multiply far faster than your fixed assets."}
+      ],
+      "the_move": "Separate the design rent from the manufacturing grind, and keep only the rent. Capital-light scaling is what turns a semiconductor company into a 70%-margin one.",
+      "in_the_wild": {
+        "name": "Every NVIDIA data-center GPU is fabricated by TSMC, and NVIDIA's supply ceiling is set by TSMC's CoWoS advanced-packaging capacity, not by NVIDIA's own plants",
+        "confidence": "high"
+      },
+      "watch_out": "No furnace means no control of the furnace. A TSMC packaging shortage, an earthquake, or a Taiwan geopolitical shock caps NVIDIA's output no matter how high demand climbs.",
+      "mechanics": ["fabless", "asset-light", "margin-stack", "outsourced-capital-intensity"]
+    },
+    {
+      "play_name": "Yearly Tick",
+      "tagline": "Ship a new architecture every year so staying still means falling behind.",
+      "flow": [
+        {"step_title": "Set a cadence", "step_desc": "Commit to a roughly annual architecture cycle (Hopper to Blackwell to Rubin) instead of waiting multiple years between generations."},
+        {"step_title": "Reset the frontier", "step_desc": "Each generation jumps performance-per-dollar enough that last year's fleet is competitively obsolete for the labs racing each other."},
+        {"step_title": "Force the re-buy", "step_desc": "Customers who skip a generation risk training slower than rivals, so the upgrade is defensive, not optional — demand refreshes itself."}
+      ],
+      "the_move": "Weaponize your own R&D speed. By outrunning both competitors and your own installed base, you convert a durable good into something closer to a subscription.",
+      "in_the_wild": {
+        "name": "NVIDIA moved from the Hopper (H100) generation to Blackwell (GB200) and publicly committed to a one-year product cadence, compressing the window in which any rival can catch a single chip",
+        "confidence": "medium"
+      },
+      "watch_out": "A brutal cadence strains TSMC, customers' power and cooling budgets, and NVIDIA's own validation. Slip once, or ship a flawed generation, and the treadmill becomes a liability buyers resent.",
+      "mechanics": ["planned-obsolescence", "innovation-cadence", "red-queen-race", "recurring-demand"]
+    },
+    {
+      "play_name": "Sell the Rack",
+      "tagline": "Stop selling chips; sell the whole machine around them.",
+      "flow": [
+        {"step_title": "Buy the missing piece", "step_desc": "Acquire the networking that ties GPUs together (Mellanox, ~$7B, closed 2020) so you own how chips talk, not just the chips."},
+        {"step_title": "Integrate upward", "step_desc": "Package GPUs, CPUs, NVLink, and InfiniBand into full systems and racks (DGX, GB200 NVL72) sold as one unit."},
+        {"step_title": "Raise the ticket", "step_desc": "A rack sells for far more than its loose chips and buries the moat deeper — now the networking and system software lock in too, not just CUDA."}
+      ],
+      "the_move": "Move up the value chain from component to system. Bundling raises average selling price and makes the product harder to disaggregate or substitute piece by piece.",
+      "in_the_wild": {
+        "name": "The GB200 NVL72 is sold as a 72-GPU rack-scale 'single giant GPU,' and NVIDIA's 2020 Mellanox acquisition is what let it own the high-speed interconnect inside it",
+        "confidence": "medium"
+      },
+      "watch_out": "Selling systems puts NVIDIA in competition with its own server-maker and cloud customers, and invites antitrust attention as the bundle swallows more of the stack.",
+      "mechanics": ["vertical-integration", "bundling", "asp-expansion", "acquire-the-complement"]
+    },
+    {
+      "play_name": "Allocation",
+      "tagline": "When demand outruns supply, deciding who gets fed is power.",
+      "flow": [
+        {"step_title": "Run short on purpose or by luck", "step_desc": "With TSMC packaging capped, NVIDIA cannot make enough GPUs, so it must choose which customers get allocation and how much."},
+        {"step_title": "Price and steer", "step_desc": "Scarcity lets NVIDIA hold margins and shape the ecosystem — favoring partners, investing in buyers, and influencing who can scale."},
+        {"step_title": "Convert scarcity into relationships", "step_desc": "Allocation becomes leverage: customers court the supplier, and NVIDIA can take stakes in or strike supply deals with the clouds and labs that depend on it."}
+      ],
+      "the_move": "Treat a shortage as a steering wheel. Whoever rations a scarce, must-have input controls more than its own price — it shapes the market around it.",
+      "in_the_wild": {
+        "name": "NVIDIA has invested in or struck large supply-linked arrangements with GPU-dependent buyers such as CoreWeave, blurring the line between supplier and backer",
+        "confidence": "illustrative"
+      },
+      "watch_out": "Scarcity is temporary. When TSMC capacity, competing silicon, and a demand plateau all arrive, allocation power flips to buyer's-market pricing — and the stakes taken at the top can sour.",
+      "mechanics": ["scarcity-power", "allocation-leverage", "supplier-financing", "demand-shaping"]
+    }
+  ],
+  "mechanics_summary": [
+    {"tag": "switching-costs", "note": "CUDA turns a decade of developers' habits into a wall around the hardware. The moat is software, not silicon."},
+    {"tag": "picks-and-shovels", "note": "Revenue is a tax on an entire competitive frenzy; NVIDIA wins whichever AI lab wins."},
+    {"tag": "fabless", "note": "Design and software kept in-house; capital-heavy manufacturing pushed to TSMC. That split is the source of the fat margin."},
+    {"tag": "complement-giveaway", "note": "Make the complement (software) free to protect pricing on the thing you sell (chips)."},
+    {"tag": "innovation-cadence", "note": "A one-year architecture cycle outruns rivals and the installed base, converting a durable good into a repeat purchase."},
+    {"tag": "bundling", "note": "Selling racks and networking, not just chips, raises ticket size and deepens lock-in beyond CUDA."},
+    {"tag": "bottleneck-control", "note": "Owning the one shared input of a boom gives pricing and allocation power over far larger buyers."},
+    {"tag": "derived-demand", "note": "NVIDIA's sales rise and fall with its customers' belief that more compute buys more capability — a belief, not a contract."}
+  ],
+  "history": {
+    "origin": {
+      "who": "Jensen Huang, Chris Malachowsky, and Curtis Priem",
+      "when": "Founded 1993; CUDA launched 2006; the AI inflection arrived 2012 (AlexNet trained on NVIDIA GPUs) and exploded with generative AI from 2022-2023",
+      "what_problem_forced_it": "NVIDIA began selling graphics chips for games. The accidental discovery was that the same parallel hardware built to render pixels was ideal for the matrix math behind neural networks. CUDA (2006) was a bet — years before it paid off — that general-purpose GPU computing would matter. When deep learning arrived, NVIDIA was the only company whose hardware and software were already waiting."
+    },
+    "operator": {
+      "name": "Jensen Huang (co-founder and CEO, 1993-2026)",
+      "what_they_did": "Ran NVIDIA for its entire life until November 2026, betting the company repeatedly on GPU computing and CUDA long before AI made it obvious, and compressing the product cadence to a yearly beat during the AI boom. Under him NVIDIA briefly became the most valuable company on earth.",
+      "outcome": "Huang resigned as President, CEO, and board member effective November 12, 2026; CFO Colette Kress was named interim CEO while the board searches for a permanent successor, and Harvey C. Jones became the company's first-ever board Chair. The machine Huang built now faces its first test without its architect — a live case study in whether a moat this deep is a company or a person."
+    },
+    "counterexample": {
+      "name": "Intel",
+      "what_they_did": "Owned the prior era of computing by owning both the chip design AND the factories (the integrated-device model), and dominated CPUs for decades.",
+      "why_it_broke": "Intel bet on its own fabs and its CPU franchise, missed the shift to parallel/GPU compute and the AI workload, and watched a fabless designer pairing with TSMC leapfrog it. Owning the furnace became a weight, not a moat, when the furnace fell behind TSMC's process lead. The lesson NVIDIA's fabless play inverts: in this era, the rent is in design and software, not in the plant."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {"claim": "Full-year FY2026 revenue of $215.9 billion, up 65% year over year", "value": "$215.9B", "as_of_date": "2026-02-25", "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026", "confidence": "high"},
+      {"claim": "Full-year FY2026 Data Center revenue of $193.7 billion, up 68%", "value": "$193.7B", "as_of_date": "2026-02-25", "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026", "confidence": "high"},
+      {"claim": "Full-year FY2026 GAAP gross margin of 71.1%", "value": "71.1%", "as_of_date": "2026-02-25", "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026", "confidence": "high"},
+      {"claim": "Full-year FY2026 GAAP net income of $120.1 billion", "value": "$120.1B", "as_of_date": "2026-02-25", "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026", "confidence": "high"},
+      {"claim": "Q3 FY2026 revenue $57.0B, Data Center $51.2B, GAAP gross margin 73.4% (quarter ended Oct 26, 2025)", "value": "$57.0B rev / $51.2B DC / 73.4% GM", "as_of_date": "2025-11-19", "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026", "confidence": "high"},
+      {"claim": "NVIDIA holds an estimated 80-92% share of AI data-center accelerators; exact figure varies by analyst and by whether the measure is units, revenue, or add-in-board GPUs", "value": "~80-90%+", "as_of_date": "2025-11-19", "source_url": "https://www.kucoin.com/news/flash/nvidia-maintains-81-90-ai-chip-market-share-amid-rising-competition", "confidence": "illustrative"},
+      {"claim": "Jensen Huang resigned as President, CEO and board member effective Nov 12, 2026; CFO Colette Kress named interim CEO (per SEC Form 8-K)", "value": "CEO transition 2026-11-12", "as_of_date": "2026-11-12", "source_url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm", "confidence": "high"}
+    ],
+    "overall": "high",
+    "unknowns": [
+      "Exact AI-accelerator market share is not a clean published figure — estimates range ~80-92% depending on source and methodology (units vs revenue vs add-in-board). Treated as illustrative.",
+      "The reasons reported for Jensen Huang's resignation (an alleged affair with a person suspected of spying) are journalistic claims; only the fact and date of the transition are confirmed by the SEC filing. The Atlas records the governance change, not the tabloid narrative.",
+      "The durability of NVIDIA's margin under hyperscaler in-house silicon (Google TPU, Amazon Trainium, Microsoft/Meta chips) is genuinely contested and unknowable from current data.",
+      "How much of recent 'demand' is durable AI value versus circular vendor-financed buildout (NVIDIA investing in customers who then buy NVIDIA) is debated and not resolvable here.",
+      "This is educational business analysis, not investment advice. No claim is made about NVIDIA's stock or future financial performance."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "A gold-rush valley at night, lit by thousands of lamps. Prospectors in muddy coats — their backs stitched with the names OpenAI, Meta, xAI, Google — hack at the dark rock. Every pickaxe, lamp, and shovel is stamped with the same green eye. At the valley's single general store stands a leather-aproned shopkeeper in a black jacket, handing out tools with one hand. In the other hand, held behind his back, is the only map (labeled CUDA) — and none of the shovels dig unless you can read it. Outside the store, a rival peddler offers cheaper shovels to an empty line.",
+    "questions": [
+      "Where does NVIDIA's real moat live — in the silicon or in the software? (If you said silicon, look again at why the map is free.)",
+      "NVIDIA owns zero chip factories. Who actually makes its chips, and why does staying fabless make the margin fat instead of thin?",
+      "In the gold rush, NVIDIA is the ____ seller. Name three 'miners' who are forced to buy from it even while trying to beat each other."
+    ]
+  },
+  "economics_lens": {
+    "concept": "Network effects and switching costs (increasing returns to adoption)",
+    "micro_or_macro": "micro",
+    "explain": "CUDA is a textbook case of increasing returns to adoption: the more developers, tutorials, and production pipelines built on NVIDIA's software, the more valuable NVIDIA hardware becomes and the costlier it is for any buyer to switch, even to a cheaper or faster rival chip. This converts a commodity (silicon) into a product with a durable moat, letting NVIDIA sustain ~70%+ gross margins that competitive markets would normally erode. It also illustrates the complementary-goods logic of a loss leader — giving the software away for free is what protects the pricing power on the thing actually sold."
+  }
+}

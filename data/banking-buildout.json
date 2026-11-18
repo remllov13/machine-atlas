@@ -1,0 +1,318 @@
+{
+  "id": "banking-retail-buildout",
+  "name": "Retail Banking",
+  "aka": [
+    "de novo bank",
+    "starting a bank",
+    "bank charter"
+  ],
+  "sector": "Financial services",
+  "geography": "US framing (charter + FDIC)",
+  "era": "De novo formation, present day",
+  "mode": "buildout",
+  "date_walked": "2026-07-26",
+  "chain": {
+    "parent_id": "banking-retail",
+    "relation": "same_business_inverse",
+    "relation_note": "The buildout half of the golden pair — same machine as the teardown, viewed from the founder's side.",
+    "chain_position": 0,
+    "suggested_next": [
+      {
+        "id": "core-banking-software",
+        "relation": "upstream_supplier",
+        "why": "You can't launch without a core system — the first vendor you'd shop, and a business in its own right."
+      },
+      {
+        "id": "banking-as-a-service",
+        "relation": "substitute",
+        "why": "The modern shortcut: rent a chartered bank's rails instead of getting your own charter."
+      }
+    ]
+  },
+  "one_line": "Raise ~$20M of capital, win a charter, buy deposits cheap and lend them dear — then survive the years before the spread outruns the burn.",
+  "engine": {
+    "inputs": "Founder capital + regulatory approval + a deposit base",
+    "transformation": "Convert equity capital into a charter, then leverage deposits ~10x into a loan book",
+    "outputs": "A regulated balance sheet that earns the spread",
+    "money_in": "Net interest income once loans are on the book; fees later",
+    "money_out": "Charter/legal spend, core-system build, staff, and interest paid to win deposits",
+    "the_spread": "loan yield − (deposit cost + operating cost + loan losses)",
+    "leverage_point": "The charter itself — it's the license to run ~10x leverage legally; everything before it is pure cost"
+  },
+  "unit": {
+    "unit_name": "The de novo formation (one new bank)",
+    "unit_economics": "~$10–50M initial capital (community banks ~$10–20M; regional 50M+); ~1–3 yrs to charter; roughly break-even for years 0–2 while deposits build. Figures illustrative — validate with counsel.",
+    "what_one_unit_produces": "A perpetual, regulated money-machine and a balance sheet that compounds — plus a moat competitors need years and regulators to replicate."
+  },
+  "plays": [
+    {
+      "play_name": "Niche Charter",
+      "tagline": "Don't out-scale the big banks. Serve who they price out.",
+      "flow": [
+        {
+          "step_title": "Pick the underserved",
+          "step_desc": "A segment big banks decline — a local trade, an immigrant community, a specific small-business type."
+        },
+        {
+          "step_title": "Underwrite what you know",
+          "step_desc": "Lend on relationship and local knowledge competitors can't read from a spreadsheet."
+        },
+        {
+          "step_title": "Own the category",
+          "step_desc": "Become the default bank for that niche before anyone else notices it."
+        }
+      ],
+      "the_move": "The charter is expensive, so aim it at a lane where you already have an edge — not the open market.",
+      "in_the_wild": "A.P. Giannini built Bank of Italy (later Bank of America) by banking working-class immigrants elite banks ignored in early-1900s San Francisco.",
+      "watch_out": "Concentration risk — regulators scrutinize a book that's all one segment; you need diversification on the horizon.",
+      "glyph_id": "nichecharter",
+      "mechanics": [
+        "regulatory-moat",
+        "information-asymmetry",
+        "brand-premium"
+      ]
+    },
+    {
+      "play_name": "Rails, Rented",
+      "tagline": "Skip the charter. Rent someone else's.",
+      "flow": [
+        {
+          "step_title": "Partner a chartered bank",
+          "step_desc": "Use a Banking-as-a-Service provider that already holds the license."
+        },
+        {
+          "step_title": "Own the customer + product",
+          "step_desc": "You build the app and brand; they hold the regulated balance sheet."
+        },
+        {
+          "step_title": "Launch in months, not years",
+          "step_desc": "Trade a slice of economics for speed and near-zero charter cost."
+        }
+      ],
+      "the_move": "If the charter is the cost center, don't buy it — rent it, and put your capital into distribution instead.",
+      "in_the_wild": "Most modern neobanks (Chime, Cash App banking features) run on partner-bank rails rather than their own charter.",
+      "watch_out": "You don't own the moat — the partner does. Regulators have tightened BaaS oversight; the rails can change under you.",
+      "glyph_id": "railsrented",
+      "mechanics": [
+        "asset-light",
+        "platform-tax",
+        "commoditize-your-complement"
+      ]
+    },
+    {
+      "play_name": "Deposit-First Launch",
+      "tagline": "Win the funding before you chase the loans.",
+      "flow": [
+        {
+          "step_title": "Lead with a rate",
+          "step_desc": "Open with a competitive high-yield account to build a deposit base fast."
+        },
+        {
+          "step_title": "Prove liquidity to regulators",
+          "step_desc": "A stable funding base is what lets you lend and satisfies examiners."
+        },
+        {
+          "step_title": "Deploy conservatively",
+          "step_desc": "Lend the base out slowly, keeping credit quality pristine while you scale."
+        }
+      ],
+      "the_move": "Solve the chicken-and-egg (need deposits to lend, need loans to attract deposits) by buying deposits first.",
+      "in_the_wild": "De novo and online banks routinely launch with a top-of-market savings rate to bootstrap a funding base before building the loan book.",
+      "watch_out": "Hot money — rate-shopper deposits flee when a competitor outbids you, leaving you funding-short.",
+      "glyph_id": "depositfirst",
+      "mechanics": [
+        "scarcity-manufacture",
+        "capital-cycle",
+        "spread"
+      ]
+    }
+  ],
+  "mechanics_summary": [
+    {
+      "tag": "regulatory-moat",
+      "note": "The charter is a license competitors need years and regulators to replicate — a moat you buy with time, not just money."
+    },
+    {
+      "tag": "capital-cycle",
+      "note": "Thin equity leveraged into a large book, governed by ratio; the whole game is surviving to where leverage pays."
+    },
+    {
+      "tag": "asset-light",
+      "note": "The BaaS path avoids the balance sheet and the charter entirely — rent the rails."
+    },
+    {
+      "tag": "spread",
+      "note": "Same core as the teardown — the buildout is just the cost of getting to the point where you earn it."
+    }
+  ],
+  "why_now": "Rate environments and the rise of Banking-as-a-Service have split the path in two: the classic charter route (slow, expensive, durable moat) and the rented-rails route (fast, cheap, no moat). A founder today actually chooses which business they're in — that choice is the whole strategy.",
+  "structural_gap": "Big banks price out entire segments (thin-file borrowers, niche small businesses, specific communities). Those segments still need credit and a place to bank. The gap is a lane where relationship underwriting beats algorithmic underwriting — exactly where a focused de novo (or a niche neobank on rented rails) can win.",
+  "one_unit_economics": {
+    "line_items": [
+      {
+        "item": "Initial capital (community-scale)",
+        "cash": "$10–20M",
+        "note": "Regulators set the floor; more for regional ambitions",
+        "confidence": "ballpark"
+      },
+      {
+        "item": "Charter/legal/compliance to approval",
+        "cash": "$1–5M",
+        "note": "Lawyers, consultants, application process",
+        "confidence": "illustrative"
+      },
+      {
+        "item": "Core banking system + tech build",
+        "cash": "$2–5M",
+        "note": "The rails, or a big chunk of a BaaS fee if renting",
+        "confidence": "illustrative"
+      },
+      {
+        "item": "Leadership + compliance staff (annual)",
+        "cash": "$1–2M/yr",
+        "note": "Experienced bankers regulators trust",
+        "confidence": "illustrative"
+      },
+      {
+        "item": "Deposit acquisition (rate + marketing)",
+        "cash": "millions, ongoing",
+        "note": "The cost of winning trust with money",
+        "confidence": "illustrative"
+      }
+    ],
+    "summary": "Years 0–2 are cash-negative by design — you're buying a charter and a deposit base before the spread turns positive. The prize is a compounding regulated balance sheet."
+  },
+  "operating_model": "Assemble an experienced team first (regulators fund people, not just money) → file the charter with a clear niche thesis → raise capital from a consortium (rarely one person) → build or rent the core system → win a deposit base with competitive rates → lend conservatively to protect credit quality → scale the book as the spread compounds.",
+  "money_stack": [
+    {
+      "layer": "Net interest income",
+      "phase": "core",
+      "price_range": "the spread × the book",
+      "note": "The engine — grows with the balance sheet."
+    },
+    {
+      "layer": "Fee income",
+      "phase": "2",
+      "price_range": "account/card/overdraft/wire",
+      "note": "Non-interest income; politically fragile but real."
+    },
+    {
+      "layer": "Loan origination / servicing",
+      "phase": "2–3",
+      "price_range": "per loan",
+      "note": "Especially in a niche-lending model."
+    },
+    {
+      "layer": "Equity value of the charter",
+      "phase": "3+",
+      "price_range": "acquisition / franchise value",
+      "note": "Many de novos are ultimately acquired — the charter itself is the asset."
+    }
+  ],
+  "launch_cadence": [
+    {
+      "window": "Year -1 → 0 (pre-charter)",
+      "actions": "Assemble the team, write the niche thesis, line up capital commitments, file the charter application."
+    },
+    {
+      "window": "Charter approval (~1–3 yrs)",
+      "actions": "Survive the regulatory process; build or contract the core system; hire compliance."
+    },
+    {
+      "window": "Year 0–1 (launch)",
+      "actions": "Open deposit products with a competitive rate; build the funding base; begin conservative lending."
+    },
+    {
+      "window": "Year 1–3 (scale)",
+      "actions": "Grow the loan book, protect credit quality, layer in fee income; the spread turns net-positive."
+    }
+  ],
+  "players_map": {
+    "regulators": [
+      "OCC / state banking dept (charter)",
+      "FDIC (deposit insurance)",
+      "Federal Reserve (holding co)"
+    ],
+    "capital": [
+      "Bank-focused private equity",
+      "Consortium of local investors",
+      "Experienced-banker founders"
+    ],
+    "vendors": [
+      "Core banking system providers",
+      "Banking-as-a-Service platforms (rented-rails route)",
+      "Compliance/KYC tooling"
+    ],
+    "talent": [
+      "Ex-regional-bank executives",
+      "Chief credit + chief compliance officers",
+      "Relationship lenders in the niche"
+    ]
+  },
+  "risks": [
+    "Regulatory rejection or years of delay — the charter is not guaranteed.",
+    "The chicken-and-egg: deposits vs. loans, burning cash while you solve it.",
+    "Credit quality slips while scaling — one bad loan cohort can sink a young book.",
+    "Hot-money deposits flee when out-bid, creating a funding hole.",
+    "On the BaaS path: partner-bank or regulatory changes pull the rails out from under you."
+  ],
+  "moat": [
+    "The charter itself — slow and hard to obtain, a durable regulatory moat (classic route).",
+    "Relationship underwriting in a niche competitors can't read.",
+    "First mover as the default bank for an underserved segment.",
+    "Regulated trust — once examiners and depositors trust you, that standing compounds."
+  ],
+  "first_five_moves": [
+    "Choose the route: your own charter (durable moat, slow/expensive) or rented BaaS rails (fast/cheap, no moat).",
+    "Write the niche thesis — exactly which underserved segment and why you can underwrite it better.",
+    "Recruit an experienced banking team regulators will trust; this precedes the money.",
+    "Line up consortium capital against that thesis (~$10–20M community-scale).",
+    "File the charter (or sign the BaaS partner) and stand up the deposit product to start the funding base."
+  ],
+  "epistemics": {
+    "numbers": [
+      {
+        "label": "Initial capital, community-scale",
+        "value": "$10–20",
+        "unit": "M",
+        "source_url": "https://www.fdic.gov/resources/bankers/de-novo-banks/",
+        "as_of_date": "2026-07-26",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Time to charter",
+        "value": "~1–3",
+        "unit": "yrs",
+        "source_url": null,
+        "as_of_date": "2026-07-26",
+        "confidence": "illustrative"
+      },
+      {
+        "label": "Cash-negative window",
+        "value": "~0–2",
+        "unit": "yrs",
+        "source_url": null,
+        "as_of_date": "2026-07-26",
+        "confidence": "illustrative"
+      }
+    ],
+    "confidence": "ballpark",
+    "unknowns": [
+      "Exact capital minimums vary by state, charter type, and business plan — not pinned here.",
+      "BaaS economics (revenue split with the partner bank) vary widely by provider and deal.",
+      "Approval timelines swing with the regulatory climate; de novo activity has ebbed and flowed sharply.",
+      "This is an educational model, not legal or financial advice — a real formation needs banking counsel."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "Picture a long uphill ramp of pure cost — legal, tech, staff, deposit-buying — leading to a single gate marked 'CHARTER'. Only past the gate does the ground tilt downhill and the spread start paying. The whole buildout is getting to the gate with cash still in the tank.",
+    "three_questions": [
+      "What are the two routes to run a bank, and what does each trade off?",
+      "Why are years 0–2 cash-negative by design, and what flips it positive?",
+      "What is the real moat — and why can't a competitor just buy it?"
+    ],
+    "last_reviewed": null,
+    "next_review": null,
+    "ease": null
+  }
+}

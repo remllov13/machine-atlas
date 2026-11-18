@@ -1,0 +1,183 @@
+{
+  "identity": {
+    "id": "aws-cloud",
+    "name": "Amazon Web Services (AWS)",
+    "aka": ["AWS", "the cloud", "hyperscale cloud", "IaaS", "the hyperscaler"],
+    "sector": "Cloud computing / IT infrastructure",
+    "geography": "Global (US-headquartered, Seattle)",
+    "era": "2006-present",
+    "mode": "teardown",
+    "date_walked": "2026-11-18"
+  },
+  "chain": {
+    "parent_id": null,
+    "relation": "root",
+    "relation_note": "First entry in the Atlas. AWS is the substrate machine: most modern software and AI businesses rent their computing here instead of building it, so nearly every later entry will link back to this cost floor.",
+    "chain_position": 1,
+    "suggested_next": [
+      {
+        "id": "nvidia",
+        "relation": "supplies",
+        "why": "The upstream picks-and-shovels seller to the picks-and-shovels seller. AWS is simultaneously Nvidia's largest kind of customer and its rival (via in-house Trainium/Graviton silicon). Tears down the input side of the cloud's cost floor and the economics of selling the one scarce ingredient everyone needs."
+      },
+      {
+        "id": "snowflake",
+        "relation": "builds-on",
+        "why": "A business that rents AWS by the metered unit and resells it one layer up as a higher-priced managed service. The 'value-added reseller on top of the utility' pattern, and a clean lesson in margin stacking: how a tenant earns a spread on top of the landlord's spread."
+      },
+      {
+        "id": "coreweave",
+        "relation": "competes-with",
+        "why": "A pure-play AI 'neocloud' renting GPUs at scale. A modern challenger testing whether the hyperscale scale/capex moat still holds when a focused entrant floods one input (GPUs) and skips the rest of the AWS catalog."
+      }
+    ]
+  },
+  "one_line": "Pour billions into data centers once, then rent that capacity back to the world by the metered sip, and let scale push your cost floor below anyone who tries to follow.",
+  "engine": {
+    "inputs": [
+      "Capital (data centers, land, servers, custom silicon)",
+      "Electricity and cooling",
+      "Fiber and networking",
+      "Engineering talent",
+      "Long-term power and real-estate contracts"
+    ],
+    "transformation": "Pool enormous, lumpy capital assets into standardized, on-demand infrastructure primitives (compute, storage, database, networking) exposed through APIs, so a customer can summon or release capacity in seconds and be billed only for what they touch.",
+    "outputs": [
+      "On-demand compute (instance-hours, serverless function calls)",
+      "Metered storage (GB-months)",
+      "Managed higher-order services (databases, AI/ML, analytics) billed by usage"
+    ],
+    "money_in": "Usage-metered fees, plus reserved/committed-use discounts that pre-sell capacity, plus premium margins on managed services.",
+    "money_out": "Depreciation on data-center capex, electricity, bandwidth, engineering salaries, and in-house chip R&D.",
+    "the_spread": "Average cost per unit falls as utilization of the shared fleet rises. AWS charges a utility price well above its scale-lowered, fully-loaded cost per unit; the bigger the fleet, the lower the floor, the wider the spread. A 34.6% operating margin (Q3 2025) is that spread made visible.",
+    "leverage_point": "Utilization and fixed-cost amortization. Every incremental workload placed on already-built capacity is almost pure margin, and only a fleet this size can justify designing its own cheaper chips, which drops the floor again out of reach of smaller rivals."
+  },
+  "unit": "One metered unit of consumption, e.g. an EC2 instance-hour or a GB-month of S3 storage, priced above its fully-loaded cost-at-scale. The business is the sum of trillions of these tiny units, each carrying a sliver of margin.",
+  "plays": [
+    {
+      "play_name": "Meter Everything",
+      "tagline": "Turn capital into a tap you bill by the sip.",
+      "flow": [
+        {"step_title": "Build the reservoir", "step_desc": "Sink billions into fixed capacity: data centers, servers, networking, power."},
+        {"step_title": "Fit tiny meters", "step_desc": "Expose that capacity as small on-demand units via API: instance-hours, GB-months, per-request calls, per-millisecond execution."},
+        {"step_title": "Bill the drip", "step_desc": "Charge continuously by usage with no upfront commitment, so spend scales automatically with the customer's own growth."}
+      ],
+      "the_move": "Convert a customer's lumpy, boardroom-level capex decision into a frictionless opex drip. Adoption needs no approval, and your revenue compounds with their success instead of your sales effort.",
+      "in_the_wild": "AWS Lambda bills per-millisecond of execution and per-request; S3 bills by the GB-month. A startup can run a workload for pennies and only writes a big check once it is already winning.",
+      "watch_out": "Metered pricing hides total cost until the invoice lands. 'Bill shock' and the resulting FinOps/cost-optimization backlash are the predictable blowback of billing by the sip.",
+      "mechanics": ["metered-pricing", "capex-to-opex", "low-friction-adoption", "consumption-growth"]
+    },
+    {
+      "play_name": "Scale Moat",
+      "tagline": "The biggest fleet has the lowest floor.",
+      "flow": [
+        {"step_title": "Spread the fixed cost", "step_desc": "Amortize an enormous fixed asset base over more usage than anyone else, lowering average cost per unit."},
+        {"step_title": "Reinvest the margin", "step_desc": "Plow the resulting profit back into still more capacity and custom silicon."},
+        {"step_title": "Price past rivals", "step_desc": "Set prices at a level where sub-scale competitors lose money, letting capex requirements guard the gate."}
+      ],
+      "the_move": "Use scale to push your average cost below any smaller competitor's, then let the sheer capital required to match you do the gatekeeping no marketing could.",
+      "in_the_wild": "HP shut down its Helion public cloud (effective Jan 31, 2016) after concluding it 'made no sense to go head-to-head' with the hyperscalers and lacked the financial resources to match their scale.",
+      "watch_out": "The moat demands relentless capex (Amazon raised 2025 capital spending to roughly $125B); a scale moat also draws antitrust scrutiny, and any demand miss turns that fixed cost into dead weight.",
+      "mechanics": ["economies-of-scale", "fixed-cost-amortization", "capex-barrier-to-entry", "experience-curve"]
+    },
+    {
+      "play_name": "Own The Silicon",
+      "tagline": "Design the chip only scale can justify.",
+      "flow": [
+        {"step_title": "Reach the volume", "step_desc": "Grow usage until designing custom hardware pays off against buying it at retail."},
+        {"step_title": "Build in-house chips", "step_desc": "Design your own processors: Graviton (Arm CPUs), Trainium and Inferentia (AI chips)."},
+        {"step_title": "Keep the markup", "step_desc": "Capture the margin a merchant-silicon buyer would otherwise hand to Intel or Nvidia."}
+      ],
+      "the_move": "Vertically integrate down to the transistor. Scale is what makes a multi-year chip program rational, and it drops your cost floor below any rival that must buy compute at list price.",
+      "in_the_wild": "AWS Graviton (Arm-based server CPUs) and Trainium (AI training chips) let AWS offer compute that undercuts equivalent merchant-silicon instances and reduces its dependence on Nvidia pricing.",
+      "watch_out": "Chip R&D is a capital-heavy, multi-year bet. If the architecture loses or software support lags, the investment strands and the cost advantage never arrives.",
+      "mechanics": ["vertical-integration", "scale-enabled-R&D", "input-cost-control"]
+    },
+    {
+      "play_name": "Lock The Gravity",
+      "tagline": "Cheap to pour in, costly to pull out.",
+      "flow": [
+        {"step_title": "Make entry free", "step_desc": "Keep data ingress and storage cheap so workloads flow in without friction."},
+        {"step_title": "Let it accumulate", "step_desc": "Allow data, integrations, and service dependencies to pile up over years."},
+        {"step_title": "Charge the exit", "step_desc": "Price data-transfer-out (egress) and make re-platforming painful, so leaving costs real money and effort."}
+      ],
+      "the_move": "Build switching costs out of accumulated data and dependencies, 'data gravity,' so recurring revenue compounds not because the customer re-chooses you but because leaving is harder than staying.",
+      "in_the_wild": "AWS historically charged for data transfer out while inbound transfer was free. The lock-in was real enough that the EU's Data Act pushed cloud providers to curb egress fees, and AWS began waiving them for customers migrating off.",
+      "watch_out": "Regulators now target egress fees and lock-in directly; overplaying data gravity invites forced interoperability rules that dissolve the moat.",
+      "mechanics": ["switching-costs", "data-gravity", "recurring-revenue", "lock-in"]
+    },
+    {
+      "play_name": "Rent The Reaccel",
+      "tagline": "Sell shovels into the AI gold rush.",
+      "flow": [
+        {"step_title": "Be the default venue", "step_desc": "Position the fleet as the obvious place to run AI workloads."},
+        {"step_title": "Package the compute", "step_desc": "Offer managed model and training services (Bedrock, SageMaker) plus GPU and Trainium capacity."},
+        {"step_title": "Capture the surge", "step_desc": "Collect metered revenue as every company rents AI compute rather than building its own data centers."}
+      ],
+      "the_move": "Ride a demand wave by renting the scarce input (compute) instead of betting on which model or application wins. Whoever strikes gold, the shovel-seller gets paid.",
+      "in_the_wild": "AWS revenue re-accelerated to about 20% year-over-year, reaching $33.0B in Q3 2025, on AI-driven demand, and Amazon raised its 2025 capex to roughly $125B to build the capacity to rent.",
+      "watch_out": "That $125B of capex assumes AI demand holds. A demand air-pocket turns freshly poured fixed cost into dead weight, exactly the scale-economics trap that sank sub-scale clouds, now at hyperscaler stakes.",
+      "mechanics": ["picks-and-shovels", "demand-capture", "capex-cycle", "utilization-leverage"]
+    }
+  ],
+  "mechanics_summary": [
+    {"tag": "economies-of-scale", "note": "Average total cost falls as the shared fleet grows; the largest player holds the lowest cost floor, and the advantage widens with size rather than eroding."},
+    {"tag": "fixed-cost-amortization", "note": "Capacity is a sunk cost. Once built, every added workload on that capacity is near-pure margin, so utilization is the real profit lever."},
+    {"tag": "metered-pricing", "note": "Billing by tiny usage units turns a customer's capex into opex, removes the approval friction, and hides total cost until the invoice."},
+    {"tag": "capex-barrier-to-entry", "note": "Matching scale requires tens of billions per year in data centers and chips, a wall that fences out sub-scale rivals more effectively than any patent."},
+    {"tag": "vertical-integration", "note": "Scale alone justifies designing in-house silicon, dropping the cost floor below rivals who must buy compute at retail."},
+    {"tag": "data-gravity", "note": "Accumulated data and dependencies create switching costs, so recurring revenue compounds on inertia rather than repeated re-selling."},
+    {"tag": "picks-and-shovels", "note": "Renting the scarce input (compute) captures a boom without having to pick the boom's winner."}
+  ],
+  "history": {
+    "origin": {
+      "who": "Amazon, with Andy Jassy writing the original business plan",
+      "when": "S3 launched in 2006 and EC2 in August 2006, making AWS first to market with modern cloud infrastructure",
+      "what_problem_forced_it": "Internally, Amazon's projects that should have taken three months were spending that long just standing up database, compute, and storage from scratch, with every team rebuilding the same plumbing. Amazon built common, well-documented infrastructure services so any team could move faster, realized it was unusually good at running infrastructure at scale and low margin, and rented that capability to everyone else. As Jassy put it, 'very quietly around 2000, we became a services company.'"
+    },
+    "operator": {
+      "name": "Andy Jassy",
+      "what_they_did": "Built AWS from its first business plan into a standalone profit engine, pricing aggressively and reinvesting margin into capacity and custom silicon, then carried that playbook into the Amazon CEO seat in 2021.",
+      "outcome": "AWS generated roughly $11.4B of operating income in Q3 2025, about two-thirds of Amazon's total operating profit, on under a fifth of its revenue. The cloud subsidized the retailer."
+    },
+    "counterexample": {
+      "name": "HP Helion Public Cloud",
+      "what_they_did": "HP ran a competing OpenStack-based public cloud, then announced in October 2015 it would shut the public cloud down (effective January 31, 2016) and retreat to private and managed offerings.",
+      "why_it_broke": "HP had the technology but not the scale. It concluded it 'made no sense to go head-to-head' with AWS, Azure, and Google, was dropped from Gartner's IaaS Magic Quadrant for insufficient share, and lacked the financial resources to fund competitive capex. Sub-scale, its cost per unit never fell to where it could price and still profit, the exact downside of the scale curve AWS rides up."
+    }
+  },
+  "economics_lens": {
+    "concept": "Economies of scale (with metered utility pricing)",
+    "micro_or_macro": "micro",
+    "explain": "Cloud infrastructure is a textbook high-fixed-cost, near-zero-marginal-cost business: data centers, fiber, and custom silicon are enormous sunk costs, while serving one more instance-hour costs almost nothing. The firm that spreads the largest fixed base over the most usage has the lowest average total cost, so as output rises its cost curve keeps falling, the declining long-run average cost curve an economics course would draw. AWS's 34.6% operating margin and HP's forced exit are the same curve seen from opposite ends: scale is the moat, and sub-scale is the trap."
+  },
+  "epistemics": {
+    "numbers": [
+      {"metric": "AWS Q3 2025 revenue", "value": "$33.0B (33.01B), ~20% YoY (Jassy cited 20.2%)", "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/default.aspx", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "AWS Q3 2025 operating income", "value": "$11.43B", "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "AWS Q3 2025 operating margin", "value": "34.6%", "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "AWS annualized revenue run rate", "value": "~$132B", "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "Amazon total Q3 2025 operating income (for AWS share comparison)", "value": "$17.4B total; AWS ~66% of it", "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "Global cloud infrastructure market share, Q3 2025 (Synergy Research)", "value": "AWS 29%, Microsoft Azure 20%, Google Cloud 13%; total market ~$107B for the quarter", "source_url": "https://www.theregister.com/2025/11/20/aws_loses_market_share_azure_google/", "as_of_date": "2025-09-30", "confidence": "high"},
+      {"metric": "Amazon 2025 capital expenditure guidance", "value": "~$125B (raised), led by AWS/AI data centers", "source_url": "https://www.ciodive.com/news/aws-revenue-jumps-33b/804450/", "as_of_date": "2025-10-31", "confidence": "medium"},
+      {"metric": "AWS launch and first-to-market", "value": "S3 in 2006, EC2 in August 2006", "source_url": "https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/", "as_of_date": "2016-07-02", "confidence": "high"},
+      {"metric": "HP Helion public cloud shutdown", "value": "Announced Oct 2015, shut down effective Jan 31, 2016", "source_url": "https://www.informationweek.com/cloud/infrastructure-as-a-service/hp-kills-public-cloud-cedes-to-aws-google-microsoft/d/d-id/1322789", "as_of_date": "2015-10-22", "confidence": "high"}
+    ],
+    "overall": "high",
+    "unknowns": [
+      "AWS does not publicly break out its true unit cost, utilization rates, or the cost-per-instance-hour, so the exact width of 'the spread' at the unit level is inferred from segment margin, not disclosed.",
+      "The portion of AWS's reported operating margin attributable to custom silicon (Graviton/Trainium) versus scale alone is not separately disclosed.",
+      "The $125B 2025 capex figure is guidance and blends AWS AI buildout with other Amazon spending; the AWS-only share is not cleanly isolated here.",
+      "The 'free egress' / EU Data Act claim is directionally well-reported but the precise scope and effective dates of AWS's egress-fee waivers were not re-verified for this entry and should be confirmed before relying on specifics.",
+      "This is educational analysis of how the business works, not investment, legal, or tax advice; figures are as-of the dates shown and will drift."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "A single colossal concrete water tower looms over a flat desert plain. From its base run thousands of thin pipes to every building on the horizon, and each pipe is fitted with a spinning coin-meter that clicks softly as water trickles through. The tower's foundation is a mountain of poured concrete; the more pipes that draw from it, the cheaper each drop becomes. On a distant ridge sits a half-built rival tower, scaffolding rusting, abandoned for lack of money.",
+    "questions": [
+      "Why does the biggest cloud have the lowest cost per unit, and why does that gap widen rather than close as it grows?",
+      "How does metered, pay-as-you-go billing change a customer's buying decision compared with purchasing their own servers up front?",
+      "HP had the technology to run a public cloud; name the single thing it could not match, and explain why that one thing is the entire moat."
+    ]
+  }
+}
