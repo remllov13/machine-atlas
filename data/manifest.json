@@ -6,8 +6,9 @@
     "frontier-room",
     "payment-networks",
     "banking-buildout",
+    "openai",
     "banking",
     "tsmc"
   ],
-  "count": 8
+  "count": 9
 }

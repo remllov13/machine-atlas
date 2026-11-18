@@ -1,0 +1,194 @@
+{
+  "identity": {
+    "id": "openai",
+    "name": "OpenAI",
+    "aka": [
+      "ChatGPT",
+      "OpenAI Group PBC",
+      "the frontier lab",
+      "the demand side of the AI stack"
+    ],
+    "sector": "Frontier AI research & products (foundation models, consumer + enterprise AI)",
+    "geography": "United States (San Francisco, CA); compute via global data-center partners",
+    "era": "2015-present; nonprofit founding 2015, ChatGPT launch Nov 2022, for-profit recapitalization 2025",
+    "mode": "teardown",
+    "date_walked": "2026-11-18"
+  },
+  "chain": {
+    "parent_id": "coreweave",
+    "relation": "customer",
+    "relation_note": "The CoreWeave teardown ended by pointing here: OpenAI is CoreWeave's largest and most strategic tenant, the signed demand that makes CoreWeave's debt-fueled backlog look safe. Walk one step further down the demand stack and you reach the lab whose appetite for compute underwrites the whole chain -- nvidia -> coreweave -> openai. NVIDIA called OpenAI 'the archetypal miner buying the shovels'; CoreWeave rents OpenAI the racked-up shovels on multi-year leases. This entry tears down the buyer at the bottom of the AI supply chain: the one whose demand is the reason every machine above it got built. If OpenAI is the engine of derived demand, every supplier's capex is a bet on this lab's revenue arriving on schedule.",
+    "chain_position": 4,
+    "suggested_next": [
+      {
+        "id": "anthropic",
+        "relation": "substitute",
+        "why": "The closest frontier-lab rival and the cleanest contrast class: a different safety posture, a different cloud patron (Amazon/Google rather than Microsoft), and a different accounting of 'revenue.' Tearing it down shows which parts of OpenAI's machine are the category and which are just OpenAI."
+      },
+      {
+        "id": "microsoft",
+        "relation": "patron",
+        "why": "OpenAI's largest shareholder (~27%), its early compute landlord, and the distribution giant that puts the models in front of a billion Office/Windows users. A teardown of the patron explains how a hyperscaler buys a call option on AGI without building the lab itself."
+      },
+      {
+        "id": "ai-capex-bubble",
+        "relation": "template",
+        "why": "OpenAI's ~$1.4T of compute commitments, financed circularly by its own suppliers, is the keystone of the AI capex boom. Tearing down 'the bubble question' as a pattern -- derived demand, circular financing, and the accelerator principle -- ties nvidia, tsmc, coreweave, and openai into one macro machine."
+      }
+    ]
+  },
+  "one_line": "OpenAI gives away superhuman intelligence at or below cost to 1.2 billion people, burning tens of billions a year, betting that scale, data, and a falling cost-per-token will turn today's subsidy into tomorrow's toll -- and that the demand it promises is big enough to justify the trillion-dollar supply chain built to serve it.",
+  "engine": {
+    "inputs": [
+      "Enormous quantities of rented compute (GPUs from clouds like CoreWeave, Microsoft, Oracle; ~$1.4T of multi-year commitments)",
+      "Capital -- tens of billions in equity from Microsoft, SoftBank, Nvidia, sovereign funds, raised faster than almost any company in history",
+      "Data: public web text, licensed corpora, and a feedback flywheel from 1.2B weekly users' interactions",
+      "Scarce research talent and the brand that lets it recruit and retain them",
+      "A free-to-use consumer funnel (ChatGPT) that doubles as distribution and as a data/eval engine"
+    ],
+    "transformation": "Spend capital and compute to train frontier models, then give most people access free or cheap to win a winner-take-most market before unit costs fall. The bet is a learning curve: each generation of model is cheaper to serve per token and the brand/scale lead compounds, so a business that loses ~$20B a year today becomes a high-margin toll on intelligence once adoption is locked and compute costs per unit of capability keep dropping. Convert research breakthroughs into (1) a consumer habit (ChatGPT) and (2) an enterprise/API platform others build on.",
+    "outputs": [
+      "ChatGPT (free + paid consumer tiers) -- the fastest-adopted consumer product in history",
+      "The API/platform that developers and enterprises build products on top of",
+      "Frontier models (the GPT line and successors) licensed and embedded via Microsoft and direct enterprise deals",
+      "A standing claim on ~30 GW of future compute -- an asset and a liability at once"
+    ],
+    "money_in": "Consumer subscriptions (~50M paying consumers), enterprise and API usage (enterprise was >40% of revenue by early 2026), and licensing. Annualized revenue run-rate reached ~$50B by late 2026, up from $3.7B of revenue in 2024.",
+    "money_out": "Staggering compute and training costs, model-serving (inference) costs that scale with every free user, research headcount, and the beginnings of ~$1.4T in contracted infrastructure spend. OpenAI posted an operating loss around $21B in 2025 and projects deeply negative free cash flow for years.",
+    "the_spread": "Negative today by design. Gross margin on paid usage can be healthy, but it is swamped by the cost of serving 1.2B weekly users mostly for free and by the capex ramp. The 'spread' OpenAI is underwriting is intertemporal: lose money now to own the demand, and harvest the toll later -- if the learning curve and the demand both show up.",
+    "leverage_point": "Distribution + the data/brand flywheel. The model weights are increasingly replicable (rivals are close), but 1.2B weekly users, the 'ChatGPT' brand that became a verb, the Microsoft distribution channel, and the feedback loop that improves the product are not easily copied. That demand-side moat -- not a secret algorithm -- is what the whole valuation and the whole supply chain rest on."
+  },
+  "unit": {
+    "what": "One user interaction (a ChatGPT query or an API call). Each one costs real compute to serve. For free users that cost is pure subsidy; for paid users it is a thin margin over inference cost. The unit economics turn on cost-per-token falling (better chips, better models, cheaper inference) faster than usage grows.",
+    "the_math": "The model only closes if (lifetime value of a captured user, once habits and switching costs set in) > (cumulative subsidy spent acquiring and serving them) AND cost-per-unit-of-capability keeps dropping. OpenAI is betting the learning curve is steep enough and the market winner-take-most enough that running the largest loss in corporate history now buys a durable toll booth later. The risk: inference costs scale with free usage, so popularity itself is a cash drain until pricing power or efficiency catches up."
+  },
+  "plays": [
+    {
+      "play_name": "Give Away the Intelligence",
+      "tagline": "Subsidize the thing everyone wants until using anything else feels like a downgrade.",
+      "flow": [
+        {
+          "step_title": "Ship it free and astonishing",
+          "step_desc": "Launch ChatGPT free to consumers (Nov 2022). It reaches 100M users in two months and 1.2B weekly by 2026 -- the fastest-adopted product ever, and a data/eval engine that improves the model."
+        },
+        {
+          "step_title": "Eat the loss on purpose",
+          "step_desc": "Serve most users below cost, accepting ~$20B+ annual losses. The spend is the strategy: buy the habit and the brand before rivals can, while cost-per-token keeps falling."
+        },
+        {
+          "step_title": "Monetize the locked-in",
+          "step_desc": "Convert the funnel into paid consumer tiers, an enterprise platform (>40% of revenue), and API usage others build on -- turning a free habit into a metered toll once leaving feels costly."
+        }
+      ]
+    },
+    {
+      "play_name": "Play the Patrons Against Each Other",
+      "tagline": "If no one company can fund the AGI bet, make several compete to.",
+      "flow": [
+        {
+          "step_title": "Anchor with one giant",
+          "step_desc": "Take Microsoft's capital and Azure compute early; give Microsoft a large stake (~27%) and distribution rights. One patron de-risks the first act."
+        },
+        {
+          "step_title": "Widen the bidding",
+          "step_desc": "Then raise from Nvidia, SoftBank, sovereign funds, and others, and sign compute deals with Oracle, CoreWeave, and Amazon -- so no single supplier or funder can dictate terms, and each fears being left out."
+        },
+        {
+          "step_title": "Commit to demand you must grow into",
+          "step_desc": "Sign ~$1.4T of multi-year compute commitments (~30 GW). The commitments signal confidence and lock supply -- but also force OpenAI to grow revenue fast enough to pay for them, binding its suppliers' fate to its own."
+        }
+      ]
+    }
+  ],
+  "mechanics_summary": "OpenAI is a blitzscaling loss-leader: it sells frontier intelligence at or below cost to the largest audience it can reach, financing the shortfall with the biggest capital raises in history, on the bet that increasing returns (scale, data, brand, and a falling cost-per-token learning curve) will convert today's subsidy into tomorrow's toll. Its moat is demand-side -- 1.2B weekly users, a verb-status brand, and Microsoft distribution -- not a secret model, since rivals are close behind. Zoom out and OpenAI is the keystone of the whole Atlas AI chain: it is the derived demand that justifies CoreWeave's debt, NVIDIA's margins, and TSMC's furnaces. That is also the fragility. OpenAI has promised ~$1.4T of compute it cannot yet pay for from current revenue, and much of that demand is validated by suppliers who also fund it (Nvidia invests, clouds extend credit) -- circular financing that makes the demand signal look bigger and firmer than independent buyers alone would make it. If OpenAI's revenue arrives on schedule, the whole stack is a flywheel. If it stalls, the accelerator runs in reverse all the way back up to the furnace.",
+  "history": {
+    "origin": {
+      "who": "Founded by Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman, and others",
+      "when": "Founded 2015 as a nonprofit research lab; capped-profit arm added 2019; ChatGPT launched November 2022; recapitalized into OpenAI Group PBC in 2025",
+      "what_problem_forced_it": "OpenAI began as a nonprofit meant to ensure AGI 'benefits all of humanity,' explicitly structured to NOT be driven by profit. But frontier AI turned out to be extraordinarily capital- and compute-intensive -- far beyond what donations could fund. The capped-profit structure (2019) and then the 2025 conversion to a public benefit corporation were forced by a single economic fact: training frontier models costs tens of billions, and only equity capital at that scale could pay for it. The mission didn't change; the balance sheet demanded a structure that could absorb the world's largest private capital raises."
+    },
+    "operator": {
+      "name": "Sam Altman (CEO)",
+      "what_they_did": "Turned a research nonprofit into the demand engine of the AI economy by doing three things at once: shipping a free consumer product that became a global habit, raising and committing capital at unprecedented scale, and playing every major infrastructure provider (Microsoft, Nvidia, Oracle, SoftBank, Amazon, sovereign funds) against each other to fund the buildout. Survived a dramatic board ouster and reinstatement in November 2023 that underlined how much the machine is identified with him.",
+      "outcome": "By late 2026 OpenAI ran at a ~$50B annualized revenue run-rate against ~$21B (2025) operating losses, was valued at $500B in the October 2025 recapitalization and reportedly higher in later rounds, and sat on ~$1.4T of compute commitments. It is simultaneously the most valuable private company of the era and the single largest open question in it: whether demand for intelligence is deep enough to pay for the supply chain OpenAI has summoned into existence."
+    },
+    "counterexample": {
+      "name": "DeepSeek (and the open-weight model wave)",
+      "what_they_did": "A Chinese lab that showed in early 2025 that a competitive frontier-ish model could be trained and served at a small fraction of the assumed cost, and released open weights. It is the contrast class that threatens OpenAI's core bet: if frontier capability commoditizes and cost-per-token collapses for everyone, the moat shifts entirely to distribution and brand, and the trillion-dollar capex thesis -- that only a few well-funded labs can afford to play -- weakens. The counterexample is not 'a better model'; it is 'the same capability for far less money,' which is exactly what a learning-curve bet both needs and fears."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {
+        "claim": "Annualized revenue run-rate of about $50B as of October 2026 (up from $13.07B of revenue in 2025 and $3.7B in 2024)",
+        "value": "~$50B run-rate",
+        "as_of_date": "2026-10-01",
+        "source_url": "https://explodingtopics.com/blog/openai-revenue",
+        "confidence": "medium"
+      },
+      {
+        "claim": "Full-year 2025 revenue of $13.07B and a 2025 operating loss of about $20.9B (from leaked/audited accounts reported by Fortune)",
+        "value": "$13.07B rev / -$20.9B op loss (2025)",
+        "as_of_date": "2026-01-01",
+        "source_url": "https://explodingtopics.com/blog/openai-revenue",
+        "confidence": "medium"
+      },
+      {
+        "claim": "About 1.2 billion weekly active ChatGPT users as of September 2026; roughly 50 million paying consumer subscribers (Feb 2026); enterprise was over 40% of revenue by early 2026",
+        "value": "1.2B weekly users",
+        "as_of_date": "2026-09-01",
+        "source_url": "https://explodingtopics.com/blog/openai-revenue",
+        "confidence": "medium"
+      },
+      {
+        "claim": "October 2025 recapitalization into OpenAI Group PBC valued the entity at $500B; the OpenAI Foundation (nonprofit) controls it and holds a 26% stake (~$130B); Microsoft holds ~27%",
+        "value": "$500B; Foundation 26% / Microsoft 27%",
+        "as_of_date": "2025-10-28",
+        "source_url": "https://www.axios.com/2025/10/28/openai-completes-recapitalization",
+        "confidence": "high"
+      },
+      {
+        "claim": "A March 2026 round raised ~$122B at an $852B valuation, with a later round reportedly discussed near a ~$1.4T valuation",
+        "value": "$122B raised @ $852B (Mar 2026)",
+        "as_of_date": "2026-03-01",
+        "source_url": "https://explodingtopics.com/blog/openai-revenue",
+        "confidence": "medium"
+      },
+      {
+        "claim": "OpenAI has committed to roughly $1.4 trillion of compute/infrastructure over ~8 years (~30 GW), including an ~$300B Oracle deal and large Nvidia, AMD, Amazon, and CoreWeave arrangements; Altman has said OpenAI wants to reach ~$1T/year in infrastructure spend",
+        "value": "~$1.4T compute commitments / ~30 GW",
+        "as_of_date": "2025-10-28",
+        "source_url": "https://www.axios.com/2025/10/28/openai-1-trillion-altman",
+        "confidence": "medium"
+      },
+      {
+        "claim": "Company/FT projections cited ~$36B of 2026 revenue, ~$856B of 2026-2030 compute and infrastructure spending, and ~$278B of cumulative negative free cash flow over 2026-2030",
+        "value": "~$856B compute spend 2026-30 (proj.)",
+        "as_of_date": "2026-01-01",
+        "source_url": "https://explodingtopics.com/blog/openai-revenue",
+        "confidence": "low"
+      }
+    ],
+    "unknowns": [
+      "The true single revenue run-rate. Reported figures range from ~$50B (OpenAI's method) to ~$70B (a different accounting method), and OpenAI is private, so audited, reconciled numbers are not public -- several figures here come from leaks and secondary reporting, not filings.",
+      "Whether the ~$1.4T of compute commitments are firm obligations, options, or framework agreements that can be renegotiated. The distinction is the whole bull/bear case and is not cleanly disclosed.",
+      "How much of OpenAI's demand is independent versus circular -- validated by the same suppliers (Nvidia, clouds) who also fund or extend credit to it. The degree of circularity determines how real the demand signal is.",
+      "Unit economics per user: OpenAI has not disclosed clean inference cost per query or gross margin by tier, so the central 'does the learning curve outrun the subsidy' question is inferred, not reported.",
+      "The path and timing to positive free cash flow, and whether an IPO (widely speculated) happens before or because of the cash need."
+    ],
+    "disclaimer": "Educational teardown for pattern-recognition, not investment advice. OpenAI is a private company whose figures are largely unaudited-public and change fast; treat all numbers as dated snapshots from secondary sources."
+  },
+  "recall": {
+    "glyph_prompt": "Return to the gold-rush valley, but pull the camera back to the town square at the valley's mouth, where ALL the miners actually live. A charismatic figure stands on a crate handing out magic lanterns -- free, to an endless line of 1.2 billion townsfolk stretching to the horizon -- that light up any dark question instantly. He is paying for the lantern oil out of a bottomless sack of borrowed gold, and the sack is refilled by a ring of financiers (one wearing NVIDIA's green eye, one labeled Microsoft, one a sovereign crown) who stand in a circle, each handing gold to the next. Behind the crate, a vast IOU pinned to the sky reads '$1.4 TRILLION IN SHOVELS ORDERED.' Everyone upstream -- the shovel-renter, the shovel-seller, the furnace-keeper -- is watching this one square, because if the townsfolk ever stop needing the lanterns, every furnace in the valley goes cold.",
+    "questions": [
+      "OpenAI loses roughly $20B a year on purpose. What exactly is it buying with that loss, and what two things must be true for the subsidy to turn into a toll?",
+      "Why is OpenAI's real moat its 1.2 billion users and the ChatGPT brand rather than the model itself? (Hint: look at who's a close second.)",
+      "OpenAI sits at the bottom of the chain nvidia -> coreweave -> openai as the demand everyone above is betting on. Explain 'circular financing' here -- and why it makes that demand look bigger and safer than it may be."
+    ]
+  },
+  "economics_lens": {
+    "concept": "Blitzscaling: loss-leader pricing to capture increasing returns (scale, data, and learning-curve effects) -- and the derived demand (accelerator principle) that keystones a whole supply chain",
+    "micro_or_macro": "both",
+    "explain": "Micro: OpenAI is a textbook loss-leader played at civilizational scale. It prices a product below cost to acquire a winner-take-most market, betting on increasing returns to adoption -- more users produce more data and brand gravity, which improve the product and raise switching costs -- combined with a learning/experience curve where the cost to deliver a unit of capability falls as cumulative output rises. If cost-per-token drops faster than the subsidy compounds, the intertemporal trade works: lose money now to own a toll later. The danger is that inference cost scales with free usage, so adoption itself burns cash until pricing power or efficiency arrives, and if frontier capability commoditizes (cheap open-weight rivals), the moat collapses to distribution alone. Macro: OpenAI is the clearest live example of the accelerator principle and derived demand. Its appetite for compute is the demand that justifies CoreWeave's debt, NVIDIA's margins, and TSMC's capex -- so a change in OpenAI's growth rate is amplified as it propagates up the chain. That linkage is what makes the AI buildout both a flywheel and a potential bubble: when the demand at the bottom is partly validated by the suppliers who also finance it (circular financing), the whole structure can look sturdier than independent end-demand would justify, and a shortfall at OpenAI would run the accelerator backward all the way to the furnace."
+  }
+}
