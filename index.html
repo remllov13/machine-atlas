@@ -195,6 +195,23 @@ function roofIcon(region,x,y){
 }
 
 let VIEW={x:0,y:0,s:1};
+/* building height = economic stature, bounded [50,140]px.
+   factors (drift-proof, read only reliable fields):
+     - plays: number of distinct strategic plays the business runs (weighted x3)
+     - mechanics: distinct economic mechanics it pulls (from plays[].mechanics; capped at 12)
+   complexity = plays*3 + min(mechanics,12), mapped from [4..26] onto [50..140] and CLAMPED,
+   so no entry can ever exceed the cap no matter how its JSON drifts. */
+function buildingHeight(e){
+  const plays=Array.isArray(e.plays)?e.plays.length:0;
+  const mset=new Set();
+  (Array.isArray(e.plays)?e.plays:[]).forEach(p=>{(Array.isArray(p.mechanics)?p.mechanics:[]).forEach(m=>{if(typeof m==='string')mset.add(m.toLowerCase());});});
+  let mech=mset.size;
+  if(mech===0 && Array.isArray(e.mechanics_summary)) mech=e.mechanics_summary.filter(x=>x&&(typeof x==='object'||typeof x==='string')).length;
+  const LO=4,HI=26,HMIN=50,HMAX=140;
+  const complexity=plays*3+Math.min(mech,12);
+  const t=Math.max(0,Math.min(1,(complexity-LO)/(HI-LO)));
+  return Math.round(HMIN+t*(HMAX-HMIN));
+}
 function buildWorld(){
   const svg=document.getElementById('svg');
   const L=layout();
@@ -234,8 +251,7 @@ function buildWorld(){
   const dates=ENTRIES.map(gdate).filter(Boolean).sort(); const newest=dates[dates.length-1];
   order.forEach(p=>{
     const n=p.node, c=P(p.gx,p.gy), reg=regColor(n.region);
-    const mech=((n.repr.mechanics_summary)||[]).length || (n.repr.plays||[]).length || 4;
-    const H=18+mech*14;                                  // clearer height spread
+    const H=buildingHeight(n.repr);                     // bounded [50,140]px, drift-proof
     const bw=TW*0.72, bh=TH*0.72;
     const hasT=!!n.teardown, hasB=!!n.buildout, planOnly=!hasT&&hasB;
     drawBuilding(parts,c.x,c.y,bw,bh,H,reg,planOnly,hasT&&hasB,n.region,n.key);
@@ -386,8 +402,8 @@ async function loadQueue(){
   const isBuilt=t=>builtIds.has(slugify(t))||builtNames.has(t.toLowerCase().trim());
   let issues=[];
   try{
-    const r=await fetch('https://api.github.com/repos/'+REPO+'/issues?labels=queue&state=open&sort=created&direction=asc&per_page=50',{cache:'no-store'});
-    if(r.ok){const d=await r.json(); issues=d.filter(x=>!x.pull_request).map(x=>({text:(x.title||'').replace(/^queue:\s*/i,'').trim(),source:'issue'}));}
+    const r=await fetch('https://api.github.com/repos/'+REPO+'/issues?state=open&sort=created&direction=asc&per_page=100',{cache:'no-store'});
+    if(r.ok){const d=await r.json(); issues=d.filter(x=>!x.pull_request && /^queue:/i.test(x.title||'')).map(x=>({text:(x.title||'').replace(/^queue:\s*/i,'').trim(),source:'issue'}));}
   }catch(_){}
   const issueTexts=new Set(issues.map(i=>i.text.toLowerCase().trim()));
   const local=lsGet().filter(t=>!issueTexts.has(t.toLowerCase().trim())&&!isBuilt(t));
