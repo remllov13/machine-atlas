@@ -69,6 +69,18 @@
   .rchip{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12px;flex:1;min-width:180px}
   .rchip .r{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--blue)}
   .rchip.locked{border-style:dashed;opacity:.72}.rchip .r.lk{color:var(--dim)}
+
+  #queuebox{position:fixed;left:14px;bottom:40px;width:304px;max-width:calc(100vw - 28px);background:rgba(18,22,28,.93);border:1px solid var(--line);border-radius:12px;padding:12px 13px;z-index:30;backdrop-filter:blur(6px)}
+  .qh{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
+  .qh span{color:var(--dim)}
+  .qrow{display:flex;gap:6px}
+  #qinput{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:7px 9px;font-size:13px;font-family:inherit}
+  #qinput:focus{outline:1px solid var(--lime)}
+  .qrow button{background:var(--lime);color:var(--ink);border:none;border-radius:8px;padding:7px 12px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:1px;cursor:pointer}
+  .qlist{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .qchip{font-family:var(--mono);font-size:10px;color:var(--amber);background:rgba(228,169,58,.1);border:1px solid rgba(228,169,58,.4);border-radius:20px;padding:3px 8px}
+  .qempty{font-size:11px;color:var(--dim)}
+  .qnote{font-size:9.5px;color:var(--dim);margin-top:7px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -78,6 +90,12 @@
 </div>
 <div id="stage"><svg id="svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet"></svg></div>
 <div class="hint">DRAG to pan · SCROLL to zoom · CLICK a building to study it · each business flips between teardown &amp; buildout</div>
+<div id="queuebox">
+  <div class="qh">Queue a business <span>· unlocks next run</span></div>
+  <div class="qrow"><input id="qinput" placeholder="e.g. Stripe, or 'ad exchanges'" onkeydown="if(event.key===String.fromCharCode(13))submitQueue()"><button onclick="submitQueue()">Queue</button></div>
+  <div id="qlist" class="qlist"></div>
+  <div class="qnote">Queuing opens a GitHub issue to confirm (one click). Tomorrow&#39;s run builds it first.</div>
+</div>
 <aside id="panel"><div class="pwrap" id="pwrap"></div></aside>
 
 <script>
@@ -310,6 +328,41 @@ function renderEntry(e){
   return h;
 }
 
+
+/* ---- queue: input -> GitHub issue -> daily run builds it next ---- */
+const REPO='remllov13/machine-atlas';
+function slugify(s){return s.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+function lsGet(){try{return JSON.parse(localStorage.getItem('atlas_queue')||'[]');}catch(_){return[];}}
+function lsSet(a){try{localStorage.setItem('atlas_queue',JSON.stringify(a));}catch(_){}}
+let QUEUE=[];
+async function loadQueue(){
+  const builtIds=new Set(ENTRIES.map(gid));
+  const builtNames=new Set(ENTRIES.map(e=>gname(e).toLowerCase().trim()));
+  const isBuilt=t=>builtIds.has(slugify(t))||builtNames.has(t.toLowerCase().trim());
+  let issues=[];
+  try{
+    const r=await fetch('https://api.github.com/repos/'+REPO+'/issues?labels=queue&state=open&sort=created&direction=asc&per_page=50',{cache:'no-store'});
+    if(r.ok){const d=await r.json(); issues=d.filter(x=>!x.pull_request).map(x=>({text:(x.title||'').replace(/^queue:\s*/i,'').trim(),source:'issue'}));}
+  }catch(_){}
+  const issueTexts=new Set(issues.map(i=>i.text.toLowerCase().trim()));
+  const local=lsGet().filter(t=>!issueTexts.has(t.toLowerCase().trim())&&!isBuilt(t));
+  QUEUE=[...issues.filter(i=>!isBuilt(i.text)), ...local.map(t=>({text:t,source:'local'}))];
+  renderQueue();
+}
+function renderQueue(){
+  const box=document.getElementById('qlist'); if(!box)return;
+  if(!QUEUE.length){box.innerHTML='<div class="qempty">Nothing queued yet.</div>';return;}
+  box.innerHTML=QUEUE.map(q=>'<span class="qchip" title="unlocks next run">&#9203; '+esc(q.text)+(q.source==='local'?' <span style=\'opacity:.55\'>(confirm)</span>':'')+'</span>').join('');
+}
+function submitQueue(){
+  const inp=document.getElementById('qinput'); const t=(inp.value||'').trim(); if(!t)return;
+  const local=lsGet(); if(!local.some(x=>x.toLowerCase().trim()===t.toLowerCase().trim())){local.push(t); lsSet(local);}
+  inp.value='';
+  const url='https://github.com/'+REPO+'/issues/new?labels=queue&title='+encodeURIComponent('queue: '+t)+'&body='+encodeURIComponent('Requested from the Machine Atlas map. Build this next.');
+  try{window.open(url,'_blank','noopener');}catch(_){}
+  loadQueue();
+}
+
 /* load */
 async function load(){
   let loaded=null;
@@ -317,6 +370,7 @@ async function load(){
   ENTRIES=loaded||FALLBACK;
   const {nodes}=buildNodes(ENTRIES); NODES=nodes; NODEBYKEY={}; nodes.forEach(n=>NODEBYKEY[n.key]=n);
   buildWorld();
+  loadQueue();
 }
 load();
 </script>
