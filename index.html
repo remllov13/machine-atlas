@@ -199,6 +199,7 @@ function buildWorld(){
   const svg=document.getElementById('svg');
   const L=layout();
   const parts=[];
+  const ROADS=[];
   let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
   const cells=[...Object.values(L.placed).map(p=>({gx:p.gx,gy:p.gy})),...L.ghostPlots];
   cells.forEach(c=>{const {x,y}=iso(c.gx,c.gy);minX=Math.min(minX,x);maxX=Math.max(maxX,x);minY=Math.min(minY,y);maxY=Math.max(maxY,y);});
@@ -213,10 +214,11 @@ function buildWorld(){
     parts.push(`<path d="M${cor[3].x},${cor[3].y} L${cor[2].x},${cor[2].y} L${cor[2].x},${cor[2].y+ex} L${cor[3].x},${cor[3].y+ex} Z" fill="${c.r}" fill-opacity="0.5"/>`);
     const tl=P((b.x0+b.x1)/2,b.y1+0.5);
     parts.push(`<text class="terr-lbl" x="${tl.x}" y="${tl.y+16}" fill="${c.top}">${esc(rn)}</text>`);
+    for(let e=0;e<4;e++){const a=cor[e],d=cor[(e+1)%4];ROADS.push({ax:a.x,ay:a.y,bx:d.x,by:d.y});}
   });
 
   // roads
-  function road(aKey,bKey,st){const A=L.placed[aKey],B=L.placed[bKey];if(!A||!B||aKey===bKey)return;const pa=P(A.gx,A.gy),pb=P(B.gx,B.gy);parts.push(`<line x1="${pa.x}" y1="${pa.y}" x2="${pb.x}" y2="${pb.y}" stroke="${st.c}" stroke-width="${st.w}" stroke-dasharray="${st.d||''}" stroke-opacity="${st.o||0.6}" stroke-linecap="round"/>`);}
+  function road(aKey,bKey,st){const A=L.placed[aKey],B=L.placed[bKey];if(!A||!B||aKey===bKey)return;const pa=P(A.gx,A.gy),pb=P(B.gx,B.gy);parts.push(`<line x1="${pa.x}" y1="${pa.y}" x2="${pb.x}" y2="${pb.y}" stroke="${st.c}" stroke-width="${st.w}" stroke-dasharray="${st.d||''}" stroke-opacity="${st.o||0.6}" stroke-linecap="round"/>`);ROADS.push({ax:pa.x,ay:pa.y,bx:pb.x,by:pb.y});}
   ENTRIES.forEach(e=>{
     const pid=(e.chain||{}).parent_id;
     if(pid&&L.idToKey[pid]) road(L.idToKey[pid],bizKey(e),{c:'#C6F24E',w:3,o:0.5});
@@ -246,11 +248,52 @@ function buildWorld(){
     <g id="cam">${parts.join('')}</g>
     <rect x="0" y="0" width="1600" height="1000" fill="url(#fog)" pointer-events="none"/>`;
   svg.querySelectorAll('.bld').forEach(g=>g.addEventListener('click',()=>openPanel(g.getAttribute('data-key'))));
+  startTraffic(ROADS);
   const nNodes=Object.keys(L.placed).length;
   document.getElementById('counter').innerHTML=`<b>${nNodes}</b> businesses mapped · <b>${L.ghostPlots.length}</b> plots to unlock`;
   applyCam();
 }
 function diamond(x,y,w,h){return `M${x},${y-h} L${x+w},${y} L${x},${y+h} L${x-w},${y} Z`;}
+
+/* facade windows: tile small quads across an isometric face */
+function fwin(ox,oy,ux,uy,vx,vy,cols,rows,key,face,litColor){
+  let s=''; const su=0.60/cols, sv=0.50/rows, hu=su/2, hv=sv/2;
+  for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){
+    const cu=(i+0.5)/cols, cv=(j+0.5)/rows, cx=ox+ux*cu+vx*cv, cy=oy+uy*cu+vy*cv;
+    const pt=(du,dv)=>`${(cx+ux*du+vx*dv).toFixed(1)},${(cy+uy*du+vy*dv).toFixed(1)}`;
+    let hsh=0; const str=key+face+i+'x'+j; for(const c of str)hsh=(hsh*31+c.charCodeAt(0))>>>0;
+    const lit=(hsh%100)<22;
+    s+=`<polygon points="${pt(-hu,-hv)} ${pt(hu,-hv)} ${pt(hu,hv)} ${pt(-hu,hv)}" fill="${lit?litColor:'#223247'}" fill-opacity="${lit?0.95:0.5}"/>`;
+  }
+  return s;
+}
+let trafficRAF=null;
+function startTraffic(roads){
+  if(trafficRAF)cancelAnimationFrame(trafficRAF);
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cam=document.getElementById('cam'); if(!cam)return;
+  const g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('id','traffic'); cam.appendChild(g);
+  const cars=[];
+  roads.forEach(r=>{
+    const len=Math.hypot(r.bx-r.ax,r.by-r.ay); const ang=Math.atan2(r.by-r.ay,r.bx-r.ax)*180/Math.PI;
+    const n=len>150?2:1;
+    for(let k=0;k<n;k++){
+      const el=document.createElementNS('http://www.w3.org/2000/svg','rect');
+      el.setAttribute('width','3.6');el.setAttribute('height','2.1');el.setAttribute('rx','0.8');
+      el.setAttribute('fill',Math.random()<0.5?'#F4DCA6':'#CFE6FF');el.setAttribute('fill-opacity','0.9');
+      g.appendChild(el);
+      cars.push({el,r,ang,t:Math.random(),speed:0.028+Math.random()*0.03,dir:Math.random()<0.5?1:-1});
+    }
+  });
+  function place(c){const px=c.r.ax+(c.r.bx-c.r.ax)*c.t, py=c.r.ay+(c.r.by-c.r.ay)*c.t; c.el.setAttribute('transform',`translate(${px-1.8},${py-1.05}) rotate(${c.ang},1.8,1.05)`);}
+  if(reduce){cars.forEach(place);return;}
+  let last=performance.now();
+  function frame(now){const dt=Math.min(0.05,(now-last)/1000);last=now;
+    cars.forEach(c=>{c.t+=c.speed*dt*c.dir; if(c.t>1)c.t-=1; if(c.t<0)c.t+=1; place(c);});
+    trafficRAF=requestAnimationFrame(frame);
+  }
+  trafficRAF=requestAnimationFrame(frame);
+}
 
 function drawBuilding(parts,x,y,w,h,H,col,planOnly,bothSides,region,key){
   const topY=y-H;
@@ -263,6 +306,8 @@ function drawBuilding(parts,x,y,w,h,H,col,planOnly,bothSides,region,key){
   parts.push(`<g class="bld" data-key="${esc(key)}">
     <path class="b-l" d="${left}" fill="${col.l}" ${dash} stroke="#0A0C10" stroke-width="0.5"/>
     <path class="b-r" d="${right}" fill="${col.r}" ${dash} stroke="#0A0C10" stroke-width="0.5"/>
+    ${planOnly?'':fwin(x-w,topY,w,h,0,H,3,Math.max(3,Math.min(11,Math.round(H/10))),key,'L','#F2C15A')}
+    ${planOnly?'':fwin(x+w,topY,-w,h,0,H,3,Math.max(3,Math.min(11,Math.round(H/10))),key,'R','#E6B454')}
     <path class="b-top" d="${top}" fill="${col.top}" stroke="#0A0C10" stroke-width="0.6"/>
     ${roofIcon(region,x,topY)}
     ${bothSides?`<circle cx="${x+w-8}" cy="${topY}" r="3.2" fill="#E4A93A" stroke="#0A0C10" stroke-width="0.6"/>`:''}
