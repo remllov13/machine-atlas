@@ -1,0 +1,201 @@
+{
+  "identity": {
+    "id": "podcast",
+    "name": "Podcasting",
+    "aka": ["the podcast", "on-demand audio", "the open audio feed", "the earbud medium"],
+    "sector": "Media / creator economy / digital advertising",
+    "geography": "Global; revenue figures skew US",
+    "era": "Term coined 2004; audience and ad boom 2019-present; video-podcast era 2024-present",
+    "mode": "teardown",
+    "date_walked": "2026-11-18"
+  },
+  "chain": {
+    "parent_id": null,
+    "relation": "root",
+    "relation_note": "First entry in a new thread: the attention economy. The Atlas so far has torn down the machines that sell compute (NVIDIA, TSMC, AWS) — the supply side of the modern economy. Podcasting opens the demand side: businesses whose only raw material is human attention, rented to advertisers. It is the cleanest specimen of that kind because it was born on an OPEN protocol (RSS), so the usual platform moat is missing and you can watch, in the open, who actually captures the value — the host, the platform, or the ad-tech layer. Andrew queued this one from the map.",
+    "chain_position": 1,
+    "suggested_next": [
+      {
+        "id": "youtube",
+        "relation": "platform_substitute",
+        "why": "As of 2025 YouTube is the single most-used podcast destination in the US, ahead of Spotify and Apple. It is the attention machine that swallowed the audio one: a recommendation-driven, ad-funded video giant now hosting the podcasts it does not pay for. Tears down why an algorithmic feed beats an open protocol at distribution."
+      },
+      {
+        "id": "spotify",
+        "relation": "consolidator",
+        "why": "The company that tried to wall the open medium — ~$1B+ spent buying studios, hosting (Megaphone) and exclusive talent (Rogan) to pull listeners off RSS and into a paywalled garden, then partly reversed. The archetypal 'turn an open commons into a controlled platform' attempt, with the receipts for whether it worked."
+      },
+      {
+        "id": "patreon",
+        "relation": "downstream_monetization",
+        "why": "The disintermediation layer: when a host's audience is loyal enough, they skip advertisers entirely and sell a paid private feed. A teardown of how superfan economics lets talent capture the value the ad market used to intermediate."
+      }
+    ]
+  },
+  "one_line": "Earn a stranger's trust one episode at a time, then rent that trust to advertisers by reading their ad in your own voice — and because you publish over an open pipe anyone can carry, the audience belongs to you, not to the app they happen to listen in.",
+  "engine": {
+    "inputs": [
+      "A host (or two) with a voice, a point of view, and time",
+      "A microphone and editing software — near-trivial fixed cost",
+      "An open distribution protocol (RSS) that any listening app already reads for free",
+      "Advertiser demand for a specific, trusting audience"
+    ],
+    "transformation": "Manufacture parasocial trust at scale. A recurring voice in a listener's ears — on commutes, at the gym, doing dishes — becomes a felt relationship. That trust is the real product. The show then converts it into money by selling the host's endorsement (or the audience's attention) to advertisers, or by selling membership back to the audience directly. Publish once; the open feed copies it to every app at zero marginal cost.",
+    "outputs": [
+      "Episodes (free, ad-supported) distributed over RSS to every podcast app at once",
+      "Advertiser access to a loyal, demographically legible audience — sold as host-read endorsements or programmatic spots",
+      "Paid memberships, ad-free feeds, and bonus content sold straight to superfans",
+      "A durable back catalogue that keeps earning long after the episode drops"
+    ],
+    "money_in": "Advertising — host-read endorsements sold on a CPM (cost per thousand listens) and increasingly dynamically-inserted programmatic spots — plus direct listener revenue (memberships, subscriptions, paid feeds), live shows, and licensing.",
+    "money_out": "The host's time (and, at the top, enormous talent guarantees), production and editing, and — for platforms — hosting, ad-insertion tech, and measurement. For an independent show the cost base is astonishingly thin.",
+    "the_spread": "A one-person show has almost no marginal cost: the same episode serves one listener or one million for the same production spend, and a host-read ad at a $20-50 CPM against a loyal audience is nearly pure margin. The spread is attention bought cheaply (the host's own labor) and sold dearly (as trusted endorsement). The platforms' spread is thinner — they pay for talent and tech, then tax the ad flow.",
+    "leverage_point": "The audience is loyal to the HOST, not the platform. Because RSS is open, a show can move apps, networks, or deals and bring its listeners along. That portability is what hands pricing power to talent and makes every platform's walled-garden bet fragile."
+  },
+  "unit": {
+    "unit_name": "One download/listen of one episode (an impression of attention)",
+    "unit_economics": "An ad is priced per thousand listens (CPM). Host-read endorsements against an engaged audience command premium CPMs (often ~$18-50+ depending on show and placement); dynamically-inserted programmatic spots sell for less but fill far more inventory. One episode, produced once, can be monetized across its entire future listenership — and, with dynamic insertion, re-sold again and again as new listeners find the back catalogue. Figures are illustrative; CPMs vary widely by genre, size, and placement.",
+    "what_one_unit_produces": "Revenue now, plus one more deposit of trust in the listener — raising the odds they return next week, recommend the show, or convert to a paying member. Attention compounds into habit; habit is the asset."
+  },
+  "plays": [
+    {
+      "play_name": "Free Feed",
+      "tagline": "Publish once to an open pipe; let every app carry you for free.",
+      "flow": [
+        {"step_title": "Write to the open protocol", "step_desc": "Publish the episode as an RSS feed — a 2004-era open standard that Apple, Spotify, Overcast, and every other app already read without permission or payment."},
+        {"step_title": "Reach everywhere at zero cost", "step_desc": "One upload propagates to the whole ecosystem at once. You pay nothing for distribution and ask no gatekeeper's leave."},
+        {"step_title": "Keep the audience yours", "step_desc": "Because no single app owns the feed, listeners follow the show, not the platform — so you can switch apps, hosts, or sponsors and take them with you."}
+      ],
+      "the_move": "Distribute over a commons instead of a platform. You trade the discovery an algorithm would give you for independence from any gatekeeper — and you keep the direct relationship with the listener.",
+      "in_the_wild": {
+        "name": "The term 'podcasting' was coined in a February 2004 Guardian article; the medium was built on RSS enclosures so that, two decades later, any show still reaches Apple Podcasts, Spotify, and dozens of apps from a single feed without a distribution deal",
+        "confidence": "high"
+      },
+      "watch_out": "An open pipe gives you no discovery engine. Without an algorithm pushing you, growth leans on word of mouth, guesting, and cross-promotion — which is exactly the gap video platforms exploit.",
+      "mechanics": ["zero-marginal-cost", "open-protocol", "audience-portability", "disintermediated-distribution"]
+    },
+    {
+      "play_name": "Host-Read Trust",
+      "tagline": "The audience trusts a friend, so let the friend read the ad.",
+      "flow": [
+        {"step_title": "Bank the parasocial trust", "step_desc": "Weeks of a familiar voice in the listener's ears build a one-sided friendship — the listener feels they know the host."},
+        {"step_title": "Lend it to a sponsor", "step_desc": "The host reads the ad personally, often claiming to use the product. The endorsement borrows the trust the host has banked."},
+        {"step_title": "Charge a premium CPM", "step_desc": "Because a trusted endorsement converts far better than a banner, advertisers pay premium rates per thousand listens for host-read spots."}
+      ],
+      "the_move": "Monetize a relationship, not an eyeball. The ad works because it is laundered through trust — the scarcest and least scalable thing the medium produces.",
+      "in_the_wild": {
+        "name": "Host-read endorsements are the format advertisers prize most in podcasting precisely because the audience's trust in the host transfers to the product — the category's signature 'native' ad and its highest-CPM inventory",
+        "confidence": "medium"
+      },
+      "watch_out": "Trust is spent, not just borrowed. Promote a scam or a product that harms listeners and the parasocial bond — the only real asset — erodes, taking future ad pricing with it.",
+      "mechanics": ["parasocial-trust", "native-advertising", "endorsement-transfer", "attention-arbitrage"]
+    },
+    {
+      "play_name": "Dynamic Insertion",
+      "tagline": "Peel the ad off the episode so the back catalogue sells forever.",
+      "flow": [
+        {"step_title": "Decouple ad from content", "step_desc": "Instead of baking the ad into the recording, stitch it in at download time via dynamic ad insertion (DAI)."},
+        {"step_title": "Re-sell the archive", "step_desc": "A three-year-old episode a new listener discovers today can carry today's ad — the entire back catalogue becomes live, renewable inventory."},
+        {"step_title": "Target and measure", "step_desc": "Serve different ads to different listeners and track impressions programmatically, pulling podcasting toward the data-driven buying advertisers expect."}
+      ],
+      "the_move": "Turn a fixed library into a renewable resource. The same episode, produced once, is re-monetized against every future listener with whatever ad is freshest — inventory that grows while the content stays still.",
+      "in_the_wild": {
+        "name": "Spotify bought ad-tech and hosting company Megaphone for $235M in November 2020 to own the dynamic-insertion and ad-serving layer across shows it does not produce — taxing the ad flow regardless of who makes the podcast",
+        "confidence": "high"
+      },
+      "watch_out": "Programmatic, targeted spots command lower CPMs than host reads and can feel like generic radio ads, trading the medium's trust premium for scale — and leaning on the listener data regulators increasingly scrutinize.",
+      "mechanics": ["dynamic-ad-insertion", "back-catalogue-yield", "programmatic", "inventory-expansion"]
+    },
+    {
+      "play_name": "Buy the Talent",
+      "tagline": "Can't own the pipe? Pay the voice to come inside your walls.",
+      "flow": [
+        {"step_title": "Spot the portability problem", "step_desc": "Because RSS is open, a platform can't trap an audience through distribution — listeners just follow the host elsewhere."},
+        {"step_title": "Pay a guarantee for exclusivity", "step_desc": "Write a large upfront check to make a hit show exclusive to your app, forcing its audience to install you to keep listening."},
+        {"step_title": "Convert listeners to subscribers", "step_desc": "Use the borrowed audience as a loss-leader to drive sign-ups and ad inventory inside your walled garden."}
+      ],
+      "the_move": "When you cannot own the distribution, buy the content and wall it. The talent's portable audience is the lever; the guarantee is the price of yanking it off the commons.",
+      "in_the_wild": {
+        "name": "Spotify reportedly paid Joe Rogan a guarantee in the ~$200M range for exclusivity, then in February 2024 signed a new multi-year deal reported at up to $250M that was NON-exclusive — letting the show return to YouTube and other platforms, an open admission that the walled-garden bet had limits",
+        "confidence": "medium"
+      },
+      "watch_out": "You are renting an audience that was never yours. If the guarantee outruns the ad and subscriber revenue it drives — as Spotify found when it cut podcast staff and folded studios in 2023 — the exclusivity bet becomes a write-down.",
+      "mechanics": ["talent-lock-in", "content-exclusivity", "walled-garden", "loss-leader-content"]
+    },
+    {
+      "play_name": "Skip the Middleman",
+      "tagline": "If they love you enough, sell to them directly and keep it all.",
+      "flow": [
+        {"step_title": "Find the superfans", "step_desc": "A slice of any loyal audience will pay for more access — bonus episodes, ad-free feeds, a community."},
+        {"step_title": "Sell a private feed", "step_desc": "Offer paid membership (a gated RSS feed, Patreon tier, or channel subscription) instead of, or alongside, ads."},
+        {"step_title": "Cut out the ad market", "step_desc": "Direct payment skips advertisers and agencies, so the host keeps the large majority of the revenue per paying fan."}
+      ],
+      "the_move": "Collapse the two-sided ad market into a one-sided one. When trust is deep enough, the audience itself is the better customer — and the open feed makes a private paid feed trivial to spin up.",
+      "in_the_wild": {
+        "name": "Membership platforms (Patreon, paid Apple/Spotify subscriptions, gated feeds) let independent shows earn directly from listeners; for many mid-size podcasts a few thousand paying superfans outearn the ads their whole audience would support",
+        "confidence": "illustrative"
+      },
+      "watch_out": "Direct monetization caps at how much your true fans will pay; most listeners never convert. Push too hard on paywalls and you shrink the free audience that feeds both the ads and the funnel.",
+      "mechanics": ["direct-monetization", "subscription", "superfan-economics", "disintermediation"]
+    }
+  ],
+  "mechanics_summary": [
+    {"tag": "zero-marginal-cost", "note": "An episode produced once serves one listener or a million for the same spend — the economics of a non-rival information good, which is why a one-person show can carry near-pure margin."},
+    {"tag": "open-protocol", "note": "RSS makes distribution a free commons, not a platform. No gatekeeper owns the feed, so no gatekeeper owns the audience."},
+    {"tag": "parasocial-trust", "note": "The real product is a one-sided relationship with the host. It is the scarcest input, the source of premium pricing, and the thing a bad ad destroys."},
+    {"tag": "audience-portability", "note": "Listeners follow the host, not the app. That portability hands pricing power to talent and makes every walled-garden bet fragile."},
+    {"tag": "dynamic-ad-insertion", "note": "Peeling the ad off the recording turns a static back catalogue into renewable, targetable inventory — and relocates the toll booth to the hosting/ad-tech layer."},
+    {"tag": "two-sided-market", "note": "The free side (listeners) is subsidized to assemble an audience that the paid side (advertisers) rents — the classic ad-funded media structure."},
+    {"tag": "walled-garden", "note": "Platforms pay guarantees for exclusivity to simulate the lock-in an open medium denies them; the audience's loyalty to the host, not the app, is what makes it leak."},
+    {"tag": "disintermediation", "note": "Deep enough trust lets the host sell straight to superfans and skip the ad market entirely — the open feed makes a paid feed cheap to build."}
+  ],
+  "history": {
+    "origin": {
+      "who": "Journalist Ben Hammersley (who coined 'podcasting'), with technologists Dave Winer and ex-MTV VJ Adam Curry building the RSS-enclosure plumbing",
+      "when": "The word appeared in a February 2004 Guardian article; Apple added podcasts to iTunes in 2005, putting the feed in millions of pockets",
+      "what_problem_forced_it": "Audio was trapped by scheduling — radio happened when the broadcaster decided, not when the listener was free. RSS already syndicated text; attaching an audio 'enclosure' let any creator publish a show that listening apps would fetch and queue automatically, on the listener's schedule, with no broadcast license and no distribution deal. The open standard meant anyone with a microphone was now a broadcaster, and no company sat at the gate. That openness is the medium's founding gift and its permanent business problem: value is easy to create and hard to fence."
+    },
+    "operator": {
+      "name": "Joe Rogan (as the proof of the thesis, not a company)",
+      "what_they_did": "Built one of the world's largest audiences on long-form conversation, then showed the whole industry where the power sat: when Spotify paid a reported ~$200M to make the show exclusive, the audience was the asset being bought. In 2024 the renewal went non-exclusive at a figure reported up to $250M, and the show returned to YouTube and other apps.",
+      "outcome": "Rogan demonstrated that in podcasting the talent, not the platform, holds the leverage — the portable audience can be rented but not captured. Platforms learned they must keep paying the voice because they can never own the pipe."
+    },
+    "counterexample": {
+      "name": "Spotify's exclusive-podcast strategy",
+      "what_they_did": "Spent well over $1 billion from 2019 buying studios (Gimlet, Parcast, The Ringer), hosting/ad-tech (Megaphone, Anchor), and exclusive talent to convert the open medium into a walled, Spotify-only garden that would drive subscriptions and own the ad stack.",
+      "why_it_broke": "You cannot easily wall a medium whose audiences are loyal to hosts and accustomed to a free, open feed. Exclusivity suppressed the very discovery that grows shows; listeners resented being forced into one app. In 2023 Spotify cut podcast staff, folded studios and cancelled shows, and by 2024 let its marquee exclusive (Rogan) go non-exclusive. The lesson: on an open protocol, capital can rent attention but cannot convert a commons into a moat by force."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {"claim": "US podcast advertising revenue reached $2.4 billion in 2024, up 26.4% from 2023 (which grew just 5.5%)", "value": "$2.4B (+26.4%)", "as_of_date": "2025-04-17", "source_url": "https://iab.com/insights/us-podcast-advertising-revenue-study-2024/", "confidence": "high"},
+      {"claim": "In the 2025 Infinite Dial survey, over 50% of US respondents reported listening to a podcast in the past month — a first for the study; ~70% (about 202 million Americans) have ever listened", "value": ">50% monthly / ~70% ever", "as_of_date": "2025-03-20", "source_url": "https://barrettmedia.com/2025/03/20/podcast-consumption-reaches-record-high-in-latest-infinite-dial-survey/", "confidence": "high"},
+      {"claim": "As of the 2025 Infinite Dial, YouTube was the most-used podcast platform in the US (33% naming it primary), ahead of Spotify (26%) and Apple Podcasts (14%); 51% of respondents had watched a video podcast", "value": "YouTube 33% / Spotify 26% / Apple 14%", "as_of_date": "2025-03-20", "source_url": "https://barrettmedia.com/2025/03/20/podcast-consumption-reaches-record-high-in-latest-infinite-dial-survey/", "confidence": "high"},
+      {"claim": "Spotify agreed to acquire podcast ad-tech and hosting company Megaphone for $235 million in November 2020", "value": "$235M (Nov 2020)", "as_of_date": "2020-11-10", "source_url": "https://www.cnbc.com/2020/11/10/spotify-to-buy-podcast-ad-company-megaphone-for-235-million-.html", "confidence": "high"},
+      {"claim": "In February 2024 Spotify signed a new multi-year deal with Joe Rogan reported at up to $250M that was non-exclusive, allowing the show to distribute on YouTube and other platforms; the prior exclusive deal was reported at ~$200M+", "value": "up to $250M, non-exclusive", "as_of_date": "2024-02-02", "source_url": "https://www.cnbc.com/2024/02/02/spotify-renews-deal-with-podcaster-joe-rogan.html", "confidence": "medium"},
+      {"claim": "Google launched NotebookLM 'Audio Overviews' in September 2024, generating a podcast-style conversation between two synthetic AI hosts from a user's documents", "value": "launched Sept 2024", "as_of_date": "2024-09-11", "source_url": "https://9to5google.com/2024/09/11/notebooklms-new-audio-overview-turns-your-notes-into-a-mini-podcast/", "confidence": "high"}
+    ],
+    "overall": "high",
+    "unknowns": [
+      "Podcast CPM figures ($18-50+ for host-read; lower for programmatic) are illustrative industry ranges, not a single published number — actual rates vary enormously by show size, genre, and placement.",
+      "Total Spotify podcast spend ('well over $1 billion') is an aggregation of separately reported acquisitions and talent deals, not an official consolidated figure; exact Rogan deal values are press reports, not disclosed terms.",
+      "'Download/listen' is a famously noisy unit — measurement standards (IAB-certified downloads vs listens vs YouTube views) differ across platforms, so audience and revenue comparisons are approximate.",
+      "Whether AI-generated audio (NotebookLM-style synthetic hosts) competes with, or merely complements, human podcasting is genuinely open — it may expand the medium or commoditize its low end.",
+      "This is educational business analysis, not investment advice. No claim is made about Spotify's or any platform's stock or future results."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "A warm little recording booth glowing in a dark city at dawn. One person leans into a microphone, and from their mouth a river of voice flows out the open door — labeled 'RSS' — splitting into streams that reach every doorway on the street: doors marked Apple, Spotify, YouTube, Overcast, each lighting up as the voice arrives. Thousands of tiny figures walk the streets wearing earbuds, and on each one's shoulder sits a miniature of the same host, whispering like a trusted friend — and in the friend's hand is a product held up for the listener to see. Off to one side looms a marble castle with high walls (a green Spotify banner) whose lord leans from the gate offering the host a heavy chest of gold to step inside and pull the door shut behind them — but the river keeps flowing past the walls anyway. At the booth's back window, a few devoted fans quietly push coins directly through to the host, bypassing the whole street.",
+    "questions": [
+      "Podcasting runs on an OPEN protocol anyone can carry for free. So where does the pricing power actually sit — with the app, or with the voice? (Spotify paid ~$200M to find out.)",
+      "A host-read ad costs more per listener than a banner ad. What exactly is the advertiser paying a premium for — and what does the host spend every time they read one?",
+      "Dynamic ad insertion lets a three-year-old episode carry today's ad. Explain how that turns a finished back catalogue into inventory that grows while the content sits still.",
+      "Spotify spent over $1B trying to wall off podcasting and then retreated. Name the single feature of the medium that made the walls leak."
+    ]
+  },
+  "economics_lens": {
+    "concept": "Two-sided (advertising-funded) markets and the attention economy — monetizing a non-rival, near-zero-marginal-cost good distributed over an open commons",
+    "micro_or_macro": "micro",
+    "explain": "Podcasting is a textbook two-sided market: the content is a non-rival information good (one listener's consumption doesn't diminish another's) with near-zero marginal cost of reproduction, so it can't be sold like a scarce physical product. The business instead subsidizes one side — free episodes for listeners — to assemble an audience whose attention it rents to the other side, advertisers. What makes podcasting the sharpest specimen of this structure is RSS: because distribution is an open commons rather than a proprietary platform, the usual source of platform power (owning the pipe and therefore the audience) is absent. The scarce, excludable asset reduces to one thing — the host's parasocial trust — which is why pricing power flows to talent, why host-read endorsements out-earn generic spots, and why capital-rich platforms that tried to convert the commons into a walled garden (buying exclusivity, hosting, and ad-tech) could rent the audience but never capture it. It is a live lesson in how value accrues when a good is cheap to copy and hard to fence."
+  }
+}
