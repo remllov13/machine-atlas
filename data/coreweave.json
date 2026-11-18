@@ -1,0 +1,231 @@
+{
+  "identity": {
+    "id": "coreweave",
+    "name": "CoreWeave",
+    "aka": [
+      "CRWV",
+      "the GPU neocloud",
+      "Atlantic Crypto (original name)",
+      "the AI hyperscaler middleman"
+    ],
+    "sector": "AI cloud infrastructure / GPU-as-a-service (a 'neocloud')",
+    "geography": "United States (Livingston, New Jersey); data centers across the US and UK",
+    "era": "2017-present; crypto-mining origin 2017-2019, AI-cloud pivot 2019, IPO March 2025",
+    "mode": "teardown",
+    "date_walked": "2026-11-18"
+  },
+  "chain": {
+    "parent_id": "nvidia",
+    "relation": "customer",
+    "relation_note": "The NVIDIA teardown ended by pointing here: a 'neocloud' that rents NVIDIA GPUs by the hour, revealing how NVIDIA's allocation power reshapes an entire layer of middlemen who exist only to resell its scarce silicon. CoreWeave is the demand side of NVIDIA's machine made into a business of its own. Where NVIDIA rations chips instead of clearing the market by price, whoever wins an allocation can resell access at a markup -- and CoreWeave industrialized exactly that. NVIDIA even takes an equity stake and backstops CoreWeave's unsold capacity, so the shovel-seller is quietly financing its own best reseller. CoreWeave is also the pure-play challenger the AWS teardown flagged (relation 'competes-with'): it floods one input (GPUs) and skips the rest of the hyperscaler catalog.",
+    "chain_position": 3,
+    "suggested_next": [
+      {
+        "id": "openai",
+        "relation": "customer",
+        "why": "CoreWeave's largest and most strategic tenant, with multi-year, tens-of-billions contracts that anchor the backlog. A teardown of OpenAI shows the demand that makes CoreWeave's leverage look safe -- and whether that demand is one counterparty's bet or a durable market."
+      },
+      {
+        "id": "digital-infrastructure-reits",
+        "relation": "supplier",
+        "why": "CoreWeave rents shells, power, and land from data-center landlords (Core Scientific, which it moved to acquire; Equinix; Digital Realty). The layer beneath the neocloud -- who owns the buildings and the grid interconnects that actually cap how fast GPUs can be plugged in."
+      },
+      {
+        "id": "asset-backed-securitization",
+        "relation": "template",
+        "why": "CoreWeave's real financial trick -- borrowing against GPUs and signed customer contracts as collateral -- is the same machine banks run with mortgages and auto loans. Tearing down securitization as a pattern explains how a money-losing cloud raised $18B+ in debt, and where that machine breaks."
+      }
+    ]
+  },
+  "one_line": "CoreWeave buys the only shovels that work (NVIDIA GPUs) on borrowed money, using the shovels themselves as collateral, then rents them back to the gold-rush miners on multi-year leases -- an arbitrage on a rationed good, wrapped in a bond.",
+  "engine": {
+    "inputs": [
+      "Privileged, early allocation of scarce NVIDIA GPUs (NVIDIA is both a supplier and an equity investor)",
+      "Debt -- chiefly GPU-and-contract-collateralized delayed-draw term loans (DDTLs) -- plus equity raised at IPO",
+      "Data-center shells, power, and grid interconnects rented or bought from landlords",
+      "Long-term, often take-or-pay customer contracts that turn rented chips into bankable cash flows",
+      "Software and orchestration tuned to run large AI training/inference clusters at high utilization"
+    ],
+    "transformation": "Convert a rationed, fast-depreciating physical asset (GPUs you got privileged access to) into contracted, financeable cash flow. Get allocation ahead of rivals; finance the purchase with debt secured by the chips and the signed customer contract; sign a customer to a multi-year commitment; use that commitment to get a cheaper/investment-grade-rated loan; buy more chips. The business is really a financing machine wearing a cloud-provider's coat: it manufactures bankable duration out of scarce silicon.",
+    "outputs": [
+      "GPU compute sold as reserved multi-year capacity and on-demand hours to AI labs and hyperscalers",
+      "Managed clusters, networking, and storage optimized for AI workloads",
+      "A fast-growing revenue backlog (contracted but not-yet-recognized revenue) that is itself the asset investors price"
+    ],
+    "money_in": "Mostly large, multi-year committed contracts from a small set of AI-heavy customers (OpenAI, Microsoft historically, and other foundation-model labs), billed as capacity is delivered.",
+    "money_out": "Enormous capex to buy GPUs and build data centers; interest on a mountain of debt; power and lease payments to landlords; and depreciation on chips whose top-dollar earning life is only a few years.",
+    "the_spread": "Thin and fragile at the bottom line despite huge cash margins. In Q3 2026, adjusted EBITDA margin was ~62% -- but after depreciation and ~$846M of quarterly interest, GAAP operating margin was ~6% and the company posted a net loss. The 'spread' is the gap between the GPU-hour price customers pay and the sum of depreciation + interest + power -- and interest alone eats a quarter of revenue.",
+    "leverage_point": "Allocation + collateral. The moat is not technology (anyone can rack a GPU); it is (1) being first in line for NVIDIA's rationed chips, and (2) a financing structure that lets CoreWeave borrow against those chips and contracts faster than rivals can. Lose either -- NVIDIA's favor, or lenders' appetite -- and the machine stalls."
+  },
+  "unit": {
+    "what": "One GPU, financed and rented. Buy an NVIDIA accelerator for roughly tens of thousands of dollars (mostly on debt), rent it out at a GPU-hour rate under a multi-year contract, and race to recover the cost plus interest before the next NVIDIA generation makes that chip a markdown.",
+    "the_math": "The unit only works if (useful earning life of the GPU) > (time to repay its debt) AND (contracted demand) holds for the full term. CoreWeave's bet is that AI demand stays hot long enough, and that customer contracts are firm enough, to outrun both the depreciation clock and the interest meter. Each new contract that earns an investment-grade rating lowers the interest rate on the next tranche -- a flywheel while demand is strong, a trap if it isn't."
+  },
+  "plays": [
+    {
+      "play_name": "Shovels on Credit",
+      "tagline": "Don't wait to afford the scarce asset -- borrow against the asset itself to buy it.",
+      "flow": [
+        {
+          "step_title": "Win the allocation",
+          "step_desc": "Get to the front of NVIDIA's line while GPUs are rationed -- helped by an early, deep NVIDIA relationship (and later an NVIDIA equity stake and a capacity backstop). Scarce access, not cheap capital, is the first prize."
+        },
+        {
+          "step_title": "Collateralize the chips",
+          "step_desc": "Raise GPU-backed delayed-draw term loans (DDTLs) -- debt secured by the GPUs themselves plus the signed customer contract. The chips you haven't fully paid for become the collateral that buys them."
+        },
+        {
+          "step_title": "Lock a marquee tenant",
+          "step_desc": "Sign a large, creditworthy customer to a multi-year take-or-pay contract. That contract is worth more than the revenue: an investment-grade customer's signature earns the loan an investment-grade rating and a lower coupon."
+        },
+        {
+          "step_title": "Spin the flywheel",
+          "step_desc": "Use the cheaper debt to buy more chips, sign more contracts, grow the backlog. Investors price the backlog, not the (negative) earnings, so growth in contracted dollars becomes the thing that funds the next round."
+        }
+      ]
+    },
+    {
+      "play_name": "The Circular Handshake",
+      "tagline": "Your supplier funds you, buys your leftovers, and sells you more -- all at once.",
+      "flow": [
+        {
+          "step_title": "Supplier takes equity",
+          "step_desc": "NVIDIA invests in CoreWeave (a $100M stake in 2023; a reported ~$2B investment in early 2026). The chipmaker now owns a slice of its own reseller."
+        },
+        {
+          "step_title": "Supplier backstops demand",
+          "step_desc": "Under an agreement with an initial value of ~$6.3B, NVIDIA is obligated to buy CoreWeave's unsold data-center capacity through April 2032 -- a floor under the very demand CoreWeave is borrowing against."
+        },
+        {
+          "step_title": "Money loops",
+          "step_desc": "CoreWeave spends billions buying NVIDIA GPUs. Critics call it circular financing: the supplier's equity and backstop help CoreWeave raise the debt it uses to buy the supplier's chips. A flywheel to bulls; a house of mirrors to bears."
+        }
+      ]
+    }
+  ],
+  "mechanics_summary": "CoreWeave is an arbitrage on a rationed input, financed like a bond. Because NVIDIA allocates GPUs rather than letting price clear the market, privileged access is worth a premium -- and CoreWeave captures that premium by renting GPU-hours it bought on debt collateralized by the chips and the customer contracts. Cash margins look spectacular (62% adjusted EBITDA) because they ignore the two costs that define the model: depreciation on chips that stop being scarce in a few years, and interest on ~$47B of debt. The whole structure rests on two things staying true at once -- that AI demand stays hot and that a handful of giant customers honor multi-year commitments. If either cracks, a machine built to turn scarce silicon into bankable duration turns into fixed debt service against a depreciating, suddenly-abundant asset.",
+  "history": {
+    "origin": {
+      "who": "Michael Intrator, Brian Venturo, and Brannin McBee -- commodities traders, not technologists (plus engineer Peter Salanki, who became CTO)",
+      "when": "Founded September 2017 as Atlantic Crypto; renamed CoreWeave in 2019; IPO March 28, 2025",
+      "what_problem_forced_it": "The founders started as Ethereum miners, amassing a large pile of GPUs to mine crypto. The 2018 crypto crash left them with warehouses of idle, depreciating GPUs -- a stranded asset. The pivot was to rent that compute to anyone who needed parallel processing. When generative AI exploded in 2022-2023, the same instinct -- 'own scarce GPUs and rent them' -- found a far bigger market, and the trader's reflex for financing and arbitraging a scarce commodity became the whole business model."
+    },
+    "operator": {
+      "name": "Michael Intrator (co-founder and CEO)",
+      "what_they_did": "Turned a failed crypto miner's GPU hoard into the archetypal AI neocloud by treating compute like a tradable commodity: secure scarce supply early, finance it aggressively with asset-backed debt, and lock in long-dated contracts. Took CoreWeave public in the largest AI-related US listing by amount raised at the time.",
+      "outcome": "IPO on March 28, 2025 priced at $40/share (anchored by NVIDIA), raising ~$1.5B at roughly a ~$23B valuation. Revenue then rose from ~$1.9B (2024) toward a FY2026 guide of ~$13B, with backlog ballooning past $130B -- while debt climbed past $46B and the company kept posting net losses. CoreWeave became the clearest live test of whether a debt-fueled arbitrage on a rationed input is a durable business or a bet on the AI boom never cooling."
+    },
+    "counterexample": {
+      "name": "The hyperscalers' in-house clouds (AWS, Azure, Google Cloud)",
+      "what_they_did": "The giants CoreWeave rents from and competes with fund their GPU buildouts from vast internal cash flows, diversify across thousands of services and millions of customers, and design their own silicon (Trainium, Graviton, TPUs) to escape NVIDIA's toll. They show the contrast class: capital intensity carried by a profitable, diversified balance sheet instead of by narrow, GPU-collateralized debt and a handful of mega-contracts. The same physical business -- renting compute -- is sturdy when the balance sheet is deep and concentrated risk is low, and fragile when it is neither."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {
+        "claim": "Q3 2026 revenue of $3.661B, up ~168% year over year (quarter ended Sept 30, 2026)",
+        "value": "$3.661B",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Revenue backlog of ~$132.5B as of Sept 30, 2026",
+        "value": "$132.5B",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q3 2026 GAAP operating income $207M (6% margin) but a GAAP net loss of $(709)M (-19% margin); adjusted EBITDA $2.256B (62% margin)",
+        "value": "op $207M / net -$709M / adj EBITDA $2.256B",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q3 2026 net interest expense of $846M; Q4 2026 interest expense guided to $1.05B-$1.15B",
+        "value": "$846M (Q3)",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Total debt of ~$46.9B as of Sept 30, 2026 ($41.6B recourse + $5.3B non-recourse, excluding finance leases)",
+        "value": "~$46.9B",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q3 2026 capex ~$9.44B; FY2026 capex guided to $37B-$39B; FY2026 revenue guided to $13.0B-$13.3B with exit run-rate of $20B-$21B",
+        "value": "capex $9.44B (Q3); FY rev $13.0-13.3B",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Contracted power over 4.6 GW total, over 1.7 GW active as of Q3 2026",
+        "value": ">4.6 GW contracted / >1.7 GW active",
+        "as_of_date": "2026-11-10",
+        "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+        "confidence": "high"
+      },
+      {
+        "claim": "Microsoft accounted for over 60% of CoreWeave's revenue in 2024, per the IPO S-1 (a snapshot of extreme early customer concentration; CoreWeave no longer discloses a single-customer share)",
+        "value": ">60% (2024)",
+        "as_of_date": "2025-03-01",
+        "source_url": "https://en.wikipedia.org/wiki/CoreWeave",
+        "confidence": "high"
+      },
+      {
+        "claim": "IPO March 28, 2025 priced at $40/share (anchored by NVIDIA), raising ~$1.5B at roughly a $23B valuation",
+        "value": "$40/share, ~$1.5B raised",
+        "as_of_date": "2025-03-28",
+        "source_url": "https://www.cnbc.com/2025/03/27/nvidia-to-anchor-coreweave-ipo-at-40-a-share-source-says.html",
+        "confidence": "high"
+      },
+      {
+        "claim": "NVIDIA equity investments in CoreWeave: ~$100M (April 2023) and a reported ~$2B (January 2026, at $87.20/share)",
+        "value": "$100M + ~$2B",
+        "as_of_date": "2026-01-01",
+        "source_url": "https://en.wikipedia.org/wiki/CoreWeave",
+        "confidence": "medium"
+      },
+      {
+        "claim": "NVIDIA capacity backstop with an initial value of ~$6.3B obligates NVIDIA to purchase CoreWeave's residual unsold capacity through April 13, 2032",
+        "value": "~$6.3B backstop through Apr 2032",
+        "as_of_date": "2025-09-01",
+        "source_url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+        "confidence": "medium"
+      },
+      {
+        "claim": "GPU-and-contract-collateralized delayed-draw term loans (DDTLs): DDTL 4.0 was an $8.5B facility (March 2026, first of its kind to earn an investment-grade rating); DDTL 5.0 was a $3.1B facility (May 2026) backed by non-investment-grade contracts at a higher rate",
+        "value": "DDTL 4.0 $8.5B; DDTL 5.0 $3.1B",
+        "as_of_date": "2026-05-01",
+        "source_url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+        "confidence": "medium"
+      }
+    ],
+    "unknowns": [
+      "Current single-customer concentration. Microsoft was >60% of 2024 revenue per the S-1, but CoreWeave has since shifted weight toward OpenAI and others and no longer discloses a clean single-customer percentage -- so today's concentration is inferred, not reported.",
+      "The true economic useful life of the GPUs. CoreWeave depreciates them over a set schedule (reported around six years), but how long an accelerator earns top-dollar GPU-hour rates before a newer NVIDIA generation collapses its price is the central, unresolved assumption of the whole model.",
+      "How much of the $132.5B backlog is firm, cash-good demand versus commitments from a few counterparties (some of them loss-making AI labs) that could be renegotiated or missed if the AI capex cycle cools.",
+      "The exact NVIDIA ownership percentage and the full terms of the backstop, which are drawn from secondary reporting of SEC filings rather than a single clean primary figure here."
+    ],
+    "disclaimer": "Educational teardown for pattern-recognition, not investment advice. CoreWeave is a volatile, heavily-indebted, recently-public company and the figures here are snapshots that age quickly."
+  },
+  "recall": {
+    "glyph_prompt": "The same gold-rush valley at night. Between the green-eyed general store (NVIDIA) and the muddy prospectors stands a sharp-suited middleman at a rented stall. He has no shovels of his own -- he buys armfuls from the store on a line of credit, each shovel tagged with a paper IOU, and hands them out to miners who've signed long paper leases pinned to the stall. Behind him, a banker weighs the stack of signed leases and the shovels themselves on a scale marked COLLATERAL, then slides him more credit. The green-eyed shopkeeper has quietly dropped a coin in the middleman's own tip jar (an equity stake) and promised to buy back any shovel no miner rents. But the shovels are visibly rusting in the rain -- a newer, shinier model glints in the store window -- and the IOUs keep ticking.",
+    "questions": [
+      "CoreWeave rents GPUs, but its real product is financial. What is it actually manufacturing out of scarce chips -- and why do investors price its backlog instead of its earnings?",
+      "Adjusted EBITDA margin is ~62% but the company loses money. Name the two costs that live in the gap, and explain why one of them is a ticking clock.",
+      "Why does NVIDIA both invest in CoreWeave AND agree to buy its unsold capacity? What does the shovel-seller get from financing its own reseller -- and why do critics call it circular?"
+    ]
+  },
+  "economics_lens": {
+    "concept": "Economic rent from a rationed input (intermediation arbitrage), carried on operating leverage",
+    "micro_or_macro": "micro",
+    "explain": "When a seller rations a good -- allocating it rather than letting price rise until supply meets demand -- a gap opens between the controlled price and what buyers would actually pay. Whoever secures an allocation can resell access and pocket that gap: an economic rent that exists only because the market isn't allowed to clear. NVIDIA rations GPUs (it allocates scarce chips to favored buyers instead of auctioning them to the highest bidder), and CoreWeave's entire business is capturing the resulting rent at industrial scale -- it is the 'middleman who exists only to resell scarce silicon.' Two further forces shape the machine. First, operating leverage and extreme capital intensity: nearly all the cost is fixed (depreciation on the chips and interest on the debt that bought them), so above the breakeven utilization each extra GPU-hour is almost pure margin -- which is why cash margins look huge while the bottom line is thin. Second, the rent is self-erasing: a rent that comes from scarcity disappears as the scarcity does. As NVIDIA supply catches up and each GPU generation makes the last one cheap, the premium on access shrinks -- yet the debt and the fixed contracts remain. CoreWeave is thus a vivid lesson in why rents from rationing are real but perishable, and why financing a perishable rent with long, heavy leverage is where the fragility lives."
+  }
+}
