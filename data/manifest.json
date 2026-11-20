@@ -5,6 +5,7 @@
     "nvidia",
     "aws-cloud",
     "coreweave",
+    "anthropic",
     "frontier-room",
     "payment-networks",
     "banking-buildout",
@@ -12,5 +13,5 @@
     "banking",
     "tsmc"
   ],
-  "count": 11
+  "count": 12
 }
