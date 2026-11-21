@@ -79,6 +79,13 @@
           "step_title": "Monetize the locked-in",
           "step_desc": "Convert the funnel into paid consumer tiers, an enterprise platform (>40% of revenue), and API usage others build on -- turning a free habit into a metered toll once leaving feels costly."
         }
+      ],
+      "mechanics": [
+        "loss-leader pricing",
+        "habit and brand lock-in",
+        "learning curve (falling cost per token)",
+        "freemium conversion",
+        "data flywheel"
       ]
     },
     {
@@ -97,6 +104,12 @@
           "step_title": "Commit to demand you must grow into",
           "step_desc": "Sign ~$1.4T of multi-year compute commitments (~30 GW). The commitments signal confidence and lock supply -- but also force OpenAI to grow revenue fast enough to pay for them, binding its suppliers' fate to its own."
         }
+      ],
+      "mechanics": [
+        "multi-sourcing to cap supplier power",
+        "equity-for-distribution",
+        "circular financing",
+        "take-or-pay compute commitments"
       ]
     }
   ],
@@ -190,5 +203,16 @@
     "concept": "Blitzscaling: loss-leader pricing to capture increasing returns (scale, data, and learning-curve effects) -- and the derived demand (accelerator principle) that keystones a whole supply chain",
     "micro_or_macro": "both",
     "explain": "Micro: OpenAI is a textbook loss-leader played at civilizational scale. It prices a product below cost to acquire a winner-take-most market, betting on increasing returns to adoption -- more users produce more data and brand gravity, which improve the product and raise switching costs -- combined with a learning/experience curve where the cost to deliver a unit of capability falls as cumulative output rises. If cost-per-token drops faster than the subsidy compounds, the intertemporal trade works: lose money now to own a toll later. The danger is that inference cost scales with free usage, so adoption itself burns cash until pricing power or efficiency arrives, and if frontier capability commoditizes (cheap open-weight rivals), the moat collapses to distribution alone. Macro: OpenAI is the clearest live example of the accelerator principle and derived demand. Its appetite for compute is the demand that justifies CoreWeave's debt, NVIDIA's margins, and TSMC's capex -- so a change in OpenAI's growth rate is amplified as it propagates up the chain. That linkage is what makes the AI buildout both a flywheel and a potential bubble: when the demand at the bottom is partly validated by the suppliers who also finance it (circular financing), the whole structure can look sturdier than independent end-demand would justify, and a shortfall at OpenAI would run the accelerator backward all the way to the furnace."
+  },
+  "scale": {
+    "value_usd": 70000000000.0,
+    "display": "~$70B run-rate",
+    "metric": "annualized recurring revenue",
+    "period": "reported Sep 29, 2026",
+    "basis": "company (run-rate, forward-looking)",
+    "confidence": "medium",
+    "source_url": "https://www.thestar.com.my/tech/tech-news/2026/09/29/openai039s-annual-recurring-revenue-nears-70-billion-axios-reports",
+    "note": "Anonymous-source report (Axios, then Reuters). A separate FT report put the run rate nearer $50B, so treat as a range.",
+    "as_of_date": "2026-11-21"
   }
 }

@@ -2,7 +2,12 @@
   "identity": {
     "id": "microsoft",
     "name": "Microsoft",
-    "aka": ["Microsoft Corporation", "MSFT", "the bundle", "Redmond"],
+    "aka": [
+      "Microsoft Corporation",
+      "MSFT",
+      "the bundle",
+      "Redmond"
+    ],
     "sector": "Enterprise software / cloud / AI platforms",
     "geography": "United States (Redmond, WA); global",
     "era": "1975-present; cloud pivot 2014-present; AI-distribution era 2023-present",
@@ -60,9 +65,18 @@
       "play_name": "The Bundle",
       "tagline": "Don't beat the standalone leader; fold a good-enough version into the suite they already buy.",
       "flow": [
-        {"step_title": "Find the hot standalone", "step_desc": "Spot a category where a focused rival is winning on a per-seat subscription (chat: Slack; video: Zoom; later, AI assistants)."},
-        {"step_title": "Ship a good-enough clone, bundled", "step_desc": "Build your own version and include it in Microsoft 365 at no separate charge, so the customer's marginal price to adopt it is zero."},
-        {"step_title": "Let distribution do the killing", "step_desc": "The rival now has to be not just better but better-by-enough to justify a second invoice and a second login. Most buyers default to 'already here.'"}
+        {
+          "step_title": "Find the hot standalone",
+          "step_desc": "Spot a category where a focused rival is winning on a per-seat subscription (chat: Slack; video: Zoom; later, AI assistants)."
+        },
+        {
+          "step_title": "Ship a good-enough clone, bundled",
+          "step_desc": "Build your own version and include it in Microsoft 365 at no separate charge, so the customer's marginal price to adopt it is zero."
+        },
+        {
+          "step_title": "Let distribution do the killing",
+          "step_desc": "The rival now has to be not just better but better-by-enough to justify a second invoice and a second login. Most buyers default to 'already here.'"
+        }
       ],
       "the_move": "Weaponize an existing billing relationship. Bundling turns a feature war into a distribution war, which the incumbent with the suite almost always wins.",
       "in_the_wild": {
@@ -70,15 +84,29 @@
         "confidence": "high"
       },
       "watch_out": "Bundling a dominant product is exactly what draws antitrust scrutiny. The Teams unbundling in the EU is the warning shot; a US or EU regulator treating Copilot-in-Office the same way would blunt the sharpest blade in the kit.",
-      "mechanics": ["bundling", "product-envelopment", "zero-marginal-cost", "distribution-advantage"]
+      "mechanics": [
+        "bundling",
+        "product-envelopment",
+        "zero-marginal-cost",
+        "distribution-advantage"
+      ]
     },
     {
       "play_name": "Seat Annuity",
       "tagline": "Stop selling the box once; rent the same software forever.",
       "flow": [
-        {"step_title": "Kill the perpetual license", "step_desc": "Move customers off one-time boxed Office purchases and onto Microsoft 365, a per-user annual (or monthly) subscription."},
-        {"step_title": "Tier and expand", "step_desc": "Offer escalating tiers (E3, E5, Copilot add-ons) so the same seat can be upsold repeatedly without a new sales cycle."},
-        {"step_title": "Compound the base", "step_desc": "Revenue becomes an annuity that grows with headcount and tier mix, not a sawtooth of upgrade cycles — far more valuable and predictable."}
+        {
+          "step_title": "Kill the perpetual license",
+          "step_desc": "Move customers off one-time boxed Office purchases and onto Microsoft 365, a per-user annual (or monthly) subscription."
+        },
+        {
+          "step_title": "Tier and expand",
+          "step_desc": "Offer escalating tiers (E3, E5, Copilot add-ons) so the same seat can be upsold repeatedly without a new sales cycle."
+        },
+        {
+          "step_title": "Compound the base",
+          "step_desc": "Revenue becomes an annuity that grows with headcount and tier mix, not a sawtooth of upgrade cycles — far more valuable and predictable."
+        }
       ],
       "the_move": "Convert a durable good into a subscription. The customer pays less per month but far more per decade, and the vendor trades a lumpy upgrade business for a compounding annuity.",
       "in_the_wild": {
@@ -86,15 +114,29 @@
         "confidence": "high"
       },
       "watch_out": "Subscription fatigue and seat-count sensitivity: in a downturn, customers cut seats and downgrade tiers instantly, which a perpetual-license base could not do. The annuity cuts both ways.",
-      "mechanics": ["subscription-conversion", "annuity-revenue", "tiered-upsell", "recurring-revenue"]
+      "mechanics": [
+        "subscription-conversion",
+        "annuity-revenue",
+        "tiered-upsell",
+        "recurring-revenue"
+      ]
     },
     {
       "play_name": "Rent the Grid",
       "tagline": "Build the data centers, then charge by the metered sip.",
       "flow": [
-        {"step_title": "Pour the concrete", "step_desc": "Spend tens of billions on global data centers and AI accelerators — brutal, capital-heavy, the opposite of the software margin."},
-        {"step_title": "Meter everything", "step_desc": "Rent compute, storage, databases, and AI inference by consumption through Azure, so revenue scales with the customer's own usage."},
-        {"step_title": "Lock in with gravity", "step_desc": "Once a customer's data, pipelines, and identity live in Azure, moving out means re-plumbing everything — so usage, and the bill, only climb."}
+        {
+          "step_title": "Pour the concrete",
+          "step_desc": "Spend tens of billions on global data centers and AI accelerators — brutal, capital-heavy, the opposite of the software margin."
+        },
+        {
+          "step_title": "Meter everything",
+          "step_desc": "Rent compute, storage, databases, and AI inference by consumption through Azure, so revenue scales with the customer's own usage."
+        },
+        {
+          "step_title": "Lock in with gravity",
+          "step_desc": "Once a customer's data, pipelines, and identity live in Azure, moving out means re-plumbing everything — so usage, and the bill, only climb."
+        }
       ],
       "the_move": "Trade software's capital-light margin for infrastructure's recurring, gravity-well revenue. The capex is the moat: few can afford to build a competing grid.",
       "in_the_wild": {
@@ -102,15 +144,29 @@
         "confidence": "high"
       },
       "watch_out": "The capex is now so large it is compressing Microsoft's famous margins, and a chunk of the booked demand is circular (its own OpenAI investment buying Azure). If AI demand plateaus, the half-built grid becomes a very expensive fixed cost.",
-      "mechanics": ["metered-consumption", "capital-intensity", "data-gravity", "recurring-revenue"]
+      "mechanics": [
+        "metered-consumption",
+        "capital-intensity",
+        "data-gravity",
+        "recurring-revenue"
+      ]
     },
     {
       "play_name": "Own the Floor",
       "tagline": "Be the standard everyone else has to build on top of.",
       "flow": [
-        {"step_title": "Win the desktop and the directory", "step_desc": "Windows on the endpoint and Active Directory / Entra as the identity layer became the default enterprises standardized on decades ago."},
-        {"step_title": "Make everything authenticate to you", "step_desc": "Third-party apps, VPNs, and SaaS tools all tie into Microsoft identity and management, so Microsoft sits beneath the whole stack."},
-        {"step_title": "Collect on the standard", "step_desc": "Being the floor means every new layer — security, compliance, AI — can be sold as another product the customer logs into with the same credentials."}
+        {
+          "step_title": "Win the desktop and the directory",
+          "step_desc": "Windows on the endpoint and Active Directory / Entra as the identity layer became the default enterprises standardized on decades ago."
+        },
+        {
+          "step_title": "Make everything authenticate to you",
+          "step_desc": "Third-party apps, VPNs, and SaaS tools all tie into Microsoft identity and management, so Microsoft sits beneath the whole stack."
+        },
+        {
+          "step_title": "Collect on the standard",
+          "step_desc": "Being the floor means every new layer — security, compliance, AI — can be sold as another product the customer logs into with the same credentials."
+        }
       ],
       "the_move": "Control the lowest reusable layer (OS + identity) and you tax everything built above it. The deepest switching cost is the one wired into how everyone signs in.",
       "in_the_wild": {
@@ -118,15 +174,29 @@
         "confidence": "medium"
       },
       "watch_out": "Owning the floor also means owning the blast radius: a major identity or security breach (several have hit Entra/Exchange) damages exactly the trust the standard rests on, and invites 'single point of failure' regulation.",
-      "mechanics": ["installed-base", "identity-lock-in", "platform-standard", "high-switching-costs"]
+      "mechanics": [
+        "installed-base",
+        "identity-lock-in",
+        "platform-standard",
+        "high-switching-costs"
+      ]
     },
     {
       "play_name": "Buy the Network",
       "tagline": "When the moat is a network or a library you can't clone, write a check for it.",
       "flow": [
-        {"step_title": "Identify the un-buildable", "step_desc": "Find assets whose value is a network effect or an owned catalog that can't be recreated by shipping features — a professional graph, a developer graph, a franchise library."},
-        {"step_title": "Acquire outright", "step_desc": "Buy LinkedIn (~$26B, 2016), GitHub (~$7.5B, 2018), Activision Blizzard (~$69B, closed 2023) rather than competing with them."},
-        {"step_title": "Wire them into the base", "step_desc": "Feed the acquisition's data and audience back into the suite — LinkedIn into sales tools, GitHub into Copilot, game franchises into Game Pass."}
+        {
+          "step_title": "Identify the un-buildable",
+          "step_desc": "Find assets whose value is a network effect or an owned catalog that can't be recreated by shipping features — a professional graph, a developer graph, a franchise library."
+        },
+        {
+          "step_title": "Acquire outright",
+          "step_desc": "Buy LinkedIn (~$26B, 2016), GitHub (~$7.5B, 2018), Activision Blizzard (~$69B, closed 2023) rather than competing with them."
+        },
+        {
+          "step_title": "Wire them into the base",
+          "step_desc": "Feed the acquisition's data and audience back into the suite — LinkedIn into sales tools, GitHub into Copilot, game franchises into Game Pass."
+        }
       ],
       "the_move": "Buy moats you can't build. A network effect or a content library is cheaper to acquire than to replicate, and it slots into the existing distribution machine.",
       "in_the_wild": {
@@ -134,15 +204,29 @@
         "confidence": "high"
       },
       "watch_out": "Mega-acquisitions draw years of regulatory review (the Activision deal nearly died at the UK's CMA and the US FTC), and integrating culture-heavy networks like LinkedIn and GitHub without killing what made them valuable is far from automatic.",
-      "mechanics": ["acquire-the-complement", "network-effects", "content-library", "roll-up"]
+      "mechanics": [
+        "acquire-the-complement",
+        "network-effects",
+        "content-library",
+        "roll-up"
+      ]
     },
     {
       "play_name": "Patron's Seat",
       "tagline": "Don't just buy from the gold rush; own a share of the miner and rent them the land.",
       "flow": [
-        {"step_title": "Fund the frontier lab", "step_desc": "Invest early and heavily in OpenAI, becoming its largest outside shareholder and its original compute provider."},
-        {"step_title": "Make the money come back as revenue", "step_desc": "The lab contracts to buy ~$250B of Azure, so Microsoft's investment returns partly as its own cloud demand — a circle it books as growth."},
-        {"step_title": "Keep the distribution rights", "step_desc": "Secure IP rights to the models through 2032 (now including post-AGI models) so the frontier technology flows straight into Office, Azure, and Copilot."}
+        {
+          "step_title": "Fund the frontier lab",
+          "step_desc": "Invest early and heavily in OpenAI, becoming its largest outside shareholder and its original compute provider."
+        },
+        {
+          "step_title": "Make the money come back as revenue",
+          "step_desc": "The lab contracts to buy ~$250B of Azure, so Microsoft's investment returns partly as its own cloud demand — a circle it books as growth."
+        },
+        {
+          "step_title": "Keep the distribution rights",
+          "step_desc": "Secure IP rights to the models through 2032 (now including post-AGI models) so the frontier technology flows straight into Office, Azure, and Copilot."
+        }
       ],
       "the_move": "Be supplier, shareholder, and distributor of the same partner at once. The structure turns a bet on a startup into recurring cloud revenue plus a product pipeline you don't have to invent yourself.",
       "in_the_wild": {
@@ -150,15 +234,29 @@
         "confidence": "high"
       },
       "watch_out": "The circularity is the risk: OpenAI's losses already cut Microsoft's quarterly net income by ~$3.1B through the equity method, and if the AI revenue never catches the capex, Microsoft owns a big slice of the downside as investor, landlord, and builder all at once.",
-      "mechanics": ["strategic-investment", "vendor-financing", "supplier-as-shareholder", "distribution-rights"]
+      "mechanics": [
+        "strategic-investment",
+        "vendor-financing",
+        "supplier-as-shareholder",
+        "distribution-rights"
+      ]
     },
     {
       "play_name": "Copilot Upsell",
       "tagline": "The cheapest customer to sell AI to is the one already paying you for everything else.",
       "flow": [
-        {"step_title": "Start with the captive base", "step_desc": "Microsoft already bills hundreds of millions of knowledge-worker seats through Microsoft 365 — the acquisition cost for the next sale is essentially zero."},
-        {"step_title": "Price AI as an add-on", "step_desc": "Offer Copilot as a per-seat surcharge on top of the existing subscription rather than a new standalone product with its own sales motion."},
-        {"step_title": "Convert reach into attach rate", "step_desc": "Even a modest attach rate across a vast base is enormous incremental revenue, and it rides the same identity, data, and billing rails already in place."}
+        {
+          "step_title": "Start with the captive base",
+          "step_desc": "Microsoft already bills hundreds of millions of knowledge-worker seats through Microsoft 365 — the acquisition cost for the next sale is essentially zero."
+        },
+        {
+          "step_title": "Price AI as an add-on",
+          "step_desc": "Offer Copilot as a per-seat surcharge on top of the existing subscription rather than a new standalone product with its own sales motion."
+        },
+        {
+          "step_title": "Convert reach into attach rate",
+          "step_desc": "Even a modest attach rate across a vast base is enormous incremental revenue, and it rides the same identity, data, and billing rails already in place."
+        }
       ],
       "the_move": "Monetize a new technology through an installed base instead of a new market. Distribution, not model quality, is the scarce resource — and Microsoft already owns the distribution.",
       "in_the_wild": {
@@ -166,15 +264,29 @@
         "confidence": "medium"
       },
       "watch_out": "If a rival assistant (Google's, or a free open-weight model wired into the browser) is good enough and genuinely free, the add-on surcharge is the first line item a cost-cutting CFO questions. The upsell depends on 'already here' beating 'actually cheaper.'",
-      "mechanics": ["cross-sell", "installed-base-leverage", "add-on-pricing", "distribution-moat"]
+      "mechanics": [
+        "cross-sell",
+        "installed-base-leverage",
+        "add-on-pricing",
+        "distribution-moat"
+      ]
     },
     {
       "play_name": "Land and Expand",
       "tagline": "Get one department in the door, then grow inside the account for years.",
       "flow": [
-        {"step_title": "Sell the beachhead", "step_desc": "Win a single workload — email, a few Azure VMs, one M365 tier — often discounted through a volume-licensing enterprise agreement."},
-        {"step_title": "Grow usage inside the account", "step_desc": "Consumption and seat counts rise organically; then the field sales team cross-sells security, Dynamics, Power Platform, and Copilot into the same customer."},
-        {"step_title": "Lock the renewal", "step_desc": "Multi-year enterprise agreements and the sheer breadth of adopted products make the renewal a formality and the competitor's displacement bid nearly hopeless."}
+        {
+          "step_title": "Sell the beachhead",
+          "step_desc": "Win a single workload — email, a few Azure VMs, one M365 tier — often discounted through a volume-licensing enterprise agreement."
+        },
+        {
+          "step_title": "Grow usage inside the account",
+          "step_desc": "Consumption and seat counts rise organically; then the field sales team cross-sells security, Dynamics, Power Platform, and Copilot into the same customer."
+        },
+        {
+          "step_title": "Lock the renewal",
+          "step_desc": "Multi-year enterprise agreements and the sheer breadth of adopted products make the renewal a formality and the competitor's displacement bid nearly hopeless."
+        }
       ],
       "the_move": "Treat each customer as a territory, not a transaction. Net revenue retention above 100% means the existing base grows the top line before a single new logo is added.",
       "in_the_wild": {
@@ -182,19 +294,51 @@
         "confidence": "high"
       },
       "watch_out": "Land-and-expand depends on the account staying healthy and growing; broad exposure means a wave of enterprise belt-tightening hits many products at once, and the same breadth that aids the sale makes a multi-product price increase very visible.",
-      "mechanics": ["land-and-expand", "net-revenue-retention", "enterprise-agreements", "cross-sell"]
+      "mechanics": [
+        "land-and-expand",
+        "net-revenue-retention",
+        "enterprise-agreements",
+        "cross-sell"
+      ]
     }
   ],
   "mechanics_summary": [
-    {"tag": "bundling", "note": "The master move: fold a good-enough product into the suite the customer already buys, so a feature war becomes a distribution war the incumbent wins."},
-    {"tag": "zero-marginal-cost", "note": "Software copies for almost nothing, so the marginal price of the next bundled product can be ~zero to the customer and near-pure margin to Microsoft."},
-    {"tag": "installed-base", "note": "A fifty-year base of enterprises, developers, and governments is the asset every play leverages; the next sale is cheap because the customer is already inside."},
-    {"tag": "identity-lock-in", "note": "Entra/Active Directory is the layer everything authenticates to; the deepest switching cost is wired into how the whole org signs in."},
-    {"tag": "recurring-revenue", "note": "Perpetual licenses became per-seat subscriptions and metered cloud — a compounding annuity, visible in a $392B contracted backlog."},
-    {"tag": "capital-intensity", "note": "Azure and AI invert the software model: tens of billions of capex per quarter buy an infrastructure moat few rivals can afford to match."},
-    {"tag": "acquire-the-complement", "note": "Moats that can't be built — LinkedIn's graph, GitHub's developers, Activision's franchises — are bought and wired into the distribution machine."},
-    {"tag": "vendor-financing", "note": "The OpenAI structure makes Microsoft investor, compute landlord, and distributor of one partner at once, so its investment returns partly as its own Azure revenue."},
-    {"tag": "cross-sell", "note": "Copilot and security ride the existing base at near-zero acquisition cost; distribution, not product quality, is the scarce resource Microsoft owns."}
+    {
+      "tag": "bundling",
+      "note": "The master move: fold a good-enough product into the suite the customer already buys, so a feature war becomes a distribution war the incumbent wins."
+    },
+    {
+      "tag": "zero-marginal-cost",
+      "note": "Software copies for almost nothing, so the marginal price of the next bundled product can be ~zero to the customer and near-pure margin to Microsoft."
+    },
+    {
+      "tag": "installed-base",
+      "note": "A fifty-year base of enterprises, developers, and governments is the asset every play leverages; the next sale is cheap because the customer is already inside."
+    },
+    {
+      "tag": "identity-lock-in",
+      "note": "Entra/Active Directory is the layer everything authenticates to; the deepest switching cost is wired into how the whole org signs in."
+    },
+    {
+      "tag": "recurring-revenue",
+      "note": "Perpetual licenses became per-seat subscriptions and metered cloud — a compounding annuity, visible in a $392B contracted backlog."
+    },
+    {
+      "tag": "capital-intensity",
+      "note": "Azure and AI invert the software model: tens of billions of capex per quarter buy an infrastructure moat few rivals can afford to match."
+    },
+    {
+      "tag": "acquire-the-complement",
+      "note": "Moats that can't be built — LinkedIn's graph, GitHub's developers, Activision's franchises — are bought and wired into the distribution machine."
+    },
+    {
+      "tag": "vendor-financing",
+      "note": "The OpenAI structure makes Microsoft investor, compute landlord, and distributor of one partner at once, so its investment returns partly as its own Azure revenue."
+    },
+    {
+      "tag": "cross-sell",
+      "note": "Copilot and security ride the existing base at near-zero acquisition cost; distribution, not product quality, is the scarce resource Microsoft owns."
+    }
   ],
   "history": {
     "origin": {
@@ -215,18 +359,90 @@
   },
   "epistemics": {
     "numbers": [
-      {"claim": "Full fiscal year 2025 (ended June 30, 2025) revenue of $281.7 billion, up 15% year over year", "value": "$281.7B", "as_of_date": "2025-07-30", "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/", "confidence": "high"},
-      {"claim": "FY2025 operating income $128.5B (up 17%) and net income $101.8B (up 16%); diluted EPS $13.64", "value": "$128.5B op / $101.8B net / $13.64 EPS", "as_of_date": "2025-07-30", "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/", "confidence": "high"},
-      {"claim": "Azure surpassed $75 billion in revenue for FY2025, up 34% (CEO statement)", "value": "$75B+ Azure, +34%", "as_of_date": "2025-07-30", "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/", "confidence": "high"},
-      {"claim": "Q1 FY2026 (quarter ended Sept 30, 2025): revenue $77.7B (+18%), operating income $38.0B (+24%), GAAP net income $27.7B (+12%)", "value": "$77.7B rev / $38.0B op / $27.7B net", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "high"},
-      {"claim": "Q1 FY2026 segment revenue: Productivity and Business Processes $33.0B (+17%), Intelligent Cloud $30.9B (+28%), More Personal Computing $13.8B (+4%)", "value": "$33.0B / $30.9B / $13.8B", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "high"},
-      {"claim": "Q1 FY2026: Azure and other cloud services revenue grew 40%; Microsoft Cloud revenue $49.1B (+26%)", "value": "Azure +40%, MS Cloud $49.1B", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "high"},
-      {"claim": "Commercial remaining performance obligation (contracted, unrecognized revenue) rose 51% to $392 billion as of Sept 30, 2025", "value": "$392B RPO", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "high"},
-      {"claim": "Losses from Microsoft's investment in OpenAI reduced Q1 FY2026 GAAP net income by $3.1 billion and diluted EPS by $0.41 (equity method)", "value": "-$3.1B net income impact", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "high"},
-      {"claim": "Additions to property and equipment were approximately $19.4 billion in the quarter ended Sept 30, 2025 (cash-flow line; excludes finance leases)", "value": "~$19.4B capex (PP&E additions)", "as_of_date": "2025-10-29", "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast", "confidence": "medium"},
-      {"claim": "October 28, 2025 restructuring: Microsoft holds ~27% of OpenAI Group PBC on an as-converted diluted basis, valued ~$135B; OpenAI contracted to buy an incremental $250B of Azure; Microsoft IP rights extended through 2032, now including post-AGI models", "value": "~27% / ~$135B / $250B Azure / IP to 2032", "as_of_date": "2025-10-28", "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/", "confidence": "high"},
-      {"claim": "Microsoft crossed a $4 trillion market capitalization in 2025, the second company ever to do so", "value": "~$4T market cap", "as_of_date": "2025-07-31", "source_url": "https://www.aljazeera.com/economy/2025/7/31/microsoft-becomes-second-company-to-surpass-4-trillion-in-market-value", "confidence": "medium"},
-      {"claim": "Activision Blizzard acquisition closed October 2023 for approximately $69 billion, Microsoft's largest acquisition", "value": "~$69B Activision", "as_of_date": "2023-10-13", "source_url": "https://news.microsoft.com/2023/10/13/microsoft-completes-acquisition-of-activision-blizzard/", "confidence": "medium"}
+      {
+        "claim": "Full fiscal year 2025 (ended June 30, 2025) revenue of $281.7 billion, up 15% year over year",
+        "value": "$281.7B",
+        "as_of_date": "2025-07-30",
+        "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/",
+        "confidence": "high"
+      },
+      {
+        "claim": "FY2025 operating income $128.5B (up 17%) and net income $101.8B (up 16%); diluted EPS $13.64",
+        "value": "$128.5B op / $101.8B net / $13.64 EPS",
+        "as_of_date": "2025-07-30",
+        "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/",
+        "confidence": "high"
+      },
+      {
+        "claim": "Azure surpassed $75 billion in revenue for FY2025, up 34% (CEO statement)",
+        "value": "$75B+ Azure, +34%",
+        "as_of_date": "2025-07-30",
+        "source_url": "https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q1 FY2026 (quarter ended Sept 30, 2025): revenue $77.7B (+18%), operating income $38.0B (+24%), GAAP net income $27.7B (+12%)",
+        "value": "$77.7B rev / $38.0B op / $27.7B net",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q1 FY2026 segment revenue: Productivity and Business Processes $33.0B (+17%), Intelligent Cloud $30.9B (+28%), More Personal Computing $13.8B (+4%)",
+        "value": "$33.0B / $30.9B / $13.8B",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "high"
+      },
+      {
+        "claim": "Q1 FY2026: Azure and other cloud services revenue grew 40%; Microsoft Cloud revenue $49.1B (+26%)",
+        "value": "Azure +40%, MS Cloud $49.1B",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "high"
+      },
+      {
+        "claim": "Commercial remaining performance obligation (contracted, unrecognized revenue) rose 51% to $392 billion as of Sept 30, 2025",
+        "value": "$392B RPO",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "high"
+      },
+      {
+        "claim": "Losses from Microsoft's investment in OpenAI reduced Q1 FY2026 GAAP net income by $3.1 billion and diluted EPS by $0.41 (equity method)",
+        "value": "-$3.1B net income impact",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "high"
+      },
+      {
+        "claim": "Additions to property and equipment were approximately $19.4 billion in the quarter ended Sept 30, 2025 (cash-flow line; excludes finance leases)",
+        "value": "~$19.4B capex (PP&E additions)",
+        "as_of_date": "2025-10-29",
+        "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+        "confidence": "medium"
+      },
+      {
+        "claim": "October 28, 2025 restructuring: Microsoft holds ~27% of OpenAI Group PBC on an as-converted diluted basis, valued ~$135B; OpenAI contracted to buy an incremental $250B of Azure; Microsoft IP rights extended through 2032, now including post-AGI models",
+        "value": "~27% / ~$135B / $250B Azure / IP to 2032",
+        "as_of_date": "2025-10-28",
+        "source_url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+        "confidence": "high"
+      },
+      {
+        "claim": "Microsoft crossed a $4 trillion market capitalization in 2025, the second company ever to do so",
+        "value": "~$4T market cap",
+        "as_of_date": "2025-07-31",
+        "source_url": "https://www.aljazeera.com/economy/2025/7/31/microsoft-becomes-second-company-to-surpass-4-trillion-in-market-value",
+        "confidence": "medium"
+      },
+      {
+        "claim": "Activision Blizzard acquisition closed October 2023 for approximately $69 billion, Microsoft's largest acquisition",
+        "value": "~$69B Activision",
+        "as_of_date": "2023-10-13",
+        "source_url": "https://news.microsoft.com/2023/10/13/microsoft-completes-acquisition-of-activision-blizzard/",
+        "confidence": "medium"
+      }
     ],
     "overall": "high",
     "unknowns": [
@@ -249,5 +465,15 @@
     "concept": "Bundling and economies of scope (zero marginal cost)",
     "micro_or_macro": "micro",
     "explain": "Microsoft is the textbook case of bundling as a competitive weapon. Because software has near-zero marginal cost of reproduction, Microsoft can add a product to the Microsoft 365 suite at essentially no extra charge to the customer — which means a focused rival selling that product standalone must overcome not a price but the friction of a second invoice and a second login. Economies of scope (sharing one sales force, one identity layer, one billing relationship across many products) make each additional product cheaper for Microsoft to deliver than for any single-product competitor, so the suite's average cost falls as its breadth grows. Bundling also works as price discrimination: customers who value only one app and customers who use ten both pay roughly the same suite price, letting Microsoft capture more total surplus than per-product pricing would. The same logic now governs AI distribution — Copilot reaches a captive installed base at near-zero acquisition cost, so Microsoft's advantage in AI is less about model quality than about owning the channel. The limiting force is antitrust: bundling by a dominant firm can foreclose competition, which is why the EU forced Microsoft to unbundle Teams."
+  },
+  "scale": {
+    "value_usd": 331800000000.0,
+    "display": "$331.8B",
+    "metric": "annual revenue",
+    "period": "FY2026 (ended Jun 30, 2026)",
+    "basis": "company",
+    "confidence": "high",
+    "source_url": "https://news.microsoft.com/source/2026/07/29/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results-4",
+    "as_of_date": "2026-11-21"
   }
 }

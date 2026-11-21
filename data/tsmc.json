@@ -2,7 +2,12 @@
   "identity": {
     "id": "tsmc",
     "name": "TSMC",
-    "aka": ["Taiwan Semiconductor Manufacturing Company", "TSM", "the foundry", "the world's fab"],
+    "aka": [
+      "Taiwan Semiconductor Manufacturing Company",
+      "TSM",
+      "the foundry",
+      "the world's fab"
+    ],
     "sector": "Semiconductor manufacturing (pure-play foundry)",
     "geography": "Taiwan (Hsinchu); expanding fabs in Arizona, Japan, and Germany",
     "era": "1987-present; AI-driven leading-edge dominance 2023-present",
@@ -57,9 +62,18 @@
       "play_name": "Pure Play",
       "tagline": "Make nothing of your own, so every designer can trust you with their crown jewels.",
       "flow": [
-        {"step_title": "Renounce your own chips", "step_desc": "Commit to never designing or selling a competing product. The factory's only business is building other people's designs."},
-        {"step_title": "Earn the trust", "step_desc": "Because you will never compete with them, mortal rivals can all hand you their most secret designs without fear you'll copy or favor one."},
-        {"step_title": "Collect from every side", "step_desc": "Your customer list becomes the entire industry at once — the designers who hate each other all pay the same neutral forge."}
+        {
+          "step_title": "Renounce your own chips",
+          "step_desc": "Commit to never designing or selling a competing product. The factory's only business is building other people's designs."
+        },
+        {
+          "step_title": "Earn the trust",
+          "step_desc": "Because you will never compete with them, mortal rivals can all hand you their most secret designs without fear you'll copy or favor one."
+        },
+        {
+          "step_title": "Collect from every side",
+          "step_desc": "Your customer list becomes the entire industry at once — the designers who hate each other all pay the same neutral forge."
+        }
       ],
       "the_move": "Turn neutrality into a business model. By refusing to compete with your customers, you become the one supplier all of them can safely depend on.",
       "in_the_wild": {
@@ -67,15 +81,29 @@
         "confidence": "high"
       },
       "watch_out": "Neutrality cracks if TSMC ever starts favoring one customer's allocation over another's, or if a customer fears its designs leak. Trust is the whole asset, and it is fragile.",
-      "mechanics": ["neutral-supplier", "trust-as-moat", "shared-infrastructure", "conflict-free"]
+      "mechanics": [
+        "neutral-supplier",
+        "trust-as-moat",
+        "shared-infrastructure",
+        "conflict-free"
+      ]
     },
     {
       "play_name": "Pool Demand",
       "tagline": "Build the fab no single customer could afford by renting it to all of them.",
       "flow": [
-        {"step_title": "Find the unaffordable fixed cost", "step_desc": "A leading-edge fab costs more than $20 billion — more than any one chip company's volume could justify building alone."},
-        {"step_title": "Aggregate the orders", "step_desc": "Combine the wafer demand of dozens of fabless companies so the fab runs full, spreading that colossal fixed cost across everyone."},
-        {"step_title": "Make the build rational", "step_desc": "What is irrational for one buyer becomes obviously rational as shared infrastructure — and once built, it is the cheapest place on Earth to make advanced chips."}
+        {
+          "step_title": "Find the unaffordable fixed cost",
+          "step_desc": "A leading-edge fab costs more than $20 billion — more than any one chip company's volume could justify building alone."
+        },
+        {
+          "step_title": "Aggregate the orders",
+          "step_desc": "Combine the wafer demand of dozens of fabless companies so the fab runs full, spreading that colossal fixed cost across everyone."
+        },
+        {
+          "step_title": "Make the build rational",
+          "step_desc": "What is irrational for one buyer becomes obviously rational as shared infrastructure — and once built, it is the cheapest place on Earth to make advanced chips."
+        }
       ],
       "the_move": "Convert a prohibitive fixed cost into shared infrastructure. Pooling demand is what lets the frontier fab exist at all — and what makes it a near-impossible thing to replicate.",
       "in_the_wild": {
@@ -83,15 +111,29 @@
         "confidence": "high"
       },
       "watch_out": "Pooled demand is pooled risk. If AI capex turns out to be a bubble, TSMC is left holding the depreciation on fabs built for demand that evaporated.",
-      "mechanics": ["demand-aggregation", "fixed-cost-sharing", "minimum-efficient-scale", "capital-moat"]
+      "mechanics": [
+        "demand-aggregation",
+        "fixed-cost-sharing",
+        "minimum-efficient-scale",
+        "capital-moat"
+      ]
     },
     {
       "play_name": "Climb the Node",
       "tagline": "Stay one process generation ahead and let the learning curve bury the chasers.",
       "flow": [
-        {"step_title": "Lead the next shrink", "step_desc": "Be first to a new, smaller process node (3nm, then 2nm) that makes chips faster and more efficient."},
-        {"step_title": "Ride the yield curve", "step_desc": "Yields (good chips per wafer) improve with cumulative production, so the first mover with the most volume gets good fast and cheap while rivals struggle."},
-        {"step_title": "Reinvest the lead", "step_desc": "The profits from the frontier node fund the next one, so the gap to Samsung and Intel widens rather than closes."}
+        {
+          "step_title": "Lead the next shrink",
+          "step_desc": "Be first to a new, smaller process node (3nm, then 2nm) that makes chips faster and more efficient."
+        },
+        {
+          "step_title": "Ride the yield curve",
+          "step_desc": "Yields (good chips per wafer) improve with cumulative production, so the first mover with the most volume gets good fast and cheap while rivals struggle."
+        },
+        {
+          "step_title": "Reinvest the lead",
+          "step_desc": "The profits from the frontier node fund the next one, so the gap to Samsung and Intel widens rather than closes."
+        }
       ],
       "the_move": "Weaponize the experience curve. Because yield improves with volume and volume follows the lead, being ahead compounds into being further ahead.",
       "in_the_wild": {
@@ -99,15 +141,29 @@
         "confidence": "high"
       },
       "watch_out": "The climb is not infinite — physics, EUV tool availability from ASML, and ballooning costs per node could flatten the lead, and one botched node transition would hand rivals a rare opening.",
-      "mechanics": ["learning-curve", "first-mover-compounding", "process-leadership", "increasing-returns"]
+      "mechanics": [
+        "learning-curve",
+        "first-mover-compounding",
+        "process-leadership",
+        "increasing-returns"
+      ]
     },
     {
       "play_name": "Own the Package",
       "tagline": "Control the last step everyone forgot about, and you gate the whole AI boom.",
       "flow": [
-        {"step_title": "Master advanced packaging", "step_desc": "AI accelerators need many dies and memory stacks bonded together (CoWoS). TSMC built the capacity and know-how to do this at scale."},
-        {"step_title": "Become the chokepoint", "step_desc": "Even with chips fabricated, there is nowhere near enough packaging capacity — so CoWoS output, not raw chips, sets how many AI GPUs can ship."},
-        {"step_title": "Hold the valve", "step_desc": "Whoever controls the scarcest step in the chain controls the whole chain's throughput, and can price and allocate it."}
+        {
+          "step_title": "Master advanced packaging",
+          "step_desc": "AI accelerators need many dies and memory stacks bonded together (CoWoS). TSMC built the capacity and know-how to do this at scale."
+        },
+        {
+          "step_title": "Become the chokepoint",
+          "step_desc": "Even with chips fabricated, there is nowhere near enough packaging capacity — so CoWoS output, not raw chips, sets how many AI GPUs can ship."
+        },
+        {
+          "step_title": "Hold the valve",
+          "step_desc": "Whoever controls the scarcest step in the chain controls the whole chain's throughput, and can price and allocate it."
+        }
       ],
       "the_move": "Find the overlooked bottleneck and own it. When demand explodes, the scarcest step becomes the most powerful one — and advanced packaging became exactly that.",
       "in_the_wild": {
@@ -115,15 +171,29 @@
         "confidence": "medium"
       },
       "watch_out": "Packaging is where rivals and customers push hardest to build alternatives (OSAT firms, in-house packaging), because it is the newest and least entrenched part of TSMC's moat.",
-      "mechanics": ["bottleneck-control", "adjacent-expansion", "throughput-gatekeeping", "scarcity-power"]
+      "mechanics": [
+        "bottleneck-control",
+        "adjacent-expansion",
+        "throughput-gatekeeping",
+        "scarcity-power"
+      ]
     },
     {
       "play_name": "Prepay to Play",
       "tagline": "Let customers fund your factory before you build it.",
       "flow": [
-        {"step_title": "Keep capacity scarce", "step_desc": "Leading-edge and packaging capacity are always tight, so customers cannot assume they'll get what they need."},
-        {"step_title": "Demand commitment", "step_desc": "To secure allocation, customers sign long-term agreements and make prepayments — reserving future capacity with cash up front."},
-        {"step_title": "Build with their money", "step_desc": "Those commitments de-risk TSMC's enormous capex: it expands the fab knowing the demand is already paid for."}
+        {
+          "step_title": "Keep capacity scarce",
+          "step_desc": "Leading-edge and packaging capacity are always tight, so customers cannot assume they'll get what they need."
+        },
+        {
+          "step_title": "Demand commitment",
+          "step_desc": "To secure allocation, customers sign long-term agreements and make prepayments — reserving future capacity with cash up front."
+        },
+        {
+          "step_title": "Build with their money",
+          "step_desc": "Those commitments de-risk TSMC's enormous capex: it expands the fab knowing the demand is already paid for."
+        }
       ],
       "the_move": "Shift the financing risk of the factory onto the customers who need it. Scarcity turns buyers into lenders who fund the very capacity they're competing for.",
       "in_the_wild": {
@@ -131,15 +201,29 @@
         "confidence": "illustrative"
       },
       "watch_out": "Prepaid commitments can whipsaw: if a customer's own demand collapses, it may walk away from orders, leaving TSMC with capacity built for a buyer who vanished.",
-      "mechanics": ["customer-financing", "capacity-reservation", "scarcity-power", "demand-visibility"]
+      "mechanics": [
+        "customer-financing",
+        "capacity-reservation",
+        "scarcity-power",
+        "demand-visibility"
+      ]
     },
     {
       "play_name": "Spread the Fabs",
       "tagline": "Put a few fabs abroad to protect the ones that matter at home.",
       "flow": [
-        {"step_title": "Acknowledge the single-point risk", "step_desc": "Concentrating the world's advanced chips in one earthquake- and geopolitics-exposed island terrifies customers and governments."},
-        {"step_title": "Plant flags abroad", "step_desc": "Build fabs in Arizona, Japan, and Germany — enough to reassure customers and win subsidies, courting the US and other governments."},
-        {"step_title": "Keep the crown in Taiwan", "step_desc": "Hold the newest nodes, R&D, and the deepest expertise at home, so the hedge reduces fear without giving away the core advantage."}
+        {
+          "step_title": "Acknowledge the single-point risk",
+          "step_desc": "Concentrating the world's advanced chips in one earthquake- and geopolitics-exposed island terrifies customers and governments."
+        },
+        {
+          "step_title": "Plant flags abroad",
+          "step_desc": "Build fabs in Arizona, Japan, and Germany — enough to reassure customers and win subsidies, courting the US and other governments."
+        },
+        {
+          "step_title": "Keep the crown in Taiwan",
+          "step_desc": "Hold the newest nodes, R&D, and the deepest expertise at home, so the hedge reduces fear without giving away the core advantage."
+        }
       ],
       "the_move": "Diversify the geography of risk without diluting the geography of advantage. The foreign fabs are insurance and diplomacy; the real machine stays in Taiwan.",
       "in_the_wild": {
@@ -147,18 +231,47 @@
         "confidence": "medium"
       },
       "watch_out": "Overseas fabs cost far more to run and partly erode the cost advantage; push the diversification too far and the economics that made TSMC unbeatable start to leak.",
-      "mechanics": ["geographic-hedging", "political-capital", "concentration-risk", "cost-tradeoff"]
+      "mechanics": [
+        "geographic-hedging",
+        "political-capital",
+        "concentration-risk",
+        "cost-tradeoff"
+      ]
     }
   ],
   "mechanics_summary": [
-    {"tag": "neutral-supplier", "note": "Owning no products of its own is what lets every rival designer trust TSMC with their crown-jewel designs."},
-    {"tag": "economies-of-scale", "note": "A leading-edge fab's fixed cost is so vast that only the player with the most pooled volume can afford the next node."},
-    {"tag": "learning-curve", "note": "Yield improves with cumulative production, so the volume leader gets cheaper and better faster — the lead compounds."},
-    {"tag": "capital-moat", "note": "Tens of billions a year in capex is itself the barrier; you cannot 'just build a competing fab.'"},
-    {"tag": "bottleneck-control", "note": "CoWoS advanced packaging is the scarcest step, so TSMC gates the throughput of the entire AI-accelerator supply chain."},
-    {"tag": "customer-financing", "note": "Scarce capacity turns customers into lenders who prepay and commit, funding TSMC's expansion ahead of the build."},
-    {"tag": "concentration-risk", "note": "The whole frontier sits on one geopolitically exposed island — the machine's single greatest vulnerability."},
-    {"tag": "derived-demand", "note": "TSMC's fortunes ride entirely on its customers' demand for compute; it sits one layer below NVIDIA's own demand bet."}
+    {
+      "tag": "neutral-supplier",
+      "note": "Owning no products of its own is what lets every rival designer trust TSMC with their crown-jewel designs."
+    },
+    {
+      "tag": "economies-of-scale",
+      "note": "A leading-edge fab's fixed cost is so vast that only the player with the most pooled volume can afford the next node."
+    },
+    {
+      "tag": "learning-curve",
+      "note": "Yield improves with cumulative production, so the volume leader gets cheaper and better faster — the lead compounds."
+    },
+    {
+      "tag": "capital-moat",
+      "note": "Tens of billions a year in capex is itself the barrier; you cannot 'just build a competing fab.'"
+    },
+    {
+      "tag": "bottleneck-control",
+      "note": "CoWoS advanced packaging is the scarcest step, so TSMC gates the throughput of the entire AI-accelerator supply chain."
+    },
+    {
+      "tag": "customer-financing",
+      "note": "Scarce capacity turns customers into lenders who prepay and commit, funding TSMC's expansion ahead of the build."
+    },
+    {
+      "tag": "concentration-risk",
+      "note": "The whole frontier sits on one geopolitically exposed island — the machine's single greatest vulnerability."
+    },
+    {
+      "tag": "derived-demand",
+      "note": "TSMC's fortunes ride entirely on its customers' demand for compute; it sits one layer below NVIDIA's own demand bet."
+    }
   ],
   "history": {
     "origin": {
@@ -179,13 +292,55 @@
   },
   "epistemics": {
     "numbers": [
-      {"claim": "Full-year 2025 net revenue of US$122.42 billion (NT$3,809.05 billion), up 35.9% YoY in USD", "value": "US$122.42B", "as_of_date": "2026-01-15", "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf", "confidence": "high"},
-      {"claim": "Full-year 2025 gross margin of 59.9%, up 3.8 points from 56.1% in 2024", "value": "59.9%", "as_of_date": "2026-01-15", "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf", "confidence": "high"},
-      {"claim": "2025 capital expenditure of about US$40.90 billion (consolidated)", "value": "US$40.90B", "as_of_date": "2026-01-15", "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf", "confidence": "high"},
-      {"claim": "In 2025, 7nm-and-below nodes were 74% of wafer revenue; 5nm was 36% and 3nm was 24%", "value": "74% advanced / 24% at 3nm", "as_of_date": "2026-01-15", "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf", "confidence": "high"},
-      {"claim": "2025 full-year net income attributable to parent of NT$1,717.88 billion (diluted EPS NT$66.25)", "value": "NT$1,717.88B", "as_of_date": "2026-01-15", "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf", "confidence": "high"},
-      {"claim": "TSMC held roughly 70-72% of total global foundry revenue through 2025 (TrendForce estimates reported via trade press)", "value": "~70-72%", "as_of_date": "2025-12-23", "source_url": "https://dataconomy.com/2025/12/23/tsmc-dominates-foundry-market-with-72-share-in-q3-2025/", "confidence": "medium"},
-      {"claim": "TSMC's share of leading-edge/advanced-node capacity is widely estimated at ~90%+, though exact figures vary by definition and source", "value": "~90%+ (leading edge)", "as_of_date": "2025-12-23", "source_url": "https://dataconomy.com/2025/12/23/tsmc-dominates-foundry-market-with-72-share-in-q3-2025/", "confidence": "illustrative"}
+      {
+        "claim": "Full-year 2025 net revenue of US$122.42 billion (NT$3,809.05 billion), up 35.9% YoY in USD",
+        "value": "US$122.42B",
+        "as_of_date": "2026-01-15",
+        "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+        "confidence": "high"
+      },
+      {
+        "claim": "Full-year 2025 gross margin of 59.9%, up 3.8 points from 56.1% in 2024",
+        "value": "59.9%",
+        "as_of_date": "2026-01-15",
+        "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+        "confidence": "high"
+      },
+      {
+        "claim": "2025 capital expenditure of about US$40.90 billion (consolidated)",
+        "value": "US$40.90B",
+        "as_of_date": "2026-01-15",
+        "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+        "confidence": "high"
+      },
+      {
+        "claim": "In 2025, 7nm-and-below nodes were 74% of wafer revenue; 5nm was 36% and 3nm was 24%",
+        "value": "74% advanced / 24% at 3nm",
+        "as_of_date": "2026-01-15",
+        "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+        "confidence": "high"
+      },
+      {
+        "claim": "2025 full-year net income attributable to parent of NT$1,717.88 billion (diluted EPS NT$66.25)",
+        "value": "NT$1,717.88B",
+        "as_of_date": "2026-01-15",
+        "source_url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+        "confidence": "high"
+      },
+      {
+        "claim": "TSMC held roughly 70-72% of total global foundry revenue through 2025 (TrendForce estimates reported via trade press)",
+        "value": "~70-72%",
+        "as_of_date": "2025-12-23",
+        "source_url": "https://dataconomy.com/2025/12/23/tsmc-dominates-foundry-market-with-72-share-in-q3-2025/",
+        "confidence": "medium"
+      },
+      {
+        "claim": "TSMC's share of leading-edge/advanced-node capacity is widely estimated at ~90%+, though exact figures vary by definition and source",
+        "value": "~90%+ (leading edge)",
+        "as_of_date": "2025-12-23",
+        "source_url": "https://dataconomy.com/2025/12/23/tsmc-dominates-foundry-market-with-72-share-in-q3-2025/",
+        "confidence": "illustrative"
+      }
     ],
     "overall": "high",
     "unknowns": [
@@ -208,5 +363,15 @@
     "concept": "Economies of scale and the experience (learning) curve — tending toward natural monopoly",
     "micro_or_macro": "micro",
     "explain": "A leading-edge fab carries such enormous fixed costs that average cost per chip falls steeply with volume, so the minimum efficient scale is larger than any single customer's demand — only a neutral foundry pooling the whole industry's orders can reach it. Layered on top is the experience curve: manufacturing yield improves with cumulative production, so the volume leader gets cheaper and better faster than chasers can. Together these create increasing returns to scale that push the leading-edge foundry market toward a natural monopoly, which is exactly why GlobalFoundries had to quit the frontier and why TSMC's ~60% margins survive despite ferocious capital intensity."
+  },
+  "scale": {
+    "value_usd": 122400000000.0,
+    "display": "$122.4B",
+    "metric": "annual revenue",
+    "period": "calendar 2025",
+    "basis": "company",
+    "confidence": "high",
+    "source_url": "https://manufacturingdive.com/news/tsmc-q4-full-year-2025-earnings-ai-taiwan/809775",
+    "as_of_date": "2026-11-21"
   }
 }

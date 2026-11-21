@@ -82,6 +82,12 @@
           "step_title": "Spin the flywheel",
           "step_desc": "Use the cheaper debt to buy more chips, sign more contracts, grow the backlog. Investors price the backlog, not the (negative) earnings, so growth in contracted dollars becomes the thing that funds the next round."
         }
+      ],
+      "mechanics": [
+        "rationed-input arbitrage",
+        "asset-backed debt (GPU collateral)",
+        "contract-backed financing",
+        "duration matching"
       ]
     },
     {
@@ -100,6 +106,11 @@
           "step_title": "Money loops",
           "step_desc": "CoreWeave spends billions buying NVIDIA GPUs. Critics call it circular financing: the supplier's equity and backstop help CoreWeave raise the debt it uses to buy the supplier's chips. A flywheel to bulls; a house of mirrors to bears."
         }
+      ],
+      "mechanics": [
+        "vendor financing",
+        "supplier demand backstop",
+        "circular financing"
       ]
     }
   ],
@@ -227,5 +238,15 @@
     "concept": "Economic rent from a rationed input (intermediation arbitrage), carried on operating leverage",
     "micro_or_macro": "micro",
     "explain": "When a seller rations a good -- allocating it rather than letting price rise until supply meets demand -- a gap opens between the controlled price and what buyers would actually pay. Whoever secures an allocation can resell access and pocket that gap: an economic rent that exists only because the market isn't allowed to clear. NVIDIA rations GPUs (it allocates scarce chips to favored buyers instead of auctioning them to the highest bidder), and CoreWeave's entire business is capturing the resulting rent at industrial scale -- it is the 'middleman who exists only to resell scarce silicon.' Two further forces shape the machine. First, operating leverage and extreme capital intensity: nearly all the cost is fixed (depreciation on the chips and interest on the debt that bought them), so above the breakeven utilization each extra GPU-hour is almost pure margin -- which is why cash margins look huge while the bottom line is thin. Second, the rent is self-erasing: a rent that comes from scarcity disappears as the scarcity does. As NVIDIA supply catches up and each GPU generation makes the last one cheap, the premium on access shrinks -- yet the debt and the fixed contracts remain. CoreWeave is thus a vivid lesson in why rents from rationing are real but perishable, and why financing a perishable rent with long, heavy leverage is where the fragility lives."
+  },
+  "scale": {
+    "value_usd": 5130000000.0,
+    "display": "$5.13B",
+    "metric": "annual revenue",
+    "period": "calendar 2025",
+    "basis": "company",
+    "confidence": "high",
+    "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
+    "as_of_date": "2026-11-21"
   }
 }

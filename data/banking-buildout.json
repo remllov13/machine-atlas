@@ -314,5 +314,16 @@
     "last_reviewed": null,
     "next_review": null,
     "ease": null
+  },
+  "scale": {
+    "value_usd": 1076000000000.0,
+    "display": "~$1.08T",
+    "metric": "net operating revenue of all FDIC-insured US banks",
+    "period": "calendar 2025",
+    "basis": "industry (all US insured banks, not retail-only)",
+    "confidence": "high",
+    "source_url": "https://www.fdic.gov/quarterly-banking-profile/quarterly-banking-profile-fourth-quarter-2025.pdf",
+    "note": "Net interest income $738.3B + noninterest income $337.8B. Covers all insured banks, so it overstates retail banking alone.",
+    "as_of_date": "2026-11-21"
   }
 }

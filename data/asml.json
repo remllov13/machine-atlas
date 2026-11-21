@@ -2,7 +2,11 @@
   "identity": {
     "id": "asml",
     "name": "ASML",
-    "aka": ["ASML Holding N.V.", "the lithography monopoly", "the one that makes the machine"],
+    "aka": [
+      "ASML Holding N.V.",
+      "the lithography monopoly",
+      "the one that makes the machine"
+    ],
     "sector": "Semiconductor capital equipment (photolithography systems)",
     "geography": "Veldhoven, Netherlands; critical optics from Carl Zeiss (Germany), light source from Cymer (San Diego); ~5,000 suppliers worldwide",
     "era": "1984-present; sole EUV supplier since ~2018, indispensable to the AI-chip boom 2023-present",
@@ -58,9 +62,18 @@
       "play_name": "Be the Only Door",
       "tagline": "Own the one tool the whole frontier must pass through, and you price the frontier.",
       "flow": [
-        {"step_title": "Find the non-substitutable step", "step_desc": "Every leading-edge chip must be patterned by EUV light. There is no workaround at the cutting edge and no second vendor — the step is mandatory and single-sourced."},
-        {"step_title": "Be the sole maker", "step_desc": "ASML is the only company in the world that builds an EUV machine. To make an advanced chip, you must buy from ASML; there is no alternative to shop to."},
-        {"step_title": "Price the chokepoint", "step_desc": "Because the input is both essential and single-sourced, ASML captures economic rent from the entire downstream chain — every AI GPU's existence runs back through its machine."}
+        {
+          "step_title": "Find the non-substitutable step",
+          "step_desc": "Every leading-edge chip must be patterned by EUV light. There is no workaround at the cutting edge and no second vendor — the step is mandatory and single-sourced."
+        },
+        {
+          "step_title": "Be the sole maker",
+          "step_desc": "ASML is the only company in the world that builds an EUV machine. To make an advanced chip, you must buy from ASML; there is no alternative to shop to."
+        },
+        {
+          "step_title": "Price the chokepoint",
+          "step_desc": "Because the input is both essential and single-sourced, ASML captures economic rent from the entire downstream chain — every AI GPU's existence runs back through its machine."
+        }
       ],
       "the_move": "Occupy the one mandatory, non-substitutable step in a giant value chain. A monopoly on an essential complement lets you tax everything built on top of it.",
       "in_the_wild": {
@@ -68,15 +81,29 @@
         "confidence": "high"
       },
       "watch_out": "A chokepoint monopoly is a political target. Antitrust scrutiny, forced technology sharing, or a government deciding the chokepoint is too dangerous in private hands are all live risks — and so is any customer finding a way around EUV entirely.",
-      "mechanics": ["sole-supplier", "non-substitutable-input", "chokepoint-monopoly", "pricing-power"]
+      "mechanics": [
+        "sole-supplier",
+        "non-substitutable-input",
+        "chokepoint-monopoly",
+        "pricing-power"
+      ]
     },
     {
       "play_name": "Decades No One Will Repeat",
       "tagline": "Make the barrier be time, not money — because money can be raised overnight and thirty years cannot.",
       "flow": [
-        {"step_title": "Start absurdly early", "step_desc": "Begin EUV research in 1997, when the payoff is decades away and uncertain, building on US national-lab science and a consortium few believed in."},
-        {"step_title": "Spend through the doubt", "step_desc": "Pour billions into a technology that repeatedly looks impossible, with R&D rising from under $500M a year in 2010 toward ~€4.7B today — a cost most firms could not survive carrying."},
-        {"step_title": "Compound the lead", "step_desc": "Each solved problem feeds the next generation, so the accumulated know-how becomes a moat measured in years of learning a rival cannot fast-forward through."}
+        {
+          "step_title": "Start absurdly early",
+          "step_desc": "Begin EUV research in 1997, when the payoff is decades away and uncertain, building on US national-lab science and a consortium few believed in."
+        },
+        {
+          "step_title": "Spend through the doubt",
+          "step_desc": "Pour billions into a technology that repeatedly looks impossible, with R&D rising from under $500M a year in 2010 toward ~€4.7B today — a cost most firms could not survive carrying."
+        },
+        {
+          "step_title": "Compound the lead",
+          "step_desc": "Each solved problem feeds the next generation, so the accumulated know-how becomes a moat measured in years of learning a rival cannot fast-forward through."
+        }
       ],
       "the_move": "Convert the barrier to entry from capital into cumulative time. A competitor can match your bank balance in a day but cannot buy the thirty years of failures you learned from.",
       "in_the_wild": {
@@ -84,15 +111,29 @@
         "confidence": "high"
       },
       "watch_out": "A state that treats catch-up as a national-security project and funds it without regard to return (as China is attempting) plays by different rules than a company that must earn a return — the time moat is strongest against rational rivals.",
-      "mechanics": ["sunk-cost-barrier", "cumulative-rnd", "time-as-moat", "irreproducibility"]
+      "mechanics": [
+        "sunk-cost-barrier",
+        "cumulative-rnd",
+        "time-as-moat",
+        "irreproducibility"
+      ]
     },
     {
       "play_name": "Orchestrate, Don't Manufacture",
       "tagline": "Don't build the hardest parts — be the only one who can make them all work together.",
       "flow": [
-        {"step_title": "Buy the crown-jewel components", "step_desc": "Source the optics from Carl Zeiss (ASML part-owns Zeiss SMT) and the light source from Cymer, which ASML acquired outright for $2.55B to control the riskiest piece."},
-        {"step_title": "Conduct the orchestra", "step_desc": "Coordinate ~5,000 direct suppliers, each making a component that exists nowhere else, into a single machine of unmatched complexity."},
-        {"step_title": "Own the integration", "step_desc": "The defensible asset is not any one part but the system architecture and the ability to make thousands of bespoke parts cohere — knowledge no single supplier holds."}
+        {
+          "step_title": "Buy the crown-jewel components",
+          "step_desc": "Source the optics from Carl Zeiss (ASML part-owns Zeiss SMT) and the light source from Cymer, which ASML acquired outright for $2.55B to control the riskiest piece."
+        },
+        {
+          "step_title": "Conduct the orchestra",
+          "step_desc": "Coordinate ~5,000 direct suppliers, each making a component that exists nowhere else, into a single machine of unmatched complexity."
+        },
+        {
+          "step_title": "Own the integration",
+          "step_desc": "The defensible asset is not any one part but the system architecture and the ability to make thousands of bespoke parts cohere — knowledge no single supplier holds."
+        }
       ],
       "the_move": "Become the system integrator of an ecosystem of monopolist-suppliers. Owning the whole only you can assemble is harder to copy than owning any single part.",
       "in_the_wild": {
@@ -100,15 +141,29 @@
         "confidence": "high"
       },
       "watch_out": "Orchestration is also dependency: a single critical supplier (above all Zeiss optics) is itself a near-monopoly, so ASML's bottleneck has bottlenecks of its own that it does not fully control.",
-      "mechanics": ["system-integration", "supplier-orchestration", "complementary-assets", "vertical-control"]
+      "mechanics": [
+        "system-integration",
+        "supplier-orchestration",
+        "complementary-assets",
+        "vertical-control"
+      ]
     },
     {
       "play_name": "Sell the Machine, Rent the Upkeep",
       "tagline": "Every tool you ship becomes an annuity that pays whether or not you sell another.",
       "flow": [
-        {"step_title": "Ship a machine that never finishes", "step_desc": "An EUV system needs constant servicing, spare parts, and performance upgrades across a working life measured in many years."},
-        {"step_title": "Keep the relationship", "step_desc": "ASML services and upgrades its own installed base, so each sale opens a durable, recurring revenue stream tied to that machine."},
-        {"step_title": "Smooth the cycle", "step_desc": "When new-system orders dip with the chip cycle, the installed-base revenue keeps climbing, because the fleet in the field only grows."}
+        {
+          "step_title": "Ship a machine that never finishes",
+          "step_desc": "An EUV system needs constant servicing, spare parts, and performance upgrades across a working life measured in many years."
+        },
+        {
+          "step_title": "Keep the relationship",
+          "step_desc": "ASML services and upgrades its own installed base, so each sale opens a durable, recurring revenue stream tied to that machine."
+        },
+        {
+          "step_title": "Smooth the cycle",
+          "step_desc": "When new-system orders dip with the chip cycle, the installed-base revenue keeps climbing, because the fleet in the field only grows."
+        }
       ],
       "the_move": "Attach a recurring annuity to a lumpy capital sale. The razor-and-blades logic turns a cyclical equipment business into one with a growing, cycle-resistant base.",
       "in_the_wild": {
@@ -116,15 +171,29 @@
         "confidence": "high"
       },
       "watch_out": "The annuity depends on machines staying in service and on customers buying upgrades; a demand collapse that idles fabs would thin even the recurring stream.",
-      "mechanics": ["installed-base", "recurring-revenue", "aftermarket-annuity", "razor-and-blades"]
+      "mechanics": [
+        "installed-base",
+        "recurring-revenue",
+        "aftermarket-annuity",
+        "razor-and-blades"
+      ]
     },
     {
       "play_name": "Make Your Customers Your Shareholders",
       "tagline": "When you and your buyer each can't exist without the other, turn the standoff into shared ownership.",
       "flow": [
-        {"step_title": "Name the mutual hostage", "step_desc": "ASML needs its few giant customers' volume to justify EUV; the customers need ASML's machine to survive. Each could hold the other up — a classic bilateral monopoly."},
-        {"step_title": "Sell equity, not just machines", "step_desc": "In 2012 ASML opened a co-investment program: Intel, TSMC, and Samsung bought stakes (Intel paid $4.1B for ~15%; ~23% of ASML was sold in total) and helped fund EUV's final push."},
-        {"step_title": "Align the incentives", "step_desc": "Now the customers profit when ASML profits, so they finance the very tool they depend on and have no incentive to starve it."}
+        {
+          "step_title": "Name the mutual hostage",
+          "step_desc": "ASML needs its few giant customers' volume to justify EUV; the customers need ASML's machine to survive. Each could hold the other up — a classic bilateral monopoly."
+        },
+        {
+          "step_title": "Sell equity, not just machines",
+          "step_desc": "In 2012 ASML opened a co-investment program: Intel, TSMC, and Samsung bought stakes (Intel paid $4.1B for ~15%; ~23% of ASML was sold in total) and helped fund EUV's final push."
+        },
+        {
+          "step_title": "Align the incentives",
+          "step_desc": "Now the customers profit when ASML profits, so they finance the very tool they depend on and have no incentive to starve it."
+        }
       ],
       "the_move": "Defuse the holdup problem with vertical quasi-integration. Letting your dependent customers own a slice converts a dangerous mutual dependence into aligned incentives — and into their capital funding your R&D.",
       "in_the_wild": {
@@ -132,15 +201,29 @@
         "confidence": "high"
       },
       "watch_out": "Customers-as-owners can cut both ways: a large shareholder-customer gains influence and visibility that a pure supplier relationship would not grant, and interests can diverge if one customer's node roadmap slows.",
-      "mechanics": ["holdup-solution", "customer-financing", "vertical-quasi-integration", "incentive-alignment"]
+      "mechanics": [
+        "holdup-solution",
+        "customer-financing",
+        "vertical-quasi-integration",
+        "incentive-alignment"
+      ]
     },
     {
       "play_name": "Climb to High-NA",
       "tagline": "Raise the bar you already clear so the gap behind you never closes.",
       "flow": [
-        {"step_title": "Build the next-generation tool", "step_desc": "Develop High-NA EUV (the EXE line), with a bigger numerical aperture that prints even finer features for the nodes beyond 2nm."},
-        {"step_title": "Price the frontier again", "step_desc": "Sell each High-NA system for ~$370M — nearly double a standard EUV machine — and recognize the first systems as customers install them."},
-        {"step_title": "Reset the entry bar", "step_desc": "Every leap in capability and cost makes the already-impossible task of catching up harder, so the lead widens with each generation rather than eroding."}
+        {
+          "step_title": "Build the next-generation tool",
+          "step_desc": "Develop High-NA EUV (the EXE line), with a bigger numerical aperture that prints even finer features for the nodes beyond 2nm."
+        },
+        {
+          "step_title": "Price the frontier again",
+          "step_desc": "Sell each High-NA system for ~$370M — nearly double a standard EUV machine — and recognize the first systems as customers install them."
+        },
+        {
+          "step_title": "Reset the entry bar",
+          "step_desc": "Every leap in capability and cost makes the already-impossible task of catching up harder, so the lead widens with each generation rather than eroding."
+        }
       ],
       "the_move": "Keep moving the frontier you already own. A monopolist's best defense of a lead is to make the next generation even more expensive and difficult, so the distance behind only grows.",
       "in_the_wild": {
@@ -148,18 +231,47 @@
         "confidence": "medium"
       },
       "watch_out": "The frontier is not free: High-NA economics are unproven, customers may stretch existing EUV with multi-patterning rather than adopt High-NA quickly, and physics eventually makes each node's payoff smaller.",
-      "mechanics": ["next-gen-leap", "raising-the-bar", "frontier-leadership", "escalating-fixed-cost"]
+      "mechanics": [
+        "next-gen-leap",
+        "raising-the-bar",
+        "frontier-leadership",
+        "escalating-fixed-cost"
+      ]
     }
   ],
   "mechanics_summary": [
-    {"tag": "chokepoint-monopoly", "note": "One mandatory, single-sourced step (EUV patterning) sits under the entire advanced-chip economy, so whoever owns it taxes everything built above."},
-    {"tag": "irreproducibility", "note": "The moat is ~30 years of cumulative R&D and a 5,000-supplier web — neither buyable nor rushable, so money alone cannot replicate it."},
-    {"tag": "system-integration", "note": "ASML orchestrates an ecosystem of monopolist-suppliers (Zeiss optics, Cymer light source); the defensible asset is making the whole cohere."},
-    {"tag": "razor-and-blades", "note": "Each machine sold spins off a growing, cycle-resistant service-and-upgrade annuity on the installed base."},
-    {"tag": "holdup-solution", "note": "Bilateral monopoly with its few giant customers was defused by selling them equity, aligning incentives and funding EUV."},
-    {"tag": "escalating-fixed-cost", "note": "Each generation (DUV -> EUV -> High-NA) costs more to develop and buy, so the barrier to entry rises faster than any chaser can climb."},
-    {"tag": "derived-demand", "note": "ASML sits one layer below TSMC in the chain; its orders ride on chipmakers' capex, which rides on the demand for AI compute."},
-    {"tag": "geopolitical-chokepoint", "note": "Being the single gate for advanced chips makes ASML an instrument of export policy — a source of both protection and risk."}
+    {
+      "tag": "chokepoint-monopoly",
+      "note": "One mandatory, single-sourced step (EUV patterning) sits under the entire advanced-chip economy, so whoever owns it taxes everything built above."
+    },
+    {
+      "tag": "irreproducibility",
+      "note": "The moat is ~30 years of cumulative R&D and a 5,000-supplier web — neither buyable nor rushable, so money alone cannot replicate it."
+    },
+    {
+      "tag": "system-integration",
+      "note": "ASML orchestrates an ecosystem of monopolist-suppliers (Zeiss optics, Cymer light source); the defensible asset is making the whole cohere."
+    },
+    {
+      "tag": "razor-and-blades",
+      "note": "Each machine sold spins off a growing, cycle-resistant service-and-upgrade annuity on the installed base."
+    },
+    {
+      "tag": "holdup-solution",
+      "note": "Bilateral monopoly with its few giant customers was defused by selling them equity, aligning incentives and funding EUV."
+    },
+    {
+      "tag": "escalating-fixed-cost",
+      "note": "Each generation (DUV -> EUV -> High-NA) costs more to develop and buy, so the barrier to entry rises faster than any chaser can climb."
+    },
+    {
+      "tag": "derived-demand",
+      "note": "ASML sits one layer below TSMC in the chain; its orders ride on chipmakers' capex, which rides on the demand for AI compute."
+    },
+    {
+      "tag": "geopolitical-chokepoint",
+      "note": "Being the single gate for advanced chips makes ASML an instrument of export policy — a source of both protection and risk."
+    }
   ],
   "history": {
     "origin": {
@@ -180,18 +292,90 @@
   },
   "epistemics": {
     "numbers": [
-      {"claim": "Full-year 2025 total net sales of €32.67 billion", "value": "€32.67B", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "Full-year 2025 net income of €9.61 billion (29.4% of net sales)", "value": "€9.61B", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "Full-year 2025 gross margin of 52.8%", "value": "52.8%", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "2025 EUV system sales of ~€11.6 billion, up 39% year-on-year; DUV system sales ~€12.0 billion", "value": "EUV €11.6B / DUV €12.0B", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "2025 Installed Base Management (service and upgrade) revenue of ~€8.2 billion, up 26% year-on-year", "value": "€8.2B", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "2025 R&D costs of ~€4.70 billion; total net bookings €28.0 billion; year-end backlog €38.8 billion", "value": "R&D €4.70B / backlog €38.8B", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "327 lithography systems recognized in 2025 (48 EUV + 279 DUV); 2026 revenue guidance €34-39 billion", "value": "327 systems (48 EUV)", "as_of_date": "2026-01-28", "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm", "confidence": "high"},
-      {"claim": "ASML is the world's only manufacturer of EUV lithography machines and held ~83% of worldwide lithography-system sales in 2025", "value": "sole EUV maker / ~83% litho", "as_of_date": "2026-11-19", "source_url": "https://en.wikipedia.org/wiki/ASML_Holding", "confidence": "medium"},
-      {"claim": "A top EUV machine (TWINSCAN NXE:3600D) costs up to ~$200M; a High-NA EUV machine costs ~$370M", "value": "~$200M / ~$370M", "as_of_date": "2026-11-19", "source_url": "https://en.wikipedia.org/wiki/ASML_Holding", "confidence": "medium"},
-      {"claim": "An EUV machine draws on a network of ~5,000 direct suppliers, weighs ~180 tons, and needs three Boeing 747s to transport", "value": "~5,000 suppliers", "as_of_date": "2026-11-19", "source_url": "https://en.wikipedia.org/wiki/ASML_Holding", "confidence": "medium"},
-      {"claim": "ASML acquired Cymer (EUV light source) for $2.55B (2012-2013); 2012 co-investment sold ~23% to Intel, TSMC and Samsung, Intel paying $4.1B for ~15%", "value": "Cymer $2.55B / co-invest 23%", "as_of_date": "2026-11-19", "source_url": "https://en.wikipedia.org/wiki/ASML_Holding", "confidence": "medium"},
-      {"claim": "ASML employs roughly 44,000 people (2025)", "value": "~44,000", "as_of_date": "2026-11-19", "source_url": "https://en.wikipedia.org/wiki/ASML_Holding", "confidence": "medium"}
+      {
+        "claim": "Full-year 2025 total net sales of €32.67 billion",
+        "value": "€32.67B",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "Full-year 2025 net income of €9.61 billion (29.4% of net sales)",
+        "value": "€9.61B",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "Full-year 2025 gross margin of 52.8%",
+        "value": "52.8%",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "2025 EUV system sales of ~€11.6 billion, up 39% year-on-year; DUV system sales ~€12.0 billion",
+        "value": "EUV €11.6B / DUV €12.0B",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "2025 Installed Base Management (service and upgrade) revenue of ~€8.2 billion, up 26% year-on-year",
+        "value": "€8.2B",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "2025 R&D costs of ~€4.70 billion; total net bookings €28.0 billion; year-end backlog €38.8 billion",
+        "value": "R&D €4.70B / backlog €38.8B",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "327 lithography systems recognized in 2025 (48 EUV + 279 DUV); 2026 revenue guidance €34-39 billion",
+        "value": "327 systems (48 EUV)",
+        "as_of_date": "2026-01-28",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm",
+        "confidence": "high"
+      },
+      {
+        "claim": "ASML is the world's only manufacturer of EUV lithography machines and held ~83% of worldwide lithography-system sales in 2025",
+        "value": "sole EUV maker / ~83% litho",
+        "as_of_date": "2026-11-19",
+        "source_url": "https://en.wikipedia.org/wiki/ASML_Holding",
+        "confidence": "medium"
+      },
+      {
+        "claim": "A top EUV machine (TWINSCAN NXE:3600D) costs up to ~$200M; a High-NA EUV machine costs ~$370M",
+        "value": "~$200M / ~$370M",
+        "as_of_date": "2026-11-19",
+        "source_url": "https://en.wikipedia.org/wiki/ASML_Holding",
+        "confidence": "medium"
+      },
+      {
+        "claim": "An EUV machine draws on a network of ~5,000 direct suppliers, weighs ~180 tons, and needs three Boeing 747s to transport",
+        "value": "~5,000 suppliers",
+        "as_of_date": "2026-11-19",
+        "source_url": "https://en.wikipedia.org/wiki/ASML_Holding",
+        "confidence": "medium"
+      },
+      {
+        "claim": "ASML acquired Cymer (EUV light source) for $2.55B (2012-2013); 2012 co-investment sold ~23% to Intel, TSMC and Samsung, Intel paying $4.1B for ~15%",
+        "value": "Cymer $2.55B / co-invest 23%",
+        "as_of_date": "2026-11-19",
+        "source_url": "https://en.wikipedia.org/wiki/ASML_Holding",
+        "confidence": "medium"
+      },
+      {
+        "claim": "ASML employs roughly 44,000 people (2025)",
+        "value": "~44,000",
+        "as_of_date": "2026-11-19",
+        "source_url": "https://en.wikipedia.org/wiki/ASML_Holding",
+        "confidence": "medium"
+      }
     ],
     "overall": "high",
     "unknowns": [
@@ -216,5 +400,16 @@
     "concept": "Barriers to entry and monopoly power — a supply-chain chokepoint on a non-substitutable complement, and the bilateral-monopoly holdup problem that customer co-investment solved",
     "micro_or_macro": "micro",
     "explain": "TSMC's monopoly comes from scale and the learning curve; ASML's comes from a different place, which is why it is a cleaner case. First, ASML owns a chokepoint: EUV lithography is an essential, non-substitutable complement to every advanced chip, single-sourced, so ASML earns economic rent from the entire downstream chain — the classic power of an 'essential facility.' Second, the barrier to entry is not capital but a sunk, cumulative asset — roughly thirty years of R&D and a 5,000-supplier ecosystem — that cannot be bought or accelerated; a rival with unlimited money still faces a time moat, which is why the market tipped to a single winner (ASML) while adjacent tool markets stayed competitive. Third, ASML and its handful of giant customers form a bilateral monopoly: each is a mutual hostage who could hold the other up. ASML defused that holdup problem through vertical quasi-integration — the 2012 co-investment that made Intel, TSMC, and Samsung part-owners — converting a dangerous standoff into aligned incentives and customer-funded R&D. Together these explain how ASML sustains ~53% margins as the invisible monopolist beneath the entire AI-chip boom."
+  },
+  "scale": {
+    "value_usd": 37000000000.0,
+    "display": "€32.7B (~$37B)",
+    "metric": "annual net sales",
+    "period": "calendar 2025",
+    "basis": "company",
+    "confidence": "medium",
+    "source_url": "https://www.asml.com/en/news/press-releases/2026/q4-2025-financial-results",
+    "note": "Reported in euros; converted at ~1.13 USD/EUR (approximate 2025 average).",
+    "as_of_date": "2026-11-21"
   }
 }

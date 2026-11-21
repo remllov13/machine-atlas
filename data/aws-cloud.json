@@ -2,7 +2,13 @@
   "identity": {
     "id": "aws-cloud",
     "name": "Amazon Web Services (AWS)",
-    "aka": ["AWS", "the cloud", "hyperscale cloud", "IaaS", "the hyperscaler"],
+    "aka": [
+      "AWS",
+      "the cloud",
+      "hyperscale cloud",
+      "IaaS",
+      "the hyperscaler"
+    ],
     "sector": "Cloud computing / IT infrastructure",
     "geography": "Global (US-headquartered, Seattle)",
     "era": "2006-present",
@@ -58,76 +64,166 @@
       "play_name": "Meter Everything",
       "tagline": "Turn capital into a tap you bill by the sip.",
       "flow": [
-        {"step_title": "Build the reservoir", "step_desc": "Sink billions into fixed capacity: data centers, servers, networking, power."},
-        {"step_title": "Fit tiny meters", "step_desc": "Expose that capacity as small on-demand units via API: instance-hours, GB-months, per-request calls, per-millisecond execution."},
-        {"step_title": "Bill the drip", "step_desc": "Charge continuously by usage with no upfront commitment, so spend scales automatically with the customer's own growth."}
+        {
+          "step_title": "Build the reservoir",
+          "step_desc": "Sink billions into fixed capacity: data centers, servers, networking, power."
+        },
+        {
+          "step_title": "Fit tiny meters",
+          "step_desc": "Expose that capacity as small on-demand units via API: instance-hours, GB-months, per-request calls, per-millisecond execution."
+        },
+        {
+          "step_title": "Bill the drip",
+          "step_desc": "Charge continuously by usage with no upfront commitment, so spend scales automatically with the customer's own growth."
+        }
       ],
       "the_move": "Convert a customer's lumpy, boardroom-level capex decision into a frictionless opex drip. Adoption needs no approval, and your revenue compounds with their success instead of your sales effort.",
       "in_the_wild": "AWS Lambda bills per-millisecond of execution and per-request; S3 bills by the GB-month. A startup can run a workload for pennies and only writes a big check once it is already winning.",
       "watch_out": "Metered pricing hides total cost until the invoice lands. 'Bill shock' and the resulting FinOps/cost-optimization backlash are the predictable blowback of billing by the sip.",
-      "mechanics": ["metered-pricing", "capex-to-opex", "low-friction-adoption", "consumption-growth"]
+      "mechanics": [
+        "metered-pricing",
+        "capex-to-opex",
+        "low-friction-adoption",
+        "consumption-growth"
+      ]
     },
     {
       "play_name": "Scale Moat",
       "tagline": "The biggest fleet has the lowest floor.",
       "flow": [
-        {"step_title": "Spread the fixed cost", "step_desc": "Amortize an enormous fixed asset base over more usage than anyone else, lowering average cost per unit."},
-        {"step_title": "Reinvest the margin", "step_desc": "Plow the resulting profit back into still more capacity and custom silicon."},
-        {"step_title": "Price past rivals", "step_desc": "Set prices at a level where sub-scale competitors lose money, letting capex requirements guard the gate."}
+        {
+          "step_title": "Spread the fixed cost",
+          "step_desc": "Amortize an enormous fixed asset base over more usage than anyone else, lowering average cost per unit."
+        },
+        {
+          "step_title": "Reinvest the margin",
+          "step_desc": "Plow the resulting profit back into still more capacity and custom silicon."
+        },
+        {
+          "step_title": "Price past rivals",
+          "step_desc": "Set prices at a level where sub-scale competitors lose money, letting capex requirements guard the gate."
+        }
       ],
       "the_move": "Use scale to push your average cost below any smaller competitor's, then let the sheer capital required to match you do the gatekeeping no marketing could.",
       "in_the_wild": "HP shut down its Helion public cloud (effective Jan 31, 2016) after concluding it 'made no sense to go head-to-head' with the hyperscalers and lacked the financial resources to match their scale.",
       "watch_out": "The moat demands relentless capex (Amazon raised 2025 capital spending to roughly $125B); a scale moat also draws antitrust scrutiny, and any demand miss turns that fixed cost into dead weight.",
-      "mechanics": ["economies-of-scale", "fixed-cost-amortization", "capex-barrier-to-entry", "experience-curve"]
+      "mechanics": [
+        "economies-of-scale",
+        "fixed-cost-amortization",
+        "capex-barrier-to-entry",
+        "experience-curve"
+      ]
     },
     {
       "play_name": "Own The Silicon",
       "tagline": "Design the chip only scale can justify.",
       "flow": [
-        {"step_title": "Reach the volume", "step_desc": "Grow usage until designing custom hardware pays off against buying it at retail."},
-        {"step_title": "Build in-house chips", "step_desc": "Design your own processors: Graviton (Arm CPUs), Trainium and Inferentia (AI chips)."},
-        {"step_title": "Keep the markup", "step_desc": "Capture the margin a merchant-silicon buyer would otherwise hand to Intel or Nvidia."}
+        {
+          "step_title": "Reach the volume",
+          "step_desc": "Grow usage until designing custom hardware pays off against buying it at retail."
+        },
+        {
+          "step_title": "Build in-house chips",
+          "step_desc": "Design your own processors: Graviton (Arm CPUs), Trainium and Inferentia (AI chips)."
+        },
+        {
+          "step_title": "Keep the markup",
+          "step_desc": "Capture the margin a merchant-silicon buyer would otherwise hand to Intel or Nvidia."
+        }
       ],
       "the_move": "Vertically integrate down to the transistor. Scale is what makes a multi-year chip program rational, and it drops your cost floor below any rival that must buy compute at list price.",
       "in_the_wild": "AWS Graviton (Arm-based server CPUs) and Trainium (AI training chips) let AWS offer compute that undercuts equivalent merchant-silicon instances and reduces its dependence on Nvidia pricing.",
       "watch_out": "Chip R&D is a capital-heavy, multi-year bet. If the architecture loses or software support lags, the investment strands and the cost advantage never arrives.",
-      "mechanics": ["vertical-integration", "scale-enabled-R&D", "input-cost-control"]
+      "mechanics": [
+        "vertical-integration",
+        "scale-enabled-R&D",
+        "input-cost-control"
+      ]
     },
     {
       "play_name": "Lock The Gravity",
       "tagline": "Cheap to pour in, costly to pull out.",
       "flow": [
-        {"step_title": "Make entry free", "step_desc": "Keep data ingress and storage cheap so workloads flow in without friction."},
-        {"step_title": "Let it accumulate", "step_desc": "Allow data, integrations, and service dependencies to pile up over years."},
-        {"step_title": "Charge the exit", "step_desc": "Price data-transfer-out (egress) and make re-platforming painful, so leaving costs real money and effort."}
+        {
+          "step_title": "Make entry free",
+          "step_desc": "Keep data ingress and storage cheap so workloads flow in without friction."
+        },
+        {
+          "step_title": "Let it accumulate",
+          "step_desc": "Allow data, integrations, and service dependencies to pile up over years."
+        },
+        {
+          "step_title": "Charge the exit",
+          "step_desc": "Price data-transfer-out (egress) and make re-platforming painful, so leaving costs real money and effort."
+        }
       ],
       "the_move": "Build switching costs out of accumulated data and dependencies, 'data gravity,' so recurring revenue compounds not because the customer re-chooses you but because leaving is harder than staying.",
       "in_the_wild": "AWS historically charged for data transfer out while inbound transfer was free. The lock-in was real enough that the EU's Data Act pushed cloud providers to curb egress fees, and AWS began waiving them for customers migrating off.",
       "watch_out": "Regulators now target egress fees and lock-in directly; overplaying data gravity invites forced interoperability rules that dissolve the moat.",
-      "mechanics": ["switching-costs", "data-gravity", "recurring-revenue", "lock-in"]
+      "mechanics": [
+        "switching-costs",
+        "data-gravity",
+        "recurring-revenue",
+        "lock-in"
+      ]
     },
     {
       "play_name": "Rent The Reaccel",
       "tagline": "Sell shovels into the AI gold rush.",
       "flow": [
-        {"step_title": "Be the default venue", "step_desc": "Position the fleet as the obvious place to run AI workloads."},
-        {"step_title": "Package the compute", "step_desc": "Offer managed model and training services (Bedrock, SageMaker) plus GPU and Trainium capacity."},
-        {"step_title": "Capture the surge", "step_desc": "Collect metered revenue as every company rents AI compute rather than building its own data centers."}
+        {
+          "step_title": "Be the default venue",
+          "step_desc": "Position the fleet as the obvious place to run AI workloads."
+        },
+        {
+          "step_title": "Package the compute",
+          "step_desc": "Offer managed model and training services (Bedrock, SageMaker) plus GPU and Trainium capacity."
+        },
+        {
+          "step_title": "Capture the surge",
+          "step_desc": "Collect metered revenue as every company rents AI compute rather than building its own data centers."
+        }
       ],
       "the_move": "Ride a demand wave by renting the scarce input (compute) instead of betting on which model or application wins. Whoever strikes gold, the shovel-seller gets paid.",
       "in_the_wild": "AWS revenue re-accelerated to about 20% year-over-year, reaching $33.0B in Q3 2025, on AI-driven demand, and Amazon raised its 2025 capex to roughly $125B to build the capacity to rent.",
       "watch_out": "That $125B of capex assumes AI demand holds. A demand air-pocket turns freshly poured fixed cost into dead weight, exactly the scale-economics trap that sank sub-scale clouds, now at hyperscaler stakes.",
-      "mechanics": ["picks-and-shovels", "demand-capture", "capex-cycle", "utilization-leverage"]
+      "mechanics": [
+        "picks-and-shovels",
+        "demand-capture",
+        "capex-cycle",
+        "utilization-leverage"
+      ]
     }
   ],
   "mechanics_summary": [
-    {"tag": "economies-of-scale", "note": "Average total cost falls as the shared fleet grows; the largest player holds the lowest cost floor, and the advantage widens with size rather than eroding."},
-    {"tag": "fixed-cost-amortization", "note": "Capacity is a sunk cost. Once built, every added workload on that capacity is near-pure margin, so utilization is the real profit lever."},
-    {"tag": "metered-pricing", "note": "Billing by tiny usage units turns a customer's capex into opex, removes the approval friction, and hides total cost until the invoice."},
-    {"tag": "capex-barrier-to-entry", "note": "Matching scale requires tens of billions per year in data centers and chips, a wall that fences out sub-scale rivals more effectively than any patent."},
-    {"tag": "vertical-integration", "note": "Scale alone justifies designing in-house silicon, dropping the cost floor below rivals who must buy compute at retail."},
-    {"tag": "data-gravity", "note": "Accumulated data and dependencies create switching costs, so recurring revenue compounds on inertia rather than repeated re-selling."},
-    {"tag": "picks-and-shovels", "note": "Renting the scarce input (compute) captures a boom without having to pick the boom's winner."}
+    {
+      "tag": "economies-of-scale",
+      "note": "Average total cost falls as the shared fleet grows; the largest player holds the lowest cost floor, and the advantage widens with size rather than eroding."
+    },
+    {
+      "tag": "fixed-cost-amortization",
+      "note": "Capacity is a sunk cost. Once built, every added workload on that capacity is near-pure margin, so utilization is the real profit lever."
+    },
+    {
+      "tag": "metered-pricing",
+      "note": "Billing by tiny usage units turns a customer's capex into opex, removes the approval friction, and hides total cost until the invoice."
+    },
+    {
+      "tag": "capex-barrier-to-entry",
+      "note": "Matching scale requires tens of billions per year in data centers and chips, a wall that fences out sub-scale rivals more effectively than any patent."
+    },
+    {
+      "tag": "vertical-integration",
+      "note": "Scale alone justifies designing in-house silicon, dropping the cost floor below rivals who must buy compute at retail."
+    },
+    {
+      "tag": "data-gravity",
+      "note": "Accumulated data and dependencies create switching costs, so recurring revenue compounds on inertia rather than repeated re-selling."
+    },
+    {
+      "tag": "picks-and-shovels",
+      "note": "Renting the scarce input (compute) captures a boom without having to pick the boom's winner."
+    }
   ],
   "history": {
     "origin": {
@@ -153,15 +249,69 @@
   },
   "epistemics": {
     "numbers": [
-      {"metric": "AWS Q3 2025 revenue", "value": "$33.0B (33.01B), ~20% YoY (Jassy cited 20.2%)", "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/default.aspx", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "AWS Q3 2025 operating income", "value": "$11.43B", "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "AWS Q3 2025 operating margin", "value": "34.6%", "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "AWS annualized revenue run rate", "value": "~$132B", "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "Amazon total Q3 2025 operating income (for AWS share comparison)", "value": "$17.4B total; AWS ~66% of it", "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "Global cloud infrastructure market share, Q3 2025 (Synergy Research)", "value": "AWS 29%, Microsoft Azure 20%, Google Cloud 13%; total market ~$107B for the quarter", "source_url": "https://www.theregister.com/2025/11/20/aws_loses_market_share_azure_google/", "as_of_date": "2025-09-30", "confidence": "high"},
-      {"metric": "Amazon 2025 capital expenditure guidance", "value": "~$125B (raised), led by AWS/AI data centers", "source_url": "https://www.ciodive.com/news/aws-revenue-jumps-33b/804450/", "as_of_date": "2025-10-31", "confidence": "medium"},
-      {"metric": "AWS launch and first-to-market", "value": "S3 in 2006, EC2 in August 2006", "source_url": "https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/", "as_of_date": "2016-07-02", "confidence": "high"},
-      {"metric": "HP Helion public cloud shutdown", "value": "Announced Oct 2015, shut down effective Jan 31, 2016", "source_url": "https://www.informationweek.com/cloud/infrastructure-as-a-service/hp-kills-public-cloud-cedes-to-aws-google-microsoft/d/d-id/1322789", "as_of_date": "2015-10-22", "confidence": "high"}
+      {
+        "metric": "AWS Q3 2025 revenue",
+        "value": "$33.0B (33.01B), ~20% YoY (Jassy cited 20.2%)",
+        "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "AWS Q3 2025 operating income",
+        "value": "$11.43B",
+        "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "AWS Q3 2025 operating margin",
+        "value": "34.6%",
+        "source_url": "https://marketchameleon.com/articles/b/2025/10/31/aws-powers-amazon-growth-ai-q3-2025",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "AWS annualized revenue run rate",
+        "value": "~$132B",
+        "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "Amazon total Q3 2025 operating income (for AWS share comparison)",
+        "value": "$17.4B total; AWS ~66% of it",
+        "source_url": "https://futurumgroup.com/insights/amazon-q3-fy-2025-earnings-aws-reaccelerates-retail-and-ads-grow/",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "Global cloud infrastructure market share, Q3 2025 (Synergy Research)",
+        "value": "AWS 29%, Microsoft Azure 20%, Google Cloud 13%; total market ~$107B for the quarter",
+        "source_url": "https://www.theregister.com/2025/11/20/aws_loses_market_share_azure_google/",
+        "as_of_date": "2025-09-30",
+        "confidence": "high"
+      },
+      {
+        "metric": "Amazon 2025 capital expenditure guidance",
+        "value": "~$125B (raised), led by AWS/AI data centers",
+        "source_url": "https://www.ciodive.com/news/aws-revenue-jumps-33b/804450/",
+        "as_of_date": "2025-10-31",
+        "confidence": "medium"
+      },
+      {
+        "metric": "AWS launch and first-to-market",
+        "value": "S3 in 2006, EC2 in August 2006",
+        "source_url": "https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/",
+        "as_of_date": "2016-07-02",
+        "confidence": "high"
+      },
+      {
+        "metric": "HP Helion public cloud shutdown",
+        "value": "Announced Oct 2015, shut down effective Jan 31, 2016",
+        "source_url": "https://www.informationweek.com/cloud/infrastructure-as-a-service/hp-kills-public-cloud-cedes-to-aws-google-microsoft/d/d-id/1322789",
+        "as_of_date": "2015-10-22",
+        "confidence": "high"
+      }
     ],
     "overall": "high",
     "unknowns": [
@@ -179,5 +329,15 @@
       "How does metered, pay-as-you-go billing change a customer's buying decision compared with purchasing their own servers up front?",
       "HP had the technology to run a public cloud; name the single thing it could not match, and explain why that one thing is the entire moat."
     ]
+  },
+  "scale": {
+    "value_usd": 128725000000.0,
+    "display": "$128.7B",
+    "metric": "annual segment revenue",
+    "period": "calendar 2025",
+    "basis": "company segment",
+    "confidence": "high",
+    "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+    "as_of_date": "2026-11-21"
   }
 }

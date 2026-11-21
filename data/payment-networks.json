@@ -1,170 +1,313 @@
 {
   "id": "payment-networks",
   "name": "Payment Networks",
-  "aka": ["card networks", "card schemes", "Visa/Mastercard rails"],
+  "aka": [
+    "card networks",
+    "card schemes",
+    "Visa/Mastercard rails"
+  ],
   "sector": "Financial services",
   "geography": "Global; figures skew US",
   "era": "Modern form since BankAmericard (1958) → Visa (1970s); still dominant",
   "mode": "teardown",
   "date_walked": "2026-07-27",
-
   "chain": {
     "parent_id": "banking-retail",
     "relation": "symbiote",
     "relation_note": "Networks sit on the same money flow as banks: banks issue the cards and lend, the network moves the authorization and clips a toll. Neither works without the other.",
     "chain_position": 1,
     "suggested_next": [
-      {"id": "payment-processors", "relation": "downstream_customer", "why": "Stripe, Adyen, Square \u2014 the layer merchants actually touch, sitting on top of the network rails."},
-      {"id": "card-issuing-banks", "relation": "symbiote", "why": "The side that collects the fat interchange the network directs to it \u2014 the other half of the two-sided machine."},
-      {"id": "real-time-payment-rails", "relation": "substitute", "why": "FedNow, account-to-account, and stablecoins aim to move money without the card toll \u2014 the modern threat to the rails."}
+      {
+        "id": "payment-processors",
+        "relation": "downstream_customer",
+        "why": "Stripe, Adyen, Square — the layer merchants actually touch, sitting on top of the network rails."
+      },
+      {
+        "id": "card-issuing-banks",
+        "relation": "symbiote",
+        "why": "The side that collects the fat interchange the network directs to it — the other half of the two-sided machine."
+      },
+      {
+        "id": "real-time-payment-rails",
+        "relation": "substitute",
+        "why": "FedNow, account-to-account, and stablecoins aim to move money without the card toll — the modern threat to the rails."
+      }
     ]
   },
-
-  "one_line": "Own the rails money rides on, clip a thin toll off every trip \u2014 and never touch the money itself.",
-
+  "one_line": "Own the rails money rides on, clip a thin toll off every trip — and never touch the money itself.",
   "engine": {
-    "inputs": "A tap or a swipe \u2014 a request to move money between a shopper's bank and a merchant's bank",
+    "inputs": "A tap or a swipe — a request to move money between a shopper's bank and a merchant's bank",
     "transformation": "Route the authorization across the network, set the fee schedule, and guarantee the transaction settles",
     "outputs": "A cleared payment, and a stream of tiny per-transaction fees",
-    "money_in": "Network assessment/service fees (~0.13\u20130.14% of volume), per-transaction data-processing fees, and premium cross-border fees",
+    "money_in": "Network assessment/service fees (~0.13–0.14% of volume), per-transaction data-processing fees, and premium cross-border fees",
     "money_out": "Running the rails, fraud/security, incentives paid to banks to issue the network's cards",
-    "the_spread": "a tiny % of an enormous volume  (fee-per-swipe \u00d7 trillions in flow)",
-    "leverage_point": "Asset-light: the network owns no cash and no receivables \u2014 it taxes movement, so revenue scales with total spend at near-zero marginal cost"
+    "the_spread": "a tiny % of an enormous volume  (fee-per-swipe × trillions in flow)",
+    "leverage_point": "Asset-light: the network owns no cash and no receivables — it taxes movement, so revenue scales with total spend at near-zero marginal cost"
   },
-
   "unit": {
     "unit_name": "One card transaction",
-    "unit_economics": "On a $100 US credit purchase the merchant loses ~$2\u20133 total. Almost all of that (~86% of the merchant's cost) is interchange that goes to the shopper's BANK, not the network. The network itself keeps only its thin assessment (~$0.13\u20130.14) plus small data-processing fees. Figures ballpark; vary by card type and geography.",
-    "what_one_unit_produces": "Data on the transaction, one more reason every merchant must accept the network, and one more reason every bank wants to issue its cards \u2014 the flywheel tightening by one turn."
+    "unit_economics": "On a $100 US credit purchase the merchant loses ~$2–3 total. Almost all of that (~86% of the merchant's cost) is interchange that goes to the shopper's BANK, not the network. The network itself keeps only its thin assessment (~$0.13–0.14) plus small data-processing fees. Figures ballpark; vary by card type and geography.",
+    "what_one_unit_produces": "Data on the transaction, one more reason every merchant must accept the network, and one more reason every bank wants to issue its cards — the flywheel tightening by one turn."
   },
-
   "plays": [
     {
       "play_name": "The Toll",
       "tagline": "Don't hold the money. Tax the movement.",
       "flow": [
-        {"step_title": "Sit on the flow", "step_desc": "Own the rails every card payment must cross."},
-        {"step_title": "Clip a sliver", "step_desc": "Take a fraction of a percent of each transaction \u2014 too small to fight, on every purchase."},
-        {"step_title": "Scale with spend", "step_desc": "Revenue rises with total volume at almost no extra cost, because you own no balance sheet."}
+        {
+          "step_title": "Sit on the flow",
+          "step_desc": "Own the rails every card payment must cross."
+        },
+        {
+          "step_title": "Clip a sliver",
+          "step_desc": "Take a fraction of a percent of each transaction — too small to fight, on every purchase."
+        },
+        {
+          "step_title": "Scale with spend",
+          "step_desc": "Revenue rises with total volume at almost no extra cost, because you own no balance sheet."
+        }
       ],
       "the_move": "A tiny toll is invisible per-swipe and colossal across trillions. Own the road, not the cars.",
       "in_the_wild": "In fiscal 2025 Visa processed roughly $14 trillion in payments volume across ~258 billion transactions and reported about $40 billion in net revenue; Mastercard handled around $9.2 trillion in gross dollar volume.",
       "watch_out": "The toll is a regulatory target. Caps and antitrust settlements can compress the take rate you rely on.",
       "glyph_id": "thetoll",
-      "mechanics": ["toll-booth", "asset-light", "platform-tax"]
+      "mechanics": [
+        "toll-booth",
+        "asset-light",
+        "platform-tax"
+      ]
     },
     {
       "play_name": "Pay the Issuer",
       "tagline": "Route the fat fee to the banks so they push your card.",
       "flow": [
-        {"step_title": "Set the interchange", "step_desc": "The network SETS the ~2% interchange fee \u2014 but doesn't keep it."},
-        {"step_title": "Hand it to the bank", "step_desc": "That fat fee flows to the bank that issued the shopper's card."},
-        {"step_title": "Banks push your rails", "step_desc": "Rich interchange makes every issuer want to hand out YOUR cards, not a rival's."}
+        {
+          "step_title": "Set the interchange",
+          "step_desc": "The network SETS the ~2% interchange fee — but doesn't keep it."
+        },
+        {
+          "step_title": "Hand it to the bank",
+          "step_desc": "That fat fee flows to the bank that issued the shopper's card."
+        },
+        {
+          "step_title": "Banks push your rails",
+          "step_desc": "Rich interchange makes every issuer want to hand out YOUR cards, not a rival's."
+        }
       ],
       "the_move": "Give away the big fee to align the banks; keep the small, unstoppable one for yourself.",
-      "in_the_wild": "Interchange makes up the large majority of the merchant's swipe cost \u2014 combined US credit interchange averaged about 2.36% in 2025 \u2014 and it funds the rewards programs banks use to compete for cardholders.",
+      "in_the_wild": "Interchange makes up the large majority of the merchant's swipe cost — combined US credit interchange averaged about 2.36% in 2025 — and it funds the rewards programs banks use to compete for cardholders.",
       "watch_out": "This is what regulators attack: the US Durbin Amendment capped debit interchange, gutting that slice for issuers overnight.",
       "glyph_id": "payissuer",
-      "mechanics": ["two-sided-network", "commoditize-your-complement", "bundling"]
+      "mechanics": [
+        "two-sided-network",
+        "commoditize-your-complement",
+        "bundling"
+      ]
     },
     {
       "play_name": "Border Toll",
       "tagline": "The fattest margin lives at the border.",
       "flow": [
-        {"step_title": "Wait for a foreigner", "step_desc": "A cardholder pays outside their home country."},
-        {"step_title": "Stack premium fees", "step_desc": "Cross-border and currency-conversion fees apply on top of the normal toll."},
-        {"step_title": "Bank the spread", "step_desc": "These are among the network's most profitable transactions."}
+        {
+          "step_title": "Wait for a foreigner",
+          "step_desc": "A cardholder pays outside their home country."
+        },
+        {
+          "step_title": "Stack premium fees",
+          "step_desc": "Cross-border and currency-conversion fees apply on top of the normal toll."
+        },
+        {
+          "step_title": "Bank the spread",
+          "step_desc": "These are among the network's most profitable transactions."
+        }
       ],
-      "the_move": "Same rails, higher toll \u2014 charge a premium exactly where travelers have no alternative.",
+      "the_move": "Same rails, higher toll — charge a premium exactly where travelers have no alternative.",
       "in_the_wild": "Cross-border is a disproportionately profitable line for both Visa and Mastercard, though its volume growth has decelerated for three straight years into 2025.",
-      "watch_out": "Cross-border volume tracks travel and trade \u2014 it slumps in downturns and pandemics, taking the premium with it.",
+      "watch_out": "Cross-border volume tracks travel and trade — it slumps in downturns and pandemics, taking the premium with it.",
       "glyph_id": "bordertoll",
-      "mechanics": ["arbitrage", "brand-premium", "scarcity-manufacture"]
+      "mechanics": [
+        "arbitrage",
+        "brand-premium",
+        "scarcity-manufacture"
+      ]
     },
     {
       "play_name": "Two-Sided Lock",
       "tagline": "Every cardholder pulls a merchant; every merchant pulls a cardholder.",
       "flow": [
-        {"step_title": "Win both sides", "step_desc": "Get cards into wallets AND terminals into stores."},
-        {"step_title": "Make refusal costly", "step_desc": "A merchant can't decline the network everyone carries; a shopper wants the card accepted everywhere."},
-        {"step_title": "Compound the moat", "step_desc": "Each new cardholder makes acceptance more essential, and vice versa \u2014 a self-tightening loop."}
+        {
+          "step_title": "Win both sides",
+          "step_desc": "Get cards into wallets AND terminals into stores."
+        },
+        {
+          "step_title": "Make refusal costly",
+          "step_desc": "A merchant can't decline the network everyone carries; a shopper wants the card accepted everywhere."
+        },
+        {
+          "step_title": "Compound the moat",
+          "step_desc": "Each new cardholder makes acceptance more essential, and vice versa — a self-tightening loop."
+        }
       ],
-      "the_move": "Don't out-feature rivals \u2014 out-network them. Ubiquity itself becomes the product no one can copy.",
+      "the_move": "Don't out-feature rivals — out-network them. Ubiquity itself becomes the product no one can copy.",
       "in_the_wild": "Visa and Mastercard together account for more than 80% of US credit card transaction volume; challengers struggle to break a moat built on universal acceptance.",
-      "watch_out": "The same ubiquity draws antitrust scrutiny \u2014 and new rails can bootstrap their own network effect from a big platform's user base.",
+      "watch_out": "The same ubiquity draws antitrust scrutiny — and new rails can bootstrap their own network effect from a big platform's user base.",
       "glyph_id": "twosidedlock",
-      "mechanics": ["two-sided-network", "economies-of-scale", "lock-in"]
+      "mechanics": [
+        "two-sided-network",
+        "economies-of-scale",
+        "lock-in"
+      ]
     },
     {
       "play_name": "Beyond the Swipe",
       "tagline": "Once you own the rails, sell services on top of them.",
       "flow": [
-        {"step_title": "Start with the toll", "step_desc": "The core transaction fee funds everything."},
-        {"step_title": "Layer on services", "step_desc": "Fraud scoring, tokenization, data analytics, consulting, real-time-payment products."},
-        {"step_title": "Diversify the take", "step_desc": "Value-added services grow faster than the toll and hedge against interchange pressure."}
+        {
+          "step_title": "Start with the toll",
+          "step_desc": "The core transaction fee funds everything."
+        },
+        {
+          "step_title": "Layer on services",
+          "step_desc": "Fraud scoring, tokenization, data analytics, consulting, real-time-payment products."
+        },
+        {
+          "step_title": "Diversify the take",
+          "step_desc": "Value-added services grow faster than the toll and hedge against interchange pressure."
+        }
       ],
-      "the_move": "Turn the rails into a platform \u2014 sell the tools everyone riding them needs.",
+      "the_move": "Turn the rails into a platform — sell the tools everyone riding them needs.",
       "in_the_wild": "Both networks have pushed hard into value-added services and acquisitions to grow revenue beyond pure transaction fees as regulatory pressure on interchange rises.",
-      "watch_out": "Services revenue is more competitive and less moat-protected than the toll \u2014 it's a real market, not a tollgate.",
+      "watch_out": "Services revenue is more competitive and less moat-protected than the toll — it's a real market, not a tollgate.",
       "glyph_id": "beyondswipe",
-      "mechanics": ["data-flywheel", "bundling", "platform-tax"]
+      "mechanics": [
+        "data-flywheel",
+        "bundling",
+        "platform-tax"
+      ]
     }
   ],
-
   "mechanics_summary": [
-    {"tag": "toll-booth", "note": "Sit on a flow and charge a small fee each time value passes \u2014 the purest version of this mechanic."},
-    {"tag": "two-sided-network", "note": "Cardholders and merchants each make the other side more valuable; the loop is the moat."},
-    {"tag": "asset-light", "note": "The network owns no money and no credit risk \u2014 it taxes movement, so it scales almost for free."},
-    {"tag": "platform-tax", "note": "Take a cut of transactions you host without being party to them."},
-    {"tag": "commoditize-your-complement", "note": "Route the fat interchange to banks so issuance (your complement) is abundant and loyal to you."},
-    {"tag": "regulatory-moat", "note": "Cuts both ways \u2014 scale deters entrants, but the same dominance invites caps and antitrust."}
+    {
+      "tag": "toll-booth",
+      "note": "Sit on a flow and charge a small fee each time value passes — the purest version of this mechanic."
+    },
+    {
+      "tag": "two-sided-network",
+      "note": "Cardholders and merchants each make the other side more valuable; the loop is the moat."
+    },
+    {
+      "tag": "asset-light",
+      "note": "The network owns no money and no credit risk — it taxes movement, so it scales almost for free."
+    },
+    {
+      "tag": "platform-tax",
+      "note": "Take a cut of transactions you host without being party to them."
+    },
+    {
+      "tag": "commoditize-your-complement",
+      "note": "Route the fat interchange to banks so issuance (your complement) is abundant and loyal to you."
+    },
+    {
+      "tag": "regulatory-moat",
+      "note": "Cuts both ways — scale deters entrants, but the same dominance invites caps and antitrust."
+    }
   ],
-
   "history": {
     "origin": {
       "who": "Bank of America (BankAmericard) and the banks behind Interbank / Master Charge",
-      "when": "1958 (BankAmericard); networks formalized through the 1960s\u201370s",
-      "what_problem_forced_it": "A single bank's card was only useful at merchants that bank had signed. Merchants and banks needed a universal system so ANY bank's card would work at ANY merchant \u2014 the network was the shared switchboard that made cards interoperable, and the toll paid for running it."
+      "when": "1958 (BankAmericard); networks formalized through the 1960s–70s",
+      "what_problem_forced_it": "A single bank's card was only useful at merchants that bank had signed. Merchants and banks needed a universal system so ANY bank's card would work at ANY merchant — the network was the shared switchboard that made cards interoperable, and the toll paid for running it."
     },
     "operator": {
       "name": "Dee Hock, founder of Visa",
-      "what_they_did": "Reorganized BankAmericard into a member-owned cooperative (Visa) in the 1970s \u2014 a deliberately decentralized structure owned by the banks that used it, so competitors could cooperate on shared rails while competing for cardholders.",
+      "what_they_did": "Reorganized BankAmericard into a member-owned cooperative (Visa) in the 1970s — a deliberately decentralized structure owned by the banks that used it, so competitors could cooperate on shared rails while competing for cardholders.",
       "outcome": "Visa grew into the largest payment network on earth; the cooperative later went public as a for-profit company worth hundreds of billions."
     },
     "counterexample": {
       "name": "The Durbin Amendment (2010) and interchange litigation",
       "what_they_did": "US regulators capped debit-card interchange, and a long-running antitrust fight forced credit interchange concessions and settlements into the 2020s.",
-      "why_it_broke": "The model's dependence on interchange is also its exposure: when the fee that aligns banks is capped by law, the flywheel's fuel is rationed \u2014 proof that a regulatory moat can become a regulatory ceiling."
+      "why_it_broke": "The model's dependence on interchange is also its exposure: when the fee that aligns banks is capped by law, the flywheel's fuel is rationed — proof that a regulatory moat can become a regulatory ceiling."
     }
   },
-
   "epistemics": {
     "numbers": [
-      {"label": "Visa FY2025 payments volume", "value": "~14", "unit": "T USD", "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard", "as_of_date": "2026-07-27", "confidence": "ballpark"},
-      {"label": "Visa FY2025 net revenue", "value": "~40", "unit": "B USD", "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard", "as_of_date": "2026-07-27", "confidence": "ballpark"},
-      {"label": "Mastercard FY2025 gross dollar volume", "value": "~9.2", "unit": "T USD", "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard", "as_of_date": "2026-07-27", "confidence": "ballpark"},
-      {"label": "Network assessment fee (Visa)", "value": "~0.13\u20130.14", "unit": "% of volume", "source_url": "https://chargebacks911.com/visa-interchange-fees/", "as_of_date": "2026-07-27", "confidence": "ballpark"},
-      {"label": "Combined US credit interchange avg (2025)", "value": "~2.36", "unit": "%", "source_url": "https://www.fool.com/money/research/average-credit-card-processing-fees-costs-america/", "as_of_date": "2026-07-27", "confidence": "ballpark"},
-      {"label": "Visa+MC share of US credit volume", "value": ">80", "unit": "%", "source_url": "https://www.fool.com/money/research/average-credit-card-processing-fees-costs-america/", "as_of_date": "2026-07-27", "confidence": "ballpark"}
+      {
+        "label": "Visa FY2025 payments volume",
+        "value": "~14",
+        "unit": "T USD",
+        "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Visa FY2025 net revenue",
+        "value": "~40",
+        "unit": "B USD",
+        "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Mastercard FY2025 gross dollar volume",
+        "value": "~9.2",
+        "unit": "T USD",
+        "source_url": "https://www.spark.money/research/card-network-economics-visa-mastercard",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Network assessment fee (Visa)",
+        "value": "~0.13–0.14",
+        "unit": "% of volume",
+        "source_url": "https://chargebacks911.com/visa-interchange-fees/",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Combined US credit interchange avg (2025)",
+        "value": "~2.36",
+        "unit": "%",
+        "source_url": "https://www.fool.com/money/research/average-credit-card-processing-fees-costs-america/",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      },
+      {
+        "label": "Visa+MC share of US credit volume",
+        "value": ">80",
+        "unit": "%",
+        "source_url": "https://www.fool.com/money/research/average-credit-card-processing-fees-costs-america/",
+        "as_of_date": "2026-07-27",
+        "confidence": "ballpark"
+      }
     ],
     "confidence": "ballpark",
     "unknowns": [
       "Exact split of the network's own take between assessment, data-processing, and cross-border fees is not broken out here.",
       "Figures come from secondary sources citing company filings, not read directly from the 10-Ks in this entry.",
-      "Interchange rates and settlement terms are actively changing through ongoing litigation \u2014 treat 2025 figures as a moving target.",
-      "Non-US economics differ sharply (e.g. EU interchange is capped far lower) \u2014 these numbers skew US."
+      "Interchange rates and settlement terms are actively changing through ongoing litigation — treat 2025 figures as a moving target.",
+      "Non-US economics differ sharply (e.g. EU interchange is capped far lower) — these numbers skew US."
     ]
   },
-
   "recall": {
-    "glyph_prompt": "A tollbooth straddling a massive highway of money. Trillions of cars stream through and the network clips a single coin off each one \u2014 without ever owning a car. The fat toll doesn't stay in the booth: it's handed to the banks that sent the drivers, so the banks keep sending more.",
+    "glyph_prompt": "A tollbooth straddling a massive highway of money. Trillions of cars stream through and the network clips a single coin off each one — without ever owning a car. The fat toll doesn't stay in the booth: it's handed to the banks that sent the drivers, so the banks keep sending more.",
     "three_questions": [
-      "On a $100 swipe, who actually keeps most of the ~$2\u20133 fee \u2014 the network or the bank? (the bank, via interchange; the network keeps a thin assessment)",
+      "On a $100 swipe, who actually keeps most of the ~$2–3 fee — the network or the bank? (the bank, via interchange; the network keeps a thin assessment)",
       "Why do issuing banks want to hand out Visa/Mastercard cards specifically?",
       "What is the network's real moat, and what two forces threaten it? (two-sided network effect; interchange regulation and real-time/stablecoin rails)"
     ],
     "last_reviewed": null,
     "next_review": null,
     "ease": null
+  },
+  "scale": {
+    "value_usd": 78700000000.0,
+    "display": "~$78.7B (Visa + Mastercard)",
+    "metric": "combined annual net revenue of the two largest networks",
+    "period": "Visa FY2026 ($45.9B) + Mastercard 2025 ($32.8B)",
+    "basis": "industry proxy (top two players)",
+    "confidence": "high",
+    "source_url": "https://www.digitaltransactions.net/visa-posts-a-robust-final-quarter-to-fiscal-2026/",
+    "note": "Mastercard figure: https://s25.q4cdn.com/479285134/files/doc_financials/2025/q4/4Q25-Mastercard-Earnings-Release.pdf",
+    "as_of_date": "2026-11-21"
   }
 }
