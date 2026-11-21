@@ -3,6 +3,7 @@
     "podcast",
     "asml",
     "nvidia",
+    "microsoft",
     "aws-cloud",
     "coreweave",
     "anthropic",
@@ -13,5 +14,5 @@
     "banking",
     "tsmc"
   ],
-  "count": 12
+  "count": 13
 }
