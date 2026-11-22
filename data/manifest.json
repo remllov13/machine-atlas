@@ -3,6 +3,7 @@
     "podcast",
     "asml",
     "nvidia",
+    "ai-capex-bubble",
     "microsoft",
     "aws-cloud",
     "coreweave",
@@ -14,5 +15,5 @@
     "banking",
     "tsmc"
   ],
-  "count": 13
+  "count": 14
 }

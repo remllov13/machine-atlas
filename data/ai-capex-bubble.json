@@ -1,0 +1,356 @@
+{
+  "identity": {
+    "id": "ai-capex-bubble",
+    "name": "The AI Capex Supercycle",
+    "aka": [
+      "the AI buildout",
+      "the trillion-dollar loop",
+      "the circular-financing web",
+      "the compute arms race",
+      "'the bubble question'"
+    ],
+    "sector": "Macro / capital formation — the aggregate data-center buildout that underwrites the whole AI stack (chips, foundries, clouds, labs)",
+    "geography": "Global, but concentrated in US hyperscalers (Microsoft, Amazon, Alphabet, Meta), the frontier labs (OpenAI, Anthropic, xAI), and their chip and cloud suppliers (NVIDIA, TSMC, Oracle, CoreWeave)",
+    "era": "Modern AI capex wave 2023-present; the arms race went vertical in 2025-2026 as hyperscaler annual capex crossed ~$400B and OpenAI alone committed ~$1.4T; the 'is-it-a-bubble' debate peaked publicly in Nov 2025",
+    "mode": "teardown",
+    "date_walked": "2026-11-22"
+  },
+  "chain": {
+    "parent_id": "nvidia",
+    "relation": "macro_aggregate",
+    "relation_note": "This is the one entry that is not a single business but the weather every AI business in the Atlas is operating inside. NVIDIA sits at the root of the supply thread -- it sells the picks and shovels -- and its revenue IS the capex that TSMC fabs, CoreWeave debt-finances, and OpenAI, Anthropic and Microsoft spend. Walk up from any of those buildings and you arrive at the same macro question the Anthropic teardown teed up by name: 'both labs now sit on hundreds of billions in compute commitments financed partly by the same suppliers who sell them chips and cloud... tearing down the bubble question as a pattern ties nvidia, tsmc, coreweave, openai, and anthropic into one macro machine.' That is what this entry does. It does not add a new company; it steps back far enough to see that the individual machines are wired into a single flywheel of derived demand, vendor financing, and expectation -- and it names the economics (the accelerator principle, malinvestment, the Minsky dynamic) that decide whether the flywheel is a durable buildout or a cluster of errors about to resolve. Read it after the supply thread (nvidia, tsmc, asml, coreweave) and the demand thread (openai, anthropic, microsoft): it is the macro roof over both.",
+    "chain_position": 6,
+    "suggested_next": [
+      {
+        "id": "oracle",
+        "relation": "most_exposed_bet",
+        "why": "The single clearest specimen of one company betting its balance sheet on the supercycle. Oracle signed a ~$300B, five-year cloud deal with OpenAI (Project Stargate), is adding ~4.5GW of capacity, and reportedly plans ~$40B of NVIDIA chips for Abilene alone -- much of it debt-financed against a single anchor customer. Tearing down Oracle shows the bubble at the level of one firm's cap table: concentration risk, take-or-pay contracts, and the gap between booked backlog and cash in hand."
+      },
+      {
+        "id": "dot-com-fiber-glut",
+        "relation": "historical_analog",
+        "why": "The canonical capex bubble that every malinvestment argument is drawn from: the 1999-2001 telecom/fiber overbuild (WorldCom, Global Crossing, Nortel, Lucent) that laid ~20x the fiber actually needed, went bankrupt, and left cheap infrastructure the next decade's internet ran on. The cleanest answer to 'how does an overbuild resolve?' -- and whether the assets outlive the firms that financed them. Walking it is how you learn to tell a bubble that destroys capital from one that merely transfers it."
+      },
+      {
+        "id": "cursor-anysphere",
+        "relation": "demand_test",
+        "why": "The whole supercycle is a bet that real end-user demand will show up to absorb the capacity. Cursor is the clearest specimen of the application layer that has to generate that revenue -- an AI coding tool reselling model calls as seats, growing fast on genuine willingness-to-pay rather than on a supplier's investment. Tearing it down is how you check the demand side of the bubble question: is there organic demand under the circular deals, or only derived demand propped up by the sellers?"
+      }
+    ]
+  },
+  "one_line": "The AI capex supercycle is what happens when a jump in expected demand for intelligence is turned, by cheap capital and circular financing, into a near-vertical jump in capital spending: hyperscalers and labs committing hundreds of billions -- OpenAI alone ~$1.4 trillion -- to build compute now for demand that is forecast, not yet earned, with the chip-sellers so often financing their own customers that the question stops being 'is AI real?' and becomes 'how much of this demand is independent, and what breaks if one link in the loop misses?'",
+  "engine": {
+    "inputs": [
+      "An expectations shock: a widely-shared belief that demand for AI compute will grow enormously and soon, which (by the accelerator principle) justifies spending to build capacity for the GROWTH, not just the current level",
+      "Cheap and abundant capital -- equity raised at escalating marks, hyperscaler free cash flow, and, increasingly, DEBT (bonds, private credit, SPV/leasing structures) that funds data centers against future contracts",
+      "A small number of suppliers (NVIDIA above all) willing to invest in, prepay, or backstop their own customers -- turning a sale into a financed, circular commitment",
+      "Physical scarcity rails: power, land, transformers, HBM memory, and leading-edge TSMC wafers, which make capacity a race rather than an on-demand purchase",
+      "Accounting discretion over how fast the bought hardware is written down -- the useful-life assumption that decides how much of today's spend hits today's earnings"
+    ],
+    "transformation": "Convert a forecast of future demand into present-tense concrete, steel, and silicon -- and do it before rivals, because in a capacity race the firm without compute loses the model race. The mechanism that makes it go vertical: each large commitment (NVIDIA invests in OpenAI; OpenAI signs Oracle; Oracle orders NVIDIA; Microsoft/Amazon/Google raise their own capex to keep pace) validates the next, so dollars spent by one player reappear as revenue for another and the whole cluster reads as 'breakneck organic growth.' The transformation is real -- actual data centers get built -- but the DEMAND SIGNAL driving it is partly manufactured by the sellers, so the machine's output is both a genuine build and an inflated read on how much the market actually wants.",
+    "outputs": [
+      "Gigawatts of new data-center capacity and millions of deployed GPUs -- a real, physical stock of compute",
+      "A self-reinforcing set of headline numbers (record capex, record backlog, record supplier revenue) that make the growth look more organic and more certain than independent end-demand alone would",
+      "Soaring supplier earnings (NVIDIA) and soaring supplier/lab valuations, which become the collateral and currency for the next round of commitments",
+      "A lattice of take-or-pay contracts, warrants, equity stakes, and debt that ties the participants' fates together",
+      "Either: the infrastructure the next decade of AI runs on (if demand shows up) -- or a glut of half-utilized, fast-depreciating hardware and stranded debt (if it doesn't)"
+    ],
+    "money_in": "Equity at escalating valuations, hyperscaler operating cash flow, and a fast-growing slug of debt and off-balance-sheet financing raised against long-term compute contracts. Suppliers' own capital re-enters the system as investments in and prepayments to their customers.",
+    "money_out": "NVIDIA GPUs and systems, TSMC wafers, land, power, construction, and the interest on the debt -- paid NOW, for capacity whose paying demand arrives LATER (or in forecast). OpenAI's ~$1.4T of commitments against ~$20B of annualized revenue is the extreme illustration of the timing gap.",
+    "the_spread": "The spread the supercycle is harvesting is a TIMING and EXPECTATIONS spread, not an operating one. Capital is committed today against revenue expected over 5-10 years; the bet pays only if realized demand (and the price of compute) tracks the forecast baked into the buildout. In the middle sits an accounting spread: stretching the useful life of GPUs moves depreciation off near-term earnings, widening reported profit without widening cash -- a paper spread that reverses if the hardware obsoletes on its real 2-3 year cycle.",
+    "leverage_point": "Expectations, amplified by circularity. Because capex is set by the expected CHANGE in demand (the accelerator), a small shift in the forecast swings spending a lot -- up on the way in, and hard DOWN if belief cracks. And because suppliers finance the demand they book, the demand signal is partly endogenous: the single most fragile node is whoever sits at the center of the loop (today, OpenAI's ability to turn ~$1.4T of commitments into real revenue), since a miss there propagates backward through every supplier that financed it."
+  },
+  "unit": "One marginal gigawatt of committed compute (or one large GPU order). The question for every such unit is the same: is it bought by an end customer paying with money earned from users, or by a counterparty whose purchase is being financed -- directly or circularly -- by the very supplier booking the sale? A unit of the first kind is organic demand and makes the buildout look conservative; a unit of the second kind is derived, round-tripped demand that makes aggregate growth look stronger than the underlying market. The supercycle is sound to exactly the degree its marginal units are the first kind. The hard part is that from the outside the two units look identical on the income statement -- both show up as revenue and backlog -- which is why the bubble question is so hard to settle in real time.",
+  "plays": [
+    {
+      "play_name": "Ride the Accelerator",
+      "tagline": "When demand is expected to GROW, you don't buy for today's level -- you build for the slope, and the slope magnifies everything.",
+      "flow": [
+        {
+          "step_title": "Read the derived demand",
+          "step_desc": "Nobody wants GPUs for their own sake; demand for compute is DERIVED from expected demand for AI output. When that end-demand is forecast to grow fast, the capacity needed grows with it -- one rung up the chain from the user."
+        },
+        {
+          "step_title": "Apply the accelerator",
+          "step_desc": "Investment responds to the CHANGE in expected demand, not its level. A jump in the forecast calls for a burst of new capacity all at once (you build the whole next factory now), so capex swings far more violently than demand itself -- the accelerator principle."
+        },
+        {
+          "step_title": "Race, because waiting loses",
+          "step_desc": "In a capacity-constrained race, the lab or cloud without compute falls behind on models and customers. So everyone front-loads spending to not be last -- turning a rational response to growth into a synchronized, oversized surge."
+        }
+      ],
+      "the_move": "Let expected demand growth, not current demand, set spending -- which is correct micro behavior and exactly why aggregate capex overshoots: the accelerator turns a demand wobble into a capex earthquake, up and (eventually) down.",
+      "in_the_wild": {
+        "name": "Big Four hyperscaler capex up ~50% in one year (~$240B in 2024 to ~$400B in 2025, ~$650B planned 2026); OpenAI committing ~$1.4T against ~$20B ARR",
+        "confidence": "high"
+      },
+      "watch_out": "The accelerator runs in reverse. If the demand FORECAST merely stops rising (not even falls), the justification for NET-new capacity collapses and capex can fall off a cliff -- the same math that drove the boom drives the bust.",
+      "mechanics": [
+        "accelerator-principle",
+        "derived-demand",
+        "capex-supercycle",
+        "expectations-driven-investment"
+      ]
+    },
+    {
+      "play_name": "Fund Your Own Customer",
+      "tagline": "If you're not sure the buyer can pay, become the buyer's investor -- then the sale and the funding are the same dollar going in a circle.",
+      "flow": [
+        {
+          "step_title": "Invest in the demand",
+          "step_desc": "The supplier takes a stake in, prepays, or backstops its customer. NVIDIA agreed to invest up to ~$100B in OpenAI; took >5% of CoreWeave and guaranteed to buy ~$6.3B of CoreWeave's unsold cloud capacity; AMD granted OpenAI warrants for ~10% of AMD tied to GPU deployment."
+        },
+        {
+          "step_title": "Book the sale it funds",
+          "step_desc": "That capital comes back as orders: OpenAI commits to deploy millions of NVIDIA GPUs; CoreWeave buys NVIDIA chips to build the data centers; Oracle orders ~$40B of NVIDIA silicon to serve its ~$300B OpenAI contract. The supplier's investment returns as the supplier's revenue."
+        },
+        {
+          "step_title": "Let the loop read as growth",
+          "step_desc": "Because each deal validates the next and dollars recirculate, the cluster shows breakneck top-line growth. An outside observer can't easily separate organic demand from demand the sellers financed -- so the whole sector 'gets fatter by eating itself.'"
+        }
+      ],
+      "the_move": "Vendor-finance your own demand to secure supply and manufacture a growth signal -- which de-risks capacity in the short run but makes the aggregate demand number partly circular, and ties every participant's solvency to every other's.",
+      "in_the_wild": {
+        "name": "The NVIDIA-OpenAI-Oracle-CoreWeave-AMD 'trillion-dollar loop' (Sept-Oct 2025 deals), widely described as circular financing / vendor financing",
+        "confidence": "high"
+      },
+      "watch_out": "Round-tripped revenue is only as solid as the weakest counterparty's real cash. If the central customer (OpenAI) can't convert commitments into end-user revenue, the financed demand evaporates and unwinds backward through every supplier that booked it.",
+      "mechanics": [
+        "vendor-financing",
+        "circular-financing",
+        "round-tripping",
+        "counterparty-risk"
+      ]
+    },
+    {
+      "play_name": "Stretch the Depreciation",
+      "tagline": "Buy a 3-year asset, book it over 6, and today's earnings look twice as good as the cash says.",
+      "flow": [
+        {
+          "step_title": "Capitalize the spend",
+          "step_desc": "GPUs and servers are capex, not expense -- their cost hits the income statement slowly, as depreciation, over an assumed 'useful life.' The longer that assumed life, the smaller the annual charge."
+        },
+        {
+          "step_title": "Extend the useful life",
+          "step_desc": "Hyperscalers have lengthened assumed server lives (toward ~6 years), even as frontier GPUs obsolete on a ~2-3 year product cycle. A longer book life means less depreciation now, so reported operating profit rises without any change in cash."
+        },
+        {
+          "step_title": "Flatter the run-rate",
+          "step_desc": "The result is earnings that look stronger during the build -- exactly when the market is paying up for AI 'profitability' -- while the real economic cost of the fast-aging hardware is pushed into later years or understated outright."
+        }
+      ],
+      "the_move": "Use discretion in a non-cash estimate (useful life) to move reported profit forward in time -- legal accounting judgment at one end, earnings management (or, critics say, worse) at the other, depending on how far the assumption diverges from physical reality.",
+      "in_the_wild": {
+        "name": "Michael Burry (closing Scion) in Nov 2025 estimated hyperscalers would understate depreciation by ~$176B across 2026-2028 by extending useful lives, naming Oracle and Meta and calling it an artificial earnings boost",
+        "confidence": "medium"
+      },
+      "watch_out": "Depreciation is a timing, not a cash, lever -- it reverses. If the hardware really does obsolete in 2-3 years, the deferred charges land later as write-downs and depressed earnings, and the gap between reported profit and free cash flow becomes the tell.",
+      "mechanics": [
+        "depreciation-accounting",
+        "useful-life-estimation",
+        "earnings-management",
+        "non-cash-expense"
+      ]
+    },
+    {
+      "play_name": "Build for the Peak",
+      "tagline": "When cheap money and shared euphoria tell everyone to build at once, the cluster overshoots -- not because anyone was dumb, but because they all read the same signal.",
+      "flow": [
+        {
+          "step_title": "Cheap capital lowers the bar",
+          "step_desc": "Abundant equity and debt drop the hurdle rate, so projects that need heroic demand to pay off still clear. Capital floods toward the hot sector because that's where the returns are forecast."
+        },
+        {
+          "step_title": "Everyone builds simultaneously",
+          "step_desc": "Each firm, seeing the same bullish forecast and fearing to be left without capacity, commits at the same time. Individually rational; collectively a synchronized surge that no single actor is sizing against the others."
+        },
+        {
+          "step_title": "Capacity overshoots demand",
+          "step_desc": "Because capacity is lumpy and lead times are long, the industry builds for a peak forecast that realized demand may undershoot -- leaving idle gigawatts, falling utilization, and collapsing prices for the service the capacity was meant to sell."
+        }
+      ],
+      "the_move": "Let cheap capital plus correlated optimism coordinate a build that overshoots -- the Austrian 'cluster of errors' and the classic capex (hog) cycle: a boom carries the seeds of its own glut because everyone invests on the same signal at the same time.",
+      "in_the_wild": {
+        "name": "The 1999-2001 telecom/fiber overbuild (WorldCom, Global Crossing, Nortel): ~20x the needed fiber laid, mass bankruptcy, then a decade of cheap infrastructure for the internet that followed",
+        "confidence": "high"
+      },
+      "watch_out": "Overbuilding and healthy investment look identical at the top -- both are lots of construction. The difference only shows at the margin (utilization, pricing, returns on the last dollar of capex), which is invisible until demand is tested.",
+      "mechanics": [
+        "malinvestment",
+        "overcapacity",
+        "capex-cycle",
+        "cluster-of-errors"
+      ]
+    },
+    {
+      "play_name": "Trust Jevons",
+      "tagline": "The bull's answer to overbuilding: make compute cheaper and people use so much more of it that the glut fills itself.",
+      "flow": [
+        {
+          "step_title": "Drive the cost per unit down",
+          "step_desc": "Better chips, better models, and scale push the cost per token/inference down fast -- the learning curve that has defined compute for decades."
+        },
+        {
+          "step_title": "Watch demand expand to fill it",
+          "step_desc": "When a resource gets cheaper and more useful, total consumption can RISE, not fall (Jevons paradox): cheaper inference unlocks agents, always-on assistants, and uses that were uneconomic before, so usage outruns the price cut."
+        },
+        {
+          "step_title": "Absorb the capacity",
+          "step_desc": "If induced demand grows fast enough, the 'overbuilt' capacity is exactly what's needed a year later -- and the firms that front-loaded capex look prescient rather than reckless."
+        }
+      ],
+      "the_move": "Bet that high price-elasticity plus genuinely useful falling-cost compute turns apparent overcapacity into just-in-time capacity -- the mechanism by which a buildout that looks like a glut today becomes the floor under tomorrow's demand.",
+      "in_the_wild": {
+        "name": "Jevons paradox (coal, 1865) and the long compute price-performance curve; cited by hyperscaler CEOs as the reason cheaper AI expands rather than shrinks their capacity needs",
+        "confidence": "illustrative"
+      },
+      "watch_out": "Jevons is a hope, not a guarantee, on any given timeline. Demand can be elastic AND arrive two years after the debt is due; the capacity is physical and depreciating, so even a correct long-run bull case can bankrupt the firms that financed it early -- the fiber-glut outcome.",
+      "mechanics": [
+        "jevons-paradox",
+        "price-elasticity-of-demand",
+        "induced-demand",
+        "learning-curve"
+      ]
+    },
+    {
+      "play_name": "Too Wired to Fail Quietly",
+      "tagline": "Stability breeds confidence breeds leverage breeds fragility -- and when everyone is wired to everyone, one broken link isn't local.",
+      "flow": [
+        {
+          "step_title": "Concentrate the bet",
+          "step_desc": "A handful of firms, one chip vendor, and one or two anchor customers carry most of the weight. The AI trade is a huge share of the stock market's gains and, by some accounts, of US GDP growth -- so the economy is long this one bet."
+        },
+        {
+          "step_title": "Add leverage and circularity",
+          "step_desc": "Debt-financed data centers, take-or-pay contracts, warrants, and supplier stakes mean the players hold each other's paper. Each link borrowed against the next link's promise -- the configuration Minsky called the march from hedge to speculative to Ponzi finance."
+        },
+        {
+          "step_title": "Test one node",
+          "step_desc": "If the central customer's revenue disappoints, it can't meet commitments; the supplier that financed it takes the loss; its backed cloud loses its backstop; the debt reprices; and the correlated unwind hits all at once -- a Minsky moment rather than a tidy correction."
+        }
+      ],
+      "the_move": "Let interlocking leverage and concentration convert many independent bets into one correlated bet, so the system is robust to small shocks and brittle to the one shock that hits the center -- fragility manufactured by the very deals that made the boom feel safe.",
+      "in_the_wild": {
+        "name": "Nov 2025-2026 bubble debate (Burry, IMF/BoE financial-stability warnings, AI as an outsized share of S&P 500 gains and US capex), weighing circular-financing concentration against real asset creation",
+        "confidence": "medium"
+      },
+      "watch_out": "Systemic fragility is unobservable until it isn't: the same tight coupling that looks like strength (committed demand, locked-in supply) is what transmits a single failure everywhere. And unlike 2008's financial-only assets, here real productive infrastructure is being built -- so a bust can destroy the FINANCIERS while leaving useful capacity behind (as fiber did), which is a different, milder failure mode than a pure credit bubble.",
+      "mechanics": [
+        "minsky-moment",
+        "systemic-risk",
+        "financial-fragility",
+        "concentration-risk"
+      ]
+    }
+  ],
+  "mechanics_summary": "The AI capex supercycle is the macro machine the whole Atlas supply-and-demand thread is bolted into, and it runs on one master dynamic: the accelerator principle. Because demand for compute is DERIVED from expected demand for AI, and because investment responds to the CHANGE in expected demand rather than its level, a jump in the forecast calls for a burst of capacity all at once -- so aggregate capex (hyperscalers ~$240B in 2024 to ~$400B in 2025 toward ~$650B planned in 2026; OpenAI alone ~$1.4T committed against ~$20B of revenue) swings far more violently than underlying demand. Three amplifiers turn that surge into something that looks like a bubble. First, circular/vendor financing: NVIDIA invests up to ~$100B in OpenAI, backstops CoreWeave, and watches the money return as GPU orders; Oracle borrows to buy NVIDIA chips to serve a ~$300B OpenAI contract; AMD hands OpenAI warrants for ~10% of itself tied to deployment -- so dollars recirculate and the sector's growth reads as more organic than independent end-demand alone would support. Second, depreciation stretching: lengthening the assumed useful life of GPUs that really obsolete in 2-3 years moves non-cash cost out of today's earnings, flattering reported profit (Burry's ~$176B understatement claim) without changing cash. Third, cheap capital and correlated euphoria coordinate a synchronized overbuild -- the Austrian cluster of errors and the classic capex/hog cycle -- because every player invests on the same signal at the same time. The bull case against a bust is Jevons: cheaper, more useful compute could expand usage enough to absorb the capacity, turning apparent glut into just-in-time supply. The bear case is Minsky: concentration plus leverage plus circularity means one broken link at the center (an OpenAI revenue miss) transmits a correlated unwind through everyone holding the paper. The pattern to carry to any boom: find the accelerator (what change in expectations is being extrapolated), check whether the demand is organic or vendor-financed, watch the gap between reported earnings and cash, and ask whether a bust would destroy the capital or merely transfer the assets to whoever buys them cheap afterward. A capex bubble that overbuilds real, durable, useful infrastructure (fiber, rail, data centers) can ruin its financiers and still leave the economy the plumbing it grows on -- which is why 'is it a bubble?' and 'was the buildout worth it?' are two different questions with, often, two different answers.",
+  "history": {
+    "origin": {
+      "who": "No single operator -- the supercycle is the emergent behavior of hyperscalers (Microsoft, Amazon, Alphabet, Meta), frontier labs (OpenAI, Anthropic, xAI), and their suppliers (NVIDIA, TSMC, Oracle, CoreWeave) all responding to the same demand forecast at once",
+      "when": "Modern wave from the 2023 ChatGPT demand shock; went vertical through 2025-2026; the public 'bubble?' debate crystallized around Nov 2025",
+      "what_problem_forced_it": "The problem the buildout is trying to solve is a capacity race under uncertainty: if frontier AI demand is as large as forecast, the firms without compute lose the model and customer race, and capacity (power, fabs, GPUs) has long lead times and is physically scarce -- so you must commit capital years ahead of the revenue, on a forecast. That timing gap is the whole drama. Build too little and you're locked out; build too much on a forecast that slips and you own a glut of fast-depreciating hardware and the debt that bought it. The circular financing and the accounting discretion are the tools the participants reached for to make committing that early-and-large capital feel safer -- and are exactly what turned a rational buildout into something with the shape of a bubble."
+    },
+    "operator": {
+      "name": "Jensen Huang (NVIDIA) as the keystone, with Sam Altman (OpenAI) as the demand anchor",
+      "what_they_did": "NVIDIA sits at the center of the loop: it sells the GPUs every buildout needs, and in 2025 began investing in and backstopping the very customers who buy them (up to ~$100B into OpenAI, a stake in and purchase guarantee for CoreWeave), so its sales help finance the demand it books. Huang framed OpenAI as 'the next multi-trillion-dollar hyperscale company' and the investment as 'one of the smartest we can possibly imagine.' Altman, at the demand end, turned escalating forecasts into ~$1.4T of compute commitments across NVIDIA, Oracle, AMD, Microsoft, Amazon and others -- the single largest bet that the demand will be there. Together they are the two nodes whose confidence sets the whole cluster's spending.",
+      "outcome": "By late 2026 the buildout was simultaneously the biggest capital-formation event in modern tech history and the center of a loud bubble debate. Real capacity was being built at record pace; supplier earnings and valuations soared; and skeptics (Burry, and institutions like the IMF and Bank of England warning on financial stability) argued the demand was partly circular and the earnings partly an accounting illusion. The question it carries forward is unresolved by design: whether the accelerator is pricing in durable demand (Jevons) or a cluster of errors (malinvestment) -- a question only realized demand, tested against the debt's maturity schedule, can settle."
+    },
+    "counterexample": {
+      "name": "The 1990s telecom/fiber overbuild -- and its two-sided lesson",
+      "what_they_did": "In 1999-2001, telecoms (WorldCom, Global Crossing, Qwest) and their suppliers (Nortel, Lucent) borrowed heavily to lay vastly more fiber than demand required -- aided by vendor financing (equipment makers lending customers the money to buy their gear) and aggressive accounting that, at WorldCom, tipped into outright fraud. The bust wiped out the financiers and their shareholders. BUT the fiber stayed in the ground: the next decade's broadband internet ran on that cheap, stranded capacity. It is the Atlas's cleanest proof that a capex bubble can be real malinvestment for its investors AND durable infrastructure for the economy -- the same assets, a wipeout for one group and a windfall for whoever buys them at ten cents on the dollar. The AI buildout's bull and bear cases are both already visible in this one precedent."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {
+        "claim": "The four largest US hyperscalers (Microsoft, Amazon, Alphabet, Meta) spent about $400 billion on capital expenditures in 2025 -- roughly a 50% jump from about $240 billion in 2024 -- and have signaled plans around $650 billion for 2026",
+        "value": "~$400B (2025) / ~$650B planned (2026)",
+        "as_of_date": "2025-12-31",
+        "source_url": "https://qz.com/big-tech-ai-capex-amazon-microsoft-meta-google",
+        "confidence": "high"
+      },
+      {
+        "claim": "Sam Altman said OpenAI has committed to spend about $1.4 trillion on infrastructure (roughly 30 gigawatts of data-center capacity) and has an annualized revenue run-rate of about $20 billion",
+        "value": "~$1.4T committed / ~$20B ARR",
+        "as_of_date": "2025-11-06",
+        "source_url": "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/",
+        "confidence": "high"
+      },
+      {
+        "claim": "In September 2025 NVIDIA agreed to invest up to $100 billion in OpenAI to help fund at least 10GW of data centers, with OpenAI committing to deploy millions of NVIDIA GPUs in return -- widely described as the supplier financing its own future sales",
+        "value": "up to ~$100B NVIDIA->OpenAI",
+        "as_of_date": "2025-09-22",
+        "source_url": "https://fortune.com/2025/09/28/nvidia-openai-circular-financing-ai-bubble/",
+        "confidence": "high"
+      },
+      {
+        "claim": "OpenAI and Oracle signed a ~$300 billion, five-year cloud deal (Project Stargate); Oracle is adding ~4.5GW and, per the FT, plans to spend ~$40 billion on ~400,000 NVIDIA GB200 chips for the Abilene, Texas flagship",
+        "value": "~$300B Oracle deal / ~$40B NVIDIA chips",
+        "as_of_date": "2025-09-10",
+        "source_url": "https://www.datacenterfrontier.com/machine-learning/article/55316610/openai-and-oracles-300b-stargate-deal-building-ais-national-scale-infrastructure",
+        "confidence": "medium"
+      },
+      {
+        "claim": "In October 2025 OpenAI agreed to deploy 6GW of AMD Instinct GPUs; AMD granted OpenAI a warrant for up to ~160 million AMD shares (~10% of the company), vesting with deployment -- another supplier-equity-for-demand structure",
+        "value": "6GW AMD / warrant for ~10% of AMD",
+        "as_of_date": "2025-10-06",
+        "source_url": "https://www.theregister.com/special-features/2025/11/04/nvidia-openai-and-the-trillion-dollar-loop/",
+        "confidence": "medium"
+      },
+      {
+        "claim": "NVIDIA took an equity stake of more than 5% in CoreWeave and agreed to buy about $6.3 billion of CoreWeave cloud capacity (backstopping any GPU time CoreWeave doesn't sell to others); OpenAI's own CoreWeave contracts total about $22.4 billion",
+        "value": ">5% stake / ~$6.3B backstop / ~$22.4B OpenAI-CoreWeave",
+        "as_of_date": "2025-09-30",
+        "source_url": "https://www.theregister.com/special-features/2025/11/04/nvidia-openai-and-the-trillion-dollar-loop/",
+        "confidence": "medium"
+      },
+      {
+        "claim": "Michael Burry (Scion), closing his fund in Nov 2025, argued hyperscalers artificially boost earnings by extending the useful life of AI chips/servers against a 2-3 year product cycle, estimating an industry depreciation understatement of roughly $176 billion over 2026-2028 and naming Oracle and Meta",
+        "value": "~$176B understated depreciation (2026-2028, est.)",
+        "as_of_date": "2025-11-11",
+        "source_url": "https://www.cnbc.com/2025/11/11/big-short-investor-michael-burry-accuses-ai-hyperscalers-of-artificially-boosting-earnings.html",
+        "confidence": "medium"
+      },
+      {
+        "claim": "For scale context, McKinsey estimated roughly $7 trillion of cumulative global data-center capital expenditure would be required through 2030 to meet projected AI compute demand",
+        "value": "~$7T cumulative through 2030 (projection)",
+        "as_of_date": "2025-04-28",
+        "source_url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers",
+        "confidence": "low"
+      }
+    ],
+    "unknowns": [
+      "How much of the demand is organic vs circular. The single most important unknown: what share of booked AI revenue traces back to end customers paying with user-earned money, versus to counterparties whose purchases are financed by the suppliers booking the sale. From the outside the two are nearly indistinguishable on the income statement.",
+      "Whether realized demand will track the forecast, and on what timeline. Jevons-style demand expansion may be real but arrive after the debt matures; the bust/no-bust outcome turns on the race between demand growth and financing cost -- unknowable in advance.",
+      "The true economic useful life of frontier GPUs, and therefore how large the depreciation understatement (if any) really is. Burry's ~$176B is an estimate contested by the companies; the real answer depends on how fast deployed hardware actually becomes uneconomic.",
+      "The amount and structure of leverage. A growing share of the buildout is debt- and SPV-financed, often off the hyperscalers' own balance sheets; the total system leverage and its covenants are opaque, which is exactly what makes systemic-risk estimates uncertain.",
+      "How concentrated the single-point-of-failure is. The loop's fragility depends heavily on OpenAI specifically converting ~$1.4T of commitments into revenue; the sensitivity of the whole cluster to that one node is argued but not precisely known.",
+      "Which failure mode a correction would take -- a mild one that strands assets but leaves useful infrastructure (fiber precedent) or a severe, 2008-style one that transmits through leverage and the broader economy. The two have very different consequences and the balance between them is unknown."
+    ],
+    "disclaimer": "Educational macro teardown for pattern-recognition, NOT investment advice and not a prediction that a crash will or won't happen. This entry deliberately lays out BOTH the bubble case (circularity, accounting, overbuilding, Minsky) and the sound-buildout case (real assets, accelerator-justified capacity, Jevons demand) because the question is genuinely unresolved as of late 2026. Figures come largely from company statements and secondary reporting, are fast-moving, and mix actuals with multi-year commitments and forecasts -- treat every number as a dated snapshot, and note especially that annual capex, total multi-year commitments, and cumulative projections are three different measures that are easy to conflate."
+  },
+  "recall": {
+    "glyph_prompt": "A vast construction site stretching past the horizon, where thousands of identical data-center towers rise at once under a sky of pure forecast -- the clouds literally shaped like upward-sloping demand curves. At the center, a great brass flywheel labeled ACCELERATOR spins faster the steeper the sky's slope gets, flinging money outward. The money travels a closed golden pipe: out of a chip-foundry (NVIDIA) into a lab (OpenAI), from the lab into a cloud (Oracle, CoreWeave), and from the cloud straight back to the foundry as a GPU order -- a glowing loop that never touches an actual paying customer, so the pipe is labeled 'LOOKS LIKE GROWTH.' Workers paint '6-YEAR LIFE' over machines stamped '3-YEAR LIFE,' making the ledgers glow greener than the cash drawer, which is nearly empty. In the far background, half-buried in sand, lie the rusted spools of 1990s fiber-optic cable -- a ghost of the last overbuild -- with a faded sign: 'ruined the builders, paved the future.' A small figure in a 'Scion' cap points at the depreciation paint and the empty cash drawer; a crowd points instead at the beautiful sloped sky. The whole city balances on the flywheel's single axle -- magnificent while it spins, and wired so tightly that if the lab at the center of the loop ever misses, every tower leans at once.",
+    "questions": [
+      "Hyperscaler AI capex jumped ~50% in a single year while actual AI revenue grew far less. Use the accelerator principle and derived demand to explain why capital spending overshoots demand on the way up -- and why the same math makes it collapse if the forecast merely stops rising.",
+      "NVIDIA invested up to ~$100B in OpenAI, which then commits to buy millions of NVIDIA GPUs; Oracle borrows to buy NVIDIA chips to serve a ~$300B OpenAI contract. Explain what 'circular / vendor financing' does to the aggregate demand signal, and why it makes 'is this growth real?' so hard to answer from the income statement.",
+      "Burry argued hyperscalers understate depreciation by stretching GPU useful lives. Explain how a non-cash accounting estimate can raise reported profit without raising cash -- and then give BOTH the bear case (malinvestment/Minsky) and the bull case (Jevons) for whether the whole buildout ends in a bust or a bargain."
+    ]
+  },
+  "economics_lens": {
+    "concept": "The accelerator principle and malinvestment: how derived demand, vendor financing, cheap capital and accounting discretion turn an expectations shock into a self-reinforcing capital-spending supercycle -- with Jevons demand and the Minsky dynamic as the two forces deciding whether it ends in a durable buildout or a cluster of errors",
+    "micro_or_macro": "macro",
+    "explain": "This is the Atlas's macro keystone, and it is best understood as the accelerator principle wearing modern clothes. Start with derived demand: nobody wants a GPU for itself; demand for compute is derived from expected demand for AI output, one rung up the chain. Now add the accelerator: investment responds to the CHANGE in expected demand, not its level, because to serve growth you must build the whole next increment of capacity at once. So when the AI demand FORECAST jumps, required capacity jumps, and capital spending jumps by even more -- which is exactly what the data show (hyperscaler capex up ~50% in a year, OpenAI committing ~$1.4T against ~$20B of revenue) while realized end-demand grew far less. The accelerator is why capex is the most volatile part of any economy, and why a boom built on it carries the seed of a bust: if the forecast merely stops rising, the justification for NET-new capacity vanishes and spending can fall off a cliff. Three amplifiers make this cycle look like a bubble rather than a normal investment wave. First, circular/vendor financing: when suppliers invest in, prepay, or backstop their own customers (NVIDIA into OpenAI and CoreWeave, AMD's warrants to OpenAI, Oracle borrowing to buy NVIDIA to serve OpenAI), the demand signal becomes partly endogenous -- dollars recirculate and the sector's growth reads as more organic than independent buyers alone would produce. Second, accounting discretion: stretching the depreciable life of hardware that really obsoletes in 2-3 years moves non-cash cost out of present earnings, so reported profit outruns cash flow (the heart of Burry's critique) -- a reminder that earnings are an opinion and cash is a fact. Third, cheap capital plus correlated optimism: when the hurdle rate falls and everyone extrapolates the same bullish forecast, they all build simultaneously, and because capacity is lumpy and slow, the cluster overshoots -- the Austrian 'cluster of errors' / malinvestment, the same engine as the classic capex (hog) cycle and the 1990s fiber glut. Against all that stands the bull's mechanism, Jevons paradox: if falling cost-per-compute is elastic enough, cheaper intelligence induces so much more usage that the 'overbuilt' capacity is absorbed -- apparent glut becomes just-in-time supply. And framing the downside is Minsky: stability breeds leverage breeds fragility, so a system this concentrated and interlinked is robust to small shocks and brittle to the one that hits its center. The thing to carry to every other boom you'll ever analyze: find the accelerator (what change in expectations is being extrapolated into capacity?), check whether the demand underneath is organic or vendor-financed, watch the spread between reported earnings and free cash flow, and ask the fiber question -- if this overbuilds, does the bust DESTROY the capital or just TRANSFER the assets to whoever buys them cheap? Because the deepest lesson of capex bubbles is that 'were the investors right?' and 'was the infrastructure worth building?' can have opposite answers -- the fiber that bankrupted WorldCom still carries this sentence to you."
+  },
+  "scale": {
+    "value_usd": 400000000000,
+    "display": "~$400B/yr",
+    "metric": "combined 2025 capital expenditure of the four largest US hyperscalers (Microsoft, Amazon, Alphabet, Meta) -- a conservative annual proxy for the AI buildout",
+    "period": "calendar year 2025 (actual)",
+    "basis": "industry",
+    "confidence": "high",
+    "source_url": "https://qz.com/big-tech-ai-capex-amazon-microsoft-meta-google",
+    "note": "This ~$400B is a deliberately CONSERVATIVE floor for the supercycle's size: it counts only the Big Four hyperscalers' annual capex and excludes Oracle, CoreWeave, xAI, sovereign and neocloud buildouts. Broader framings are far larger -- the same four plan ~$650B for 2026; OpenAI alone has committed ~$1.4 trillion of multi-year infrastructure spend; and McKinsey projects ~$7 trillion of cumulative global data-center capex through 2030. Annual capex, total multi-year commitments, and cumulative projections are three different measures; value_usd uses the cleanest sourced ANNUAL actual so the building's height is comparable to the revenue-scaled buildings around it rather than inflated by lumping in forward commitments.",
+    "as_of_date": "2026-11-22"
+  }
+}
