@@ -7,6 +7,7 @@
     "aws-cloud",
     "coreweave",
     "anthropic",
+    "github",
     "frontier-room",
     "payment-networks",
     "banking-buildout",
@@ -14,5 +15,5 @@
     "banking",
     "tsmc"
   ],
-  "count": 13
+  "count": 14
 }

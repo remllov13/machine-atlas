@@ -1,0 +1,346 @@
+{
+  "identity": {
+    "id": "github",
+    "name": "GitHub",
+    "aka": [
+      "GitHub, Inc.",
+      "the octocat",
+      "where code lives"
+    ],
+    "sector": "Developer tools / software collaboration / AI coding",
+    "geography": "United States (San Francisco, CA); global, remote-first",
+    "era": "2008-present; Microsoft subsidiary since 2018; Copilot/AI era 2021-present; folded into Microsoft CoreAI 2025",
+    "mode": "teardown",
+    "date_walked": "2026-11-23"
+  },
+  "chain": {
+    "parent_id": "microsoft",
+    "relation": "owned_subsidiary",
+    "relation_note": "Microsoft's own teardown pointed here first: GitHub is its developer-distribution arm and the single most important funnel for Copilot. But GitHub is a full machine in its own right, and it is the cleanest case in the Atlas of a trick most people never notice — a company that gives its core product away for free to almost everyone, on purpose, forever, and gets rich anyway. It is also the substrate the rest of the AI stack sits on: NVIDIA's CUDA samples, OpenAI's SDKs, Anthropic's cookbooks, and nearly every open-source model and tool live here, and GitHub is where Copilot was born and where AI first learned to write code at scale. Walking GitHub shows how 'free for open source' is not charity but the most valuable marketing budget in software history, and how owning the place developers work converts into pricing power one layer up.",
+    "chain_position": 4,
+    "suggested_next": [
+      {
+        "id": "gitlab",
+        "relation": "substitute",
+        "why": "The independent, publicly traded rival that competes on being the un-Microsoft: a single integrated DevSecOps platform you can self-host, sold to enterprises precisely for the control and neutrality GitHub-under-Microsoft can't promise. A teardown shows the open-core business model (free community edition, paid enterprise tiers) and what it costs to fight a free, network-effect incumbent from the outside."
+      },
+      {
+        "id": "cursor-anysphere",
+        "relation": "substitute",
+        "why": "Anthropic already pointed here. Cursor is the AI-native code editor that reframed Copilot's own game — it treats the whole repository as context and the model as the primary author, not an autocomplete. A teardown shows the new layer of value forming above the git host: if the AI writes most of the code, does the money move to whoever owns the editor and the model, or does GitHub's ownership of where code lives keep it in the toll booth?"
+      },
+      {
+        "id": "npm-registry",
+        "relation": "owned_subsidiary",
+        "why": "GitHub bought npm in 2020 — the default package registry for JavaScript, downloaded tens of billions of times a week. It is a pure dependency-graph chokepoint: free to use, un-clonable because the whole ecosystem's imports point at it, and a live supply-chain attack surface. A teardown shows how owning the registry deepens the same lock-in as owning the host."
+      }
+    ]
+  },
+  "one_line": "GitHub gives the thing it actually makes — code hosting — away free to 150 million developers, because the free tier is the marketing: it makes GitHub the default place code lives, and a host that owns every developer's identity, history, and dependencies can then sell teams the private, secure, AI-assisted version of the same thing they already can't leave.",
+  "engine": {
+    "inputs": [
+      "The git version-control protocol (open, free, invented by Linus Torvalds in 2005 — GitHub owns none of it)",
+      "150M+ registered developers and the world's largest body of public source code (1B+ repositories)",
+      "Every developer's work graph: commit history, issues, pull requests, CI pipelines, stars, and social identity",
+      "Microsoft's balance sheet, Azure compute, enterprise sales force, and the OpenAI/Anthropic frontier models behind Copilot",
+      "npm and the dependency graphs of the languages built on top of GitHub-hosted packages"
+    ],
+    "transformation": "Host public code and open-source projects for free, at scale, better than anyone — so that being on GitHub becomes the default and a developer's reputation, network, and muscle memory all accumulate there. Then convert that captive graph into revenue two ways: charge organizations for the private, governed, higher-security version of the same product (seats, Enterprise, Advanced Security), and meter AI generated on top of all that code (Copilot) as a per-seat add-on. The free product is the funnel; the paid product is the same product with a company's name on the invoice.",
+    "outputs": [
+      "Free hosting for public repos, open source, and individual developers (the funnel)",
+      "GitHub Team and Enterprise — paid private repositories, org controls, SSO, audit logs",
+      "GitHub Advanced Security — code scanning, secret scanning, dependency review (premium add-on)",
+      "GitHub Copilot — AI code completion, chat, and agents, sold per seat (Individual, Business, Enterprise)",
+      "GitHub Actions (metered CI/CD minutes), Codespaces (metered cloud dev environments), and the npm registry"
+    ],
+    "money_in": "Per-seat subscriptions (Team and Enterprise), the Copilot per-seat add-on, metered consumption of Actions minutes and Codespaces compute, and Advanced Security premiums. Almost nothing comes from the 100M+ free users directly — they are the asset, not the customer.",
+    "money_out": "Storage and bandwidth for the world's code, the compute to run billions of CI jobs, the inference bill for every Copilot suggestion (paid to the model providers and to Azure), R&D on a very large engineering org, and the cost of fighting a constant war against abuse, malware, and supply-chain attacks on a free, open platform.",
+    "the_spread": "The marginal cost of one more free developer is tiny; the marginal value of that developer — as a future paying employee of a company, as a node that makes the network denser, and as training signal and context for Copilot — is large. The paid tiers and Copilot then sell at software margins against a customer-acquisition cost that was effectively pre-paid by the free tier years earlier.",
+    "leverage_point": "Default-ness. Because a developer's identity, history, open-source contributions, and every tool they've wired to their account already live on GitHub — and because the code of the projects they depend on lives here too — the cost of the next sale (a private repo, a Copilot seat) is low, and the cost of leaving is paying with years of accumulated graph."
+  },
+  "unit": "One developer. A free user costs cents a year to host and is worth keeping for decades, because they carry GitHub into every job they take; the moment their employer needs private repos, compliance, or AI assistance, that same already-onboarded developer becomes a paid seat (roughly $4-21/user/month for Team/Enterprise, plus ~$19-39/user/month for Copilot Business/Enterprise) at almost no incremental acquisition cost. The lifetime value is the chain of paid seats a single free account eventually sits in.",
+  "plays": [
+    {
+      "play_name": "Free Is The Funnel",
+      "tagline": "Give the core product away to everyone, so being on it becomes the default — then sell the version with a company's name on it.",
+      "flow": [
+        {
+          "step_title": "Host the world's code for free",
+          "step_desc": "Offer unlimited public (and generous private) repositories at no charge, better and more reliably than any rival, so open source and individual developers all land here."
+        },
+        {
+          "step_title": "Become the default",
+          "step_desc": "Once the projects everyone depends on, and everyone's own history and reputation, live on GitHub, 'where do I put this code' stops being a question — the answer is already GitHub."
+        },
+        {
+          "step_title": "Charge the organization",
+          "step_desc": "When a company needs private repos, access controls, SSO, audit, and security, it pays per seat for Team/Enterprise — the same product, governed, with an invoice attached."
+        }
+      ],
+      "the_move": "Treat the free tier as a marketing budget, not a loss. The cost of hosting millions of free developers buys default status, and default status is what makes the paid conversion almost free.",
+      "in_the_wild": {
+        "name": "GitHub reports 150M+ developers and surpassed 1 billion repositories in 2025, the overwhelming majority on free plans, while revenue comes from paid Team/Enterprise seats and Copilot",
+        "confidence": "high"
+      },
+      "watch_out": "The free tier is a permanent, growing cost center and a magnet for abuse (malware hosting, crypto-mining on free CI, spam). If a rival matches 'good and free' and peels off the default, the whole funnel logic inverts into pure expense.",
+      "mechanics": [
+        "loss-leader",
+        "freemium",
+        "default-status",
+        "customer-acquisition-prepaid"
+      ]
+    },
+    {
+      "play_name": "The Developer Graph",
+      "tagline": "Don't lock in the code; lock in the history, the identity, and the social proof around it.",
+      "flow": [
+        {
+          "step_title": "Let git stay portable",
+          "step_desc": "The code itself is just a git repo — anyone can clone it and move it elsewhere in minutes. GitHub never tries to trap the code."
+        },
+        {
+          "step_title": "Build value around it",
+          "step_desc": "Accumulate what git doesn't carry: issues, pull-request discussions, CI configs, stars, your contribution graph, your followers, your green squares — a reputation and a workflow, not just files."
+        },
+        {
+          "step_title": "Make the graph the cost of leaving",
+          "step_desc": "Moving the code is trivial; moving ten years of history, a public reputation, and every integration wired to your account is not. The switching cost is everything git left out."
+        }
+      ],
+      "the_move": "Locate the lock-in in the metadata, not the asset. A developer can take their code anywhere, which is exactly why they don't — because everything that makes the code valuable socially stays on GitHub.",
+      "in_the_wild": {
+        "name": "A developer's public profile, contribution history, and open-source reputation function as a de facto résumé that only exists on GitHub; recruiters and employers read it directly",
+        "confidence": "high"
+      },
+      "watch_out": "Because the code is genuinely portable, the lock-in is softer than it looks — a credible rival (or a mass political/trust event, as when developers threatened to leave over ICE contracts or the Microsoft deal) can trigger real migration if the metadata becomes exportable or copyable.",
+      "mechanics": [
+        "switching-costs",
+        "network-effects",
+        "data-gravity",
+        "identity-as-moat"
+      ]
+    },
+    {
+      "play_name": "Own Where Code Is Written",
+      "tagline": "Sit under the whole software supply chain so every new layer can be sold as one more thing you log into here.",
+      "flow": [
+        {
+          "step_title": "Host the dependencies, not just the project",
+          "step_desc": "Through GitHub-hosted repos and the npm registry, the packages nearly every project imports also live inside GitHub's perimeter."
+        },
+        {
+          "step_title": "Add the workflow layers",
+          "step_desc": "Fold in CI/CD (Actions), cloud dev environments (Codespaces), and security scanning — so building, testing, and shipping all happen without leaving."
+        },
+        {
+          "step_title": "Collect on each layer",
+          "step_desc": "Every layer added on top of the host — security, automation, AI — becomes another metered or per-seat product sold to a customer already authenticated and already here."
+        }
+      ],
+      "the_move": "Control the lowest reusable layer (where source and dependencies live) and tax everything built above it. It is Microsoft's 'own the floor' play, run one level up, on developers instead of enterprises.",
+      "in_the_wild": {
+        "name": "GitHub Actions (metered CI minutes), Codespaces (metered cloud compute), Advanced Security, and the npm registry (acquired 2020) all layer onto the same account and billing",
+        "confidence": "high"
+      },
+      "watch_out": "Owning the floor means owning the blast radius: a supply-chain compromise (malicious npm packages, stolen tokens, a poisoned Action) hits the whole ecosystem at once and damages exactly the trust the position rests on.",
+      "mechanics": [
+        "platform-standard",
+        "supply-chain-chokepoint",
+        "metered-consumption",
+        "envelopment"
+      ]
+    },
+    {
+      "play_name": "Copilot — Meter The Corpus",
+      "tagline": "You already host the world's code; now charge to have an AI, trained on code, write more of it right where it lives.",
+      "flow": [
+        {
+          "step_title": "Sit on the training ground",
+          "step_desc": "GitHub hosts the largest public body of source code on Earth — the raw material from which code models are built and the exact place developers already work."
+        },
+        {
+          "step_title": "Ship AI into the existing workflow",
+          "step_desc": "Put model-powered completion, chat, and agents directly in the editor and the pull request, so the AI meets the developer inside the tool they never leave."
+        },
+        {
+          "step_title": "Charge per seat on top",
+          "step_desc": "Sell Copilot as a per-seat add-on (and a free tier to seed habit), so a new technology monetizes through the captive base instead of a cold new market."
+        }
+      ],
+      "the_move": "Monetize AI through distribution you already own. The scarce resource isn't the model (GitHub buys that from OpenAI, Anthropic, and Google) — it's being the surface where developers already are, which GitHub owns outright.",
+      "in_the_wild": {
+        "name": "GitHub Copilot reached ~1.8M paid subscribers and 77,000+ organizations by early 2024 and was cited as driving GitHub toward a ~$2B revenue run rate; a free Copilot tier launched December 2024 and now offers a choice of Anthropic, OpenAI, and Google models",
+        "confidence": "medium"
+      },
+      "watch_out": "GitHub does not own the model, so margin depends on inference costs it pays to others, and the value may migrate to AI-native editors (Cursor) or to whoever owns the best model. Copilot's early lead has visibly narrowed, and 'the AI is in the tool I already use' only holds while developers still choose to write code on GitHub.",
+      "mechanics": [
+        "installed-base-leverage",
+        "add-on-pricing",
+        "corpus-advantage",
+        "distribution-moat"
+      ]
+    },
+    {
+      "play_name": "Bought, Not Built",
+      "tagline": "When you're the un-clonable network a giant needs, the exit is being acquired — and kept mostly alive.",
+      "flow": [
+        {
+          "step_title": "Build the un-buildable asset",
+          "step_desc": "GitHub's value is a network effect — every developer is here because every other developer and project is here — which can't be recreated by shipping features."
+        },
+        {
+          "step_title": "Get acquired by the complement",
+          "step_desc": "Microsoft, which sells developer tools, Azure, and (later) AI, buys GitHub for ~$7.5B in 2018 to own the developer relationship and feed its other products."
+        },
+        {
+          "step_title": "Run semi-independent, then integrate",
+          "step_desc": "GitHub kept its brand and some autonomy to avoid spooking a wary open-source community — until 2025, when it was folded into Microsoft's CoreAI division as the AI stakes rose."
+        }
+      ],
+      "the_move": "A network you can't clone is cheaper to buy than to replicate. For GitHub, being the complement a platform giant needed turned a developer tool into a $7.5B exit and a permanent home inside the distribution machine.",
+      "in_the_wild": {
+        "name": "Microsoft acquired GitHub for ~$7.5B (all-stock, announced June 2018, closed October 2018); in 2025 CEO Thomas Dohmke stepped down and GitHub was absorbed into Microsoft's CoreAI engineering org with no standalone CEO named",
+        "confidence": "high"
+      },
+      "watch_out": "The thing bought is a community that distrusts the buyer. Over-integration (killing the brand, the independence, or the neutrality) can trigger the migration the network effect otherwise prevents — the 2025 CoreAI absorption is the live test of how much integration the graph will tolerate.",
+      "mechanics": [
+        "acquire-the-complement",
+        "network-effects",
+        "un-clonable-asset",
+        "integration-risk"
+      ]
+    }
+  ],
+  "mechanics_summary": [
+    {
+      "tag": "loss-leader",
+      "note": "Free hosting for 100M+ developers is the marketing budget, not charity — it buys default status, which makes the paid conversion nearly free."
+    },
+    {
+      "tag": "freemium",
+      "note": "The free tier seeds habit and reputation; the money is in the private, governed, AI-assisted version of the identical product sold to organizations."
+    },
+    {
+      "tag": "switching-costs",
+      "note": "The code is portable, but the history, reputation, integrations, and social graph around it are not — the lock-in lives in everything git leaves out."
+    },
+    {
+      "tag": "network-effects",
+      "note": "Developers are on GitHub because every other developer and every dependency is on GitHub; the density is the un-clonable asset Microsoft paid $7.5B for."
+    },
+    {
+      "tag": "supply-chain-chokepoint",
+      "note": "Hosting the repos and (via npm) the packages everyone imports puts GitHub under the whole software stack — and makes it a single point of failure."
+    },
+    {
+      "tag": "corpus-advantage",
+      "note": "Sitting on the world's largest code corpus and the surface where developers work is what lets Copilot monetize AI through distribution GitHub already owns."
+    },
+    {
+      "tag": "acquire-the-complement",
+      "note": "GitHub was the complement Microsoft bought to own the developer relationship and feed Azure, Visual Studio, and Copilot — a network cheaper to buy than to build."
+    }
+  ],
+  "history": {
+    "origin": {
+      "who": "Tom Preston-Werner, Chris Wanstrath, P.J. Hyett, and Scott Chacon",
+      "when": "Founded 2008 (incorporated as Logical Awesome LLC); built atop Linus Torvalds' git (2005); grew for a decade independent before Microsoft's 2018 acquisition",
+      "what_problem_forced_it": "Git was powerful but antisocial: it made it easy to version code on your own machine and hard to collaborate, discover others' work, or build on it together. GitHub's insight was that the scarce thing wasn't version control (git was free) but the social layer on top — a web home for every project where forking, pull requests, issues, and profiles turned solitary version control into a public, collaborative commons. They gave the hosting away to win that commons, and the commons became the moat."
+    },
+    "operator": {
+      "name": "Nat Friedman (CEO 2018-2021, post-acquisition) and Thomas Dohmke (CEO 2021-2025)",
+      "what_they_did": "Friedman ran GitHub immediately after the Microsoft deal, kept the brand independent to calm a nervous open-source community, made private repos free, and greenlit the Copilot project that put GitHub at the center of AI coding. Dohmke shipped Copilot to general availability, launched the free Copilot tier, and scaled the developer base past 150M before stepping down.",
+      "outcome": "GitHub went from a feared Microsoft target to the most important developer platform in the world and the launch pad for mainstream AI coding, reaching a reported ~$2B revenue run rate. In 2025 Dohmke's exit and GitHub's absorption into Microsoft's CoreAI division marked the end of its semi-independence — the integration the 2018 deal had promised to avoid finally arriving once AI made the developer surface too strategic to keep at arm's length."
+    },
+    "counterexample": {
+      "name": "SourceForge (and earlier code hosts like Google Code)",
+      "what_they_did": "SourceForge was the dominant open-source host before GitHub — the default place projects lived in the 2000s. Google Code was Google's well-funded attempt at the same.",
+      "why_it_broke": "SourceForge treated its captive projects as something to monetize directly — ad-heavy download pages, and infamously, bundling adware into project installers — eroding exactly the developer trust that was its only moat. GitHub won by doing the opposite: making the developer experience the product and keeping the host clean, betting that owning developer goodwill was worth more than squeezing it. Projects fled to GitHub, the network tipped, and Google Code and most rivals shut down. The lesson: for a platform whose asset is a trusting community, the fastest way to lose the network is to charge the people who are the network."
+    }
+  },
+  "epistemics": {
+    "numbers": [
+      {
+        "claim": "GitHub reports more than 150 million developers (State of the Octoverse 2024)",
+        "value": "150M+ developers",
+        "as_of_date": "2024-10-29",
+        "source_url": "https://github.blog/news-insights/octoverse/octoverse-2024/",
+        "confidence": "high"
+      },
+      {
+        "claim": "GitHub surpassed 1 billion repositories in 2025",
+        "value": "1B+ repositories",
+        "as_of_date": "2025-06-01",
+        "source_url": "https://github.blog/news-insights/octoverse/octoverse-2024/",
+        "confidence": "medium"
+      },
+      {
+        "claim": "Microsoft acquired GitHub for approximately $7.5 billion in an all-stock deal (announced June 4, 2018; closed October 26, 2018)",
+        "value": "~$7.5B acquisition",
+        "as_of_date": "2018-10-26",
+        "source_url": "https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/",
+        "confidence": "high"
+      },
+      {
+        "claim": "GitHub Copilot reached about 1.8 million paid subscribers and 77,000+ organizations, with Copilot cited as driving GitHub toward a ~$2B revenue run rate (Microsoft FY2024 earnings commentary)",
+        "value": "~1.8M paid Copilot seats; ~$2B run rate",
+        "as_of_date": "2024-07-30",
+        "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+        "confidence": "medium"
+      },
+      {
+        "claim": "A free GitHub Copilot tier launched in December 2024; Copilot now offers a choice of Anthropic, OpenAI, and Google models",
+        "value": "Copilot Free launched Dec 2024",
+        "as_of_date": "2024-12-18",
+        "source_url": "https://github.blog/news-insights/product-news/github-copilot-in-vscode-free/",
+        "confidence": "high"
+      },
+      {
+        "claim": "In 2025, GitHub CEO Thomas Dohmke announced he would step down and GitHub was folded into Microsoft's CoreAI division, with no standalone GitHub CEO named as direct replacement",
+        "value": "CEO exit; absorbed into CoreAI (2025)",
+        "as_of_date": "2025-08-11",
+        "source_url": "https://www.axios.com/2025/08/11/github-ceo-dohmke-step-down",
+        "confidence": "high"
+      },
+      {
+        "claim": "GitHub acquired npm, the default JavaScript package registry, in 2020",
+        "value": "npm acquired 2020",
+        "as_of_date": "2020-03-16",
+        "source_url": "https://github.blog/news-insights/company-news/npm-is-joining-github/",
+        "confidence": "high"
+      }
+    ],
+    "overall": "medium",
+    "unknowns": [
+      "Microsoft does not report GitHub's revenue or Copilot's revenue as a separate line item in its filings, so the ~$2B run rate and the Copilot share are from earnings-call commentary, not audited disclosure (medium confidence).",
+      "The paid-subscriber and organization counts for Copilot are point-in-time figures from 2024 and have almost certainly changed; current exact totals are not cleanly disclosed.",
+      "The split of GitHub revenue across Team/Enterprise seats, Actions/Codespaces metering, Advanced Security, and Copilot is not broken out publicly.",
+      "How GitHub's absorption into Microsoft's CoreAI division changes its P&L, autonomy, and product roadmap is still unfolding as of late 2026 and not fully public.",
+      "This is educational business analysis, not investment advice. No claim is made about Microsoft's stock or GitHub's future financial performance."
+    ]
+  },
+  "recall": {
+    "glyph_prompt": "A vast public library built on open ground, doors flung wide, no admission fee — a stream of people in hoodies pouring in and out, each carrying their own crate of code, free to walk out with it any moment. A friendly cat-with-tentacles (the Octocat) stamps every visitor's wrist on the way in: not a lock, just an indelible mark that becomes their reputation. Inside, the shelves hold not the books (those belong to the readers) but the margins — every reader's notes, arguments in the pull-request reading rooms, a wall of green attendance squares, follower counts over each desk. Along one side, a frosted-glass wing marked 'Private — Enterprise' where the same crates sit behind a turnstile with a meter ticking. Floating above every desk, a small lamp labeled 'Copilot' that finishes your sentence as you write, a coin slot on its base. Bolted over the grand entrance, a newer, heavier sign: 'A Microsoft CoreAI Building' — the once-independent library now a wing of a much larger tower.",
+    "questions": [
+      "GitHub gives its core product — code hosting — away free to over 100 million people, forever, and gets rich. What is the free tier actually buying, and who pays the bill instead?",
+      "A developer can clone their code and leave GitHub in five minutes, yet almost nobody does. If the code is portable, where does the lock-in actually live?",
+      "GitHub doesn't own the AI models behind Copilot — it buys them from OpenAI, Anthropic, and Google. So what scarce thing does GitHub own that lets it sell AI coding at all, and why is that position now under threat?"
+    ]
+  },
+  "economics_lens": {
+    "concept": "Commoditize your complement (complementary goods) — give the complement away to grow demand for what you actually sell",
+    "micro_or_macro": "micro",
+    "explain": "Two goods are complements when cheaper access to one raises demand for the other — printers and ink, consoles and games, code hosting and everything built around writing code. The strategic insight (named by Joel Spolsky, rooted in standard microeconomics) is that a firm wants the complements to its product to be as cheap and abundant as possible, because a lower price on the complement shifts demand toward the thing the firm charges for. GitHub runs this in two nested layers. First, GitHub itself makes hosting a near-commodity — free, ubiquitous, better than paid rivals — which maximizes the population of developers and projects, the complement that makes the paid products (private seats, security, Copilot) valuable: you only pay for governed collaboration and AI if you are already collaborating on GitHub. Second, Microsoft bought GitHub to commoditize a complement to its own products: cheap, universal developer tooling raises demand for Azure, Visual Studio, and AI seats, so Microsoft is happy to run GitHub near break-even to own the developer relationship one layer up. The durability of the move rests on two further forces the Atlas has seen before — network effects (developers are here because everyone else is) and switching costs (the history and reputation you can't take with you) — which turn 'the default' into rents. The limiting force is trust: a complement strategy on a community only works while the community believes the free thing will stay free and uncaptured, which is exactly what SourceForge lost and what Microsoft's 2025 CoreAI integration now tests."
+  },
+  "scale": {
+    "value_usd": 2000000000.0,
+    "display": "$2B",
+    "metric": "annual revenue run rate (Copilot-driven)",
+    "period": "run rate as of mid-2024 (Microsoft FY2024 earnings commentary)",
+    "basis": "company (run-rate, forward-looking)",
+    "confidence": "medium",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+    "as_of_date": "2024-07-30",
+    "note": "Microsoft does not report GitHub revenue as a separate line item in its filings. The ~$2B figure is an annual revenue run rate stated by CEO Satya Nadella on the FY2024 Q4 earnings call (July 30, 2024), who noted Copilot was driving over 40% of GitHub's revenue growth; it grew from a ~$1B ARR reported in October 2022. Treated as a company-level run-rate estimate, not an audited annual figure."
+  }
+}
