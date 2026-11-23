@@ -1,46 +1,42 @@
 # The Machine Atlas
 
-A growing, cross-linked library of business "machines." Each entry is one JSON file that studies how a business works (a **teardown**) or how you'd start one (a **buildout**). The dashboard (`index.html`) is just a render of these JSON records.
+A growing, cross-linked library of business "machines." Each entry is one JSON file that studies how a business works (a **teardown**) or how you'd start one (a **buildout**). The map (`index.html`) is a render of these JSON records.
 
 **The decks are exhaust. The Atlas is the asset. The fluency is the product.**
 
-## Design: free writing, thin wiring (managed drift)
+## v3: an industry city with company districts
 
-Entries are written freely — the model that writes them is not forced into a rigid template, because that freedom is what makes them good. The dashboard is a **tolerant reader**: it bends to each entry's shape instead of demanding one. It handles, for example:
+**Top map (index.html):** each building is an industry, sized by the industry's revenue (every 10x in revenue roughly doubles the height). Rows are supply chains (AI stack, Money, Media, Community); within a row, suppliers sit left and customers right, and roads run supplier → customer. Dashed plots are locked industries that a daily run has not mapped yet.
 
-- `identity` nested as an object **or** flat at the top level
-- `recall.questions` **or** `recall.three_questions`
-- `in_the_wild` as a string **or** a `{name, confidence}` object
-- `engine.inputs` as an array **or** a string
-- `unit` as a string **or** an object
-- `economics_lens` present or absent; buildout-only sections appear only when present
+**Click an industry:** its district opens. Each company is a building; height compares share of that market against a fixed 100% reference, so a near-monopoly looks like one tower among huts and an oligopoly looks like a skyline. Lit windows = a teardown exists. Plain = known, not studied. A crane = a teardown ordered. The staked lot adds a company that isn't listed.
 
-The only things that stay stable (the "wiring") are the few fields that let entries find each other: an entry's `id`, its `mode`, and `chain.parent_id` / `chain.relation` / `chain.suggested_next`. Those let the dashboard trace chains and let the daily run know what's already covered.
+**Queue box:** Industry mode maps a new industry; Company mode orders a teardown or buildout. Each opens a prefilled GitHub issue (`queue: industry: X` or `queue: company: X | industry: id | mode: teardown`).
+
+**Daily run:** one industry per day (must map to a 2022 NAICS code; trends go to `data/macro/queue.json`, not the map), plus one queued company teardown. Companies stay plain until ordered.
+
+`classic.html` is the v2 company map, kept for reference.
 
 ## Layout
 
 ```
 machine-atlas/
-├── index.html            the dashboard (tolerant reader; works offline + on Pages)
-├── .nojekyll             tells GitHub Pages to serve files as-is
-├── build.py              regenerates data/manifest.json + re-inlines the offline fallback
+├── index.html                 v3 city map (loads data over HTTP; no inlined data)
+├── classic.html               v2 company map
+├── build.py                   regenerates data/manifest.json (teardowns) + classic fallback
 └── data/
-    ├── manifest.json     list of entry slugs the dashboard loads
-    └── <slug>.json       one entry per file
+    ├── industries/city.json   chains, roads, locked plots
+    ├── industries/<id>.json   one industry: revenue, structure, companies with sourced shares
+    ├── <slug>.json            company or industry teardowns (free writing, thin wiring)
+    ├── manifest.json          list of teardown slugs
+    └── macro/                 macro forces (future weather layer)
 ```
 
-## Current entries (6)
+## Industry file (industry/v1, fixed shape)
 
-**Finance chain:** `banking` (teardown) -> `payment-networks` (symbiote); plus `banking-buildout`.
-**AI-stack chain:** `nvidia` (root) -> `tsmc` (supplier).
-**Convening:** `frontier-room` (buildout -- the Fort Lauderdale AI Builders' Club).
+`id, name, chain, stage, naics{code,title}, one_line, sells, customers, suppliers, revenue{value_usd, display, metric, period, basis, confidence, source_url, note}, structure{type, why, hhi, hhi_note}, econ, companies[{name, share_pct, share_basis, revenue_usd, revenue_display, rank, source_url, as_of_date, teardown, note}]`, optional `industry_teardown` / `industry_buildout`.
 
-## Adding an entry
-
-1. Drop `data/<slug>.json` into the folder (write it however reads best -- the dashboard will bend to it).
-2. Run `python3 build.py` to update the manifest and the offline fallback.
-3. Commit. The dashboard picks it up automatically.
+Teardowns keep the loose v2 shape ("free writing, thin wiring"); a standard teardown protocol is a later phase.
 
 ## Publish (GitHub Pages)
 
-Repo **Settings -> Pages -> Deploy from branch -> main / root**. Live at `https://<you>.github.io/machine-atlas/`. The `.nojekyll` file is what makes it serve the dashboard instead of rendering this README.
+Repo Settings → Pages → Deploy from branch → main / root. The `.nojekyll` file makes Pages serve the map instead of rendering this README.

@@ -1,0 +1,115 @@
+{
+  "id": "retail-banking",
+  "name": "Retail banking",
+  "chain": "Money",
+  "stage": 2,
+  "naics": {
+    "code": "522110",
+    "title": "Commercial Banking"
+  },
+  "one_line": "Takes in deposits, lends them out at a higher rate, and keeps the spread.",
+  "sells": "Checking and savings accounts, loans, mortgages, credit cards",
+  "customers": "Households and small businesses",
+  "suppliers": "Depositors (the cheap money), card networks, core banking software",
+  "revenue": {
+    "value_usd": 1076000000000.0,
+    "display": "~$1.08T",
+    "metric": "net operating revenue of all FDIC-insured US banks",
+    "period": "2025",
+    "basis": "industry (all insured banks)",
+    "confidence": "high",
+    "source_url": "https://www.fdic.gov/quarterly-banking-profile/quarterly-banking-profile-fourth-quarter-2025.pdf",
+    "note": "Net interest income $738.3B + noninterest income $337.8B. Covers all insured banks, so it overstates retail banking alone.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Concentrated top, long tail",
+    "why": "Three banks hold about a third of US deposits; thousands of smaller banks share the rest.",
+    "hhi_note": "Shares are each bank's domestic deposits divided by ~$17.8T total domestic deposits (derived from FDIC Q2 2026: +$142.7B = +0.8%).",
+    "hhi": 355
+  },
+  "econ": "Maturity transformation: banks borrow short (deposits you can withdraw today) and lend long (30-year mortgages). The spread is the profit; a run on deposits is the risk.",
+  "industry_teardown": "banking",
+  "industry_buildout": "banking-buildout",
+  "companies": [
+    {
+      "name": "JPMorgan Chase",
+      "share_pct": 12.5,
+      "share_basis": "share of US domestic deposits, Jun 30 2026 ($2.227T, FDIC data)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://statranker.org/?p=13153",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Bank of America",
+      "share_pct": 11.1,
+      "share_basis": "share of US domestic deposits, Jun 30 2026 ($1.983T, FDIC data)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://statranker.org/?p=13153",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Wells Fargo",
+      "share_pct": 8.7,
+      "share_basis": "share of US domestic deposits, Jun 30 2026 ($1.555T, FDIC data)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://statranker.org/?p=13153",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Citibank",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "U.S. Bank",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Capital One",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "PNC",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

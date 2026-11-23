@@ -1,0 +1,105 @@
+{
+  "id": "cloud",
+  "name": "Cloud computing",
+  "chain": "AI stack",
+  "stage": 3,
+  "naics": {
+    "code": "518210",
+    "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"
+  },
+  "one_line": "Rents computing power by the hour, so nobody else has to build a data center.",
+  "sells": "Computing, storage and AI capacity, rented by usage",
+  "customers": "Every kind of business, and the AI labs above all",
+  "suppliers": "AI chips, servers, electricity, land and buildings",
+  "revenue": {
+    "value_usd": 500000000000.0,
+    "display": "$500B+",
+    "metric": "worldwide cloud infrastructure services revenue",
+    "period": "2026 (Synergy: on track to exceed $500B; Q3 2026 alone was $167.7B)",
+    "basis": "industry",
+    "confidence": "high",
+    "source_url": "https://www.statista.com/chart/18819/worldwide-market-share-of-leading-cloud-infrastructure-service-providers/",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Three companies hold about 61% of the market. Fast-growing 'neoclouds' such as CoreWeave rent mostly AI chips.",
+    "hhi_note": "Top three shares only, so a lower bound.",
+    "hhi": 1293
+  },
+  "econ": "Economies of scale with high fixed costs: data centers cost billions up front, and each extra customer costs little, so size lowers prices and raises the wall for newcomers.",
+  "companies": [
+    {
+      "name": "Amazon Web Services",
+      "share_pct": 26,
+      "share_basis": "share of worldwide cloud infrastructure, Q3 2026 (Synergy)",
+      "revenue_usd": 128725000000.0,
+      "revenue_display": "$128.7B 2025 segment revenue",
+      "rank": null,
+      "source_url": "https://www.techinsights.com/node/61958",
+      "as_of_date": "2026-11-23",
+      "teardown": "aws-cloud"
+    },
+    {
+      "name": "Microsoft Azure",
+      "share_pct": 19,
+      "share_basis": "share of worldwide cloud infrastructure, Q3 2026 (Synergy)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.techinsights.com/node/61958",
+      "as_of_date": "2026-11-23",
+      "teardown": "microsoft",
+      "note": "Teardown covers all of Microsoft; it sits here because cloud is its largest segment."
+    },
+    {
+      "name": "Google Cloud",
+      "share_pct": 16,
+      "share_basis": "share of worldwide cloud infrastructure, Q3 2026 (Synergy)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.techinsights.com/node/61958",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Oracle",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.techinsights.com/node/61958",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Among the fastest-growing second-tier providers (Synergy)."
+    },
+    {
+      "name": "CoreWeave",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 5130000000.0,
+      "revenue_display": "$5.13B 2025 revenue",
+      "rank": null,
+      "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
+      "as_of_date": "2026-11-23",
+      "teardown": "coreweave",
+      "note": "A 'neocloud' that rents NVIDIA GPUs."
+    },
+    {
+      "name": "Alibaba Cloud",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Largest cloud in China; no 2026 global share in sources checked."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

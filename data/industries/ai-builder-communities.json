@@ -1,0 +1,60 @@
+{
+  "id": "ai-builder-communities",
+  "name": "AI builder communities",
+  "chain": "Community",
+  "stage": 2,
+  "naics": {
+    "code": "813910",
+    "title": "Business Associations"
+  },
+  "one_line": "Gathers the people building with AI in one room, and earns from sponsors who want to be in that room.",
+  "sells": "Event sponsorships, partner tiers, hiring access, deal flow",
+  "customers": "Sponsors (AI and cloud companies), employers, investors",
+  "suppliers": "Venues, builders who demo, organizers",
+  "revenue": {
+    "value_usd": null,
+    "display": "No market data",
+    "metric": "no reliable industry total found",
+    "period": "",
+    "basis": "none",
+    "confidence": "illustrative",
+    "source_url": null,
+    "note": "Too new and informal to be measured. Building sits at the floor height until a sourced size exists.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Early and fragmented",
+    "why": "Mostly volunteer-run local groups; no measured market shares.",
+    "hhi_note": "Not computable.",
+    "hhi": null
+  },
+  "econ": "Club goods and network effects: a room is valuable because of who else is in it, so the first group to gather the best builders in a city tends to keep them.",
+  "companies": [
+    {
+      "name": "The Frontier Room",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": "frontier-room",
+      "note": "Andrew's buildout plan for a Fort Lauderdale AI builders' club."
+    },
+    {
+      "name": "AI Tinkerers",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Network of local AI meetups; the Miami chapter is referenced in the Frontier Room buildout."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "card-networks",
+  "name": "Card networks",
+  "chain": "Money",
+  "stage": 1,
+  "naics": {
+    "code": "522320",
+    "title": "Financial Transactions Processing, Reserve, and Clearinghouse Activities"
+  },
+  "one_line": "Runs the rails that move a card payment from a shopper's bank to a store's bank, and takes a small cut of each one.",
+  "sells": "Payment authorization, clearing and settlement, charged per transaction and per dollar",
+  "customers": "Card-issuing banks and the merchant acquirers that sign up stores",
+  "suppliers": "Data centers, fraud and security technology",
+  "revenue": {
+    "value_usd": 78700000000.0,
+    "display": "~$78.7B (Visa + Mastercard)",
+    "metric": "combined net revenue of the two largest networks",
+    "period": "Visa FY2026 ($45.9B) + Mastercard 2025 ($32.8B)",
+    "basis": "industry proxy (top two)",
+    "confidence": "high",
+    "source_url": "https://www.digitaltransactions.net/visa-posts-a-robust-final-quarter-to-fiscal-2026/",
+    "note": "Excludes American Express, UnionPay, Discover and JCB.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Duopoly",
+    "why": "Visa and Mastercard are the two global open networks most banks issue cards on; Visa alone carried 40.76% of global card purchase transactions in 2025 (Nilson). Each new card and store makes the network more valuable to the other side.",
+    "hhi_note": "Not computed: only Visa's share of global transactions is public.",
+    "hhi": null
+  },
+  "econ": "Two-sided network effects: shoppers want the card every store takes, stores take the card every shopper carries, so the two leaders are very hard to dislodge.",
+  "industry_teardown": "payment-networks",
+  "companies": [
+    {
+      "name": "Visa",
+      "share_pct": 40.76,
+      "share_basis": "share of global card purchase transactions, 2025 (Nilson Report)",
+      "revenue_usd": 45900000000.0,
+      "revenue_display": "$45.9B FY2026 net revenue",
+      "rank": null,
+      "source_url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Mastercard",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 32791000000.0,
+      "revenue_display": "$32.8B 2025 net revenue",
+      "rank": null,
+      "source_url": "https://s25.q4cdn.com/479285134/files/doc_financials/2025/q4/4Q25-Mastercard-Earnings-Release.pdf",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "UnionPay",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "China's card network; one of the six global networks the Nilson Report tracks."
+    },
+    {
+      "name": "American Express",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Closed loop: issues its own cards and signs up its own merchants."
+    },
+    {
+      "name": "Discover (Capital One)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "JCB",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

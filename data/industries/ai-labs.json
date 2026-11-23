@@ -1,0 +1,103 @@
+{
+  "id": "ai-labs",
+  "name": "AI labs",
+  "chain": "AI stack",
+  "stage": 4,
+  "naics": {
+    "code": "541715",
+    "title": "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)"
+  },
+  "one_line": "Trains frontier AI models and sells access to them, by the token or the seat.",
+  "sells": "Model access (API), chat apps, coding agents, enterprise subscriptions",
+  "customers": "Businesses building on AI, developers, consumers",
+  "suppliers": "Cloud computing, AI chips, data, research talent",
+  "revenue": {
+    "value_usd": 151000000000.0,
+    "display": "~$151B run-rate (top two)",
+    "metric": "combined annualized revenue of Anthropic (~$81B) and OpenAI (~$70B)",
+    "period": "Oct–Sep 2026 run-rates",
+    "basis": "industry floor (two companies, run-rate)",
+    "confidence": "medium",
+    "source_url": "https://fourweekmba.com/ai-anthropics-run-rate-hit-81b-october-added-2-2x-2025-sales/",
+    "note": "A run rate annualizes the latest month. Excludes Google, Meta and others, so the real total is higher. OpenAI figure is an anonymous-source report.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Oligopoly, leaning duopoly",
+    "why": "Two labs take 86% of business spending on model APIs (Menlo Ventures, Nov 2026).",
+    "hhi_note": "From Menlo's enterprise API spend shares. Menlo Ventures is an investor in Anthropic.",
+    "hhi": 4083
+  },
+  "econ": "High fixed cost, low marginal cost: training a frontier model is a huge one-time cost, while serving one more request is cheap, so the winners are whoever spreads the fixed cost over the most customers.",
+  "companies": [
+    {
+      "name": "Anthropic",
+      "share_pct": 55,
+      "share_basis": "share of enterprise LLM API spend, 2026 (Menlo Ventures)",
+      "revenue_usd": 81000000000.0,
+      "revenue_display": "~$81B run-rate (Oct 31, 2026)",
+      "rank": null,
+      "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
+      "as_of_date": "2026-11-23",
+      "teardown": "anthropic"
+    },
+    {
+      "name": "OpenAI",
+      "share_pct": 31,
+      "share_basis": "share of enterprise LLM API spend, 2026 (Menlo Ventures)",
+      "revenue_usd": 70000000000.0,
+      "revenue_display": "~$70B run-rate (Sep 2026, reported)",
+      "rank": null,
+      "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
+      "as_of_date": "2026-11-23",
+      "teardown": "openai"
+    },
+    {
+      "name": "Google DeepMind",
+      "share_pct": 9,
+      "share_basis": "share of enterprise LLM API spend, 2026 (Menlo Ventures)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Open-source models (Meta and others)",
+      "share_pct": 4,
+      "share_basis": "share of enterprise LLM API spend, 2026 (Menlo Ventures)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Open models hold 4% of spend but 19% of usage (Menlo)."
+    },
+    {
+      "name": "xAI",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "Mistral",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

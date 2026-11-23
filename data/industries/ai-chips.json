@@ -1,0 +1,95 @@
+{
+  "id": "ai-chips",
+  "name": "AI chips",
+  "chain": "AI stack",
+  "stage": 2,
+  "naics": {
+    "code": "334413",
+    "title": "Semiconductor and Related Device Manufacturing"
+  },
+  "one_line": "Designs the processors that train and run AI models, then pays foundries to make them.",
+  "sells": "AI accelerators (GPUs and custom chips), plus the systems and software around them",
+  "customers": "Cloud companies, AI labs, big tech building its own data centers",
+  "suppliers": "Chip foundries, memory makers (HBM), packaging",
+  "revenue": {
+    "value_usd": 308000000000.0,
+    "display": "~$300B (estimate)",
+    "metric": "AI accelerator market, derived",
+    "period": "derived from NVIDIA FY2026 revenue ($215.9B) / ~70% share",
+    "basis": "industry (derived)",
+    "confidence": "illustrative",
+    "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+    "note": "No clean public total exists. Estimated as NVIDIA's revenue divided by its ~70% share (Tom's Hardware, May 2026). Share estimates range 70–85%, and NVIDIA's revenue includes some non-AI products, so treat as a rough size.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Dominant firm with a growing fringe",
+    "why": "NVIDIA sells most AI chips, but every big cloud company now designs its own custom chips, mostly with Broadcom.",
+    "hhi_note": "Only NVIDIA's share is sourced, so this is a lower bound.",
+    "hhi": 4900
+  },
+  "econ": "Switching costs and ecosystem lock-in: developers write software for NVIDIA's CUDA platform, which makes its chips the default even when rivals are cheaper.",
+  "companies": [
+    {
+      "name": "NVIDIA",
+      "share_pct": 70,
+      "share_basis": "approx. share of AI chip market (Tom's Hardware, May 2026)",
+      "revenue_usd": 215938000000.0,
+      "revenue_display": "$215.9B FY2026 revenue",
+      "rank": null,
+      "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+      "as_of_date": "2026-11-23",
+      "teardown": "nvidia"
+    },
+    {
+      "name": "Broadcom",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://fool.com/investing/2026/06/03/1-thing-broadcom-does-better-than-nvidia",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Leads custom AI chips (about 70% of that segment, per Motley Fool, June 2026). Partner for Google, Meta and OpenAI chips."
+    },
+    {
+      "name": "AMD",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Second merchant GPU maker; no reliable 2026 share figure found."
+    },
+    {
+      "name": "Marvell",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Custom chips for Amazon and Microsoft; projects up to $11B AI chip revenue in 2026 (Tom's Hardware)."
+    },
+    {
+      "name": "Google (TPU)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Designs its own TPUs for internal use and Google Cloud customers."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

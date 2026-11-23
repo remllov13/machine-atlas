@@ -1,0 +1,7 @@
+{
+  "note": "Macro forces: economy-wide trends that hit many industries at once. Not industries, so they stay off the city map. They become the future weather layer.",
+  "themes": [
+    {"name": "AI capex supercycle", "file": "ai-capex-bubble.json", "added": "2026-11-22",
+     "why": "Total spending by big tech on data centers, chips and power. It is revenue for the AI stack, not a business with its own customers."}
+  ]
+}

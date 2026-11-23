@@ -1,0 +1,97 @@
+{
+  "id": "podcasting",
+  "name": "Podcasting",
+  "chain": "Media",
+  "stage": 2,
+  "naics": {
+    "code": "516210",
+    "title": "Media Streaming Distribution Services, Social Networks, and Other Media Networks and Content Providers"
+  },
+  "one_line": "Earns a listener's trust one episode at a time, then sells that attention to advertisers.",
+  "sells": "Ad slots read by hosts, plus subscriptions and exclusive deals",
+  "customers": "Advertisers and their agencies; listeners pay with attention",
+  "suppliers": "Hosts and producers, audio and video platforms, ad-tech",
+  "revenue": {
+    "value_usd": 2862000000.0,
+    "display": "$2.86B",
+    "metric": "US podcast advertising revenue",
+    "period": "2025 (IAB/PwC)",
+    "basis": "industry (US ad revenue only)",
+    "confidence": "high",
+    "source_url": "https://radioink.com/?p=102310",
+    "note": "Ad revenue only; excludes subscriptions, live shows and markets outside the US.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Fragmented, a few big networks",
+    "why": "Thousands of shows, but a handful of networks sell most of the ads. Only reach rankings are public, not revenue shares.",
+    "hhi_note": "Not computable: no public revenue shares.",
+    "hhi": null
+  },
+  "econ": "Two-sided market: free content draws listeners, listeners draw advertisers. The host's personal trust is the scarce input.",
+  "industry_teardown": "podcast",
+  "companies": [
+    {
+      "name": "Spotify",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://ssrs.com/news/the-top-podcast-networks-based-on-reach-q2-2026/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "#1 US podcast network by weekly reach, Q2 2026 (Edison/SSRS)."
+    },
+    {
+      "name": "SiriusXM Podcast Network",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 2,
+      "source_url": "https://ssrs.com/news/the-top-podcast-networks-based-on-reach-q2-2026/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "#2 by weekly reach, Q2 2026 (Edison/SSRS)."
+    },
+    {
+      "name": "iHeartPodcasts",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://ssrs.com/news/the-top-podcast-networks-based-on-reach-q2-2026/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "#3 by weekly reach, Q2 2026 (Edison/SSRS)."
+    },
+    {
+      "name": "Red Seat Ventures",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://ssrs.com/news/the-top-podcast-networks-based-on-reach-q2-2026/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "#4 by weekly reach, Q2 2026 (Edison/SSRS)."
+    },
+    {
+      "name": "YouTube",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.thewrap.com/industry-news/business/best-in-podcasts-2025-video-streaming/",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Passed 1 billion monthly podcast viewers in 2025 (TheWrap). A platform, not a network, so Edison's network ranking doesn't list it."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

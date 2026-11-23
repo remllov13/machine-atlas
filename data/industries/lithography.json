@@ -1,0 +1,83 @@
+{
+  "id": "lithography",
+  "name": "Chip lithography machines",
+  "chain": "AI stack",
+  "stage": 0,
+  "naics": {
+    "code": "333242",
+    "title": "Semiconductor Machinery Manufacturing"
+  },
+  "one_line": "Builds the machines that print circuit patterns onto silicon with light. Every advanced chip passes under one.",
+  "sells": "Lithography scanners (EUV and DUV) plus service contracts",
+  "customers": "Chip foundries and memory makers",
+  "suppliers": "Precision optics, lasers, light sources, ultra-pure parts",
+  "revenue": {
+    "value_usd": 28900000000.0,
+    "display": "$28.9B",
+    "metric": "global photolithography equipment market",
+    "period": "2025",
+    "basis": "industry",
+    "confidence": "medium",
+    "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
+    "note": "Market-research estimate (GMI). ASML's own revenue (€32.7B in 2025) is larger because it also counts service and other tools.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Near-monopoly",
+    "why": "Only one company can build EUV machines, the ones needed for the most advanced chips. Rivals compete only in older, cheaper machines.",
+    "hhi_note": "Lower bound, from ASML's share alone.",
+    "hhi": 7762
+  },
+  "econ": "Monopoly from a technology no rival can copy: decades of R&D and a global supplier network built up since the 1990s act as the barrier to entry.",
+  "companies": [
+    {
+      "name": "ASML",
+      "share_pct": 88.1,
+      "share_basis": "share of 2025 lithography equipment market (GMI)",
+      "revenue_usd": 37000000000.0,
+      "revenue_display": "€32.7B company revenue",
+      "rank": null,
+      "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
+      "as_of_date": "2026-11-23",
+      "teardown": "asml"
+    },
+    {
+      "name": "Canon",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Older-generation and packaging lithography; with Nikon holds most of the remaining ~12%."
+    },
+    {
+      "name": "Nikon",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "Older-generation (DUV) scanners."
+    },
+    {
+      "name": "SMEE",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-23",
+      "teardown": null,
+      "note": "China's domestic lithography maker; no reliable share figure found."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

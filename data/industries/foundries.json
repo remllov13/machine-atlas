@@ -1,0 +1,91 @@
+{
+  "id": "foundries",
+  "name": "Chip foundries",
+  "chain": "AI stack",
+  "stage": 1,
+  "naics": {
+    "code": "334413",
+    "title": "Semiconductor and Related Device Manufacturing"
+  },
+  "one_line": "Manufactures chips that other companies design. The factory floor of the AI boom.",
+  "sells": "Finished silicon wafers, made to a customer's design",
+  "customers": "Chip designers (NVIDIA, Apple, AMD, Broadcom, Qualcomm)",
+  "suppliers": "Lithography machines, other fab equipment, silicon wafers, chemicals, power",
+  "revenue": {
+    "value_usd": 213960000000.0,
+    "display": "~$214B/yr",
+    "metric": "top-10 foundry revenue, annualized",
+    "period": "Q2 2026 ($53.49B) x 4",
+    "basis": "industry (annualized)",
+    "confidence": "medium",
+    "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+    "note": "One quarter times four; revenue was rising each quarter, so the trailing year is lower.",
+    "as_of_date": "2026-11-23"
+  },
+  "structure": {
+    "type": "Dominant firm",
+    "why": "TSMC alone takes roughly three of every four foundry dollars and leads at the most advanced manufacturing nodes.",
+    "hhi_note": "Mixed sources: TSMC, Samsung, SMIC from TrendForce Q2 2026; UMC and GlobalFoundries from Counterpoint Q1 2026 (pure-foundry basis).",
+    "hhi": 5345
+  },
+  "econ": "Economies of scale and the learning curve: each new factory is enormously expensive, and the firm that has made the most wafers makes them best, so the leader keeps pulling away.",
+  "companies": [
+    {
+      "name": "TSMC",
+      "share_pct": 72.5,
+      "share_basis": "share of top-10 foundry revenue, Q2 2026 (TrendForce)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+      "as_of_date": "2026-11-23",
+      "teardown": "tsmc"
+    },
+    {
+      "name": "Samsung Foundry",
+      "share_pct": 5.9,
+      "share_basis": "share of top-10 foundry revenue, Q2 2026 (TrendForce)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "SMIC",
+      "share_pct": 5.4,
+      "share_basis": "share of top-10 foundry revenue, Q2 2026 (TrendForce)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "UMC",
+      "share_pct": 4,
+      "share_basis": "pure-foundry share, Q1 2026 (Counterpoint)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://counterpointresearch.com/default.htm/insights/global-semiconductor-foundry-market-share",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    },
+    {
+      "name": "GlobalFoundries",
+      "share_pct": 3,
+      "share_basis": "pure-foundry share, Q1 2026 (Counterpoint)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://counterpointresearch.com/default.htm/insights/global-semiconductor-foundry-market-share",
+      "as_of_date": "2026-11-23",
+      "teardown": null
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-23"
+}

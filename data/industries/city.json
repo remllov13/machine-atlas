@@ -1,0 +1,111 @@
+{
+  "schema": "city/v1",
+  "as_of_date": "2026-11-23",
+  "chains": [
+    "AI stack",
+    "Money",
+    "Media",
+    "Community"
+  ],
+  "industries": [
+    "lithography",
+    "foundries",
+    "ai-chips",
+    "cloud",
+    "ai-labs",
+    "card-networks",
+    "retail-banking",
+    "podcasting",
+    "ai-builder-communities"
+  ],
+  "roads": [
+    {
+      "from": "lithography",
+      "to": "foundries",
+      "what": "Lithography machines",
+      "basis": "company filings: ASML sells to TSMC, Samsung, Intel"
+    },
+    {
+      "from": "foundries",
+      "to": "ai-chips",
+      "what": "Manufactured AI chips",
+      "basis": "TSMC fabricates chips for NVIDIA, Broadcom and the hyperscalers (Tom's Hardware, May 2026)"
+    },
+    {
+      "from": "ai-chips",
+      "to": "cloud",
+      "what": "GPUs and custom accelerators",
+      "basis": "company filings"
+    },
+    {
+      "from": "cloud",
+      "to": "ai-labs",
+      "what": "Rented compute",
+      "basis": "company filings and disclosed deals (Anthropic–AWS, OpenAI–Azure/CoreWeave)"
+    },
+    {
+      "from": "card-networks",
+      "to": "retail-banking",
+      "what": "Payment rails for the cards banks issue",
+      "basis": "industry structure (issuing banks pay network fees)"
+    }
+  ],
+  "locked": [
+    {
+      "id": "memory-chips",
+      "name": "Memory chips (HBM)",
+      "chain": "AI stack",
+      "naics": "334413",
+      "rel": "supplier",
+      "target": "ai-chips"
+    },
+    {
+      "id": "electric-power",
+      "name": "Electric power",
+      "chain": "AI stack",
+      "naics": "2211",
+      "rel": "supplier",
+      "target": "cloud"
+    },
+    {
+      "id": "business-software",
+      "name": "Business software",
+      "chain": "AI stack",
+      "naics": "513210",
+      "rel": "customer",
+      "target": "ai-labs"
+    },
+    {
+      "id": "merchant-acquiring",
+      "name": "Merchant acquiring",
+      "chain": "Money",
+      "naics": "522320",
+      "rel": "customer",
+      "target": "card-networks"
+    },
+    {
+      "id": "advertising-agencies",
+      "name": "Advertising agencies",
+      "chain": "Media",
+      "naics": "541810",
+      "rel": "customer",
+      "target": "podcasting"
+    },
+    {
+      "id": "venture-capital",
+      "name": "Venture capital",
+      "chain": "Community",
+      "naics": "523910",
+      "rel": "customer",
+      "target": "ai-builder-communities"
+    },
+    {
+      "id": "coworking-spaces",
+      "name": "Coworking spaces",
+      "chain": "Community",
+      "naics": "531120",
+      "rel": "supplier",
+      "target": "ai-builder-communities"
+    }
+  ]
+}
