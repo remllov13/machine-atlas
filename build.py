@@ -11,3 +11,15 @@ for hf in glob.glob('*.html'):
     if new!=html:
         open(hf,'w').write(new); print('re-inlined fallback into', hf)
 print('manifest entries:', slugs)
+
+# orphans: teardowns not linked from any industry (the daily run houses these first)
+ind_files=[f for f in glob.glob('data/industries/*.json') if not f.endswith('city.json')]
+linked=set()
+for f in ind_files:
+    d=json.load(open(f))
+    for c in d.get('companies',[]):
+        if c.get('teardown'): linked.add(c['teardown'])
+    for k in ('industry_teardown','industry_buildout'):
+        if d.get(k): linked.add(d[k])
+orphans=sorted(s for s in slugs if s not in linked)
+print('orphans (teardowns with no industry home):', orphans if orphans else 'none')
