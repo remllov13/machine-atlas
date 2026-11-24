@@ -1,6 +1,6 @@
 {
   "schema": "city/v1",
-  "as_of_date": "2026-11-23",
+  "as_of_date": "2026-11-24",
   "chains": [
     "AI stack",
     "Money",
@@ -10,6 +10,7 @@
   "industries": [
     "lithography",
     "foundries",
+    "memory-chips",
     "ai-chips",
     "cloud",
     "ai-labs",
@@ -32,6 +33,18 @@
       "basis": "TSMC fabricates chips for NVIDIA, Broadcom and the hyperscalers (Tom's Hardware, May 2026)"
     },
     {
+      "from": "memory-chips",
+      "to": "ai-chips",
+      "what": "HBM stacks mounted beside the processor",
+      "basis": "SK Hynix, Micron and Samsung supply HBM to NVIDIA and other AI-chip makers (Counterpoint, 2026)"
+    },
+    {
+      "from": "foundries",
+      "to": "memory-chips",
+      "what": "Logic base die for HBM4",
+      "basis": "SK Hynix uses TSMC to fabricate the HBM4 base die (2026 reports)"
+    },
+    {
       "from": "ai-chips",
       "to": "cloud",
       "what": "GPUs and custom accelerators",
@@ -52,8 +65,16 @@
   ],
   "locked": [
     {
-      "id": "memory-chips",
-      "name": "Memory chips (HBM)",
+      "id": "semiconductor-equipment",
+      "name": "Semiconductor equipment",
+      "chain": "AI stack",
+      "naics": "333242",
+      "rel": "supplier",
+      "target": "foundries"
+    },
+    {
+      "id": "chip-packaging",
+      "name": "Advanced chip packaging (OSAT)",
       "chain": "AI stack",
       "naics": "334413",
       "rel": "supplier",

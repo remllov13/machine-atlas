@@ -1,0 +1,84 @@
+{
+  "id": "memory-chips",
+  "name": "Memory chips (HBM)",
+  "chain": "AI stack",
+  "stage": 1,
+  "naics": {
+    "code": "334413",
+    "title": "Semiconductor and Related Device Manufacturing"
+  },
+  "one_line": "Stacks of DRAM bonded into a tower, sold so an AI chip can be fed data fast enough to keep its compute busy.",
+  "sells": "High-bandwidth memory: layers of DRAM stacked on a logic base die and sold to AI chip makers",
+  "customers": "AI chip and GPU designers (NVIDIA, AMD, Broadcom, Google), who mount HBM right next to the processor",
+  "suppliers": "DRAM wafer fabs, advanced-packaging and through-silicon-via tooling, and foundries for the HBM4 logic base die",
+  "revenue": {
+    "value_usd": 54600000000.0,
+    "display": "~$55B (2026 est.)",
+    "metric": "worldwide HBM revenue",
+    "period": "2026 (forecast)",
+    "basis": "industry (forecast)",
+    "confidence": "medium",
+    "source_url": "https://news.skhynix.com/en/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/",
+    "note": "Forecasts, not an audited actual. BofA sees $54.6B in 2026 (+58% YoY), cited on SK Hynix's newsroom; Yole estimates ~$60B (+~70%) up from ~$35B in 2025. Supply is sold out, so revenue tracks capacity and price more than demand.",
+    "as_of_date": "2026-11-24"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Only three firms in the world ship HBM in volume. SK Hynix has led on HBM3E; Micron has pulled ahead of Samsung, and Samsung's HBM4 is now closing the gap.",
+    "hhi": 4574,
+    "hhi_note": "Sum of squared Q2 2026 shares (62, 21, 17) from Counterpoint Research as reported by Future of Korea / Astute Group. Basis is reported variously as revenue and as bit shipments, so treat the HHI as approximate; a fourth entrant (CXMT) has no measurable share yet."
+  },
+  "econ": "Barriers to entry. Making HBM needs both leading-edge DRAM and advanced 3D stacking (through-silicon vias), which only three companies can do at scale, so the market is a global oligopoly. Because demand outruns capacity, output is sold out a year ahead and the makers, not the buyers, hold the pricing power.",
+  "companies": [
+    {
+      "name": "SK Hynix",
+      "share_pct": 62,
+      "share_basis": "overall HBM share, Q2 2026 (Counterpoint Research, reported by Future of Korea / Astute Group); basis reported variously as revenue and bit shipments",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
+      "as_of_date": "2026-11-24",
+      "teardown": null,
+      "note": "The HBM3E leader and NVIDIA's main supplier. Counterpoint says its growth slowed in Q3 2026 as Samsung's HBM4 gained."
+    },
+    {
+      "name": "Micron",
+      "share_pct": 21,
+      "share_basis": "overall HBM share, Q2 2026 (Counterpoint Research, reported by Future of Korea / Astute Group); basis reported variously as revenue and bit shipments",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 2,
+      "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
+      "as_of_date": "2026-11-24",
+      "teardown": null,
+      "note": "Overtook Samsung for second place in Q2 2026 per Counterpoint; ramping HBM3E and HBM4 for NVIDIA and other AI-chip clients."
+    },
+    {
+      "name": "Samsung",
+      "share_pct": 17,
+      "share_basis": "overall HBM share, Q2 2026 (Counterpoint Research, reported by Future of Korea / Astute Group); basis reported variously as revenue and bit shipments",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
+      "as_of_date": "2026-11-24",
+      "teardown": null,
+      "note": "Lagged on HBM3E but its HBM4 is well received; Counterpoint expects Samsung to challenge for the HBM lead in 2027."
+    },
+    {
+      "name": "CXMT",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-24",
+      "teardown": null,
+      "note": "China's largest DRAM maker and an aspiring HBM entrant; no material HBM share in 2026 sources checked."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-24"
+}
