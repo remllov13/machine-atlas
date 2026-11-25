@@ -17,7 +17,8 @@
     "card-networks",
     "retail-banking",
     "podcasting",
-    "ai-builder-communities"
+    "ai-builder-communities",
+    "electric-power"
   ],
   "roads": [
     {
@@ -61,6 +62,18 @@
       "to": "retail-banking",
       "what": "Payment rails for the cards banks issue",
       "basis": "industry structure (issuing banks pay network fees)"
+    },
+    {
+      "from": "electric-power",
+      "to": "cloud",
+      "what": "Electricity for data centers",
+      "basis": "utilities report multi-GW contracted large-load/data-center agreements (Reuters, May 2026)"
+    },
+    {
+      "from": "electric-power",
+      "to": "foundries",
+      "what": "Electricity to run the fabs",
+      "basis": "industry structure (chip fabrication is highly power-intensive)"
     }
   ],
   "locked": [
@@ -79,14 +92,6 @@
       "naics": "334413",
       "rel": "supplier",
       "target": "ai-chips"
-    },
-    {
-      "id": "electric-power",
-      "name": "Electric power",
-      "chain": "AI stack",
-      "naics": "2211",
-      "rel": "supplier",
-      "target": "cloud"
     },
     {
       "id": "business-software",
@@ -127,6 +132,22 @@
       "naics": "531120",
       "rel": "supplier",
       "target": "ai-builder-communities"
+    },
+    {
+      "id": "power-generation-equipment",
+      "name": "Power generation equipment",
+      "chain": "AI stack",
+      "naics": "333611",
+      "rel": "supplier",
+      "target": "electric-power"
+    },
+    {
+      "id": "natural-gas",
+      "name": "Natural gas production",
+      "chain": "AI stack",
+      "naics": "211130",
+      "rel": "supplier",
+      "target": "electric-power"
     }
   ]
 }

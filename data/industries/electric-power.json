@@ -1,0 +1,97 @@
+{
+  "id": "electric-power",
+  "name": "Electric power",
+  "chain": "AI stack",
+  "stage": 2,
+  "naics": {
+    "code": "2211",
+    "title": "Electric Power Generation, Transmission and Distribution"
+  },
+  "one_line": "Generates electricity and moves it over wires to everyone who plugs in. The input the AI data-center boom is now fighting over.",
+  "sells": "Electricity, billed by the kilowatt-hour, plus the grid connection that delivers it",
+  "customers": "Homes, businesses, factories, and now hyperscale data centers above all",
+  "suppliers": "Natural gas and other fuels, turbines and generators, power lines and transformers, land",
+  "revenue": {
+    "value_usd": 553164000000.0,
+    "display": "~$553B/yr",
+    "metric": "US revenue from electricity sales to ultimate customers",
+    "period": "2025 (full year)",
+    "basis": "industry",
+    "confidence": "high",
+    "source_url": "https://www.eia.gov/electricity/annual/html/epa_02_06.html",
+    "note": "EIA Table 2.6, all end-use sectors (residential $261.8B, commercial $200.9B, industrial $89.4B, transportation $1.0B). Retail sales to end customers only; wholesale sales between utilities are not counted. Up from $514.4B in 2024.",
+    "as_of_date": "2026-11-25"
+  },
+  "structure": {
+    "type": "Fragmented",
+    "why": "Roughly 3,000 electric utilities serve the US, and even the largest holding company serves well under a tenth of the country. Each is a regional monopoly: one company owns the wires in its territory and a state commission sets its prices.",
+    "hhi": null,
+    "hhi_note": "No meaningful national HHI. Service is a local monopoly, and holding-company figures mix regulated electric, regulated gas and competitive generation, so national market shares are not comparable. Companies below are ranked by market value (Reuters, May 2026) as a rough size proxy, not by market share.",
+    "basis": "~3,000 utilities: APPA, EEI and rural-cooperative counts"
+  },
+  "econ": "Natural monopoly, regulated. Running one set of wires to a street is far cheaper than running competing ones, so a single utility serves each area and a public commission sets the price in place of competition. The result is thousands of regional monopolies: monopolistic block by block, fragmented across the country.",
+  "companies": [
+    {
+      "name": "NextEra Energy",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
+      "as_of_date": "2026-05-19",
+      "teardown": null,
+      "note": "Called the largest US utility; market cap ~$185.7B. Parent of Florida Power & Light. Announced a $66.8B acquisition of Dominion Energy in 2026 (combined enterprise value ~$420B)."
+    },
+    {
+      "name": "Southern Company",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 2,
+      "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
+      "as_of_date": "2026-05-19",
+      "teardown": null,
+      "note": "Market value ~$105.6B; ~9 million customers across the Southeast. Over 11 GW of contracted large-load (data-center) capacity."
+    },
+    {
+      "name": "Duke Energy",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
+      "as_of_date": "2026-05-19",
+      "teardown": null,
+      "note": "Market value ~$95.8B; ~8.6 million customers; ~55,100 MW of capacity. 7.6 GW contracted with data-center customers."
+    },
+    {
+      "name": "Constellation Energy",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
+      "as_of_date": "2026-05-19",
+      "teardown": null,
+      "note": "Valued ~$94.6B; the biggest independent power producer, ~55 GW of capacity and ~10% of US clean energy. Signed Microsoft to restart Three Mile Island; acquired the Calpine fleet."
+    },
+    {
+      "name": "American Electric Power",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
+      "as_of_date": "2026-05-19",
+      "teardown": null,
+      "note": "Market value ~$72.5B; ~5.6 million customers across parts of 11 states. 7 GW of new large-load agreements signed in Q1 2026, mostly data centers."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-25"
+}
