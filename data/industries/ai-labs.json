@@ -2,7 +2,7 @@
   "id": "ai-labs",
   "name": "AI labs",
   "chain": "AI stack",
-  "stage": 4,
+  "stage": 5,
   "naics": {
     "code": "541715",
     "title": "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)"

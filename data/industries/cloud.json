@@ -2,7 +2,7 @@
   "id": "cloud",
   "name": "Cloud computing",
   "chain": "AI stack",
-  "stage": 3,
+  "stage": 4,
   "naics": {
     "code": "518210",
     "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"

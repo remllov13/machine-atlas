@@ -2,7 +2,7 @@
   "id": "ai-chips",
   "name": "AI chips",
   "chain": "AI stack",
-  "stage": 2,
+  "stage": 3,
   "naics": {
     "code": "334413",
     "title": "Semiconductor and Related Device Manufacturing"

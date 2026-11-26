@@ -18,7 +18,8 @@
     "retail-banking",
     "podcasting",
     "ai-builder-communities",
-    "electric-power"
+    "electric-power",
+    "chip-packaging"
   ],
   "roads": [
     {
@@ -74,6 +75,18 @@
       "to": "foundries",
       "what": "Electricity to run the fabs",
       "basis": "industry structure (chip fabrication is highly power-intensive)"
+    },
+    {
+      "from": "foundries",
+      "to": "chip-packaging",
+      "what": "Bare logic dies and silicon interposers to be packaged",
+      "basis": "industry structure (foundries fabricate wafers, then dies go to assembly and packaging)"
+    },
+    {
+      "from": "chip-packaging",
+      "to": "ai-chips",
+      "what": "Advanced packaging (CoWoS): HBM bonded beside the logic die on an interposer",
+      "basis": "TSMC's CoWoS capacity is the widely reported bottleneck on NVIDIA AI-chip supply (2026 reports)"
     }
   ],
   "locked": [
@@ -86,12 +99,20 @@
       "target": "foundries"
     },
     {
-      "id": "chip-packaging",
-      "name": "Advanced chip packaging (OSAT)",
+      "id": "ic-substrates",
+      "name": "IC package substrates",
       "chain": "AI stack",
-      "naics": "334413",
+      "naics": "334412",
       "rel": "supplier",
-      "target": "ai-chips"
+      "target": "chip-packaging"
+    },
+    {
+      "id": "test-equipment",
+      "name": "Chip test equipment (ATE)",
+      "chain": "AI stack",
+      "naics": "334515",
+      "rel": "supplier",
+      "target": "chip-packaging"
     },
     {
       "id": "business-software",

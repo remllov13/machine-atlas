@@ -1,0 +1,104 @@
+{
+  "id": "chip-packaging",
+  "name": "Advanced chip packaging (OSAT)",
+  "chain": "AI stack",
+  "stage": 2,
+  "naics": {
+    "code": "334413",
+    "title": "Semiconductor and Related Device Manufacturing"
+  },
+  "one_line": "Takes bare chips and turns them into finished packages — bonding, stacking memory beside the processor, and testing. The last mile before a chip can be used.",
+  "sells": "Assembly, advanced packaging (die stacking and interposer bonding) and final test, done to a customer's chips",
+  "customers": "Chip designers and foundries (NVIDIA, AMD, Broadcom, and the firms whose chips TSMC fabricates)",
+  "suppliers": "Bare dies and silicon interposers from foundries, HBM stacks, package substrates, and bonding and test equipment",
+  "revenue": {
+    "value_usd": 41560000000.0,
+    "display": "~$42B/yr",
+    "metric": "top-10 OSAT revenue",
+    "period": "2024",
+    "basis": "industry (top-10 firms)",
+    "confidence": "high",
+    "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+    "note": "Combined revenue of the top-10 outsourced assembly-and-test firms (TrendForce). One market-research estimate put the broader OSAT market near $52B for 2025; neither figure includes TSMC's in-house advanced packaging (CoWoS), where the AI bottleneck actually sits.",
+    "as_of_date": "2026-11-26"
+  },
+  "structure": {
+    "type": "Dominant firm",
+    "why": "ASE alone takes about 45% of outsourced revenue and leads across mainstream and advanced packaging; a handful of rivals split the rest, and the most advanced AI packaging (TSMC's CoWoS) is kept in-house rather than outsourced.",
+    "hhi_note": "Sum of squared shares of top-10 OSAT revenue (TrendForce, 2024); measured against the whole market it slightly overstates concentration, and it excludes TSMC's in-house advanced packaging.",
+    "hhi": 2481
+  },
+  "econ": "Complementary inputs and the binding constraint: a working AI accelerator needs both a logic die and the advanced package that bonds high-bandwidth memory beside it, so whichever is scarcer caps total output. Through 2025-26 it has been packaging capacity, not the dies, that limited how many AI chips could ship.",
+  "companies": [
+    {
+      "name": "ASE Technology",
+      "share_pct": 44.6,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $18.54B of $41.56B)",
+      "revenue_usd": 18540000000.0,
+      "revenue_display": "$18.54B 2024 revenue",
+      "rank": 1,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null
+    },
+    {
+      "name": "Amkor Technology",
+      "share_pct": 15.2,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $6.32B of $41.56B)",
+      "revenue_usd": 6320000000.0,
+      "revenue_display": "$6.32B 2024 revenue",
+      "rank": 2,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null
+    },
+    {
+      "name": "JCET Group",
+      "share_pct": 12.0,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $5.00B of $41.56B)",
+      "revenue_usd": 5000000000.0,
+      "revenue_display": "$5.00B 2024 revenue",
+      "rank": 3,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null,
+      "note": "Largest Chinese OSAT; grew 19% in 2024."
+    },
+    {
+      "name": "Tongfu Microelectronics",
+      "share_pct": 8.0,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $3.32B of $41.56B)",
+      "revenue_usd": 3320000000.0,
+      "revenue_display": "$3.32B 2024 revenue",
+      "rank": 4,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null
+    },
+    {
+      "name": "Powertech Technology",
+      "share_pct": 5.5,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $2.28B of $41.56B)",
+      "revenue_usd": 2280000000.0,
+      "revenue_display": "$2.28B 2024 revenue",
+      "rank": 5,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null
+    },
+    {
+      "name": "HT-Tech (Huatian)",
+      "share_pct": 4.8,
+      "share_basis": "share of top-10 OSAT revenue, 2024 (TrendForce; $2.01B of $41.56B)",
+      "revenue_usd": 2010000000.0,
+      "revenue_display": "$2.01B 2024 revenue",
+      "rank": 6,
+      "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
+      "as_of_date": "2026-11-26",
+      "teardown": null,
+      "note": "Chinese OSAT; grew 26% in 2024."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-26"
+}
