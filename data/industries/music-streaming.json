@@ -1,0 +1,118 @@
+{
+  "id": "music-streaming",
+  "name": "Music streaming",
+  "chain": "Media",
+  "stage": 2,
+  "naics": {
+    "code": "516210",
+    "title": "Media Streaming Distribution Services, Social Networks, and Other Media Networks and Content Providers"
+  },
+  "one_line": "On-demand access to the same ~100M-song catalog, licensed from the labels. The pipe between recorded music and 900M+ paying listeners.",
+  "sells": "On-demand streaming of recorded music (plus podcasts and audiobooks) through paid subscriptions and ad-supported free tiers",
+  "customers": "Listeners (paid subscribers and ad-supported free users) and, on the free tiers, advertisers",
+  "suppliers": "Record labels and music publishers (who license the catalog), cloud and CDN infrastructure, and device and telecom distribution partners",
+  "revenue": {
+    "value_usd": 22100000000.0,
+    "display": "~$22B/yr (wholesale)",
+    "metric": "global recorded-music streaming revenue paid through to rights holders (wholesale)",
+    "period": "2025",
+    "basis": "industry (global)",
+    "confidence": "high",
+    "source_url": "https://www.musicbusinessworldwide.com/global-recorded-music-revenues-hit-31-7bn-in-2025-up-6-4-yoy-users-of-paid-music-subscriptions-reach-837m/",
+    "note": "This is the wholesale streaming revenue paid to labels and artists (IFPI: total streaming was above $22B, 69.6% of recorded-music revenue in 2025). The streaming services collect more - subscriptions plus ads - and keep roughly 30% after paying rights holders; Spotify's own revenue was ~$17B in 2024. Subscriber shares below are MIDiA's Q4 2025 share of 921.6M global music subscribers.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Spotify leads with ~31% of the world's 921.6M music subscribers, trailed by Tencent Music, Apple Music, YouTube Music and Amazon Music; the top five hold ~79%. No service controls the catalog, so scale and distribution - not content - decide the ranking.",
+    "hhi_note": "HHI from the top-5 services' subscriber shares (covering ~79% of global music subscribers). The ~21% remainder (NetEase Cloud Music, Deezer and regional services) is fragmented and adds little.",
+    "hhi": 1561
+  },
+  "econ": "Every service licenses essentially the same catalog from the same three major labels, so they cannot compete on content - they compete on price, discovery and distribution (phones, telecom bundles, hardware). Rights holders take roughly 70% of each dollar, leaving the services thin margins and a race for subscriber scale.",
+  "companies": [
+    {
+      "name": "Spotify",
+      "share_pct": 31.4,
+      "share_basis": "share of global music streaming subscribers, Q4 2025 (MIDiA Research)",
+      "revenue_usd": null,
+      "revenue_display": "290M premium subscribers (end 2025, Spotify)",
+      "rank": null,
+      "source_url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Spotify Premium",
+        "Free (ad-supported) tier",
+        "Audiobooks"
+      ]
+    },
+    {
+      "name": "Tencent Music (TME)",
+      "share_pct": 13.8,
+      "share_basis": "share of global music streaming subscribers, Q4 2025 (MIDiA Research)",
+      "revenue_usd": null,
+      "revenue_display": "127.4M paying subscribers (Q4 2025, TME)",
+      "rank": null,
+      "source_url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "QQ Music",
+        "Kugou",
+        "Kuwo"
+      ]
+    },
+    {
+      "name": "Apple Music",
+      "share_pct": 12.6,
+      "share_basis": "share of global music streaming subscribers, Q4 2025 (MIDiA Research)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Apple Music",
+        "Apple Music Classical",
+        "Apple Music Sing"
+      ],
+      "note": "MIDiA: Apple Music's share fell from 18.4% at end 2020 to 12.6% at end 2025."
+    },
+    {
+      "name": "YouTube Music",
+      "share_pct": 12.4,
+      "share_basis": "share of global music streaming subscribers, Q4 2025 (MIDiA Research)",
+      "revenue_usd": null,
+      "revenue_display": "125M incl. Premium (Mar 2025, YouTube)",
+      "rank": null,
+      "source_url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "YouTube Music",
+        "YouTube Premium"
+      ],
+      "note": "MIDiA counts standalone YouTube Music plus YouTube Premium subscribers; share rose from 7.9% at end 2020."
+    },
+    {
+      "name": "Amazon Music",
+      "share_pct": 8.5,
+      "share_basis": "share of global music streaming subscribers, Q4 2025 (MIDiA Research)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.musicbusinessworldwide.com/the-music-industry-is-closing-in-on-a-billion-global-subscribers-with-spotify-out-in-front/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Amazon Music Unlimited",
+        "Amazon Music Prime",
+        "Amazon Music Free"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, from company sites. Subscriber shares are MIDiA Research's Q4 2025 share of 921.6M global music streaming subscribers (one source, one metric); the map's ~21% 'All others' block is NetEase Cloud Music, Deezer and regional services not individually broken out."
+}

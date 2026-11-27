@@ -31,9 +31,22 @@
     "e-commerce-platforms",
     "online-payments-sellers",
     "recorded-music",
-    "ecommerce-fulfillment"
+    "ecommerce-fulfillment",
+    "music-streaming"
   ],
   "roads": [
+    {
+      "from": "recorded-music",
+      "to": "music-streaming",
+      "what": "The recorded-music catalog, licensed to the services; labels take roughly 70% of streaming revenue",
+      "basis": "major labels license their catalogs to streaming services under multi-year deals (industry structure; IFPI 2025)"
+    },
+    {
+      "from": "cloud",
+      "to": "music-streaming",
+      "what": "Compute, storage and CDN bandwidth to stream audio to 900M+ listeners",
+      "basis": "industry structure (streaming services run on cloud infrastructure and content delivery networks)"
+    },
     {
       "from": "recorded-music",
       "to": "video-platforms",
@@ -387,14 +400,6 @@
       "target": "online-payments-sellers"
     },
     {
-      "id": "music-streaming",
-      "name": "Music streaming",
-      "chain": "Media",
-      "naics": "516210",
-      "rel": "customer",
-      "target": "recorded-music"
-    },
-    {
       "id": "music-publishing",
       "name": "Music publishing & royalties",
       "chain": "Media",
@@ -417,6 +422,14 @@
       "naics": "333249",
       "rel": "supplier",
       "target": "ecommerce-fulfillment"
+    },
+    {
+      "id": "audiobooks",
+      "name": "Audiobooks & spoken-word",
+      "chain": "Media",
+      "naics": "512290",
+      "rel": "supplier",
+      "target": "music-streaming"
     }
   ],
   "focus": {
