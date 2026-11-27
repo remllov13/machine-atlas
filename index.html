@@ -37,6 +37,12 @@
   .lbl-prod{fill:#B9A27A}
   .lbl-big{font-size:calc(12px * var(--lk,1))}
   .lbl-ghost{fill:var(--dim)}
+  svg.far .lbl-ghost{display:none}
+  .rd{fill:none;transition:stroke-opacity .15s}
+  .rd-in{stroke:#C6F24E;stroke-width:3;stroke-opacity:.45}
+  .rd-x{stroke:#C6F24E;stroke-width:1.4;stroke-opacity:.10;stroke-dasharray:6 6}
+  .rd.hot{stroke-opacity:.9;stroke-width:3}
+  @media(prefers-reduced-motion:reduce){.rd{transition:none}}
   .row-lbl{font-family:var(--mono);font-size:calc(13px * var(--lk,1));letter-spacing:4px;text-transform:uppercase;text-anchor:end;pointer-events:none;paint-order:stroke;stroke:#0A0C10;stroke-width:4px;opacity:.9}
   .plaza-lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;text-anchor:middle;pointer-events:none;fill:var(--dim)}
 
@@ -255,7 +261,7 @@ function panelReserve(){return document.getElementById('panel').classList.contai
 function fit(b,reserve,left){
   const {w:W,h:Hh}=VB(); left=(W>900&&!(reserve>0))?(left||0):0;
   const w=b.x1-b.x0, h=b.y1-b.y0, availW=W-(reserve||0)-left-40, availH=Hh-150;
-  const minS=W<700?0.55:0.4;
+  const minS=W<700?0.55:0.28;
   const s=Math.max(minS,Math.min(1.5,availW/Math.max(w,1),availH/Math.max(h,1)));
   VIEW.s=s; VIEW.x=left+(W-(reserve||0)-left)/2-s*(b.x0+w/2); VIEW.y=(Hh+30)/2-s*(b.y0+h/2);
 }
@@ -342,7 +348,7 @@ function renderCity(){
     const c=chainColor(ch), x0=-2.8, x1=maxD*COL+2.8, y0=row.base-1.9, y1=row.ghostY+1.2; BANDPTS.push(iso(x0,y0),iso(x1,y0),iso(x1,y1),iso(x0,y1));
     const a=iso(x0,y0),b=iso(x1,y0),cc=iso(x1,y1),d=iso(x0,y1);
     parts.push(`<path d="${quad(a,b,cc,d)}" fill="${c.zone}" stroke="${c.top}" stroke-opacity="0.35" stroke-width="1.2"/>`);
-    const lp=iso(x0-0.2,y1-0.4);
+    const lp=iso(x0-1.1,(y0+y1)/2+0.3);
     parts.push(`<text class="row-lbl" x="${lp.x-6}" y="${lp.y+4}" fill="${c.lbl}">${esc(ch)}</text>`);
     ROADS.push({ax:a.x,ay:a.y,bx:b.x,by:b.y},{ax:d.x,ay:d.y,bx:cc.x,by:cc.y});
   });
@@ -350,8 +356,9 @@ function renderCity(){
   (CITY.roads||[]).forEach(rd=>{
     const A=pos[rd.from],B=pos[rd.to]; if(!A||!B)return;
     const pa=iso(A.gx,A.gy),pb=iso(B.gx,B.gy);
-    parts.push(`<line x1="${pa.x}" y1="${pa.y}" x2="${pb.x}" y2="${pb.y}" stroke="#C6F24E" stroke-width="3" stroke-opacity="0.45" stroke-linecap="round"/>`);
-    ROADS.push({ax:pa.x,ay:pa.y,bx:pb.x,by:pb.y});
+    const same=IND[rd.from].chain===IND[rd.to].chain;
+    parts.push(`<line class="rd ${same?'rd-in':'rd-x'}" data-a="${esc(rd.from)}" data-b="${esc(rd.to)}" x1="${pa.x}" y1="${pa.y}" x2="${pb.x}" y2="${pb.y}" stroke-linecap="round"/>`);
+    if(same)ROADS.push({ax:pa.x,ay:pa.y,bx:pb.x,by:pb.y});
   });
   // locked plots
   ghosts.forEach(g=>{
@@ -378,7 +385,7 @@ function renderCity(){
   const nCo=Object.values(IND).reduce((a,i)=>a+i.companies.length,0);
   const nSt=Object.values(IND).reduce((a,i)=>a+i.companies.filter(studied).length,0);
   document.getElementById('counter').innerHTML=`<b>${Object.keys(IND).length}</b> industries &middot; <b>${nCo}</b> companies &middot; <b>${nSt}</b> studied &middot; <b>${ghosts.length}</b> locked <a href="classic.html">classic map</a>`;
-  document.getElementById('hint').textContent='DRAG to pan · SCROLL to zoom · CLICK an industry to enter its district · roads run supplier → customer, left to right';
+  document.getElementById('hint').textContent='DRAG to pan · SCROLL to zoom · HOVER an industry to light its roads · CLICK to enter its district';
 }
 function mount(parts,roads){
   const {w:W,h:Hh}=VB(); document.getElementById('svg').setAttribute('viewBox',`0 0 ${W} ${Hh}`);
@@ -390,6 +397,8 @@ function wireHits(){
   document.querySelectorAll('#svg .hit').forEach(g=>{
     const act=()=>{const d=g.dataset; if(d.ind)location.hash='#/industry/'+d.ind; else if(d.ghost)openLocked(d.ghost); else if(d.co!=null)openCompany(d.dind,+d.co); else if(d.lot)openAddCompany(d.lot); else if(d.staked)openStaked(d.lot2,d.staked); else if(d.others)openOthers(d.others);};
     g.addEventListener('click',act); g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}});
+    if(g.dataset.ind){const id=g.dataset.ind, on=v=>document.querySelectorAll('#svg .rd').forEach(l=>{if(l.dataset.a===id||l.dataset.b===id)l.classList.toggle('hot',v);});
+      g.addEventListener('mouseenter',()=>on(true)); g.addEventListener('mouseleave',()=>on(false)); g.addEventListener('focus',()=>on(true)); g.addEventListener('blur',()=>on(false));}
   });
 }
 
