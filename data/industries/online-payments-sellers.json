@@ -1,0 +1,109 @@
+{
+  "id": "online-payments-sellers",
+  "name": "Online payments for sellers",
+  "chain": "Online work",
+  "stage": 2,
+  "naics": {
+    "code": "522320",
+    "title": "Financial Transactions Processing, Reserve, and Clearinghouse Activities"
+  },
+  "one_line": "The rails that let an online business accept a card or wallet payment — plug in an API, and money moves from a shopper to a seller.",
+  "sells": "Payment acceptance for online businesses: APIs and accounts that take cards, wallets and bank payments, for a fee on each transaction",
+  "customers": "Online businesses, marketplaces and software platforms that need to get paid",
+  "suppliers": "Card networks and banks that settle the money, plus cloud infrastructure and fraud/identity data",
+  "revenue": {
+    "value_usd": 64000000000.0,
+    "display": "~$64B/yr (fees)",
+    "metric": "global payment-processing vendor revenue (processor fees)",
+    "period": "2025 (estimate)",
+    "basis": "industry",
+    "confidence": "low",
+    "source_url": "https://www.clearlypayments.com/blog/how-big-is-the-payment-processing-market-by-region-in-2025/",
+    "note": "Core processor revenue is estimated at ~$64B in 2025, within a wide $60–140B range for the sector ($170B+ including gateways, fraud and software). This is fees, not volume: the leaders each move well over a trillion dollars a year — Stripe ~$1.9T and PayPal ~$1.79T in 2025. Figure aggregated by an industry source; treat as indicative.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented, scale-driven",
+    "why": "Thousands of processors compete, but scale wins: a few global online PSPs — Stripe, PayPal, Adyen — plus the legacy acquirers (Fiserv, Global Payments, Worldpay) handle a growing share of online volume, and GlobalData notes the top 20 payment firms' revenue still rising on scale.",
+    "hhi": null,
+    "hhi_note": "No HHI: shares are measured inconsistently (processed volume vs fee revenue), the largest online PSP (Stripe) is private, and legacy bank acquirers overlap the same volume, so comparable shares aren't available."
+  },
+  "econ": "A volume business with razor-thin unit economics: a processor keeps only a small slice of each payment (often well under 1% after the card networks and banks take theirs), so profit comes from scale — moving trillions of dollars cheaply and reliably. High fixed costs in compliance, fraud and global banking integrations favor the biggest players, while the networks and banks beneath them capture the largest share of every transaction fee.",
+  "rank_basis": "Approximate standing by scale: payment volume processed for merchants and company revenue in 2025 (company reports). Stripe is private; the others are public.",
+  "rank_short": "scale",
+  "companies": [
+    {
+      "name": "Stripe",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://stripe.com/newsroom/news/stripe-2025-update",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private; the largest online-first merchant PSP. Processed $1.9T in total volume in 2025 (+34%), serving 5M+ businesses; valued at $159B in a 2026 tender offer. Revenue not disclosed.",
+      "products": [
+        "Payments API & Checkout",
+        "Billing & subscriptions",
+        "Connect (marketplace payments)",
+        "Radar fraud tools"
+      ]
+    },
+    {
+      "name": "PayPal",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 33172000000.0,
+      "revenue_display": "$33.2B FY2025 revenue",
+      "rank": 2,
+      "source_url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PYPL-4Q-25-Earnings-Release.pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Public (Nasdaq: PYPL). $1.79T total payment volume and 439M active accounts in 2025; serves both sellers (Braintree, PayPal Checkout) and consumers (PayPal, Venmo).",
+      "products": [
+        "PayPal Checkout",
+        "Braintree (enterprise gateway)",
+        "Venmo",
+        "PayPal Complete Payments"
+      ]
+    },
+    {
+      "name": "Adyen",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 2600000000.0,
+      "revenue_display": "€2.36B FY2025 net revenue (~$2.6B)",
+      "rank": 3,
+      "source_url": "https://www.adyen.com/press-and-media/adyen-publishes-h2-2025-financial-results-3pgu2",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Public (Euronext: ADYEN). Single-platform PSP for large global merchants; processed €1.39T in 2025, net revenue €2.36B at a 53% EBITDA margin.",
+      "products": [
+        "Unified global payments platform",
+        "In-person (POS) terminals",
+        "Embedded finance for platforms"
+      ]
+    },
+    {
+      "name": "Block (Square)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://investors.block.xyz/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Public (NYSE: XYZ). Square's seller ecosystem processes hundreds of billions of dollars of gross payment volume, weighted to small and in-person merchants moving online. FY2025 figure not pulled this run; ranked on scale.",
+      "products": [
+        "Square payments & POS",
+        "Online checkout & e-commerce APIs",
+        "Cash App for Business"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against 2025 results releases and company sites. Figures are company-reported; Adyen's euro figures are shown as reported with an approximate USD conversion, and Stripe and Block are shown partly qualitatively. Not listed individually: Checkout.com, the legacy merchant acquirers Fiserv, Global Payments and Worldpay (see the merchant-acquiring plot), and regional wallets."
+}

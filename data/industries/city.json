@@ -28,9 +28,22 @@
     "online-courses",
     "influencer-marketing",
     "freelance-marketplaces",
-    "e-commerce-platforms"
+    "e-commerce-platforms",
+    "online-payments-sellers"
   ],
   "roads": [
+    {
+      "from": "card-networks",
+      "to": "online-payments-sellers",
+      "what": "The card rails and settlement the processors ride on to move money",
+      "basis": "industry structure (PSPs route and settle transactions through the card networks and banks)"
+    },
+    {
+      "from": "online-payments-sellers",
+      "to": "e-commerce-platforms",
+      "what": "Payment acceptance (APIs, checkout, payouts) built into online stores and marketplaces",
+      "basis": "industry structure (e-commerce platforms embed PSPs like Stripe, PayPal and Adyen to take payments)"
+    },
     {
       "from": "video-platforms",
       "to": "influencer-marketing",
@@ -366,17 +379,19 @@
       "naics": "513210",
       "rel": "supplier",
       "target": "e-commerce-platforms"
+    },
+    {
+      "id": "fraud-prevention",
+      "name": "Payments fraud & risk software",
+      "chain": "Online work",
+      "naics": "513210",
+      "rel": "supplier",
+      "target": "online-payments-sellers"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
-    "next": [
-      {
-        "name": "Online payments for sellers",
-        "chain": "Online work",
-        "hint": "Stripe, PayPal: how online businesses get paid; road to Money"
-      }
-    ]
+    "next": []
   }
 }
