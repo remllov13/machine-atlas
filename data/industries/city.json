@@ -30,7 +30,8 @@
     "freelance-marketplaces",
     "e-commerce-platforms",
     "online-payments-sellers",
-    "recorded-music"
+    "recorded-music",
+    "ecommerce-fulfillment"
   ],
   "roads": [
     {
@@ -200,6 +201,12 @@
       "to": "podcasting",
       "what": "Video distribution for podcasts",
       "basis": "YouTube passed 1 billion monthly podcast viewers in 2025 (TheWrap): https://www.thewrap.com/industry-news/business/best-in-podcasts-2025-video-streaming/"
+    },
+    {
+      "from": "ecommerce-fulfillment",
+      "to": "e-commerce-platforms",
+      "what": "Outsourced warehousing and shipping that platforms integrate and resell to merchants (e.g. Shopify's Flexport-powered fulfillment)",
+      "basis": "industry structure (Shopify sold its logistics arm to Flexport in 2023 and routes merchant fulfillment through it)"
     }
   ],
   "locked": [
@@ -364,14 +371,6 @@
       "target": "freelance-marketplaces"
     },
     {
-      "id": "ecommerce-fulfillment",
-      "name": "E-commerce logistics & fulfillment",
-      "chain": "Online work",
-      "naics": "493110",
-      "rel": "supplier",
-      "target": "e-commerce-platforms"
-    },
-    {
       "id": "ecommerce-apps",
       "name": "E-commerce apps & themes",
       "chain": "Online work",
@@ -402,6 +401,22 @@
       "naics": "512230",
       "rel": "supplier",
       "target": "recorded-music"
+    },
+    {
+      "id": "parcel-carriers",
+      "name": "Parcel delivery & couriers",
+      "chain": "Online work",
+      "naics": "492110",
+      "rel": "supplier",
+      "target": "ecommerce-fulfillment"
+    },
+    {
+      "id": "warehouse-automation",
+      "name": "Warehouse robotics & automation",
+      "chain": "Online work",
+      "naics": "333249",
+      "rel": "supplier",
+      "target": "ecommerce-fulfillment"
     }
   ],
   "focus": {

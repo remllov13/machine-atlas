@@ -1,0 +1,158 @@
+{
+  "id": "ecommerce-fulfillment",
+  "name": "E-commerce fulfillment",
+  "chain": "Online work",
+  "stage": 1,
+  "naics": {
+    "code": "493110",
+    "title": "General Warehousing and Storage"
+  },
+  "one_line": "Stores, packs and ships online orders for merchants, so a brand doesn't have to run its own warehouse.",
+  "sells": "Warehousing, pick-pack-ship, shipping and returns handling for online orders, charged per order plus storage",
+  "customers": "Online merchants and brands, from solo sellers to large retailers, selling on their own sites and on marketplaces",
+  "suppliers": "Warehouse space and labor, parcel carriers, warehouse robotics and software, and the platforms and marketplaces that route the orders",
+  "revenue": {
+    "value_usd": 138250000000.0,
+    "display": "~$138B (2025, est.)",
+    "metric": "global e-commerce fulfillment services market",
+    "period": "2025",
+    "basis": "analyst estimate (Mordor Intelligence)",
+    "confidence": "low",
+    "source_url": "https://www.mordorintelligence.com/industry-reports/e-commerce-fulfillment-market",
+    "note": "Analyst estimate; covers receiving, storage, pick-pack-ship, delivery and returns for online orders. Projected to grow ~12%/yr to ~$268B by 2031; North America is ~32% of it. Amazon's captive FBA network is the largest single operator but is not separately sized here.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Dominant firm over a fragmented tail",
+    "why": "Amazon's in-house network (FBA) fulfills the bulk of U.S. marketplace orders and dwarfs every independent. Below it the outsourced-3PL market is structurally fragmented, mixing global contract-logistics giants (DHL, GXO) with venture-backed e-commerce-native 3PLs (ShipBob, ShipMonk, Stord), none with a dominant share.",
+    "hhi": null,
+    "hhi_note": "No published shares on a comparable basis. Mordor rates market concentration 'low' / structurally fragmented, but that view excludes Amazon's captive FBA volume, which would raise concentration sharply if counted."
+  },
+  "econ": "Economies of density: fulfillment gets cheaper and faster the more orders flow through a given warehouse and delivery zone, so the largest network delivers at the lowest cost per package and smaller merchants outsource rather than build their own. It is a make-vs-buy decision at heart, a merchant renting a shared fulfillment network the way it rents cloud servers, trading a per-order fee for scale it could never reach alone.",
+  "rank_basis": "approximate e-commerce fulfillment scale (disclosed fulfillment revenue, GMV, order volume or network size); shares are not published on a comparable basis and the market is fragmented below Amazon",
+  "rank_short": "fulfillment scale",
+  "companies": [
+    {
+      "name": "Amazon (FBA & Multi-Channel Fulfillment)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://www.mordorintelligence.com/industry-reports/e-commerce-fulfillment-market",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The dominant operator by far. Its captive FBA network fulfills most of the ~1.65M active third-party sellers' orders and also ships non-Amazon orders via Multi-Channel Fulfillment. Fulfillment revenue is bundled inside Amazon's third-party seller services (~$184B in 2025, which also includes commissions and ads).",
+      "products": [
+        "Fulfillment by Amazon (FBA)",
+        "Multi-Channel Fulfillment (MCF)",
+        "Amazon Shipping",
+        "Supply Chain by Amazon"
+      ]
+    },
+    {
+      "name": "DHL Supply Chain",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 2,
+      "source_url": "https://www.mordorintelligence.com/industry-reports/e-commerce-fulfillment-market",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "World's largest contract-logistics operator (part of DHL Group); e-commerce fulfillment is one line of a broad warehousing business, so its revenue isn't separately disclosed.",
+      "products": [
+        "Contract logistics / e-fulfillment",
+        "DHL eCommerce parcel delivery"
+      ]
+    },
+    {
+      "name": "GXO Logistics",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://www.mordorintelligence.com/industry-reports/e-commerce-fulfillment-market",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Largest pure-play contract-logistics company (public); runs outsourced warehouses and returns for major retailers and brands, with e-commerce a big share of volume.",
+      "products": [
+        "Outsourced e-commerce fulfillment",
+        "Reverse logistics / returns",
+        "Warehouse automation"
+      ]
+    },
+    {
+      "name": "ShipBob",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 500000000.0,
+      "revenue_display": "~$500M 2023 revenue; ~$4-5B GMV",
+      "rank": 4,
+      "source_url": "https://research.contrary.com/company/shipbob",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Leading e-commerce-native 3PL for SMB and mid-market merchants: 60+ fulfillment centers, 7,000+ merchants, 200M+ orders shipped. Asset-light (mostly partner warehouses); charges a per-shipment fee. 2023 revenue per Sacra.",
+      "products": [
+        "Outsourced fulfillment (pick-pack-ship)",
+        "Merchant WMS software",
+        "ShipBob Plus (enterprise tier)",
+        "Global 2-day shipping"
+      ]
+    },
+    {
+      "name": "Flexport (Deliverr / Shopify Logistics)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://research.contrary.com/company/shipbob",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Took over Shopify's logistics arm, including Deliverr (which Shopify bought for $2.1B in 2022), in 2023; powers Shopify's merchant fulfillment. Announced a shift to an asset-light model by 2027.",
+      "products": [
+        "E-commerce fulfillment (ex-Deliverr)",
+        "Freight forwarding & customs",
+        "Shopify-integrated fulfillment"
+      ]
+    },
+    {
+      "name": "ShipMonk",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 6,
+      "source_url": "https://research.contrary.com/company/shipbob",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Venture-backed e-commerce 3PL (12 fulfillment centers across US, Canada, Mexico and EU; ~$365M raised); bundles fulfillment with order- and inventory-management software.",
+      "products": [
+        "Outsourced fulfillment",
+        "Order & inventory management software"
+      ]
+    },
+    {
+      "name": "Stord",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 7,
+      "source_url": "https://research.contrary.com/company/shipbob",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Cloud-supply-chain 3PL: 11 owned facilities plus a 1,000+ partner-warehouse network; ~$525M raised, crossed $200M ARR in 2022.",
+      "products": [
+        "Cloud supply chain / fulfillment",
+        "Warehouse & order management software",
+        "Parcel & freight"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products and services as of Nov 2026, checked against each operator's site and recent coverage; most 3PLs here are private, so revenue and shares are disclosed only where a company has published them."
+}
