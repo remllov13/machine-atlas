@@ -51,10 +51,10 @@
       "basis": "industry structure (influencer campaigns run on the social/video platforms where creators and audiences are)"
     },
     {
-      "from": "card-networks",
+      "from": "online-payments-sellers",
       "to": "influencer-marketing",
-      "what": "Card rails that bill brands and route commissions and payouts to creators",
-      "basis": "industry structure (campaign billing and affiliate payouts flow through card processors on the networks)"
+      "what": "Payment processing (cards, wallets, payouts)",
+      "basis": "Stripe, PayPal and peers process the card payments these platforms collect and pay out (re-pointed from Card networks, which reach them through processors)"
     },
     {
       "from": "lithography",
@@ -153,10 +153,10 @@
       "basis": "industry structure (membership and newsletter platforms run on cloud infrastructure)"
     },
     {
-      "from": "card-networks",
+      "from": "online-payments-sellers",
       "to": "creator-memberships",
-      "what": "Card rails that process fans' recurring subscription payments",
-      "basis": "industry structure (fan subscriptions are charged to cards via processors on the card networks)"
+      "what": "Payment processing (cards, wallets, payouts)",
+      "basis": "Stripe, PayPal and peers process the card payments these platforms collect and pay out (re-pointed from Card networks, which reach them through processors)"
     },
     {
       "from": "cloud",
@@ -177,10 +177,10 @@
       "basis": "industry structure (online marketplaces run on cloud infrastructure)"
     },
     {
-      "from": "card-networks",
+      "from": "online-payments-sellers",
       "to": "freelance-marketplaces",
-      "what": "Card rails and escrow to collect client payments and pay out freelancers",
-      "basis": "industry structure (marketplaces charge clients by card via processors and hold funds in escrow)"
+      "what": "Payment processing (cards, wallets, payouts)",
+      "basis": "Stripe, PayPal and peers process the card payments these platforms collect and pay out (re-pointed from Card networks, which reach them through processors)"
     },
     {
       "from": "cloud",
@@ -189,10 +189,10 @@
       "basis": "industry structure (hosted commerce platforms run on cloud infrastructure)"
     },
     {
-      "from": "card-networks",
-      "to": "e-commerce-platforms",
-      "what": "Card rails that process checkout payments for online stores (Shopify Payments, WooPayments)",
-      "basis": "industry structure (store checkouts charge cards via processors on the networks)"
+      "from": "video-platforms",
+      "to": "podcasting",
+      "what": "Video distribution for podcasts",
+      "basis": "YouTube passed 1 billion monthly podcast viewers in 2025 (TheWrap): https://www.thewrap.com/industry-news/business/best-in-podcasts-2025-video-streaming/"
     }
   ],
   "locked": [
