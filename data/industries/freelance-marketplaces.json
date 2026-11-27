@@ -1,0 +1,123 @@
+{
+  "id": "freelance-marketplaces",
+  "name": "Freelance marketplaces",
+  "chain": "Online work",
+  "stage": 1,
+  "naics": {
+    "code": "561311",
+    "title": "Employment Placement Agencies"
+  },
+  "one_line": "Matches businesses with independent freelancers for project work, and takes a cut of what the client pays.",
+  "sells": "A place for businesses to find, hire and pay independent freelancers for project work, in exchange for a fee on the money that changes hands",
+  "customers": "Businesses and individuals hiring freelance talent, and the freelancers who sell their skills by the project",
+  "suppliers": "Cloud hosting, payment processors (to move money between client and freelancer, with escrow), and the freelancers who supply the labor",
+  "revenue": {
+    "value_usd": 1600000000.0,
+    "display": "~$1.6B/yr",
+    "metric": "estimated revenue of the leading freelance / online-staffing marketplaces",
+    "period": "FY2025 for the public leaders; estimates for the private tail",
+    "basis": "industry (SEC filings for Upwork and Fiverr; estimates for the rest)",
+    "confidence": "low",
+    "source_url": "https://investors.upwork.com/node/12716/pdf",
+    "note": "Upwork ($787.8M) and Fiverr ($430.9M) FY2025 are hard numbers and make up most of the total; Toptal, Freelancer.com, Guru, Malt and PeoplePerHour add the rest (estimated). The money freelancers actually earn through these platforms is far larger than the fee business: Upwork's gross services volume alone is ~$4.0B/yr, so total freelancer earnings across the sector run to several billion dollars a year.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Two generalist platforms lead the open Western market — Upwork (~half the sector's revenue) and Fiverr (~a quarter) — above a vetted-premium tier (Toptal) and a long tail of regional and niche marketplaces.",
+    "hhi": null,
+    "hhi_note": "Shares given only to the two public leaders (Upwork ~49%, Fiverr ~27% of the ~$1.6B set), so a concentrated, Upwork-led market; squared-share HHI of those two alone is ~3,150 (a lower bound)."
+  },
+  "econ": "A two-sided marketplace that matches clients with freelancers and takes a cut of each project. Its value is trust and plumbing — vetting, ratings, escrow and payments — because strangers will not otherwise exchange work and money online. The built-in tension is disintermediation: once a client and freelancer have met, both are tempted to take the relationship off-platform to dodge the fee, so marketplaces defend their take rate with reputation systems, escrow and payment lock-in. Fiverr charges a high ~28% take on productized 'gigs'; Upwork runs an open hourly marketplace plus enterprise; Toptal vets hard and charges a premium.",
+  "companies": [
+    {
+      "name": "Upwork",
+      "share_pct": 49.2,
+      "share_basis": "share of estimated leading-marketplace revenue (~$1.6B set), FY2025 revenue basis",
+      "revenue_usd": 787800000.0,
+      "revenue_display": "$787.8M FY2025 revenue (+2%)",
+      "rank": null,
+      "source_url": "https://investors.upwork.com/node/12716/pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Largest open marketplace; $4.03B GSV, 785K active clients; Marketplace $682.9M + Enterprise $104.9M.",
+      "products": [
+        "Upwork Marketplace (hourly & fixed projects)",
+        "Upwork Enterprise",
+        "Business Plus",
+        "Uma (AI assistant)"
+      ]
+    },
+    {
+      "name": "Fiverr",
+      "share_pct": 26.9,
+      "share_basis": "share of estimated leading-marketplace revenue (~$1.6B set), FY2025 revenue basis",
+      "revenue_usd": 430900000.0,
+      "revenue_display": "$430.9M FY2025 revenue (+10.1%)",
+      "rank": null,
+      "source_url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2025-results",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Productized 'gig' marketplace; marketplace take rate 27.7%; 3.1M active buyers; Services revenue up ~51%.",
+      "products": [
+        "Fiverr Marketplace (fixed-price gigs)",
+        "Fiverr Pro",
+        "Fiverr Go (AI)",
+        "Promoted Gigs / seller services"
+      ]
+    },
+    {
+      "name": "Toptal",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$200M+ revenue (est.; private)",
+      "rank": null,
+      "source_url": "https://www.toptal.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Bootstrapped, vetted 'top 3%' network for developers, designers and finance talent; premium rates, no public revenue figure.",
+      "products": [
+        "Vetted freelance developers",
+        "Designers & product talent",
+        "Finance & interim experts"
+      ]
+    },
+    {
+      "name": "Freelancer.com",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.freelancer.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Public (ASX: FLN); contest-and-bid marketplace plus Escrow.com; smaller than the leaders.",
+      "products": [
+        "Projects & contests marketplace",
+        "Freelancer Enterprise",
+        "Escrow.com"
+      ]
+    },
+    {
+      "name": "Malt",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.malt.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Europe's largest freelance marketplace; direct freelancer–client matching with managed services, strong in France, Germany and Spain.",
+      "products": [
+        "Freelancer marketplace (Europe)",
+        "Malt Enterprise / managed services"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against each platform's site and FY2025 filings. Shares are given only to the two public leaders (Upwork, Fiverr), whose FY2025 revenue is filed; private platforms don't publish comparable revenue, so their shares are null and the map draws them beside an 'All others' block. Toptal's revenue is a third-party estimate."
+}

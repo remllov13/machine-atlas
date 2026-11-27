@@ -1,6 +1,6 @@
 {
   "schema": "city/v1",
-  "as_of_date": "2026-11-24",
+  "as_of_date": "2026-11-27",
   "chains": [
     "AI stack",
     "Money",
@@ -26,7 +26,8 @@
     "digital-advertising",
     "creator-memberships",
     "online-courses",
-    "influencer-marketing"
+    "influencer-marketing",
+    "freelance-marketplaces"
   ],
   "roads": [
     {
@@ -154,6 +155,18 @@
       "to": "online-courses",
       "what": "Ad reach to acquire learners and promote courses and communities",
       "basis": "course marketplaces and creators are heavy buyers of digital advertising to drive enrollments (industry structure)"
+    },
+    {
+      "from": "cloud",
+      "to": "freelance-marketplaces",
+      "what": "Compute, storage and delivery to run the marketplace at global scale",
+      "basis": "industry structure (online marketplaces run on cloud infrastructure)"
+    },
+    {
+      "from": "card-networks",
+      "to": "freelance-marketplaces",
+      "what": "Card rails and escrow to collect client payments and pay out freelancers",
+      "basis": "industry structure (marketplaces charge clients by card via processors and hold funds in escrow)"
     }
   ],
   "locked": [
@@ -316,17 +329,20 @@
       "naics": "711410",
       "rel": "supplier",
       "target": "influencer-marketing"
+    },
+    {
+      "id": "contractor-payroll",
+      "name": "Global payroll & contractor payments (EOR)",
+      "chain": "Online work",
+      "naics": "541214",
+      "rel": "supplier",
+      "target": "freelance-marketplaces"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Freelance marketplaces",
-        "chain": "Online work",
-        "hint": "Upwork, Fiverr: selling skills by the project"
-      },
       {
         "name": "E-commerce platforms",
         "chain": "Online work",
