@@ -21,7 +21,8 @@
     "ai-builder-communities",
     "electric-power",
     "chip-packaging",
-    "developer-tools"
+    "developer-tools",
+    "video-platforms"
   ],
   "roads": [
     {
@@ -101,6 +102,12 @@
       "to": "developer-tools",
       "what": "Frontier models behind AI coding assistants",
       "basis": "GitHub Copilot and Cursor build on OpenAI/Anthropic frontier models (2025–2026 coverage)"
+    },
+    {
+      "from": "cloud",
+      "to": "video-platforms",
+      "what": "Compute, storage and CDN bandwidth to stream video to billions",
+      "basis": "industry structure (video platforms run on cloud infrastructure and content delivery networks)"
     }
   ],
   "locked": [
@@ -199,17 +206,28 @@
       "naics": "513210",
       "rel": "customer",
       "target": "developer-tools"
+    },
+    {
+      "id": "content-delivery-networks",
+      "name": "Content delivery networks (CDN)",
+      "chain": "AI stack",
+      "naics": "518210",
+      "rel": "supplier",
+      "target": "video-platforms"
+    },
+    {
+      "id": "recorded-music",
+      "name": "Recorded music & licensing",
+      "chain": "Media",
+      "naics": "512250",
+      "rel": "supplier",
+      "target": "video-platforms"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Video and streaming platforms",
-        "chain": "Media",
-        "hint": "YouTube, TikTok, Twitch: where creators publish and get paid a share of ads"
-      },
       {
         "name": "Digital advertising",
         "chain": "Media",

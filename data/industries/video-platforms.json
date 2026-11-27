@@ -1,0 +1,140 @@
+{
+  "id": "video-platforms",
+  "name": "Video platforms",
+  "chain": "Media",
+  "stage": 2,
+  "naics": {
+    "code": "516210",
+    "title": "Media Streaming Distribution Services, Social Networks, and Other Media Networks"
+  },
+  "one_line": "Hosts video that creators upload, gives it to viewers for free, and sells their attention to advertisers. The engine of the creator economy.",
+  "sells": "Free video to viewers, ad inventory to advertisers, and distribution plus a revenue share to creators",
+  "customers": "Advertisers (the main payers), paying subscribers, and viewers whose attention is sold",
+  "suppliers": "Creators who upload the content, cloud and CDN bandwidth, electricity, and music and media rights",
+  "revenue": {
+    "value_usd": 150000000000.0,
+    "display": "~$150B+/yr (approx.)",
+    "metric": "combined annual revenue of the leading ad-supported video platforms (approximate)",
+    "period": "2025",
+    "basis": "aggregate (mixed; author's sum of the leaders)",
+    "confidence": "low",
+    "source_url": "https://www.mediapost.com/publications/article/412557/youtube-revenue-topped-60b-in-2025-ad-spend-rose.html",
+    "note": "No single source measures this market. This is a rough sum of the leaders' 2025 revenue - YouTube $60B+ (ads + subscriptions), TikTok ~$30B (ads), Kuaishou ~$20B (total) - plus Meta's Reels and Facebook video, which it does not break out, and smaller players. The metrics differ by platform, so treat this as an order-of-magnitude figure, not a measured total.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "A handful of platforms command most online video attention, each strongest in its own niche: YouTube in long-form, TikTok in short-form, Twitch and Kick in live. Meta's Reels and Facebook video are the largest challenger by audience. Dislodging a leader within its niche is rare.",
+    "hhi": null,
+    "hhi_note": "Shares are not computed: platforms report different, often stale metrics (TikTok's last global user figure is from 2021; Meta no longer reports per-app monthly users), and revenue scopes differ, so no comparable market-share base exists. Companies are ranked instead."
+  },
+  "econ": "A multi-sided platform with network effects. Each platform sits between three groups - creators, viewers and advertisers - and value rises with participation on every side: more viewers draw more creators, more content draws more viewers, and the larger audience draws more ad money, which funds better recommendations and bigger payouts. That flywheel is why online video tends toward a few giants rather than many equals, with each giant hard to unseat inside its niche.",
+  "companies": [
+    {
+      "name": "YouTube",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 60000000000.0,
+      "revenue_display": "$60B+ 2025 (ads + subscriptions)",
+      "rank": 1,
+      "source_url": "https://www.mediapost.com/publications/article/412557/youtube-revenue-topped-60b-in-2025-ad-spend-rose.html",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Part of Alphabet, which for the first time broke out YouTube's combined ad and subscription revenue for 2025. One app spanning long-form video, Shorts, live and a paid tier.",
+      "products": [
+        "YouTube",
+        "Shorts",
+        "YouTube Premium & Music",
+        "YouTube TV"
+      ]
+    },
+    {
+      "name": "TikTok (ByteDance)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$30B 2025 global ad revenue (est.)",
+      "rank": 2,
+      "source_url": "https://www.adnews.com.au/news/global-tiktok-advertising-revenue-forecast-to-top-30-billion",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The short-video leader. Parent ByteDance reached roughly $186B in total revenue in 2025 (Bloomberg via eMarketer), driven largely by TikTok. US operations now run under a USDS joint venture. Douyin is ByteDance's separate Chinese app.",
+      "products": [
+        "TikTok",
+        "Douyin",
+        "TikTok Shop",
+        "CapCut"
+      ]
+    },
+    {
+      "name": "Kuaishou",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 20000000000.0,
+      "revenue_display": "~$20B 2025 revenue (RMB 142.8B)",
+      "rank": 3,
+      "source_url": "https://kuaishou.gcs-web.com/news-releases/news-release-details/kuaishou-technology-announces-fourth-quarter-and-full-year-2025",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "China's number-two short-video app, after Douyin. Revenue includes advertising, live-commerce and e-commerce, so it is not directly comparable to the ad-only figures above.",
+      "products": [
+        "Kuaishou (short video)",
+        "Kuaishou live-commerce",
+        "Kling AI (video generation)"
+      ]
+    },
+    {
+      "name": "Twitch (Amazon)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://streamlabs.com/content-hub/post/streamlabs-and-hatchet-q2-2026-live-streaming-report",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The best-known live-streaming brand but second by hours: 21% of live-stream hours watched in Q2 2026, against YouTube Live's 60% (Streamlabs/Stream Hatchet). Owned by Amazon, which does not disclose Twitch revenue.",
+      "products": [
+        "Twitch (live streaming)",
+        "Subscriptions & Bits"
+      ]
+    },
+    {
+      "name": "Kick",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://streamlabs.com/content-hub/post/streamlabs-and-hatchet-q2-2026-live-streaming-report",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Fast-growing live-streaming challenger: 6.3% of live-stream hours in Q2 2026, up about 37% year over year (Stream Hatchet). Pays creators a larger revenue share to pull them from Twitch.",
+      "products": [
+        "Kick (live streaming)"
+      ]
+    },
+    {
+      "name": "Meta (Instagram Reels, Facebook video)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": null,
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The largest short-video competitor by audience: Instagram Reels and Facebook video go head-to-head with TikTok and YouTube Shorts. Meta does not break out video revenue, so it cannot be ranked on a comparable basis.",
+      "products": [
+        "Instagram Reels",
+        "Facebook video",
+        "Meta ads"
+      ]
+    }
+  ],
+  "rank_basis": "approximate platform scale - a mix of 2025 revenue (YouTube, Kuaishou disclosed; TikTok estimated) and live-stream hours (Twitch, Kick); scopes differ by platform, so the order is indicative, not a measured market share",
+  "rank_short": "platform scale",
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against each platform's site and 2025-2026 coverage. Scope is ad-supported, creator-driven video; subscription-only services such as Netflix are a separate industry. Audience and revenue metrics mix company disclosures and third-party estimates, so companies are ranked, not given shares."
+}
