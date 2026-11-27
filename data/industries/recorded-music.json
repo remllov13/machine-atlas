@@ -1,0 +1,88 @@
+{
+  "id": "recorded-music",
+  "name": "Recorded music & licensing",
+  "chain": "Media",
+  "stage": 1,
+  "naics": {
+    "code": "512250",
+    "title": "Record Production and Distribution"
+  },
+  "one_line": "Owns and licenses recorded songs. Three major labels control the biggest catalogs that streaming royalties flow back to.",
+  "sells": "Recorded songs and the rights to use them: streams, physical records, and licenses for sync (film/TV/ads), performance and artist services",
+  "customers": "Music and video streaming services (Spotify, Apple Music, YouTube), social and short-video platforms, radio, film/TV/advertising, and fans",
+  "suppliers": "Recording artists and songwriters, studios, music publishers, and distribution/aggregation services",
+  "revenue": {
+    "value_usd": 36200000000.0,
+    "display": "~$36B/yr",
+    "metric": "global recorded-music revenue (incl. expanded rights)",
+    "period": "2024",
+    "basis": "industry (global)",
+    "confidence": "high",
+    "source_url": "https://www.midiaresearch.com/blog/global-recorded-music-revenues-reach-362-billion-in-2024-amid-slower-growth",
+    "note": "MIDiA Research: $36.2B in 2024 (+6.5% YoY), or $32.1B excluding expanded rights; streaming was $22.2B (61.3% of the total). The narrower IFPI wholesale measure put 2025 revenue at $31.7B (+6.4%), with paid streaming 52.4% and 837M paid subscribers. Shares below are % of the MIDiA $36.2B total.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Three major labels - Universal, Sony and Warner - take roughly two-thirds of global recorded-music revenue (~65%); the rest is a fragmented tail of independent labels (~29.7%) and self-releasing artists (~5.5%). Control of the biggest back catalogs is the durable moat.",
+    "hhi_note": "HHI from the three majors' shares only (UMG, Sony, WMG). The ~35% independent and artists-direct remainder is fragmented across many firms with no comparable published single-firm shares, so it adds little to HHI.",
+    "hhi": 1511
+  },
+  "econ": "Recorded music is a near-zero-marginal-cost good: once a track is made, each extra stream costs almost nothing, so value comes from owning the copyright and a deep back catalog. Three major labels hold about two-thirds of revenue, and their catalogs are the durable asset that streaming royalties flow back to.",
+  "companies": [
+    {
+      "name": "Universal Music Group (UMG)",
+      "share_pct": 29,
+      "share_basis": "share of global recorded-music revenue, 2024 (computed from MIDiA's stated UMG revenue of $10.5B over the $36.2B total)",
+      "revenue_usd": 10500000000.0,
+      "revenue_display": "~$10.5B (2024, MIDiA)",
+      "rank": null,
+      "source_url": "https://www.midiaresearch.com/blog/global-recorded-music-revenues-reach-362-billion-in-2024-amid-slower-growth",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Republic Records",
+        "Interscope Capitol",
+        "Def Jam"
+      ],
+      "note": "MIDiA reports UMG lost about 100 basis points of share in 2024."
+    },
+    {
+      "name": "Sony Music Group",
+      "share_pct": 21.7,
+      "share_basis": "share of global recorded-music revenue, 2024 (MIDiA Research)",
+      "revenue_usd": 7850000000.0,
+      "revenue_display": "~$7.9B (2024, MIDiA)",
+      "rank": null,
+      "source_url": "https://www.midiaresearch.com/blog/global-recorded-music-revenues-reach-362-billion-in-2024-amid-slower-growth",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Columbia Records",
+        "RCA Records",
+        "The Orchard"
+      ],
+      "note": "MIDiA: Sony's recorded-music revenue rose 10.2% in 2024, share up ~700 basis points."
+    },
+    {
+      "name": "Warner Music Group (WMG)",
+      "share_pct": 14.1,
+      "share_basis": "share of global recorded-music revenue, 2024 (derived as the residual of MIDiA's total after UMG 29.0%, Sony 21.7%, independent labels 29.7% and artists-direct 5.5%)",
+      "revenue_usd": 5100000000.0,
+      "revenue_display": "~$5.1B (2024, derived)",
+      "rank": null,
+      "source_url": "https://www.midiaresearch.com/blog/global-recorded-music-revenues-reach-362-billion-in-2024-amid-slower-growth",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Atlantic Records",
+        "Warner Records",
+        "ADA"
+      ],
+      "note": "Share derived as a residual; MIDiA did not state WMG's percentage in the cited post."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship label families as of Nov 2026, from the majors' own sites (these are long-standing divisions, not volatile). Shares are MIDiA Research estimates of each firm's share of global recorded-music revenue for 2024; Sony's is stated, UMG's is computed from MIDiA's stated revenue, and Warner's is the residual. The map's 'All others' block (~35%) is the independent-label (~29.7%) and artists-direct (~5.5%) long tail, which has no single comparable firm share."
+}

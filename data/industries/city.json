@@ -29,9 +29,16 @@
     "influencer-marketing",
     "freelance-marketplaces",
     "e-commerce-platforms",
-    "online-payments-sellers"
+    "online-payments-sellers",
+    "recorded-music"
   ],
   "roads": [
+    {
+      "from": "recorded-music",
+      "to": "video-platforms",
+      "what": "Recorded music and the rights to use it in videos and shorts; platforms pay labels and collecting societies for plays",
+      "basis": "YouTube, TikTok and other platforms license music from the major labels under public multi-year deals (2024-2026 coverage)"
+    },
     {
       "from": "card-networks",
       "to": "online-payments-sellers",
@@ -301,14 +308,6 @@
       "target": "video-platforms"
     },
     {
-      "id": "recorded-music",
-      "name": "Recorded music & licensing",
-      "chain": "Media",
-      "naics": "512250",
-      "rel": "supplier",
-      "target": "video-platforms"
-    },
-    {
       "id": "ad-tech",
       "name": "Ad tech (DSPs, SSPs, exchanges)",
       "chain": "Media",
@@ -387,6 +386,22 @@
       "naics": "513210",
       "rel": "supplier",
       "target": "online-payments-sellers"
+    },
+    {
+      "id": "music-streaming",
+      "name": "Music streaming",
+      "chain": "Media",
+      "naics": "516210",
+      "rel": "customer",
+      "target": "recorded-music"
+    },
+    {
+      "id": "music-publishing",
+      "name": "Music publishing & royalties",
+      "chain": "Media",
+      "naics": "512230",
+      "rel": "supplier",
+      "target": "recorded-music"
     }
   ],
   "focus": {
