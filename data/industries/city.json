@@ -27,7 +27,8 @@
     "creator-memberships",
     "online-courses",
     "influencer-marketing",
-    "freelance-marketplaces"
+    "freelance-marketplaces",
+    "e-commerce-platforms"
   ],
   "roads": [
     {
@@ -167,6 +168,18 @@
       "to": "freelance-marketplaces",
       "what": "Card rails and escrow to collect client payments and pay out freelancers",
       "basis": "industry structure (marketplaces charge clients by card via processors and hold funds in escrow)"
+    },
+    {
+      "from": "cloud",
+      "to": "e-commerce-platforms",
+      "what": "Hosting and compute to run storefronts and checkout for millions of sellers",
+      "basis": "industry structure (hosted commerce platforms run on cloud infrastructure)"
+    },
+    {
+      "from": "card-networks",
+      "to": "e-commerce-platforms",
+      "what": "Card rails that process checkout payments for online stores (Shopify Payments, WooPayments)",
+      "basis": "industry structure (store checkouts charge cards via processors on the networks)"
     }
   ],
   "locked": [
@@ -337,17 +350,28 @@
       "naics": "541214",
       "rel": "supplier",
       "target": "freelance-marketplaces"
+    },
+    {
+      "id": "ecommerce-fulfillment",
+      "name": "E-commerce logistics & fulfillment",
+      "chain": "Online work",
+      "naics": "493110",
+      "rel": "supplier",
+      "target": "e-commerce-platforms"
+    },
+    {
+      "id": "ecommerce-apps",
+      "name": "E-commerce apps & themes",
+      "chain": "Online work",
+      "naics": "513210",
+      "rel": "supplier",
+      "target": "e-commerce-platforms"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "E-commerce platforms",
-        "chain": "Online work",
-        "hint": "Shopify, Amazon marketplace: online stores and sellers"
-      },
       {
         "name": "Online payments for sellers",
         "chain": "Online work",

@@ -1,0 +1,166 @@
+{
+  "id": "e-commerce-platforms",
+  "name": "E-commerce platforms",
+  "chain": "Online work",
+  "stage": 2,
+  "naics": {
+    "code": "513210",
+    "title": "Software Publishers"
+  },
+  "one_line": "The software that lets anyone run an online store, from a one-person shop to a global brand, without building the checkout themselves.",
+  "sells": "Hosted or self-hosted store software: product pages, cart, checkout and payments, plus an app ecosystem, sold by subscription and by taking a cut of sales",
+  "customers": "Businesses and individuals who sell online, from solo sellers to large brands",
+  "suppliers": "Cloud hosting and compute, card networks and payment processors, logistics and fulfillment, and the app and theme developers who extend the platforms",
+  "revenue": {
+    "value_usd": 11560000000.0,
+    "display": "~$12B (Shopify)",
+    "metric": "e-commerce platform revenue, anchored on Shopify's FY2025 total revenue (the dominant monetized platform)",
+    "period": "FY2025 (year ended Dec 31, 2025)",
+    "basis": "company (Shopify FY2025 results)",
+    "confidence": "medium",
+    "source_url": "https://www.digitalcommerce360.com/2026/02/17/shopify-revenue-gmv-q4-2025/",
+    "note": "No clean whole-industry revenue figure exists because the players monetize differently: Shopify earns $11.56B (+30%) on $378B of GMV from subscriptions plus a cut of payments, while WooCommerce leads by store count but is free open-source software (it earns through hosting, payments and plugins, not licenses). Wix, Squarespace, Adobe Commerce and BigCommerce add a few billion more. Shopify's revenue is used as the anchor; the full market is somewhat larger.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Duopoly (two models)",
+    "why": "Two platforms take roughly 69% of named-platform usage, but they are opposite models: WooCommerce (open-source, self-hosted, free) wins the long tail of small stores by raw count, while Shopify (managed SaaS) leads the larger, higher-traffic stores and dominates revenue and GMV. Wix, Squarespace and a tail of regional and enterprise platforms fill the rest.",
+    "hhi": 2522,
+    "hhi_note": "Sum of squared named-platform shares for the listed players (HTTP Archive, Oct 2026); a lower bound since the listed platforms cover ~93% of the named-platform market."
+  },
+  "econ": "A platform business with network effects and high switching costs: a store accumulates products, themes, apps and customer data that are painful to move, so merchants stay. The market splits on business model: free, self-hosted open-source software (WooCommerce) wins the long tail of small stores by count, while managed SaaS (Shopify) wins the larger stores and earns far more by taking a cut of payments as sales grow. It is a 'picks and shovels' trade: the platform profits from merchants' sales without having to pick which store wins.",
+  "companies": [
+    {
+      "name": "WooCommerce",
+      "share_pct": 37.1,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Open-source WordPress plugin from Automattic; leads by store count but trails in the top-1M tier (2.90% vs Shopify's 6.70%). Monetizes via hosting, WooPayments and paid extensions, not licenses.",
+      "products": [
+        "WooCommerce core (WordPress plugin)",
+        "WooPayments",
+        "Paid extensions & themes"
+      ]
+    },
+    {
+      "name": "Shopify",
+      "share_pct": 31.9,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": 11560000000.0,
+      "revenue_display": "$11.56B FY2025 revenue (+30%)",
+      "rank": null,
+      "source_url": "https://www.digitalcommerce360.com/2026/02/17/shopify-revenue-gmv-q4-2025/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Managed SaaS leader; leads the top-1M tier at 6.70%. $378B GMV in FY2025. Earns from subscriptions plus merchant solutions (Shopify Payments).",
+      "products": [
+        "Shopify (hosted online stores)",
+        "Shopify Payments",
+        "Shopify Plus",
+        "Shop app"
+      ]
+    },
+    {
+      "name": "Wix eCommerce",
+      "share_pct": 8.0,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Website builder with built-in commerce; platform-level detection, so the figure is an upper bound for active stores.",
+      "products": [
+        "Wix Stores",
+        "Wix Payments"
+      ]
+    },
+    {
+      "name": "Squarespace Commerce",
+      "share_pct": 6.1,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Design-led website builder with commerce; platform-level detection, an upper bound.",
+      "products": [
+        "Squarespace Commerce",
+        "Squarespace Payments"
+      ]
+    },
+    {
+      "name": "PrestaShop",
+      "share_pct": 3.3,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Open-source, self-hosted store software, strong in Europe.",
+      "products": [
+        "PrestaShop (open-source store software)"
+      ]
+    },
+    {
+      "name": "1C-Bitrix",
+      "share_pct": 3.3,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Site-management and commerce platform concentrated in Russia and the CIS region.",
+      "products": [
+        "1C-Bitrix Site Manager (commerce)"
+      ]
+    },
+    {
+      "name": "Adobe Commerce (Magento)",
+      "share_pct": 2.1,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Enterprise platform owned by Adobe; sold as Adobe Commerce (cloud) atop the open-source Magento engine.",
+      "products": [
+        "Adobe Commerce",
+        "Magento Open Source"
+      ]
+    },
+    {
+      "name": "BigCommerce",
+      "share_pct": 0.8,
+      "share_basis": "share of named e-commerce platforms detected on the measurable web, Oct 2026 (HTTP Archive via GravityKit)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.gravitykit.com/ecommerce-platform-market-share-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "US SaaS platform aimed at mid-market and enterprise sellers; public (Nasdaq: BIGC).",
+      "products": [
+        "BigCommerce (hosted stores)",
+        "Open-SaaS / headless commerce"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against each platform's site and 2025-2026 coverage. Shares are one comparable metric (share of named e-commerce platforms detected on the measurable web, HTTP Archive Oct 2026 via GravityKit); they measure store presence, not revenue or GMV, which is why open-source WooCommerce leads on count while Shopify leads on money. Listed platforms cover ~93% of named-platform usage; the map draws the remainder as an 'All others' block."
+}
