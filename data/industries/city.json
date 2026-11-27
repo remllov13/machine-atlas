@@ -32,7 +32,8 @@
     "online-payments-sellers",
     "recorded-music",
     "ecommerce-fulfillment",
-    "music-streaming"
+    "music-streaming",
+    "parcel-carriers"
   ],
   "roads": [
     {
@@ -220,6 +221,12 @@
       "to": "e-commerce-platforms",
       "what": "Outsourced warehousing and shipping that platforms integrate and resell to merchants (e.g. Shopify's Flexport-powered fulfillment)",
       "basis": "industry structure (Shopify sold its logistics arm to Flexport in 2023 and routes merchant fulfillment through it)"
+    },
+    {
+      "from": "parcel-carriers",
+      "to": "ecommerce-fulfillment",
+      "what": "Last-mile pickup and delivery of the packages that fulfillment centers pick, pack and hand off",
+      "basis": "industry structure (3PLs and fulfillment centers tender parcels to USPS, Amazon, UPS and FedEx for delivery)"
     }
   ],
   "locked": [
@@ -408,14 +415,6 @@
       "target": "recorded-music"
     },
     {
-      "id": "parcel-carriers",
-      "name": "Parcel delivery & couriers",
-      "chain": "Online work",
-      "naics": "492110",
-      "rel": "supplier",
-      "target": "ecommerce-fulfillment"
-    },
-    {
       "id": "warehouse-automation",
       "name": "Warehouse robotics & automation",
       "chain": "Online work",
@@ -430,6 +429,14 @@
       "naics": "512290",
       "rel": "supplier",
       "target": "music-streaming"
+    },
+    {
+      "id": "shipping-software",
+      "name": "Multi-carrier shipping software",
+      "chain": "Online work",
+      "naics": "513210",
+      "rel": "customer",
+      "target": "parcel-carriers"
     }
   ],
   "focus": {

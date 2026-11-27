@@ -1,0 +1,108 @@
+{
+  "id": "parcel-carriers",
+  "name": "Parcel delivery & couriers",
+  "chain": "Online work",
+  "stage": 1,
+  "naics": {
+    "code": "492110",
+    "title": "Couriers and Express Delivery Services"
+  },
+  "one_line": "Picks up packages and carries them to the door: the last mile of nearly everything bought online.",
+  "sells": "Pickup, transport and last-mile delivery of parcels, priced per package by weight, speed and distance",
+  "customers": "Online merchants, 3PLs and marketplaces shipping goods, plus businesses and consumers",
+  "suppliers": "Trucks and aircraft, fuel, sortation and warehouse automation, and delivery labor and contractors",
+  "revenue": {
+    "value_usd": 216000000000.0,
+    "display": "~$216B (2025, U.S., est.)",
+    "metric": "U.S. parcel delivery revenue (total carrier spend)",
+    "period": "2025",
+    "basis": "derived from Pitney Bowes (23.1B parcels x $9.34 revenue per parcel)",
+    "confidence": "medium",
+    "source_url": "https://www.pitneybowes.com/content/dam/pitneybowes/us/en/shipping-index/dmr-5127-parcel-shipping-index-report-2026-ebook.pdf",
+    "note": "Pitney Bowes states 23.1B U.S. parcels in 2025 at $9.34 average revenue per parcel; the ~$216B is that product (both inputs are Pitney Bowes figures, the multiplication is ours). Carrier spend rose 6.2% in 2025. U.S. only: global parcel volume is far larger, led by China. UPS ($88.7B) and FedEx ($87.9B) are much bigger as companies because their totals include international and freight.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Four-carrier oligopoly with a fast-growing fringe",
+    "why": "Four national networks carry ~92% of U.S. parcels. Amazon now leads by volume (its own packages), but UPS and FedEx still take ~62% of parcel revenue by carrying higher-value business and express shipments, while USPS anchors low-cost last-mile. A fringe of regional and last-mile carriers (OnTrac, Veho, UniUni) is the fastest-growing slice, lifted by Shein and Temu.",
+    "hhi": 2244,
+    "hhi_note": "Squared shares of the four listed carriers by 2025 U.S. parcel volume (Pitney Bowes) — moderately concentrated. By revenue the ranking reorders sharply: UPS 31.6%, FedEx 30.8%, Amazon 15.5%, USPS 14.9%, because Amazon's volume is low-value self-delivery while UPS and FedEx carry pricier B2B and express freight."
+  },
+  "econ": "Economies of density: the more parcels a carrier drops per route and per stop, the lower its cost per package, so dense national networks dominate and newcomers struggle to match their cost. The exception is vertical integration: a shipper with enough volume of its own, like Amazon, can build a captive delivery network and stop paying UPS and FedEx, which is why the market now splits into a volume leader (Amazon's own cheap packages) and the revenue leaders (UPS and FedEx carrying higher-value business and express shipments).",
+  "companies": [
+    {
+      "name": "Amazon Logistics",
+      "share_pct": 29.9,
+      "share_basis": "share of U.S. parcel volume in 2025, computed from Pitney Bowes stated volumes (6.9B of 23.1B)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.pitneybowes.com/content/dam/pitneybowes/us/en/shipping-index/dmr-5127-parcel-shipping-index-report-2026-ebook.pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Amazon's in-house delivery arm; overtook USPS as the #1 U.S. parcel carrier by volume in 2025. It moves mostly Amazon's own low-value packages, so its ~15.5% revenue share trails its ~30% volume share; standalone revenue isn't disclosed.",
+      "products": [
+        "Amazon Logistics last-mile delivery",
+        "Delivery Service Partner (DSP) network",
+        "Amazon Shipping (third-party)"
+      ]
+    },
+    {
+      "name": "USPS",
+      "share_pct": 26.8,
+      "share_basis": "share of U.S. parcel volume in 2025, computed from Pitney Bowes stated volumes (6.2B of 23.1B)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.pitneybowes.com/content/dam/pitneybowes/us/en/shipping-index/dmr-5127-parcel-shipping-index-report-2026-ebook.pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Government postal service; anchors low-cost last-mile and handles the final mile for other carriers. Parcel volume fell ~8.8% in 2025 as Amazon insourced; ~14.9% of U.S. parcel revenue. Total USPS revenue (~$80B) mostly comes from mail, not parcels.",
+      "products": [
+        "USPS Ground Advantage",
+        "Priority Mail",
+        "First-Class Package Service",
+        "Parcel Select (last-mile for other carriers)"
+      ]
+    },
+    {
+      "name": "UPS",
+      "share_pct": 18.6,
+      "share_basis": "share of U.S. parcel volume in 2025, computed from Pitney Bowes stated volumes (4.3B of 23.1B)",
+      "revenue_usd": 88700000000.0,
+      "revenue_display": "$88.7B FY2025 total revenue (global, all segments)",
+      "rank": null,
+      "source_url": "https://investors.ups.com/_assets/_1a37c6d5c45d5c21b81313da46733de4/ups/news/2026-01-27_UPS_Releases_4Q_2025_Earnings_and_Provides_2026_2154.pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Leads U.S. parcel revenue (~31.6% of spend) despite ranking third by volume: focused on higher-value B2B and deliberately shedding low-margin Amazon volume. Total company revenue fell to $88.7B in 2025 (from $91.1B) and spans U.S. and international package plus supply chain.",
+      "products": [
+        "UPS Ground",
+        "UPS Next Day Air",
+        "UPS Worldwide Express",
+        "UPS SurePost"
+      ]
+    },
+    {
+      "name": "FedEx",
+      "share_pct": 16.9,
+      "share_basis": "share of U.S. parcel volume in 2025, computed from Pitney Bowes stated volumes (3.9B of 23.1B)",
+      "revenue_usd": 87900000000.0,
+      "revenue_display": "$87.9B FY2025 total revenue (global, FY ended May 2025)",
+      "rank": null,
+      "source_url": "https://sec.gov/Archives/edgar/data/1048911/000104891125000005/fdx-earningsreleasefy2025q4.htm",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Second by U.S. parcel revenue (~30.8%); merged Ground, Express and Services into one Federal Express segment ($75.3B of $87.9B total). Fiscal year ends May 31, so FY2025 revenue was roughly flat (+0.3%).",
+      "products": [
+        "FedEx Ground",
+        "FedEx Express",
+        "FedEx Home Delivery",
+        "FedEx Freight"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship services as of Nov 2026; carrier volumes and shares from the Pitney Bowes Parcel Shipping Index 2026 report (2025 data), company revenue from UPS and FedEx earnings releases."
+}
