@@ -34,7 +34,8 @@
     "ecommerce-fulfillment",
     "music-streaming",
     "parcel-carriers",
-    "email-infrastructure"
+    "email-infrastructure",
+    "contractor-payroll"
   ],
   "roads": [
     {
@@ -240,6 +241,18 @@
       "to": "ecommerce-fulfillment",
       "what": "Last-mile pickup and delivery of the packages that fulfillment centers pick, pack and hand off",
       "basis": "industry structure (3PLs and fulfillment centers tender parcels to USPS, Amazon, UPS and FedEx for delivery)"
+    },
+    {
+      "from": "retail-banking",
+      "to": "contractor-payroll",
+      "what": "Local bank accounts and transfer rails (ACH, SEPA and the like) that EOR providers use to pay salaries in each country (the road into Money)",
+      "basis": "industry structure (cross-border payroll settles as local bank transfers; Deel reports processing ~$22B of payroll a year)"
+    },
+    {
+      "from": "contractor-payroll",
+      "to": "freelance-marketplaces",
+      "what": "Compliant hiring, contracts and payouts that marketplaces embed so clients can engage or employ freelancers across borders",
+      "basis": "industry structure (freelance platforms partner with or build EOR/payroll to handle compliance and payment)"
     }
   ],
   "locked": [
@@ -388,14 +401,6 @@
       "target": "influencer-marketing"
     },
     {
-      "id": "contractor-payroll",
-      "name": "Global payroll & contractor payments (EOR)",
-      "chain": "Online work",
-      "naics": "541214",
-      "rel": "supplier",
-      "target": "freelance-marketplaces"
-    },
-    {
       "id": "ecommerce-apps",
       "name": "E-commerce apps & themes",
       "chain": "Online work",
@@ -458,6 +463,22 @@
       "naics": "517810",
       "rel": "supplier",
       "target": "email-infrastructure"
+    },
+    {
+      "id": "cross-border-payments",
+      "name": "Cross-border payments & FX",
+      "chain": "Money",
+      "naics": "522320",
+      "rel": "supplier",
+      "target": "contractor-payroll"
+    },
+    {
+      "id": "identity-verification",
+      "name": "Identity & background verification",
+      "chain": "Online work",
+      "naics": "561611",
+      "rel": "supplier",
+      "target": "contractor-payroll"
     }
   ],
   "focus": {

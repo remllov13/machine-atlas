@@ -1,0 +1,144 @@
+{
+  "id": "contractor-payroll",
+  "name": "Employer of record & global payroll",
+  "chain": "Online work",
+  "stage": 2,
+  "naics": {
+    "code": "561330",
+    "title": "Professional Employer Organizations"
+  },
+  "one_line": "Becomes the legal employer of a company's overseas staff so it can hire and pay workers anywhere without setting up a foreign entity.",
+  "sells": "Acting as the legal employer or payroll agent for a company's workers in countries where it has no entity, for a per-worker monthly fee",
+  "customers": "Companies hiring remote employees and contractors across borders, from startups to enterprises",
+  "suppliers": "Local banks and cross-border payment rails to pay workers, plus the card networks behind contractor payouts and expense cards",
+  "revenue": {
+    "value_usd": 4000000000.0,
+    "display": "a few $B (Deel alone >$1B ARR)",
+    "metric": "estimated combined revenue of the leading global EOR and cross-border payroll platforms",
+    "period": "2025",
+    "basis": "illustrative; Deel's $1B+ ARR is the one hard data point, the other leaders are private and don't disclose",
+    "confidence": "illustrative",
+    "source_url": "https://www.businesswire.com/news/home/20251016949787/en/Deel-Secures-%24300-Million-in-Series-E-Funding",
+    "note": "No clean public total exists. Deel disclosed $1B+ ARR and says it processes $22B of payroll a year; Remote, Papaya and Globalization Partners are private and don't publish revenue, and Rippling's global-payroll/EOR line is one part of a broader platform. This figure is an order-of-magnitude for the specialist global EOR/payroll segment and excludes incumbent domestic payroll providers like ADP and Gusto.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Emerging leader",
+    "why": "Deel has pulled ahead on revenue and scale ($1B+ ARR, $17.3B valuation in 2025) while a cluster of well-funded rivals (Rippling, Remote, Papaya, Globalization Partners) and incumbent payroll firms moving in keep it from being a monopoly. No comparable market shares are published.",
+    "hhi": null,
+    "hhi_note": "These firms are mostly private and disclose neither comparable revenue nor market share, so no HHI is computed. They are ordered by last disclosed private valuation, which only Deel and Rippling have refreshed in 2025."
+  },
+  "econ": "An employer of record becomes the legal employer of a company's overseas staff, so a business can hire someone in another country without opening a subsidiary there. The economics are classic make-versus-buy and transaction costs: the provider turns the large fixed cost of setting up a foreign entity and mastering local labor law into a small per-worker fee, and spreads that specialized compliance work across thousands of clients, so scale and country coverage are the moat.",
+  "companies": [
+    {
+      "name": "Deel",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "$1B+ ARR; $17.3B valuation (Oct 2025)",
+      "rank": 1,
+      "source_url": "https://www.businesswire.com/news/home/20251016949787/en/Deel-Secures-%24300-Million-in-Series-E-Funding",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Pure-play leader. Surpassed $1B ARR in 2025, serves 37,000+ businesses and 1.5M workers across 150+ countries, and processes ~$22B of payroll a year; profitable three years running.",
+      "products": [
+        "EOR (Employer of Record)",
+        "Global payroll",
+        "Contractor management",
+        "Deel IT & HR"
+      ]
+    },
+    {
+      "name": "Rippling",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "$16.8B valuation (May 2025)",
+      "rank": 2,
+      "source_url": "https://techcrunch.com/2025/05/09/rippling-raises-450m-at-a-16-8b-valuation-reveals-yc-is-a-customer/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "A broad workforce platform (HR, IT, payroll, spend) with global payroll and EOR as one part; the $16.8B valuation reflects the whole company, not just its EOR line.",
+      "products": [
+        "US payroll & HR",
+        "Global payroll & EOR",
+        "IT management",
+        "Spend management"
+      ]
+    },
+    {
+      "name": "Remote",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "$3B+ valuation (2022 round)",
+      "rank": null,
+      "source_url": "https://techcrunch.com/2022/04/05/remote-payroll-hr-workforce-3-billion/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Pure-play global EOR and payroll, a close rival to Deel; last disclosed valuation was $3B+ in its 2022 round, so it isn't ranked against the 2025 marks.",
+      "products": [
+        "EOR",
+        "Global payroll",
+        "Contractor management",
+        "Remote Talent"
+      ]
+    },
+    {
+      "name": "Papaya Global",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$3.7B valuation (2021 round)",
+      "rank": null,
+      "source_url": "https://research.contrary.com/company/papaya-global",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Payments-first global payroll platform that also offers EOR; last major valuation was ~$3.7B in 2021.",
+      "products": [
+        "Global payroll platform",
+        "Workforce payments",
+        "EOR"
+      ]
+    },
+    {
+      "name": "Globalization Partners (G-P)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.globalization-partners.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "One of the original EOR providers (founded 2012), with broad country coverage; private and does not publish current revenue.",
+      "products": [
+        "G-P Meridian (EOR)",
+        "Global payroll",
+        "G-P Gia (AI advisor)"
+      ]
+    },
+    {
+      "name": "Velocity Global",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://velocityglobal.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "US-based global workforce provider; private, revenue not disclosed.",
+      "products": [
+        "EOR",
+        "Contractor management",
+        "Global payroll"
+      ]
+    }
+  ],
+  "rank_basis": "last disclosed private valuation (only Deel and Rippling have 2025 marks; others' last rounds were 2021-2022, so they are left unranked)",
+  "rank_short": "last valuation",
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against each company's site and 2025 funding and press coverage. Valuations are from the companies' funding announcements (Business Wire, TechCrunch) or named research write-ups; these firms are private and do not publish comparable revenue, so they are ranked by last valuation, not market share."
+}
