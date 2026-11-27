@@ -156,12 +156,14 @@ const CHAIN_COLORS={
   'AI stack': {top:'#2B4A74',l:'#1E3657',r:'#13223A',zone:'#111D2E',lbl:'#5B8BD4',icon:'chip'},
   'Money':    {top:'#2E6E54',l:'#1F5540',r:'#143827',zone:'#11261E',lbl:'#4FB386',icon:'vault'},
   'Media':    {top:'#8C2E58',l:'#6B2242',r:'#47152B',zone:'#26111B',lbl:'#D45B8F',icon:'play'},
-  'Community':{top:'#6A4E8C',l:'#4E3869',r:'#2F2448',zone:'#1D1729',lbl:'#A285CF',icon:'podium'}
+  'Community':{top:'#6A4E8C',l:'#4E3869',r:'#2F2448',zone:'#1D1729',lbl:'#A285CF',icon:'podium'},
+  'Online work':{top:'#8A6A2E',l:'#6B5022',r:'#473515',zone:'#231C10',lbl:'#D4A65B',icon:'laptop'}
 };
+const SPARE=[{top:'#2E6E6E',l:'#1F5555',r:'#143838',zone:'#112424',lbl:'#4FB3B3',icon:'chip'},{top:'#7A3E2E',l:'#5E2F22',r:'#3E1F16',zone:'#221310',lbl:'#D4795B',icon:'chip'},{top:'#4E6A2E',l:'#3B5022',r:'#263515',zone:'#181F10',lbl:'#9BC75B',icon:'chip'}];
 const PLAIN={top:'#3A414C',l:'#2A3038',r:'#1C2128'};
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const norm=s=>(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-const chainColor=c=>CHAIN_COLORS[c]||CHAIN_COLORS['AI stack'];
+const chainColor=c=>{if(CHAIN_COLORS[c])return CHAIN_COLORS[c];let x=0;for(const ch of String(c))x=(x*31+ch.charCodeAt(0))>>>0;return SPARE[x%SPARE.length];};
 const fmtHHI=h=>h==null?'—':h.toLocaleString('en-US');
 
 async function getJSON(p){const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw new Error(p+' '+r.status);return r.json();}
@@ -202,6 +204,7 @@ function roofIcon(kind,x,y){
   if(kind==='chip')return `<g><rect x="${x-6}" y="${y-6}" width="12" height="12" rx="1.5" ${s}/><rect x="${x-2.5}" y="${y-2.5}" width="5" height="5" fill="#0A0C10" fill-opacity="0.55"/></g>`;
   if(kind==='vault')return `<g><circle cx="${x}" cy="${y}" r="6.5" ${s}/><circle cx="${x}" cy="${y}" r="2" fill="#0A0C10" fill-opacity="0.55"/></g>`;
   if(kind==='podium')return `<g><rect x="${x-2}" y="${y-7}" width="4" height="7" ${s}/><line x1="${x-9}" y1="${y+2}" x2="${x+9}" y2="${y+2}" ${s}/></g>`;
+  if(kind==='laptop')return `<g><rect x="${x-7}" y="${y-6}" width="14" height="9" rx="1" ${s}/><line x1="${x-9}" y1="${y+5}" x2="${x+9}" y2="${y+5}" ${s}/></g>`;
   if(kind==='play')return `<path d="M${x-4},${y-6} L${x+6},${y} L${x-4},${y+6} Z" ${s}/>`;
   return '';
 }

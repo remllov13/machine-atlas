@@ -5,6 +5,7 @@
     "AI stack",
     "Money",
     "Media",
+    "Online work",
     "Community"
   ],
   "industries": [
@@ -199,5 +200,51 @@
       "rel": "customer",
       "target": "developer-tools"
     }
-  ]
+  ],
+  "focus": {
+    "set_by": "Andrew, 2026-11-27",
+    "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
+    "next": [
+      {
+        "name": "Video and streaming platforms",
+        "chain": "Media",
+        "hint": "YouTube, TikTok, Twitch: where creators publish and get paid a share of ads"
+      },
+      {
+        "name": "Digital advertising",
+        "chain": "Media",
+        "hint": "Google, Meta, Amazon ads: the money that funds most free content"
+      },
+      {
+        "name": "Creator memberships and newsletters",
+        "chain": "Media",
+        "hint": "Patreon, Substack, beehiiv: fans paying creators directly"
+      },
+      {
+        "name": "Online courses and paid communities",
+        "chain": "Media",
+        "hint": "Udemy, Coursera, Kajabi, Skool: selling knowledge online"
+      },
+      {
+        "name": "Influencer marketing",
+        "chain": "Media",
+        "hint": "agencies and platforms that pay creators for brand deals"
+      },
+      {
+        "name": "Freelance marketplaces",
+        "chain": "Online work",
+        "hint": "Upwork, Fiverr: selling skills by the project"
+      },
+      {
+        "name": "E-commerce platforms",
+        "chain": "Online work",
+        "hint": "Shopify, Amazon marketplace: online stores and sellers"
+      },
+      {
+        "name": "Online payments for sellers",
+        "chain": "Online work",
+        "hint": "Stripe, PayPal: how online businesses get paid; road to Money"
+      }
+    ]
+  }
 }
