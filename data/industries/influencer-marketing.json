@@ -1,0 +1,124 @@
+{
+  "id": "influencer-marketing",
+  "name": "Influencer marketing",
+  "chain": "Media",
+  "stage": 3,
+  "naics": {
+    "code": "541810",
+    "title": "Advertising Agencies"
+  },
+  "one_line": "The business of brands paying creators to promote them — and the platforms that match, run and measure the deals.",
+  "sells": "Creator promotion (sponsored posts, affiliate links, whole campaigns) and the software to run and measure it",
+  "customers": "Brands and their agencies seeking reach and sales through creators",
+  "suppliers": "The social and video platforms where campaigns run, payment rails, and the creators who make the content",
+  "revenue": {
+    "value_usd": 32550000000.0,
+    "display": "~$32.6B/yr",
+    "metric": "global influencer marketing spend",
+    "period": "2025 (estimate)",
+    "basis": "industry",
+    "confidence": "medium",
+    "source_url": "https://influencermarketinghub.com/influencer-marketing-statistics/",
+    "note": "Influencer Marketing Hub's benchmark estimate of total spend flowing through the channel (brand budgets to creators and the platforms/agencies in between), nearly double the ~$16.4B of 2022. This is channel spend, not platform revenue. For scale, the IAB pegs US creator ad spend alone at ~$37B in 2025, rising toward ~$44B in 2026.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented (two-sided platforms)",
+    "why": "Thousands of agencies and dozens of software platforms compete, with no dominant firm; the largest players lead distinct niches (affiliate commerce vs. enterprise campaign software) rather than the whole market.",
+    "hhi": null,
+    "hhi_note": "No HHI computed: the field mixes affiliate-commerce platforms (paid on creator sales), enterprise campaign SaaS (paid by seat) and agencies (paid on fees), and the leaders are private and don't disclose revenue, so shares aren't comparable."
+  },
+  "econ": "Two-sided platforms and network effects: these platforms sit between millions of creators and thousands of brands, and each side is more valuable the more of the other it can reach. That pull lets a few platforms scale even in a crowded field — but because switching is easy and niches differ, no one platform corners the market.",
+  "rank_basis": "Approximate standing by scale: valuation, creator GMV/payouts and customer counts (mixed sources, 2021–2026). These private platforms do not disclose revenue, so this is not a revenue ranking.",
+  "rank_short": "scale",
+  "companies": [
+    {
+      "name": "LTK (rewardStyle)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 1,
+      "source_url": "https://www.tubefilter.com/2024/09/19/ltk-content-creator-sales/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private creator-commerce platform (rewardStyle); raised at a $2B valuation (2021, BusinessWire) and reports driving several billion dollars a year in creator sales through affiliate links. Ranked on scale.",
+      "products": [
+        "LTK shopping app",
+        "Creator affiliate links",
+        "Brand campaign platform"
+      ]
+    },
+    {
+      "name": "CreatorIQ",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 2,
+      "source_url": "https://www.creatoriq.com/press/releases/creatoriq-wrapped-2025",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private enterprise influencer-marketing SaaS; 1,300+ brand and agency customers ran 44K+ campaigns on it in 2025. Revenue not disclosed.",
+      "products": [
+        "Creator discovery & CRM",
+        "Campaign management",
+        "Measurement & reporting"
+      ]
+    },
+    {
+      "name": "Later",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://later.com/blog/later-hits-2-4b-gmv-milestone-250m-in-creator-payouts/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private; social-media + influencer platform (merged with Mavrck). Passed $2.4B in creator-driven GMV and $250M in creator payouts. Revenue not disclosed.",
+      "products": [
+        "Influencer campaign platform",
+        "Social media scheduling",
+        "Link in bio"
+      ]
+    },
+    {
+      "name": "ShopMy",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://sacra.com/c/shopmy/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private creator-commerce platform and fast-growing LTK rival (Sacra); raised a Series B in 2025. Revenue and GMV not fully disclosed.",
+      "products": [
+        "Creator storefronts & commission links",
+        "Brand gifting & campaigns",
+        "Creator discovery"
+      ]
+    },
+    {
+      "name": "GRIN",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://www.cbinsights.com/esp/enterprise-tech/marketing-%26-ad-tech/influencer-marketing-platforms",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private creator-management SaaS aimed at ecommerce brands; listed among the category's leaders (CB Insights). Revenue not disclosed.",
+      "products": [
+        "Creator relationship management",
+        "Product seeding & fulfillment",
+        "Campaign analytics"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against the companies' current sites and recent coverage. These are private platforms, so product lines are described from their marketing and press, not audited. Aspire, Captiv8, Upfluence and Sprout Social (Tagger) are other notable campaign platforms not listed individually here."
+}

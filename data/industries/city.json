@@ -25,9 +25,22 @@
     "video-platforms",
     "digital-advertising",
     "creator-memberships",
-    "online-courses"
+    "online-courses",
+    "influencer-marketing"
   ],
   "roads": [
+    {
+      "from": "video-platforms",
+      "to": "influencer-marketing",
+      "what": "The social and video surfaces where creator campaigns are posted and seen",
+      "basis": "industry structure (influencer campaigns run on the social/video platforms where creators and audiences are)"
+    },
+    {
+      "from": "card-networks",
+      "to": "influencer-marketing",
+      "what": "Card rails that bill brands and route commissions and payouts to creators",
+      "basis": "industry structure (campaign billing and affiliate payouts flow through card processors on the networks)"
+    },
     {
       "from": "lithography",
       "to": "foundries",
@@ -295,17 +308,20 @@
       "naics": "611710",
       "rel": "supplier",
       "target": "online-courses"
+    },
+    {
+      "id": "talent-agencies",
+      "name": "Creator & talent agencies",
+      "chain": "Media",
+      "naics": "711410",
+      "rel": "supplier",
+      "target": "influencer-marketing"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Influencer marketing",
-        "chain": "Media",
-        "hint": "agencies and platforms that pay creators for brand deals"
-      },
       {
         "name": "Freelance marketplaces",
         "chain": "Online work",
