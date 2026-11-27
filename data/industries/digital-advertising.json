@@ -1,0 +1,140 @@
+{
+  "id": "digital-advertising",
+  "name": "Digital advertising",
+  "chain": "Media",
+  "stage": 3,
+  "naics": {
+    "code": "516210",
+    "title": "Media Streaming Distribution Services, Social Networks, and Other Media Networks"
+  },
+  "one_line": "Sells advertisers access to online audiences across search, social, video and shopping sites. The money that funds most 'free' content.",
+  "sells": "Targeted ad placements, sold by auction or negotiated deal",
+  "customers": "Advertisers and the agencies that buy on their behalf",
+  "suppliers": "The content and platforms that draw the audience, plus ad-tech plumbing, data and measurement",
+  "revenue": {
+    "value_usd": 908000000000.0,
+    "display": "~$900B (2026)",
+    "metric": "worldwide digital ad spending",
+    "period": "2026 forecast",
+    "basis": "industry (eMarketer forecast; total implied from company shares)",
+    "confidence": "medium",
+    "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+    "note": "eMarketer's April 2026 forecast puts Meta at $243.5B (26.8%), Google at $239.5B (26.4%) and Amazon at $82.1B (9%); the ~$908B total is implied from those shares. GroupM puts 2026 global digital ad spend nearer $836B, so estimates vary. Digital is roughly two-thirds of all advertising (total ad market ~$1.3T, WARC/GroupM).",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Oligopoly",
+    "why": "Three firms - Meta, Google and Amazon - take about 62% of worldwide digital ad spending, and Meta is forecast to pass Google for the first time in 2026. A long tail of platforms and publishers splits the rest.",
+    "hhi": 1566,
+    "hhi_note": "Sum of squared shares of the six listed firms (eMarketer 2026 worldwide digital-ad shares). The fragmented ~26% tail (open-web publishers, ad networks, regional players) is excluded, so this is a lower bound."
+  },
+  "econ": "Increasing returns from data and scale. A platform that reaches more people and holds more first-party data can target and measure ads better, so advertisers pay more for the same impression - which funds more reach and more data. That feedback loop concentrates ad dollars inside a few 'walled gardens' (Google, Meta, Amazon) rather than spreading them across the open web.",
+  "companies": [
+    {
+      "name": "Meta",
+      "share_pct": 26.8,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": 243460000000.0,
+      "revenue_display": "$243.5B 2026 net ad revenue (forecast)",
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Forecast to pass Google for the first time in 2026. Earns almost all revenue from advertising across its apps.",
+      "products": [
+        "Facebook & Instagram ads",
+        "Reels ads",
+        "Advantage+ (AI ad automation)",
+        "Audience Network"
+      ]
+    },
+    {
+      "name": "Google (Alphabet)",
+      "share_pct": 26.4,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": 239540000000.0,
+      "revenue_display": "$239.5B 2026 net ad revenue (forecast)",
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The long-time leader. Spans search ads (its biggest business) and YouTube video ads.",
+      "products": [
+        "Google Search ads",
+        "YouTube ads",
+        "Performance Max",
+        "Google Display Network / AdSense"
+      ]
+    },
+    {
+      "name": "Amazon",
+      "share_pct": 9.0,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": 82070000000.0,
+      "revenue_display": "$82.1B 2026 ad revenue (forecast; $68.6B in 2025)",
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The retail-media leader: ads placed next to shopping results, where buying intent is highest. The fastest-growing of the big three.",
+      "products": [
+        "Sponsored Products",
+        "Sponsored Brands",
+        "Amazon DSP",
+        "Prime Video ads"
+      ]
+    },
+    {
+      "name": "ByteDance (TikTok, Douyin)",
+      "share_pct": 7.9,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "TikTok (4.8%) plus the Chinese app Douyin (3.1%), per eMarketer. The largest ad seller outside the US triopoly.",
+      "products": [
+        "TikTok ads",
+        "TikTok Shop ads",
+        "Douyin ads"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "share_pct": 2.1,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "About half from LinkedIn, the rest from Bing/Microsoft Advertising and the Xandr ad exchange (eMarketer).",
+      "products": [
+        "Microsoft Advertising (Bing)",
+        "LinkedIn ads",
+        "Xandr"
+      ]
+    },
+    {
+      "name": "Apple",
+      "share_pct": 1.6,
+      "share_basis": "share of worldwide digital ad revenue, 2026 forecast (eMarketer)",
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.marketingdive.com/news/meta-to-surpass-google-in-digital-ad-revenue-for-first-time-emarketer/817384/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Mostly App Store Search Ads; small today but a lever on the whole market via its privacy controls on rivals' tracking.",
+      "products": [
+        "App Store Search Ads"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship ad products as of Nov 2026, checked against each company's ad documentation and 2025-2026 coverage; these are long-standing ad lines. Shares are eMarketer's April 2026 forecast of worldwide digital ad revenue; the six listed firms cover about 74%, with the remaining ~26% fragmented across open-web publishers, ad networks and regional players. NAICS 516210 is only an anchor - the sellers actually span search portals, social and media networks, and retail sites."
+}

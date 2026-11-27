@@ -22,7 +22,8 @@
     "electric-power",
     "chip-packaging",
     "developer-tools",
-    "video-platforms"
+    "video-platforms",
+    "digital-advertising"
   ],
   "roads": [
     {
@@ -108,6 +109,12 @@
       "to": "video-platforms",
       "what": "Compute, storage and CDN bandwidth to stream video to billions",
       "basis": "industry structure (video platforms run on cloud infrastructure and content delivery networks)"
+    },
+    {
+      "from": "video-platforms",
+      "to": "digital-advertising",
+      "what": "Ad inventory and audience attention that the ad market sells to brands",
+      "basis": "ad-supported video platforms earn most of their revenue from advertising (eMarketer)"
     }
   ],
   "locked": [
@@ -222,17 +229,28 @@
       "naics": "512250",
       "rel": "supplier",
       "target": "video-platforms"
+    },
+    {
+      "id": "ad-tech",
+      "name": "Ad tech (DSPs, SSPs, exchanges)",
+      "chain": "Media",
+      "naics": "541890",
+      "rel": "supplier",
+      "target": "digital-advertising"
+    },
+    {
+      "id": "ad-measurement",
+      "name": "Ad measurement & verification",
+      "chain": "Media",
+      "naics": "541910",
+      "rel": "supplier",
+      "target": "digital-advertising"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Digital advertising",
-        "chain": "Media",
-        "hint": "Google, Meta, Amazon ads: the money that funds most free content"
-      },
       {
         "name": "Creator memberships and newsletters",
         "chain": "Media",
