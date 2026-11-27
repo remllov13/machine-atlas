@@ -1,0 +1,127 @@
+{
+  "id": "creator-memberships",
+  "name": "Creator memberships & newsletters",
+  "chain": "Media",
+  "stage": 3,
+  "naics": {
+    "code": "513210",
+    "title": "Software Publishers"
+  },
+  "one_line": "Lets fans pay creators directly, by the month. Recurring income a creator owns, in exchange for the platform's ~10% cut.",
+  "sells": "Hosting, payments and membership tools that let creators charge fans directly; the platform keeps a cut",
+  "customers": "Independent creators — writers, podcasters, artists, video-makers — and the fans who pay them",
+  "suppliers": "Cloud hosting, payment processors (Stripe), email delivery, and the creators' own audiences",
+  "revenue": {
+    "value_usd": 3000000000.0,
+    "display": "~$3B+/yr (GMV)",
+    "metric": "money fans pay creators through dedicated subscription/membership platforms (GMV)",
+    "period": "2025",
+    "basis": "industry (GMV, estimated)",
+    "confidence": "illustrative",
+    "source_url": "https://research.contrary.com/company/patreon",
+    "note": "No clean industry total is published. Built from the leaders: Patreon processes 'over $2 billion annually' and Substack runs at an estimated ~$450M in gross writer revenue (Sacra), plus smaller platforms. The platforms keep roughly 10% as revenue. The broader 'direct fan-payment economy' is estimated above $10B once big-platform memberships (Twitch, YouTube) are included — those sit under video platforms here.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented",
+    "why": "No single firm dominates the whole space: Patreon leads paid memberships and Substack leads paid newsletters, with many niche platforms (beehiiv, Ko-fi, Buy Me a Coffee) and low switching costs. Fees cluster around 10%.",
+    "hhi_note": "Shares aren't published on a common basis, so HHI is left null; the market is split across membership platforms, newsletter platforms and tip jars.",
+    "hhi": null
+  },
+  "econ": "Direct patronage and disintermediation: instead of selling the audience's attention to advertisers, creators charge their most devoted fans directly for a membership or paid newsletter. It trades reach for margin — far fewer paying fans than an ad audience, but recurring income the creator controls, minus the ~10% the platform takes for hosting, payments and discovery.",
+  "rank_basis": "money paid to creators / gross creator revenue (company disclosures and Contrary/Sacra estimates, 2025)",
+  "rank_short": "creator payouts",
+  "companies": [
+    {
+      "name": "Patreon",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "$2B+/yr processed to creators",
+      "rank": 1,
+      "source_url": "https://research.contrary.com/company/patreon",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Membership tiers",
+        "Paid posts & podcasts",
+        "Gated content app",
+        "Creator commerce (shops, DMs)"
+      ],
+      "note": "The clear leader in paid memberships: 25M+ paid memberships, ~300K creators, $10B+ lifetime payouts (Axios, 2025). Standard fee is 10%."
+    },
+    {
+      "name": "Substack",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$450M run-rate writer revenue",
+      "rank": 2,
+      "source_url": "https://en.wikipedia.org/wiki/Substack",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Paid newsletters",
+        "Substack app & Notes",
+        "Podcasts & video",
+        "Recommendation network"
+      ],
+      "note": "Leader in paid newsletters: 5M+ paid subscriptions (2025), ~50K creators earning money, valued at $1.1B (July 2025). Takes a 10% cut."
+    },
+    {
+      "name": "beehiiv",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://www.gigapay.com/blog/the-global-creator-economy-report-2026",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Newsletter publishing",
+        "Built-in ad network",
+        "Paid subscriptions",
+        "Website builder"
+      ],
+      "note": "Fast-growing newsletter platform; charges a SaaS fee rather than a cut of subscriptions, and runs its own ad network for monetization."
+    },
+    {
+      "name": "Ko-fi",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://www.gigapay.com/blog/the-global-creator-economy-report-2026",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Tips / donations",
+        "Memberships",
+        "Shop & commissions"
+      ],
+      "note": "Low-fee tip jar plus memberships and a shop; takes 0% on one-off donations on its free tier."
+    },
+    {
+      "name": "Buy Me a Coffee",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://www.gigapay.com/blog/the-global-creator-economy-report-2026",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "One-off tips",
+        "Memberships",
+        "Extras (digital products)"
+      ],
+      "note": "Simple tipping and membership tool popular with smaller creators; flat 5% platform fee."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship features as of Nov 2026, checked against each platform's site and 2025–2026 coverage. Shares aren't published on a common basis, so companies are ranked by money paid to creators; Patreon and Substack are the documented leaders and the smaller platforms are ordered by reach, not exact revenue."
+}

@@ -23,7 +23,8 @@
     "chip-packaging",
     "developer-tools",
     "video-platforms",
-    "digital-advertising"
+    "digital-advertising",
+    "creator-memberships"
   ],
   "roads": [
     {
@@ -115,6 +116,18 @@
       "to": "digital-advertising",
       "what": "Ad inventory and audience attention that the ad market sells to brands",
       "basis": "ad-supported video platforms earn most of their revenue from advertising (eMarketer)"
+    },
+    {
+      "from": "cloud",
+      "to": "creator-memberships",
+      "what": "Hosting, storage and delivery for creator sites, newsletters and gated media",
+      "basis": "industry structure (membership and newsletter platforms run on cloud infrastructure)"
+    },
+    {
+      "from": "card-networks",
+      "to": "creator-memberships",
+      "what": "Card rails that process fans' recurring subscription payments",
+      "basis": "industry structure (fan subscriptions are charged to cards via processors on the card networks)"
     }
   ],
   "locked": [
@@ -245,17 +258,20 @@
       "naics": "541910",
       "rel": "supplier",
       "target": "digital-advertising"
+    },
+    {
+      "id": "email-infrastructure",
+      "name": "Email delivery infrastructure (ESP)",
+      "chain": "Media",
+      "naics": "518210",
+      "rel": "supplier",
+      "target": "creator-memberships"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Creator memberships and newsletters",
-        "chain": "Media",
-        "hint": "Patreon, Substack, beehiiv: fans paying creators directly"
-      },
       {
         "name": "Online courses and paid communities",
         "chain": "Media",
