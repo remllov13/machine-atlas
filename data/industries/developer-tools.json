@@ -1,0 +1,145 @@
+{
+  "id": "developer-tools",
+  "name": "Developer tools",
+  "chain": "AI stack",
+  "stage": 6,
+  "naics": {
+    "code": "513210",
+    "title": "Software Publishers"
+  },
+  "one_line": "The platforms and tools developers pay to write, store, review and ship code — now the front line of the AI coding boom.",
+  "sells": "Code hosting, version control, CI/CD, issue tracking, artifact management and AI coding assistants, sold by subscription and usage",
+  "customers": "Software developers and the companies that employ them, from solo builders to large enterprises",
+  "suppliers": "Cloud computing to run the platforms, and the AI labs whose frontier models power coding assistants",
+  "revenue": {
+    "value_usd": 16500000000.0,
+    "display": "~$16B (est.)",
+    "metric": "estimated global revenue for developer platforms and AI coding tools",
+    "period": "2026",
+    "basis": "illustrative",
+    "confidence": "illustrative",
+    "source_url": "https://www.thebusinessresearchcompany.com/report/software-development-tools-global-market-report",
+    "note": "No clean single figure: market sizings vary widely by definition. The Business Research Company puts the narrow 'software development tools' market at $8.8B for 2026, but that excludes much of the collaboration-suite and AI-coding revenue counted here — the six listed vendors alone report about $13B+ combined (Atlassian's figure spans its whole suite). Treat ~$16B as an order-of-magnitude estimate.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented",
+    "why": "Hundreds of specialized vendors; The Business Research Company's tally puts the top ten at only about 16% of revenue. Code hosting itself concentrates around GitHub, but the wider toolchain — IDEs, CI/CD, artifact management, security, and now AI code editors — is split among many players, with AI-native entrants like Cursor reshaping the field.",
+    "hhi": null,
+    "hhi_note": "Shares not comparable across the fragmented market; vendor revenues span different product scopes, so no HHI is computed."
+  },
+  "econ": "Network effects and ecosystem lock-in. A developer platform grows more useful as more code, contributors and integrations gather in one place, so developers congregate where everyone already is. That tips code hosting toward a single dominant venue and lets the winner sell adjacent tools — CI/CD, security, AI assistants — up the stack, even while the broader tools market stays fragmented.",
+  "rank_basis": "annual revenue or revenue run-rate from company filings and press, fiscal years ending 2025–2026; scopes differ (Atlassian spans its whole suite; Cursor and GitHub are run-rates; JetBrains is private and undisclosed)",
+  "rank_short": "annual revenue",
+  "companies": [
+    {
+      "name": "Atlassian",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 6572000000.0,
+      "revenue_display": "$6.57B FY2026 (ended Jun 30, 2026)",
+      "rank": 1,
+      "products": [
+        "Jira",
+        "Confluence",
+        "Bitbucket",
+        "Rovo (AI)"
+      ],
+      "source_url": "https://www.businesswire.com/news/home/20260806396002/en/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Revenue spans Atlassian's whole suite (Jira, Confluence, Bitbucket, Jira Service Management), not only developer tools; up 26% YoY. Listed here because its tools anchor many developers' workflows."
+    },
+    {
+      "name": "Cursor (Anysphere)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 3000000000.0,
+      "revenue_display": "~$3B ARR (early 2026)",
+      "rank": 2,
+      "products": [
+        "Cursor (AI code editor)",
+        "Agent mode",
+        "Tab autocomplete"
+      ],
+      "source_url": "https://en.wikipedia.org/wiki/Cursor_(company)",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "AI-native code editor; figure is an ARR run-rate (Bloomberg, May 2026), not audited revenue. Parent Anysphere was acquired by SpaceX in Aug 2026."
+    },
+    {
+      "name": "GitHub",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 2000000000.0,
+      "revenue_display": "~$2B revenue run-rate (FY2026)",
+      "rank": 3,
+      "products": [
+        "Repositories (code hosting)",
+        "GitHub Actions (CI/CD)",
+        "GitHub Copilot",
+        "GitHub Advanced Security"
+      ],
+      "source_url": "https://www.siasat.com/copilot-driving-githubs-growth-annual-revenue-run-rate-at-2-billion-nadella-3071173/",
+      "as_of_date": "2026-11-27",
+      "teardown": "github",
+      "note": "Run-rate cited by Microsoft CEO Satya Nadella; GitHub is a Microsoft subsidiary and does not report standalone audited revenue. Copilot passed 20M users in 2025."
+    },
+    {
+      "name": "GitLab",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 955220000.0,
+      "revenue_display": "$955M FY2026 (ended Jan 31, 2026)",
+      "rank": 4,
+      "products": [
+        "GitLab DevSecOps Platform",
+        "GitLab CI/CD",
+        "GitLab Duo (AI)"
+      ],
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1653482/000162828026018731/gtlb-20260131.htm",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "The independent, publicly traded DevSecOps platform; crossed $1B in ARR in FY2026, up 26% YoY."
+    },
+    {
+      "name": "JFrog",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 531800000.0,
+      "revenue_display": "$531.8M FY2025 (ended Dec 31, 2025)",
+      "rank": 5,
+      "products": [
+        "Artifactory",
+        "Xray",
+        "Advanced Security",
+        "Curation"
+      ],
+      "source_url": "https://jfrog.com/press-room/jfrog-announces-fourth-quarter-and-fiscal-2025-results/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Software supply-chain / artifact management, the layer that stores and secures build outputs; up 24% YoY."
+    },
+    {
+      "name": "JetBrains",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 6,
+      "products": [
+        "IntelliJ IDEA",
+        "PyCharm",
+        "ReSharper",
+        "Fleet"
+      ],
+      "source_url": "https://www.jetbrains.com/lp/annualreport-2026/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Private, so revenue is not disclosed (widely reported around $400M+ in prior years). Ranked last among listed vendors on that basis; rank uncertain. Maker of the leading paid IDEs."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against each vendor's own site and 2025–2026 coverage. Revenue figures are from company filings and press releases for fiscal years ending 2025–2026; scopes are noted where a figure spans more than developer tools."
+}

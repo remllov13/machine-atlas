@@ -19,7 +19,8 @@
     "podcasting",
     "ai-builder-communities",
     "electric-power",
-    "chip-packaging"
+    "chip-packaging",
+    "developer-tools"
   ],
   "roads": [
     {
@@ -87,6 +88,18 @@
       "to": "ai-chips",
       "what": "Advanced packaging (CoWoS): HBM bonded beside the logic die on an interposer",
       "basis": "TSMC's CoWoS capacity is the widely reported bottleneck on NVIDIA AI-chip supply (2026 reports)"
+    },
+    {
+      "from": "cloud",
+      "to": "developer-tools",
+      "what": "Compute and hosting to run the platforms",
+      "basis": "industry structure (GitHub, GitLab and peers run their services on cloud infrastructure)"
+    },
+    {
+      "from": "ai-labs",
+      "to": "developer-tools",
+      "what": "Frontier models behind AI coding assistants",
+      "basis": "GitHub Copilot and Cursor build on OpenAI/Anthropic frontier models (2025–2026 coverage)"
     }
   ],
   "locked": [
@@ -169,6 +182,22 @@
       "naics": "211130",
       "rel": "supplier",
       "target": "electric-power"
+    },
+    {
+      "id": "observability",
+      "name": "Observability & monitoring software",
+      "chain": "AI stack",
+      "naics": "513210",
+      "rel": "customer",
+      "target": "developer-tools"
+    },
+    {
+      "id": "application-security",
+      "name": "Application security (AppSec)",
+      "chain": "AI stack",
+      "naics": "513210",
+      "rel": "customer",
+      "target": "developer-tools"
     }
   ]
 }
