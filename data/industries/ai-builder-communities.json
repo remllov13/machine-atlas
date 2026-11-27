@@ -40,7 +40,10 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": "frontier-room",
-      "note": "Andrew's buildout plan for a Fort Lauderdale AI builders' club."
+      "note": "Andrew's buildout plan for a Fort Lauderdale AI builders' club.",
+      "products": [
+        "Monthly AI demo nights (planned)"
+      ]
     },
     {
       "name": "AI Tinkerers",
@@ -52,9 +55,13 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Network of local AI meetups; the Miami chapter is referenced in the Frontier Room buildout."
+      "note": "Network of local AI meetups; the Miami chapter is referenced in the Frontier Room buildout.",
+      "products": [
+        "Local AI demo meetups"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

@@ -40,7 +40,11 @@
       "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
       "as_of_date": "2026-11-24",
       "teardown": null,
-      "note": "The HBM3E leader and NVIDIA's main supplier. Counterpoint says its growth slowed in Q3 2026 as Samsung's HBM4 gained."
+      "note": "The HBM3E leader and NVIDIA's main supplier. Counterpoint says its growth slowed in Q3 2026 as Samsung's HBM4 gained.",
+      "products": [
+        "HBM4",
+        "HBM3E"
+      ]
     },
     {
       "name": "Micron",
@@ -52,7 +56,11 @@
       "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
       "as_of_date": "2026-11-24",
       "teardown": null,
-      "note": "Overtook Samsung for second place in Q2 2026 per Counterpoint; ramping HBM3E and HBM4 for NVIDIA and other AI-chip clients."
+      "note": "Overtook Samsung for second place in Q2 2026 per Counterpoint; ramping HBM3E and HBM4 for NVIDIA and other AI-chip clients.",
+      "products": [
+        "HBM4",
+        "HBM3E"
+      ]
     },
     {
       "name": "Samsung",
@@ -64,7 +72,11 @@
       "source_url": "https://futureofkorea.com/technology/hbm4-2026-sk-hynix-samsung-micron/",
       "as_of_date": "2026-11-24",
       "teardown": null,
-      "note": "Lagged on HBM3E but its HBM4 is well received; Counterpoint expects Samsung to challenge for the HBM lead in 2027."
+      "note": "Lagged on HBM3E but its HBM4 is well received; Counterpoint expects Samsung to challenge for the HBM lead in 2027.",
+      "products": [
+        "HBM4",
+        "HBM3E"
+      ]
     },
     {
       "name": "CXMT",
@@ -76,9 +88,13 @@
       "source_url": null,
       "as_of_date": "2026-11-24",
       "teardown": null,
-      "note": "China's largest DRAM maker and an aspiring HBM entrant; no material HBM share in 2026 sources checked."
+      "note": "China's largest DRAM maker and an aspiring HBM entrant; no material HBM share in 2026 sources checked.",
+      "products": [
+        "DRAM"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-24"
+  "as_of_date": "2026-11-24",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

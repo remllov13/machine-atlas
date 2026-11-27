@@ -39,7 +39,12 @@
       "rank": null,
       "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
       "as_of_date": "2026-11-23",
-      "teardown": "asml"
+      "teardown": "asml",
+      "products": [
+        "EUV scanners (NXE)",
+        "High-NA EUV (EXE)",
+        "DUV scanners (TWINSCAN NXT)"
+      ]
     },
     {
       "name": "Canon",
@@ -51,7 +56,11 @@
       "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Older-generation and packaging lithography; with Nikon holds most of the remaining ~12%."
+      "note": "Older-generation and packaging lithography; with Nikon holds most of the remaining ~12%.",
+      "products": [
+        "i-line and KrF steppers",
+        "Nanoimprint lithography"
+      ]
     },
     {
       "name": "Nikon",
@@ -63,7 +72,11 @@
       "source_url": "https://www.gminsights.com/industry-analysis/photolithography-equipment-market",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Older-generation (DUV) scanners."
+      "note": "Older-generation (DUV) scanners.",
+      "products": [
+        "ArF immersion scanners",
+        "Back-end lithography (DSP-100)"
+      ]
     },
     {
       "name": "SMEE",
@@ -75,9 +88,11 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "China's domestic lithography maker; no reliable share figure found."
+      "note": "China's domestic lithography maker; no reliable share figure found.",
+      "products": []
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

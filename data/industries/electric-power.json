@@ -41,7 +41,11 @@
       "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
       "as_of_date": "2026-05-19",
       "teardown": null,
-      "note": "Called the largest US utility; market cap ~$185.7B. Parent of Florida Power & Light. Announced a $66.8B acquisition of Dominion Energy in 2026 (combined enterprise value ~$420B)."
+      "note": "Called the largest US utility; market cap ~$185.7B. Parent of Florida Power & Light. Announced a $66.8B acquisition of Dominion Energy in 2026 (combined enterprise value ~$420B).",
+      "products": [
+        "Florida Power & Light",
+        "Wind and solar fleet"
+      ]
     },
     {
       "name": "Southern Company",
@@ -53,7 +57,11 @@
       "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
       "as_of_date": "2026-05-19",
       "teardown": null,
-      "note": "Market value ~$105.6B; ~9 million customers across the Southeast. Over 11 GW of contracted large-load (data-center) capacity."
+      "note": "Market value ~$105.6B; ~9 million customers across the Southeast. Over 11 GW of contracted large-load (data-center) capacity.",
+      "products": [
+        "Georgia Power",
+        "Alabama Power"
+      ]
     },
     {
       "name": "Duke Energy",
@@ -65,7 +73,11 @@
       "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
       "as_of_date": "2026-05-19",
       "teardown": null,
-      "note": "Market value ~$95.8B; ~8.6 million customers; ~55,100 MW of capacity. 7.6 GW contracted with data-center customers."
+      "note": "Market value ~$95.8B; ~8.6 million customers; ~55,100 MW of capacity. 7.6 GW contracted with data-center customers.",
+      "products": [
+        "Duke Energy Carolinas",
+        "Duke Energy Florida"
+      ]
     },
     {
       "name": "Constellation Energy",
@@ -77,7 +89,10 @@
       "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
       "as_of_date": "2026-05-19",
       "teardown": null,
-      "note": "Valued ~$94.6B; the biggest independent power producer, ~55 GW of capacity and ~10% of US clean energy. Signed Microsoft to restart Three Mile Island; acquired the Calpine fleet."
+      "note": "Valued ~$94.6B; the biggest independent power producer, ~55 GW of capacity and ~10% of US clean energy. Signed Microsoft to restart Three Mile Island; acquired the Calpine fleet.",
+      "products": [
+        "Nuclear power fleet"
+      ]
     },
     {
       "name": "American Electric Power",
@@ -89,9 +104,13 @@
       "source_url": "https://kfgo.com/2026/05/19/factbox-some-of-the-biggest-power-companies-in-us/",
       "as_of_date": "2026-05-19",
       "teardown": null,
-      "note": "Market value ~$72.5B; ~5.6 million customers across parts of 11 states. 7 GW of new large-load agreements signed in Q1 2026, mostly data centers."
+      "note": "Market value ~$72.5B; ~5.6 million customers across parts of 11 states. 7 GW of new large-load agreements signed in Q1 2026, mostly data centers.",
+      "products": []
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-25"
+  "as_of_date": "2026-11-25",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited.",
+  "rank_basis": "market value (Reuters, May 2026), a rough size proxy",
+  "rank_short": "market value"
 }

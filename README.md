@@ -33,7 +33,9 @@ machine-atlas/
 
 ## Industry file (industry/v1, fixed shape)
 
-`id, name, chain, stage, naics{code,title}, one_line, sells, customers, suppliers, revenue{value_usd, display, metric, period, basis, confidence, source_url, note}, structure{type, why, hhi, hhi_note}, econ, companies[{name, share_pct, share_basis, revenue_usd, revenue_display, rank, source_url, as_of_date, teardown, note}]`, optional `industry_teardown` / `industry_buildout`.
+`id, name, chain, stage, naics{code,title}, one_line, sells, customers, suppliers, revenue{value_usd, display, metric, period, basis, confidence, source_url, note}, structure{type, why, hhi, hhi_note}, econ, companies[{name, share_pct, share_basis, revenue_usd, revenue_display, rank, products[], source_url, as_of_date, teardown, note}]`, optional `rank_basis` / `rank_short` (what a rank measures), `products_note`, `industry_teardown` / `industry_buildout`.
+
+Companies are listed until published shares cover about 90% of the market where data allows; the map draws the uncovered remainder as an "All others" block. The city's column for each industry comes from the supply roads (longest supplier path), so `stage` is only a fallback.
 
 Teardowns keep the loose v2 shape ("free writing, thin wiring"); a standard teardown protocol is a later phase.
 

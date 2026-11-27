@@ -31,11 +31,13 @@
   svg{display:block;width:100%;height:100%}
   .hit{cursor:pointer;outline:none}
   .hit:hover .f,.hit:focus .f{filter:brightness(1.25)}
-  .lbl{font-family:var(--mono);font-size:10px;fill:var(--text);text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:#0A0C10;stroke-width:3px;stroke-linejoin:round}
-  .lbl-sub{font-size:8.5px;fill:var(--muted)}
-  .lbl-big{font-size:12px}
+  .lbl{font-family:var(--mono);font-size:calc(10px * var(--lk,1));fill:var(--text);text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:#0A0C10;stroke-width:3px;stroke-linejoin:round}
+  .lbl-sub{font-size:calc(8.5px * var(--lk,1));fill:var(--muted)}
+  svg.far .lbl-sub{display:none}
+  .lbl-prod{fill:#B9A27A}
+  .lbl-big{font-size:calc(12px * var(--lk,1))}
   .lbl-ghost{fill:var(--dim)}
-  .row-lbl{font-family:var(--mono);font-size:13px;letter-spacing:4px;text-transform:uppercase;text-anchor:end;pointer-events:none;paint-order:stroke;stroke:#0A0C10;stroke-width:4px;opacity:.9}
+  .row-lbl{font-family:var(--mono);font-size:calc(13px * var(--lk,1));letter-spacing:4px;text-transform:uppercase;text-anchor:end;pointer-events:none;paint-order:stroke;stroke:#0A0C10;stroke-width:4px;opacity:.9}
   .plaza-lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;text-anchor:middle;pointer-events:none;fill:var(--dim)}
 
   #legend{position:fixed;right:14px;bottom:40px;background:rgba(18,22,28,.9);border:1px solid var(--line);border-radius:10px;padding:9px 11px;z-index:20;font-size:11px;color:var(--muted);display:grid;gap:5px}
@@ -62,7 +64,7 @@
   @media(max-width:520px){.grid2{grid-template-columns:1fr}}
   .co{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:6px;cursor:pointer;width:100%;text-align:left;color:var(--text)}
   .co:hover,.co:focus{border-color:var(--lime);outline:none}
-  .co .n{font-size:14px}.co .v{font-family:var(--mono);font-size:12px;color:var(--amber)}
+  .co .n{font-size:14px}.co .prod{display:block;font-size:11px;color:var(--muted);margin-top:2px}.co .v{font-family:var(--mono);font-size:12px;color:var(--amber)}
   .bar{grid-column:1 / -1;height:5px;background:var(--panel);border-radius:3px;overflow:hidden}
   .bar span{display:block;height:100%;background:var(--amber)}
   .badge{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:20px;border:1px solid var(--line);color:var(--dim);margin-left:6px;vertical-align:1px}
@@ -242,7 +244,9 @@ const quad=(a,b,c,d)=>`M${a.x},${a.y} L${b.x},${b.y} L${c.x},${c.y} L${d.x},${d.
 
 /* ===================== camera ===================== */
 let VIEW={x:0,y:0,s:1};
-function applyCam(){const g=document.getElementById('cam');if(g)g.setAttribute('transform',`translate(${VIEW.x},${VIEW.y}) scale(${VIEW.s})`);}
+function applyCam(){const g=document.getElementById('cam');if(g)g.setAttribute('transform',`translate(${VIEW.x},${VIEW.y}) scale(${VIEW.s})`);
+  const k=Math.max(1,Math.min(1.7,Math.pow(VIEW.s,-0.75))); document.documentElement.style.setProperty('--lk',k.toFixed(3));
+  const svg=document.getElementById('svg'); if(svg)svg.classList.toggle('far',VIEW.s<0.8);}
 function VB(){const st=document.getElementById('stage');return {w:st.clientWidth||1400,h:st.clientHeight||900};}
 function panelReserve(){return document.getElementById('panel').classList.contains('open')&&VB().w>900?Math.min(520,VB().w):0;}
 function fit(b,reserve,left){
@@ -294,24 +298,48 @@ function startTraffic(roads){
 }
 
 /* ===================== city view ===================== */
+/* Layout from the roads themselves: an industry's column is its depth in the
+   supply chain (longest supplier path), so the map stays consistent whatever stage
+   a run writes. Industries at the same depth share the column, side by side in lanes. */
+const LANE=3.0, COL=3;
 function cityLayout(){
-  const pos={}, chains=CITY.chains;
-  Object.values(IND).forEach(i=>{const r=Math.max(0,chains.indexOf(i.chain));pos[i.id]={gx:i.stage*3,gy:r*ROWGAP,row:r};});
-  const ghosts=(CITY.locked||[]).filter(g=>!IND[g.id]&&IND[g.target]).map(g=>{
-    const t=pos[g.target]; return {...g,gx:t.gx+(g.rel==='supplier'?-1.5:1.5),gy:t.gy+1.7,row:t.row};
+  const ids=Object.keys(IND), ins={}; ids.forEach(i=>ins[i]=[]);
+  (CITY.roads||[]).forEach(r=>{if(IND[r.from]&&IND[r.to]&&IND[r.from].chain===IND[r.to].chain)ins[r.to].push(r.from);});
+  const depth={}; ids.forEach(i=>depth[i]=0);
+  for(let pass=0;pass<ids.length;pass++){let moved=false;ids.forEach(i=>{ins[i].forEach(s=>{if(depth[s]+1>depth[i]&&depth[s]+1<ids.length){depth[i]=depth[s]+1;moved=true;}});});if(!moved)break;}
+  ids.forEach(i=>{if(!ins[i].length&&!(CITY.roads||[]).some(r=>r.from===i&&IND[r.to]&&IND[r.to].chain===IND[i].chain))depth[i]=Math.max(0,IND[i].stage|0);});
+  const chains=CITY.chains.filter(ch=>ids.some(i=>IND[i].chain===ch));
+  const pos={}, rows=[]; let base=0;
+  chains.forEach((ch,r)=>{
+    const mine=ids.filter(i=>IND[i].chain===ch), cols={};
+    mine.forEach(i=>(cols[depth[i]]=cols[depth[i]]||[]).push(i));
+    let lanes=1;
+    Object.values(cols).forEach(list=>{list.sort((a,b)=>((IND[b].revenue||{}).value_usd||0)-((IND[a].revenue||{}).value_usd||0));lanes=Math.max(lanes,list.length);list.forEach((id,k)=>pos[id]={gx:depth[id]*COL,gy:base+k*LANE,row:r,lane:k});});
+    rows.push({chain:ch,base,lanes,ghostY:base+(lanes-1)*LANE+2.2,maxDepth:Math.max(...mine.map(i=>depth[i]))});
+    base+= (lanes-1)*LANE + 6.2;
   });
-  return {pos,ghosts};
+  // locked plots live in their own strip at the front of the row, never between buildings
+  const taken={};
+  const ghosts=(CITY.locked||[]).filter(g=>!IND[g.id]&&IND[g.target]).map(g=>{
+    const t=pos[g.target], row=rows.find(r=>r.chain===IND[g.target].chain), step=g.rel==='supplier'?-1.6:1.6;
+    const used=taken[row.chain]=taken[row.chain]||[], lo=-1.6, hi=row.maxDepth*COL+1.6, ideal=t.gx+step*0.6;
+    let gx=ideal;
+    for(let k=0;k<40;k++){const c=ideal+(k%2?-1:1)*Math.ceil(k/2)*1.6*Math.sign(step); if(c>=lo&&c<=hi&&!used.some(x=>Math.abs(x-c)<1.55)){gx=c;break;}}
+    used.push(gx);
+    return {...g,gx,gy:row.ghostY,row:t.row};
+  });
+  return {pos,ghosts,rows};
 }
 function renderCity(){
-  const {pos,ghosts}=cityLayout(); const parts=[], ROADS=[], BANDPTS=[], TOP=[];
-  const maxStage=Math.max(...Object.values(IND).map(i=>i.stage),4);
+  const {pos,ghosts,rows}=cityLayout(); const parts=[], ROADS=[], BANDPTS=[], TOP=[];
+  const maxD=Math.max(4,...rows.map(r=>r.maxDepth));
   // row bands
-  CITY.chains.forEach((ch,r)=>{
-    if(!Object.values(IND).some(i=>i.chain===ch))return;
-    const c=chainColor(ch), x0=-2.2, x1=maxStage*3+2.6, y0=r*ROWGAP-1.9, y1=r*ROWGAP+2.5; BANDPTS.push(iso(x0,y0),iso(x1,y0),iso(x1,y1),iso(x0,y1));
+  rows.forEach(row=>{
+    const ch=row.chain;
+    const c=chainColor(ch), x0=-2.8, x1=maxD*COL+2.8, y0=row.base-1.9, y1=row.ghostY+1.2; BANDPTS.push(iso(x0,y0),iso(x1,y0),iso(x1,y1),iso(x0,y1));
     const a=iso(x0,y0),b=iso(x1,y0),cc=iso(x1,y1),d=iso(x0,y1);
     parts.push(`<path d="${quad(a,b,cc,d)}" fill="${c.zone}" stroke="${c.top}" stroke-opacity="0.35" stroke-width="1.2"/>`);
-    const lp=iso(x0-0.3,(y0+y1)/2);
+    const lp=iso(x0-0.2,y1-0.4);
     parts.push(`<text class="row-lbl" x="${lp.x-6}" y="${lp.y+4}" fill="${c.lbl}">${esc(ch)}</text>`);
     ROADS.push({ax:a.x,ay:a.y,bx:b.x,by:b.y},{ax:d.x,ay:d.y,bx:cc.x,by:cc.y});
   });
@@ -357,7 +385,7 @@ function mount(parts,roads){
 }
 function wireHits(){
   document.querySelectorAll('#svg .hit').forEach(g=>{
-    const act=()=>{const d=g.dataset; if(d.ind)location.hash='#/industry/'+d.ind; else if(d.ghost)openLocked(d.ghost); else if(d.co!=null)openCompany(d.dind,+d.co); else if(d.lot)openAddCompany(d.lot); else if(d.staked)openStaked(d.lot2,d.staked);};
+    const act=()=>{const d=g.dataset; if(d.ind)location.hash='#/industry/'+d.ind; else if(d.ghost)openLocked(d.ghost); else if(d.co!=null)openCompany(d.dind,+d.co); else if(d.lot)openAddCompany(d.lot); else if(d.staked)openStaked(d.lot2,d.staked); else if(d.others)openOthers(d.others);};
     g.addEventListener('click',act); g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}});
   });
 }
@@ -369,7 +397,7 @@ function sizing(i){
   const nk=i.companies.filter(c=>c.rank).length;
   if(ns>0 && ns>=nr) return {basis:'share',label:'Height = share of this market'};
   if(nr>=2 && i.revenue&&i.revenue.value_usd>0) return {basis:'revenue',label:'Height = revenue as a share of the industry total shown'};
-  if(nk>0) return {basis:'rank',label:'Height = rank by audience reach (no revenue shares are public)'};
+  if(nk>0) return {basis:'rank',label:'Height = rank by '+(i.rank_basis||'size')+' (market shares are not public)'};
   return {basis:'none',label:'No size data yet: all buildings drawn at the same height'};
 }
 function coSize(c,i,sz){
@@ -378,6 +406,13 @@ function coSize(c,i,sz){
   if(sz.basis==='rank'&&c.rank)return {pct:null,H:Math.round(40+90/c.rank)};
   return {pct:null,H:34,unsized:true};
 }
+function coverage(i,sz){
+  if(sz.basis!=='share')return null;
+  const sum=i.companies.reduce((a,c)=>a+(typeof c.share_pct==='number'?c.share_pct:0),0);
+  return {sum:Math.min(100,sum),rest:Math.max(0,100-sum)};
+}
+const prodLine=c=>Array.isArray(c.products)&&c.products.length?c.products.slice(0,2).join(' · '):'';
+const prodShort=c=>{if(!Array.isArray(c.products)||!c.products.length)return '';const p=c.products[0];return p.length>24?p.slice(0,23)+'…':p;};
 function queuedFor(indId){return QUEUE.filter(q=>q.kind==='company'&&q.industry===indId);}
 function renderDistrict(id){
   const i=IND[id]; if(!i){goCity();return;}
@@ -386,7 +421,8 @@ function renderDistrict(id){
   const listed=i.companies.map((co,idx)=>({co,idx,s:coSize(co,i,sz)}));
   const staked=q.filter(x=>!i.companies.some(co=>norm(co.name)===norm(x.name)));
   const order=[...listed].sort((a,b)=>(b.s.H-a.s.H));
-  const cols=3, n=order.length+staked.length+1, rows=Math.ceil(n/cols), SP=2.7;
+  const cov=coverage(i,sz), others=cov&&cov.rest>=2.5?{pct:cov.rest,H:shareHeight(cov.rest)}:null;
+  const cols=3, n=order.length+(others?1:0)+staked.length+1, rows=Math.ceil(n/cols), SP=2.7;
   const slot=k=>({gx:(k%cols)*SP,gy:Math.floor(k/cols)*SP});
   // plaza + streets
   const a=iso(-1.4,-1.4),b=iso((cols-1)*SP+1.4,-1.4),cc=iso((cols-1)*SP+1.4,(rows-1)*SP+1.4),d=iso(-1.4,(rows-1)*SP+1.4);
@@ -395,18 +431,25 @@ function renderDistrict(id){
   for(let k=0;k<=cols;k++){const x=k*SP-SP/2;const p=iso(x,-1.4),p2=iso(x,(rows-1)*SP+1.4);parts.push(`<line x1="${p.x}" y1="${p.y}" x2="${p2.x}" y2="${p2.y}" stroke="#2A323C" stroke-width="5" stroke-linecap="round"/>`);ROADS.push({ax:p.x,ay:p.y,bx:p2.x,by:p2.y});}
   // buildings + lots, back to front
   const items=[];
-  order.forEach((o,k)=>items.push({k,type:'co',o}));
-  staked.forEach((s,j)=>items.push({k:order.length+j,type:'staked',s}));
-  items.push({k:order.length+staked.length,type:'lot'});
+  const seq=order.map(o=>({type:'co',o,H:o.s.H})); if(others)seq.push({type:'others',H:others.H});
+  seq.sort((A,B)=>B.H-A.H).forEach((x,k)=>items.push({k,...x}));
+  const off=seq.length;
+  staked.forEach((s,j)=>items.push({k:off+j,type:'staked',s}));
+  items.push({k:off+staked.length,type:'lot'});
   items.sort((A,B)=>{const a1=slot(A.k),b1=slot(B.k);return (a1.gx+a1.gy)-(b1.gx+b1.gy);}).forEach(it=>{
     const sp=slot(it.k), p=iso(sp.gx,sp.gy);
     if(it.type==='co'){
       const {co,idx,s}=it.o, isSt=studied(co), ord=qNames.has(norm(co.name))&&!isSt;
       parts.push(building({x:p.x,y:p.y,w:TW*0.7,h:TH*0.7,H:s.H,col:isSt?c:PLAIN,litPct:isSt?0.55:0,dashed:!!s.unsized,icon:isSt?c.icon:'',key:id+co.name,crane:ord,
         attrs:`tabindex="0" role="button" aria-label="${esc(co.name)}${s.pct!=null?', '+s.pct.toFixed(1)+' percent':''}" data-co="${idx}" data-dind="${esc(id)}"`}));
-      const sub=s.pct!=null?(s.pct<1?'<1%':(Math.round(s.pct*10)/10)+'%'):(co.rank?'#'+co.rank+' by reach':'no share data');
-      const ty=p.y-s.H-TH*0.7-(ord?52:19);
-      parts.push(`<text class="lbl" x="${p.x}" y="${ty}">${esc(co.name)}</text><text class="lbl lbl-sub" x="${p.x}" y="${ty+12}">${esc(sub)}</text>`);
+      const sub=s.pct!=null?(s.pct<1?'<1%':(Math.round(s.pct*10)/10)+'%'):(co.rank?'#'+co.rank+(i.rank_short?' by '+i.rank_short:''):'no share data');
+      const pl=prodShort(co), ty=p.y-s.H-TH*0.7-(ord?52:19)-(pl?11:0);
+      parts.push(`<text class="lbl" x="${p.x}" y="${ty}">${esc(co.name)}</text><text class="lbl lbl-sub" x="${p.x}" y="${ty+12}">${esc(sub)}</text>${pl?`<text class="lbl lbl-sub lbl-prod" x="${p.x}" y="${ty+23}">${esc(pl)}</text>`:''}`);
+    }else if(it.type==='others'){
+      parts.push(building({x:p.x,y:p.y,w:TW*0.7,h:TH*0.7,H:others.H,col:{top:'#2C323B',l:'#22272E',r:'#181C22'},litPct:0,dashed:true,icon:'',key:id+'others',crane:false,
+        attrs:`tabindex="0" role="button" aria-label="All other companies, ${others.pct.toFixed(1)} percent" data-others="${esc(id)}"`}));
+      const ty=p.y-others.H-TH*0.7-19;
+      parts.push(`<text class="lbl" x="${p.x}" y="${ty}">All others</text><text class="lbl lbl-sub" x="${p.x}" y="${ty+12}">${(Math.round(others.pct*10)/10)}%</text>`);
     }else if(it.type==='staked'){
       parts.push(`<g class="hit" tabindex="0" role="button" aria-label="Ordered: ${esc(it.s.name)}" data-staked="${esc(it.s.name)}" data-lot2="${esc(id)}"><path class="f" d="${diamond(p.x,p.y,TW*0.7,TH*0.7)}" fill="#15110A" stroke="#E4A93A" stroke-width="1.3" stroke-dasharray="4 3"/>${crane(p.x-10,p.y,TW*0.7)}</g>`);
       parts.push(`<text class="lbl" x="${p.x}" y="${p.y-46}">${esc(it.s.name)}</text><text class="lbl lbl-sub" x="${p.x}" y="${p.y-34}">ordered &middot; arrives next run</text>`);
@@ -440,12 +483,16 @@ function industryHTML(i){
     <div class="pcell"><div class="k">Market structure</div><div class="big">${esc(st.type)}</div><div class="note">HHI ${fmtHHI(st.hhi)} <span style="color:var(--dim)">(0 = many equal firms, 10,000 = one firm)</span></div><div class="note">${esc(st.why||'')}</div>${st.hhi_note?`<div class="note" style="color:var(--dim)">${esc(st.hhi_note)}</div>`:''}</div></div>`;
   const sz=sizing(i);
   h+=`<div class="psec">Companies <span style="color:var(--dim);letter-spacing:0;text-transform:none">&middot; ${esc(sz.label.toLowerCase())}</span></div>`;
+  const cov=coverage(i,sz);
+  h+=`<div class="note" style="margin:-4px 0 10px">${cov?`Companies with published shares cover <b style="color:var(--text)">${Math.round(cov.sum*10)/10}%</b> of this market.`:'Market shares are not public for this industry, so coverage is unknown.'}</div>`;
   const q=new Set(queuedFor(i.id).map(x=>norm(x.name)));
   i.companies.forEach((co,idx)=>{
     const s=coSize(co,i,sz), isSt=studied(co), ord=q.has(norm(co.name))&&!isSt;
     const val=s.pct!=null?(Math.round(s.pct*10)/10)+'%':(co.rank?'#'+co.rank:'—');
-    h+=`<button class="co" onclick="openCompany('${esc(i.id)}',${idx})"><span class="n">${esc(co.name)}${isSt?'<span class="badge lit">studied</span>':ord?'<span class="badge ord">ordered</span>':''}</span><span class="v">${esc(val)}</span>${s.pct!=null?`<span class="bar"><span style="width:${Math.min(100,s.pct)}%"></span></span>`:''}</button>`;
+    const pl=prodLine(co);
+    h+=`<button class="co" onclick="openCompany('${esc(i.id)}',${idx})"><span class="n">${esc(co.name)}${isSt?'<span class="badge lit">studied</span>':ord?'<span class="badge ord">ordered</span>':''}${pl?`<span class="prod">${esc(pl)}</span>`:''}</span><span class="v">${esc(val)}</span>${s.pct!=null?`<span class="bar"><span style="width:${Math.min(100,s.pct)}%"></span></span>`:''}</button>`;
   });
+  if(cov&&cov.rest>=2.5)h+=`<button class="co" onclick="openOthers('${esc(i.id)}')"><span class="n" style="color:var(--muted)">All others</span><span class="v" style="color:var(--muted)">${Math.round(cov.rest*10)/10}%</span><span class="bar"><span style="width:${cov.rest}%;background:#59606A"></span></span></button>`;
   queuedFor(i.id).filter(x=>!i.companies.some(co=>norm(co.name)===norm(x.name))).forEach(x=>{h+=`<div class="pcell">${esc(x.name)} <span class="badge ord">ordered</span><div class="note">Not listed yet. The next run checks it belongs here, then builds it.</div></div>`;});
   h+=`<div class="btns"><button class="btn ghost" onclick="openAddCompany('${esc(i.id)}')">+ Add a company</button></div>`;
   if(i.industry_teardown&&TEARDOWNS.has(i.industry_teardown)){
@@ -475,6 +522,7 @@ async function openCompany(indId,idx){
   else if(co.rank)h+=`<div class="big">#${co.rank}</div>`;
   else h+=`<div class="note">No public share figure found yet.</div>`;
   if(co.revenue_display)h+=`<div class="note">Revenue: ${esc(co.revenue_display)}</div>`;
+  if(Array.isArray(co.products)&&co.products.length)h+=`<div class="k" style="margin-top:10px">Known for</div><div class="pmech">${co.products.map(p=>`<span class="pill" style="font-size:11px">${esc(p)}</span>`).join('')}</div>`;
   if(co.note)h+=`<div class="note">${esc(co.note)}</div>`;
   h+=srcLink(co.source_url)+`</div>`;
   if(isSt){
@@ -509,6 +557,12 @@ function openAddCompany(indId){
     <input id="addname" class="qinput" style="width:100%;margin:6px 0" placeholder="Company name" aria-label="Company name">
     <div class="btns"><button class="btn" onclick="submitAdd('${esc(indId)}','teardown')">Order teardown</button><button class="btn ghost" onclick="submitAdd('${esc(indId)}','buildout')">Order buildout</button></div>`);
   setTimeout(()=>{const el=document.getElementById('addname');if(el)el.focus();},300);
+}
+function openOthers(indId){
+  const i=IND[indId], cov=coverage(i,sizing(i));
+  const unsized=i.companies.filter(c=>typeof c.share_pct!=='number').map(c=>c.name);
+  openPanelHTML(`<button class="plink" onclick="openIndustry('${esc(indId)}')">&larr; ${esc(i.name)}</button><div class="peyebrow">Rest of the market</div><div class="ptitle">All others</div>
+    <div class="pcell"><div class="big">${(Math.round(cov.rest*10)/10)}%</div><div class="note">The share of ${esc(i.name.toLowerCase())} not held by the companies with published shares above.${unsized.length?' It includes '+esc(unsized.join(', '))+', whose shares aren\'t published.':''}</div><div class="note">A small block means a few firms own the market. A big block means it is spread across many.</div></div>`);
 }
 function openStaked(indId,name){
   const i=IND[indId];

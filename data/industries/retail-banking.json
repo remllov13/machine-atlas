@@ -41,7 +41,11 @@
       "rank": null,
       "source_url": "https://statranker.org/?p=13153",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Chase checking",
+        "Chase Sapphire cards"
+      ]
     },
     {
       "name": "Bank of America",
@@ -52,7 +56,11 @@
       "rank": null,
       "source_url": "https://statranker.org/?p=13153",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Erica assistant",
+        "Preferred Rewards"
+      ]
     },
     {
       "name": "Wells Fargo",
@@ -63,7 +71,11 @@
       "rank": null,
       "source_url": "https://statranker.org/?p=13153",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Wells Fargo checking",
+        "Active Cash card"
+      ]
     },
     {
       "name": "Citibank",
@@ -74,7 +86,10 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Citi Double Cash card"
+      ]
     },
     {
       "name": "U.S. Bank",
@@ -85,7 +100,8 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": []
     },
     {
       "name": "Capital One",
@@ -96,7 +112,11 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Venture X card",
+        "360 Checking"
+      ]
     },
     {
       "name": "PNC",
@@ -107,9 +127,13 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Virtual Wallet"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

@@ -39,7 +39,11 @@
       "rank": null,
       "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
       "as_of_date": "2026-11-23",
-      "teardown": "tsmc"
+      "teardown": "tsmc",
+      "products": [
+        "N2 and N3 process nodes",
+        "CoWoS packaging"
+      ]
     },
     {
       "name": "Samsung Foundry",
@@ -50,7 +54,10 @@
       "rank": null,
       "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "SF2 (2nm-class) process"
+      ]
     },
     {
       "name": "SMIC",
@@ -61,7 +68,11 @@
       "rank": null,
       "source_url": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "N+2 (7nm-class)",
+        "N+3 (5nm-class)"
+      ]
     },
     {
       "name": "UMC",
@@ -72,7 +83,10 @@
       "rank": null,
       "source_url": "https://counterpointresearch.com/default.htm/insights/global-semiconductor-foundry-market-share",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Mature nodes (28nm and up)"
+      ]
     },
     {
       "name": "GlobalFoundries",
@@ -83,9 +97,14 @@
       "rank": null,
       "source_url": "https://counterpointresearch.com/default.htm/insights/global-semiconductor-foundry-market-share",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "22FDX",
+        "Specialty nodes"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

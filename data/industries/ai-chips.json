@@ -39,7 +39,12 @@
       "rank": null,
       "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
       "as_of_date": "2026-11-23",
-      "teardown": "nvidia"
+      "teardown": "nvidia",
+      "products": [
+        "Vera Rubin NVL72",
+        "Blackwell (B300)",
+        "CUDA software"
+      ]
     },
     {
       "name": "Broadcom",
@@ -51,7 +56,11 @@
       "source_url": "https://fool.com/investing/2026/06/03/1-thing-broadcom-does-better-than-nvidia",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Leads custom AI chips (about 70% of that segment, per Motley Fool, June 2026). Partner for Google, Meta and OpenAI chips."
+      "note": "Leads custom AI chips (about 70% of that segment, per Motley Fool, June 2026). Partner for Google, Meta and OpenAI chips.",
+      "products": [
+        "Custom AI chips (with Google, Meta, OpenAI)",
+        "Jericho AI networking chips"
+      ]
     },
     {
       "name": "AMD",
@@ -63,7 +72,11 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Second merchant GPU maker; no reliable 2026 share figure found."
+      "note": "Second merchant GPU maker; no reliable 2026 share figure found.",
+      "products": [
+        "Instinct MI455X / MI450X",
+        "Helios rack"
+      ]
     },
     {
       "name": "Marvell",
@@ -75,7 +88,10 @@
       "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Custom chips for Amazon and Microsoft; projects up to $11B AI chip revenue in 2026 (Tom's Hardware)."
+      "note": "Custom chips for Amazon and Microsoft; projects up to $11B AI chip revenue in 2026 (Tom's Hardware).",
+      "products": [
+        "Custom chips for AWS Trainium and Microsoft Maia"
+      ]
     },
     {
       "name": "Google (TPU)",
@@ -87,9 +103,13 @@
       "source_url": "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Designs its own TPUs for internal use and Google Cloud customers."
+      "note": "Designs its own TPUs for internal use and Google Cloud customers.",
+      "products": [
+        "Ironwood TPU"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

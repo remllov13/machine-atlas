@@ -39,7 +39,10 @@
       "rank": 1,
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Chip packaging and test (incl. SPIL)"
+      ]
     },
     {
       "name": "Amkor Technology",
@@ -50,7 +53,10 @@
       "rank": 2,
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Advanced packaging (2.5D, fan-out)"
+      ]
     },
     {
       "name": "JCET Group",
@@ -62,7 +68,8 @@
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
       "teardown": null,
-      "note": "Largest Chinese OSAT; grew 19% in 2024."
+      "note": "Largest Chinese OSAT; grew 19% in 2024.",
+      "products": []
     },
     {
       "name": "Tongfu Microelectronics",
@@ -73,7 +80,8 @@
       "rank": 4,
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
-      "teardown": null
+      "teardown": null,
+      "products": []
     },
     {
       "name": "Powertech Technology",
@@ -84,7 +92,8 @@
       "rank": 5,
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
-      "teardown": null
+      "teardown": null,
+      "products": []
     },
     {
       "name": "HT-Tech (Huatian)",
@@ -96,9 +105,11 @@
       "source_url": "https://www.trendforce.com/presscenter/news/20250513-12577.html",
       "as_of_date": "2026-11-26",
       "teardown": null,
-      "note": "Chinese OSAT; grew 26% in 2024."
+      "note": "Chinese OSAT; grew 26% in 2024.",
+      "products": []
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-26"
+  "as_of_date": "2026-11-26",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

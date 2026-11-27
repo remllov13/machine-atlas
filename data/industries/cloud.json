@@ -38,7 +38,13 @@
       "rank": null,
       "source_url": "https://www.techinsights.com/node/61958",
       "as_of_date": "2026-11-23",
-      "teardown": "aws-cloud"
+      "teardown": "aws-cloud",
+      "products": [
+        "EC2",
+        "S3",
+        "Bedrock",
+        "Trainium"
+      ]
     },
     {
       "name": "Microsoft Azure",
@@ -50,7 +56,11 @@
       "source_url": "https://www.techinsights.com/node/61958",
       "as_of_date": "2026-11-23",
       "teardown": "microsoft",
-      "note": "Teardown covers all of Microsoft; it sits here because cloud is its largest segment."
+      "note": "Teardown covers all of Microsoft; it sits here because cloud is its largest segment.",
+      "products": [
+        "Azure compute and storage",
+        "Azure OpenAI"
+      ]
     },
     {
       "name": "Google Cloud",
@@ -61,7 +71,12 @@
       "rank": null,
       "source_url": "https://www.techinsights.com/node/61958",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Vertex AI",
+        "Cloud TPUs",
+        "BigQuery"
+      ]
     },
     {
       "name": "Oracle",
@@ -73,7 +88,10 @@
       "source_url": "https://www.techinsights.com/node/61958",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Among the fastest-growing second-tier providers (Synergy)."
+      "note": "Among the fastest-growing second-tier providers (Synergy).",
+      "products": [
+        "Oracle Cloud Infrastructure (OCI)"
+      ]
     },
     {
       "name": "CoreWeave",
@@ -85,7 +103,10 @@
       "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Fourth-Quarter-and-Fiscal-Year-2025-Results/default.aspx",
       "as_of_date": "2026-11-23",
       "teardown": "coreweave",
-      "note": "A 'neocloud' that rents NVIDIA GPUs."
+      "note": "A 'neocloud' that rents NVIDIA GPUs.",
+      "products": [
+        "GPU cloud (NVIDIA GPUs by the hour)"
+      ]
     },
     {
       "name": "Alibaba Cloud",
@@ -97,9 +118,14 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Largest cloud in China; no 2026 global share in sources checked."
+      "note": "Largest cloud in China; no 2026 global share in sources checked.",
+      "products": [
+        "Qwen models",
+        "Elastic Compute Service"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

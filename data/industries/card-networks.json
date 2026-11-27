@@ -40,7 +40,12 @@
       "rank": null,
       "source_url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Visa credit and debit cards",
+        "Visa Direct",
+        "Tap to Pay"
+      ]
     },
     {
       "name": "Mastercard",
@@ -51,7 +56,12 @@
       "rank": null,
       "source_url": "https://s25.q4cdn.com/479285134/files/doc_financials/2025/q4/4Q25-Mastercard-Earnings-Release.pdf",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Mastercard cards",
+        "Click to Pay",
+        "Mastercard Send"
+      ]
     },
     {
       "name": "UnionPay",
@@ -63,7 +73,10 @@
       "source_url": "https://nilsonreport.com/articles/global-network-card-results-worldwide-2025/",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "China's card network; one of the six global networks the Nilson Report tracks."
+      "note": "China's card network; one of the six global networks the Nilson Report tracks.",
+      "products": [
+        "UnionPay cards"
+      ]
     },
     {
       "name": "American Express",
@@ -75,7 +88,10 @@
       "source_url": null,
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Closed loop: issues its own cards and signs up its own merchants."
+      "note": "Closed loop: issues its own cards and signs up its own merchants.",
+      "products": [
+        "Platinum and Gold cards"
+      ]
     },
     {
       "name": "Discover (Capital One)",
@@ -86,7 +102,10 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Discover it card"
+      ]
     },
     {
       "name": "JCB",
@@ -97,9 +116,13 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "JCB cards"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }

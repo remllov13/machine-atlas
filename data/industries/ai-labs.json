@@ -39,7 +39,12 @@
       "rank": null,
       "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
       "as_of_date": "2026-11-23",
-      "teardown": "anthropic"
+      "teardown": "anthropic",
+      "products": [
+        "Claude",
+        "Claude Code",
+        "Claude API"
+      ]
     },
     {
       "name": "OpenAI",
@@ -50,7 +55,13 @@
       "rank": null,
       "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
       "as_of_date": "2026-11-23",
-      "teardown": "openai"
+      "teardown": "openai",
+      "products": [
+        "ChatGPT",
+        "Codex",
+        "Sora",
+        "OpenAI API"
+      ]
     },
     {
       "name": "Google DeepMind",
@@ -61,7 +72,10 @@
       "rank": null,
       "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Gemini"
+      ]
     },
     {
       "name": "Open-source models (Meta and others)",
@@ -73,7 +87,12 @@
       "source_url": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
       "as_of_date": "2026-11-23",
       "teardown": null,
-      "note": "Open models hold 4% of spend but 19% of usage (Menlo)."
+      "note": "Open models hold 4% of spend but 19% of usage (Menlo).",
+      "products": [
+        "Llama (Meta)",
+        "Qwen (Alibaba)",
+        "DeepSeek"
+      ]
     },
     {
       "name": "xAI",
@@ -84,7 +103,10 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Grok"
+      ]
     },
     {
       "name": "Mistral",
@@ -95,9 +117,14 @@
       "rank": null,
       "source_url": null,
       "as_of_date": "2026-11-23",
-      "teardown": null
+      "teardown": null,
+      "products": [
+        "Le Chat",
+        "Mistral models"
+      ]
     }
   ],
   "schema": "industry/v1",
-  "as_of_date": "2026-11-23"
+  "as_of_date": "2026-11-23",
+  "products_note": "Flagship products as of Nov 2026. AI-lab and chip products checked against 2026 launch coverage; products for banks, card networks, utilities and others are long-standing lines from general knowledge, not individually cited."
 }
