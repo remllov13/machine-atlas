@@ -33,9 +33,22 @@
     "recorded-music",
     "ecommerce-fulfillment",
     "music-streaming",
-    "parcel-carriers"
+    "parcel-carriers",
+    "email-infrastructure"
   ],
   "roads": [
+    {
+      "from": "email-infrastructure",
+      "to": "e-commerce-platforms",
+      "what": "Email and SMS marketing that online stores use to drive repeat sales (e.g. Klaviyo on Shopify)",
+      "basis": "disclosed integrations (Klaviyo and peers are built around e-commerce platforms like Shopify)"
+    },
+    {
+      "from": "email-infrastructure",
+      "to": "creator-memberships",
+      "what": "The email and newsletter tools creators use to reach and sell to their audience",
+      "basis": "industry structure (newsletters and membership sites run on ESPs for list management and delivery)"
+    },
     {
       "from": "recorded-music",
       "to": "music-streaming",
@@ -351,14 +364,6 @@
       "target": "digital-advertising"
     },
     {
-      "id": "email-infrastructure",
-      "name": "Email delivery infrastructure (ESP)",
-      "chain": "Media",
-      "naics": "518210",
-      "rel": "supplier",
-      "target": "creator-memberships"
-    },
-    {
       "id": "corporate-training",
       "name": "Corporate training & L&D",
       "chain": "Online work",
@@ -437,6 +442,22 @@
       "naics": "513210",
       "rel": "customer",
       "target": "parcel-carriers"
+    },
+    {
+      "id": "cdp",
+      "name": "Customer data platforms (CDP)",
+      "chain": "Media",
+      "naics": "513210",
+      "rel": "supplier",
+      "target": "email-infrastructure"
+    },
+    {
+      "id": "sms-messaging",
+      "name": "SMS & messaging APIs",
+      "chain": "Media",
+      "naics": "517810",
+      "rel": "supplier",
+      "target": "email-infrastructure"
     }
   ],
   "focus": {

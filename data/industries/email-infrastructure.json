@@ -1,0 +1,143 @@
+{
+  "id": "email-infrastructure",
+  "name": "Email marketing platforms (ESPs)",
+  "chain": "Media",
+  "stage": 1,
+  "naics": {
+    "code": "513210",
+    "title": "Software Publishers"
+  },
+  "one_line": "The software businesses and creators use to send newsletters, marketing campaigns and automated email (and now SMS) and to make sure it lands in the inbox.",
+  "sells": "Email and SMS marketing software: list management, campaign and automation tools, deliverability and analytics, usually priced by list size or send volume",
+  "customers": "Online stores, creators, newsletters and businesses of every size that market to their audience by email",
+  "suppliers": "Cloud hosting and compute, deliverability and sending infrastructure, customer-data platforms, and SMS/messaging APIs",
+  "revenue": {
+    "value_usd": 1234019000.0,
+    "display": "~$1.2B (Klaviyo)",
+    "metric": "ESP revenue, anchored on Klaviyo's FY2025 revenue (the largest fast-growing pure-play); the market is fragmented across many players of similar scale",
+    "period": "FY2025",
+    "basis": "company (Klaviyo FY2025 results)",
+    "confidence": "medium",
+    "source_url": "https://s25.q4cdn.com/801988311/files/doc_news/Klaviyo-Delivers-Outstanding-2025-Results-32-Revenue-Growth-Record-Fourth-Quarter-and-Raised-Fiscal-Year-2026-Outlook-2026.pdf",
+    "note": "No clean whole-industry figure exists. Klaviyo earned $1.234B (+32%) in FY2025; Mailchimp inside Intuit is a comparable ~$1B-ARR business but has stalled; Constant Contact, Brevo, ActiveCampaign, GetResponse and Twilio SendGrid fill a fragmented tail, and HubSpot, Salesforce and Adobe bundle email into larger suites. Narrow research estimates (e.g. ~$1.9B, The Business Research Company, 2025) understate the category because they exclude email revenue bundled into CRM suites; counting the real platforms puts it at several billion dollars.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented (monopolistic competition)",
+    "why": "Dozens of platforms compete and no firm dominates. Mailchimp won the broad small-business market by customer count but has stalled inside Intuit, while e-commerce-native Klaviyo grew past $1.2B and took the highest-spending customers. Email is also increasingly bundled into wider CRM and marketing suites (HubSpot, Salesforce, Adobe).",
+    "hhi": null,
+    "hhi_note": "No comparable market shares are published, and email revenue is often bundled inside larger CRM suites, so an HHI cannot be computed."
+  },
+  "econ": "Vertical specialization plus switching costs. Email platforms look interchangeable, but a business's list, templates, automations and sender reputation are trapped inside whichever one it uses, so customers rarely leave, and the bill rises with list size. The incumbent (Mailchimp) won the horizontal 'everyone' market, but a specialist (Klaviyo) that built deep e-commerce integrations took the most valuable customers and overtook it on revenue, a textbook case of vertical SaaS beating a generalist on the segment that spends the most.",
+  "rank_basis": "scale by disclosed revenue/ARR where available (2025), else by prominence; customer counts and definitions differ, so the order is approximate",
+  "rank_short": "revenue / scale",
+  "companies": [
+    {
+      "name": "Klaviyo",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 1234019000.0,
+      "revenue_display": "$1.234B FY2025 revenue (+32%)",
+      "rank": 1,
+      "source_url": "https://s25.q4cdn.com/801988311/files/doc_news/Klaviyo-Delivers-Outstanding-2025-Results-32-Revenue-Growth-Record-Fourth-Quarter-and-Raised-Fiscal-Year-2026-Outlook-2026.pdf",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Public (NYSE: KVYO). Over 193,000 customers; 3,912 generating $50k+ ARR; 110% net revenue retention. E-commerce-native, built on a deep Shopify integration.",
+      "products": [
+        "Email marketing & automation",
+        "SMS marketing",
+        "Customer data platform (CDP)",
+        "Shopify & e-commerce integrations"
+      ]
+    },
+    {
+      "name": "Mailchimp (Intuit)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$1B ARR (reported; stalling)",
+      "rank": 2,
+      "source_url": "https://mailchimp.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Owned by Intuit (acquired 2021 for ~$12B). Leads by sheer customer count across small businesses, but reported ~$1B ARR has stalled since the acquisition as it lost e-commerce customers to Klaviyo.",
+      "products": [
+        "Email campaigns & automations",
+        "Marketing CRM",
+        "Websites & landing pages",
+        "SMS"
+      ]
+    },
+    {
+      "name": "Constant Contact",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://www.constantcontact.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Long-running small-business email platform (private; Clearlake/Siris-owned).",
+      "products": [
+        "Email marketing",
+        "Automations",
+        "SMS & social tools"
+      ]
+    },
+    {
+      "name": "Brevo (formerly Sendinblue)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://www.brevo.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "European all-in-one marketing platform (email, SMS, CRM), strong with SMBs.",
+      "products": [
+        "Email & SMS marketing",
+        "Marketing automation",
+        "CRM & transactional email"
+      ]
+    },
+    {
+      "name": "ActiveCampaign",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 5,
+      "source_url": "https://www.activecampaign.com/",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Automation-focused marketing platform for small and mid-market businesses (private).",
+      "products": [
+        "Email marketing & automation",
+        "CRM",
+        "Marketing workflows"
+      ]
+    },
+    {
+      "name": "Twilio SendGrid",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 6,
+      "source_url": "https://www.twilio.com/en-us/sendgrid/email-api",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "note": "Part of Twilio (NYSE: TWLO); the sending/API layer for high-volume transactional and marketing email that other apps build on.",
+      "products": [
+        "Email API (transactional)",
+        "Marketing Campaigns",
+        "Deliverability tools"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship products as of Nov 2026, checked against company sites and 2025 filings. No comparable market shares are published (email revenue is often bundled into larger CRM suites), so companies are ranked by disclosed revenue/ARR where available (Klaviyo from filings; Mailchimp from reported ARR) and otherwise by prominence; share_pct is left null."
+}
