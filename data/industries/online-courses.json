@@ -1,0 +1,146 @@
+{
+  "id": "online-courses",
+  "name": "Online courses & paid communities",
+  "chain": "Media",
+  "stage": 3,
+  "naics": {
+    "code": "611430",
+    "title": "Professional and Management Development Training"
+  },
+  "one_line": "Sells knowledge online — courses and paid communities where experts teach and learners pay to enroll.",
+  "sells": "Course hosting, enrollment, payments and community tools; platforms take a cut or charge a SaaS fee",
+  "customers": "Learners who buy courses, and the instructors and creators who sell them",
+  "suppliers": "Cloud hosting, video delivery, payment processors, and the instructors' own expertise",
+  "revenue": {
+    "value_usd": 3000000000.0,
+    "display": "~$3B+/yr",
+    "metric": "platform revenue for consumer & creator online-course and paid-community platforms",
+    "period": "2025",
+    "basis": "industry (estimated)",
+    "confidence": "illustrative",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000165156225000056/cour-20250930xexx991.htm",
+    "note": "No clean industry total is published. Built from the leaders: the merged Coursera+Udemy reported ~$1.5B combined 2025 revenue (Coursera's own FY2025 guidance was $750–754M), plus Kajabi, Teachable, Thinkific, Skool, Udacity and MasterClass. The far larger ~$320B 'e-learning' market includes corporate LMS, academic and K-12 software and sits outside this consumer/creator slice.",
+    "as_of_date": "2026-11-27"
+  },
+  "structure": {
+    "type": "Fragmented (consolidating)",
+    "why": "The course-marketplace segment just consolidated — Coursera acquired Udemy in 2026 to lead structured and MOOC-style courses — but creator-course SaaS (Kajabi, Teachable, Thinkific) and paid-community tools (Skool, Circle) remain a crowded field with low switching costs.",
+    "hhi_note": "Shares aren't published on a common basis, and the market spans distinct segments (marketplaces, creator SaaS, paid communities), so HHI is left null.",
+    "hhi": null
+  },
+  "econ": "Zero marginal cost and the long tail: a course or community costs a lot to make once and almost nothing to deliver to each extra learner, so platforms aggregate huge catalogs and let niche experts reach scattered demand worldwide. Marketplaces (Coursera, Udemy) win on catalog breadth and discovery; creator tools (Kajabi, Skool) let an expert keep more of the price by bringing their own audience.",
+  "rank_basis": "scale — revenue where public, otherwise creator GMV and reach (company reports, 2025–2026)",
+  "rank_short": "scale",
+  "companies": [
+    {
+      "name": "Coursera (with Udemy)",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$1.5B combined revenue (2025)",
+      "rank": 1,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1651562/000165156225000056/cour-20250930xexx991.htm",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Udemy course marketplace",
+        "Professional Certificates",
+        "University degrees & certificates",
+        "Coursera Coach (AI tutor)"
+      ],
+      "note": "Coursera agreed to acquire Udemy (announced Dec 2025, completed 2026 per reports), combining the two largest course marketplaces: ~290M registered learners and ~$1.5B combined 2025 revenue. Coursera's own FY2025 revenue guidance was $750–754M; Udemy's 2024 revenue was ~$787M."
+    },
+    {
+      "name": "Kajabi",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "$10B+ creator revenue processed (cumulative)",
+      "rank": 2,
+      "source_url": "https://www.businesswire.com/news/home/20250806424975/en",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Online courses",
+        "Communities & memberships",
+        "Website, funnels & email",
+        "Payments"
+      ],
+      "note": "Creator-business SaaS; creators have earned $10B+ through Kajabi (Aug 2025). Increasingly pushes communities alongside courses. Charges a SaaS fee rather than a cut of sales."
+    },
+    {
+      "name": "Skool",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 3,
+      "source_url": "https://www.skool.com",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Paid communities",
+        "Courses",
+        "Gamification & leaderboards",
+        "Events & calendar"
+      ],
+      "note": "Fast-growing paid-community-plus-courses platform, popular with coaches and info-product creators; charges a flat per-group monthly fee."
+    },
+    {
+      "name": "Teachable",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 4,
+      "source_url": "https://teachable.com",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Courses",
+        "Coaching",
+        "Digital downloads",
+        "Memberships"
+      ],
+      "note": "Creator course platform, owned by Hotmart; competes directly with Kajabi and Thinkific on creator-owned course hosting."
+    },
+    {
+      "name": "Thinkific",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "public (TSX: THNC)",
+      "rank": 5,
+      "source_url": "https://www.thinkific.com",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Courses",
+        "Communities",
+        "Thinkific Plus (enterprise)",
+        "App store"
+      ],
+      "note": "Publicly traded Canadian creator-course platform; the only pure-play creator LMS listed on a public market."
+    },
+    {
+      "name": "MasterClass",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": 6,
+      "source_url": "https://www.masterclass.com",
+      "as_of_date": "2026-11-27",
+      "teardown": null,
+      "products": [
+        "Celebrity-taught video classes",
+        "Annual subscription",
+        "MasterClass at Work"
+      ],
+      "note": "Subscription 'edutainment' — polished classes from famous instructors, sold as an annual membership rather than per-course. Private."
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-27",
+  "products_note": "Flagship offerings as of Nov 2026, checked against each platform's site and 2025–2026 coverage. Only Coursera (with Udemy) and Thinkific are public; the private platforms are ordered by rough scale and reach, not exact revenue. Coursera's $750–754M FY2025 figure is from its SEC filing and Udemy's ~$787M is FY2024."
+}

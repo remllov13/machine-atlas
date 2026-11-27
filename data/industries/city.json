@@ -24,7 +24,8 @@
     "developer-tools",
     "video-platforms",
     "digital-advertising",
-    "creator-memberships"
+    "creator-memberships",
+    "online-courses"
   ],
   "roads": [
     {
@@ -128,6 +129,18 @@
       "to": "creator-memberships",
       "what": "Card rails that process fans' recurring subscription payments",
       "basis": "industry structure (fan subscriptions are charged to cards via processors on the card networks)"
+    },
+    {
+      "from": "cloud",
+      "to": "online-courses",
+      "what": "Hosting, storage and video delivery for course catalogs and live communities",
+      "basis": "industry structure (course and community platforms run on cloud infrastructure and video delivery)"
+    },
+    {
+      "from": "digital-advertising",
+      "to": "online-courses",
+      "what": "Ad reach to acquire learners and promote courses and communities",
+      "basis": "course marketplaces and creators are heavy buyers of digital advertising to drive enrollments (industry structure)"
     }
   ],
   "locked": [
@@ -266,17 +279,28 @@
       "naics": "518210",
       "rel": "supplier",
       "target": "creator-memberships"
+    },
+    {
+      "id": "corporate-training",
+      "name": "Corporate training & L&D",
+      "chain": "Online work",
+      "naics": "611430",
+      "rel": "customer",
+      "target": "online-courses"
+    },
+    {
+      "id": "digital-credentials",
+      "name": "Digital credentials & proctoring",
+      "chain": "Media",
+      "naics": "611710",
+      "rel": "supplier",
+      "target": "online-courses"
     }
   ],
   "focus": {
     "set_by": "Andrew, 2026-11-27",
     "why": "Learn the online, work-from-your-laptop economy: how creators, freelancers and online sellers earn, and who they depend on.",
     "next": [
-      {
-        "name": "Online courses and paid communities",
-        "chain": "Media",
-        "hint": "Udemy, Coursera, Kajabi, Skool: selling knowledge online"
-      },
       {
         "name": "Influencer marketing",
         "chain": "Media",
