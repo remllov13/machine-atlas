@@ -35,7 +35,8 @@
     "music-streaming",
     "parcel-carriers",
     "email-infrastructure",
-    "contractor-payroll"
+    "contractor-payroll",
+    "fraud-prevention"
   ],
   "roads": [
     {
@@ -253,6 +254,18 @@
       "to": "freelance-marketplaces",
       "what": "Compliant hiring, contracts and payouts that marketplaces embed so clients can engage or employ freelancers across borders",
       "basis": "industry structure (freelance platforms partner with or build EOR/payroll to handle compliance and payment)"
+    },
+    {
+      "from": "fraud-prevention",
+      "to": "online-payments-sellers",
+      "what": "Real-time fraud scoring and chargeback guarantees that processors embed so sellers can approve more orders without eating the loss",
+      "basis": "industry structure (Stripe builds Radar in-house; merchants add Riskified, Signifyd or Forter on top of their PSP at checkout)"
+    },
+    {
+      "from": "fraud-prevention",
+      "to": "e-commerce-platforms",
+      "what": "Fraud decisioning that online stores plug in to accept payments without absorbing chargeback losses",
+      "basis": "industry structure (Signifyd, Riskified and peers integrate directly with Shopify, Adobe Commerce and other platforms)"
     }
   ],
   "locked": [
@@ -409,12 +422,12 @@
       "target": "e-commerce-platforms"
     },
     {
-      "id": "fraud-prevention",
-      "name": "Payments fraud & risk software",
-      "chain": "Online work",
-      "naics": "513210",
+      "id": "identity-data",
+      "name": "Consumer identity & credit data",
+      "chain": "Money",
+      "naics": "561450",
       "rel": "supplier",
-      "target": "online-payments-sellers"
+      "target": "fraud-prevention"
     },
     {
       "id": "music-publishing",

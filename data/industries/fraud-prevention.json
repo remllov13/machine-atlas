@@ -1,0 +1,180 @@
+{
+  "id": "fraud-prevention",
+  "name": "E-commerce fraud prevention",
+  "chain": "Online work",
+  "stage": 1,
+  "naics": {
+    "code": "513210",
+    "title": "Software Publishers"
+  },
+  "one_line": "Decides in milliseconds whether an online order is a real buyer or a thief, and often eats the loss if it guesses wrong.",
+  "sells": "Real-time fraud scoring for online orders, usually priced per transaction or as a share of approved sales, often with a chargeback guarantee",
+  "customers": "Online retailers, marketplaces and the payment processors that serve them",
+  "suppliers": "Cloud computing, consumer identity and card-network data, device signals, machine-learning talent",
+  "revenue": {
+    "value_usd": 9620000000.0,
+    "display": "~$9.6B/yr",
+    "metric": "payment-fraud detection & prevention revenue, worldwide",
+    "period": "2025",
+    "basis": "industry",
+    "confidence": "low",
+    "source_url": "https://www.gminsights.com/industry-analysis/fraud-detection-and-prevention-market",
+    "note": "Global Market Insights' payment-fraud segment; the whole fraud-detection & prevention market was ~$36.6B in 2025. The specialized e-commerce transaction / chargeback-guarantee vendors shown here are a smaller, fragmented subset of this: Riskified, the only public pure-play, booked $345M in FY2025.",
+    "as_of_date": "2026-11-28"
+  },
+  "structure": {
+    "type": "Fragmented (monopolistic competition)",
+    "why": "Dozens of specialist vendors compete, none with real scale: Global Market Insights reports the five largest fraud-detection vendors held just 7.58% of the market combined in 2025. The e-commerce niche splits further into independents (Riskified, Signifyd, Forter) and fraud tools bundled inside bigger platforms (Stripe, American Express, Equifax).",
+    "hhi": null,
+    "hhi_note": "Shares are not published on a comparable revenue basis, so no HHI is computed. GMI reports the top five fraud-detection vendors held a combined 7.58% in 2025, implying a very low HHI (a highly fragmented market)."
+  },
+  "econ": "Information asymmetry. At checkout a seller cannot tell a genuine shopper from a fraudster, so it is stuck choosing between turning away good customers and eating fraud losses. These vendors pool transaction data across thousands of merchants to price each order's risk, and many guarantee the chargeback, turning an unknowable risk into a predictable fee the seller pays.",
+  "rank_basis": "estimated annual revenue (Riskified official FY2025; the private firms are third-party estimates, 2024-2025)",
+  "rank_short": "est. revenue",
+  "companies": [
+    {
+      "name": "Riskified",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": 344638000.0,
+      "revenue_display": "$344.6M FY2025 revenue",
+      "rank": 1,
+      "source_url": "https://www.businesswire.com/news/home/20260304262574/en/Riskified-Reports-Fourth-Quarter-and-Full-Year-2025-Results",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "The only public pure-play (NYSE: RSKD). Reviewed $155B of GMV in 2025, up 10%; revenue is a risk-adjusted fee on the GMV it approves.",
+      "products": [
+        "Chargeback Guarantee",
+        "Policy Protect",
+        "Dispute Resolve",
+        "Account Secure"
+      ]
+    },
+    {
+      "name": "Signifyd",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$293M (est., 2024)",
+      "rank": 2,
+      "source_url": "https://getlatka.com/companies/signifyd",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Private; revenue is a third-party estimate (GetLatka). Last valued ~$1.3B (2021 Series E, $390M raised to date).",
+      "products": [
+        "Complete (guaranteed fraud protection)",
+        "Chargeback recovery",
+        "Abuse prevention",
+        "Decision Center"
+      ]
+    },
+    {
+      "name": "Forter",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$105M (est.)",
+      "rank": 3,
+      "source_url": "https://growjo.com/company/Forter",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Private; revenue is a third-party estimate (Growjo $110.6M; GetLatka $103M). Reportedly valued around $3B after its 2021 round.",
+      "products": [
+        "Trust Platform (fraud management)",
+        "Chargeback recovery",
+        "Identity / account-takeover protection",
+        "Abuse prevention"
+      ]
+    },
+    {
+      "name": "Sift",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$35M (est., 2025)",
+      "rank": 4,
+      "source_url": "https://newmarketpitch.com/blogs/news/fraud-prevention-top-revenue",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Private; revenue is a low-confidence third-party estimate. Sells a broad 'Digital Trust & Safety' suite, not only chargeback guarantees.",
+      "products": [
+        "Payment Protection",
+        "Account Defense",
+        "Dispute Management",
+        "Digital Trust & Safety platform"
+      ]
+    },
+    {
+      "name": "Sardine",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": "~$23M (est.)",
+      "rank": 5,
+      "source_url": "https://newmarketpitch.com/blogs/news/fraud-prevention-top-revenue",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Private; revenue is a third-party estimate. Spans fraud and anti-money-laundering, aimed at fintechs and instant payments as well as commerce.",
+      "products": [
+        "Fraud prevention",
+        "AML / compliance",
+        "Instant settlement risk"
+      ]
+    },
+    {
+      "name": "Stripe Radar",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://stripe.com/radar",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Fraud scoring built into Stripe's payments; not separately disclosed, but reaches millions of merchants by default. An embedded competitor, not an independent vendor.",
+      "products": [
+        "Radar (built-in fraud scoring)",
+        "Radar for Fraud Teams"
+      ]
+    },
+    {
+      "name": "Accertify",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://www.accertify.com/",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Owned by American Express; enterprise fraud and chargeback platform. Revenue folded into Amex, not disclosed.",
+      "products": [
+        "Fraud management",
+        "Chargeback management",
+        "Account protection",
+        "Digital identity"
+      ]
+    },
+    {
+      "name": "Kount",
+      "share_pct": null,
+      "share_basis": null,
+      "revenue_usd": null,
+      "revenue_display": null,
+      "rank": null,
+      "source_url": "https://kount.com/",
+      "as_of_date": "2026-11-28",
+      "teardown": null,
+      "note": "Owned by Equifax; fraud and identity-trust platform. Revenue folded into Equifax, not disclosed.",
+      "products": [
+        "Kount 360",
+        "Command (fraud)",
+        "Control (policy)",
+        "Identity trust"
+      ]
+    }
+  ],
+  "schema": "industry/v1",
+  "as_of_date": "2026-11-28",
+  "products_note": "Flagship product lines as of Nov 2026, checked against each vendor's own site and recent coverage. Private-company revenues are third-party estimates (GetLatka, Growjo, NewMarketPitch), clearly marked; only Riskified's figure is from a filing."
+}
